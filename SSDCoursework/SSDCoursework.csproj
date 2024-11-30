@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="Sign Up.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Sign Up.Designer.cs">
+      <DependentUpon>Sign Up.cs</DependentUpon>
     </Compile>
     <Compile Include="Registry.cs">
       <SubType>Form</SubType>
@@ -60,8 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Validation.cs" />
+    <EmbeddedResource Include="Sign Up.resx">
+      <DependentUpon>Sign Up.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registry.resx">
       <DependentUpon>Registry.cs</DependentUpon>

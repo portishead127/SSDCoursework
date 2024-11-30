@@ -86,9 +86,8 @@
             this.flpSidebar.Controls.Add(this.pnlSignUp);
             this.flpSidebar.Controls.Add(this.pnlLogin);
             this.flpSidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpSidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpSidebar.Location = new System.Drawing.Point(0, 0);
-            this.flpSidebar.MaximumSize = new System.Drawing.Size(200, 867);
-            this.flpSidebar.MinimumSize = new System.Drawing.Size(55, 453);
             this.flpSidebar.Name = "flpSidebar";
             this.flpSidebar.Size = new System.Drawing.Size(55, 453);
             this.flpSidebar.TabIndex = 0;
@@ -115,7 +114,7 @@
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(0);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Padding = new System.Windows.Forms.Padding(20, 4, 0, 0);
-            this.btnSignUp.Size = new System.Drawing.Size(263, 67);
+            this.btnSignUp.Size = new System.Drawing.Size(287, 67);
             this.btnSignUp.TabIndex = 2;
             this.btnSignUp.Text = "               Sign up";
             this.btnSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,7 +143,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Padding = new System.Windows.Forms.Padding(20, 4, 0, 0);
-            this.btnLogin.Size = new System.Drawing.Size(263, 67);
+            this.btnLogin.Size = new System.Drawing.Size(291, 67);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "               Login";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -161,7 +160,6 @@
             this.pnlChildFormHolder.Size = new System.Drawing.Size(815, 453);
             this.pnlChildFormHolder.TabIndex = 1;
             this.pnlChildFormHolder.Tag = "";
-            this.pnlChildFormHolder.Resize += new System.EventHandler(this.pnlChildFormHolder_Resize);
             // 
             // Registry
             // 
@@ -171,6 +169,7 @@
             this.ClientSize = new System.Drawing.Size(870, 453);
             this.Controls.Add(this.flpSidebar);
             this.Controls.Add(this.pnlChildFormHolder);
+            this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "Registry";
             this.Text = "Registry";
             this.Resize += new System.EventHandler(this.Registry_Resize);
