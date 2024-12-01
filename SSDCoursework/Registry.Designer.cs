@@ -54,7 +54,7 @@
             this.pnlHamburgerHolder.Location = new System.Drawing.Point(0, 0);
             this.pnlHamburgerHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHamburgerHolder.Name = "pnlHamburgerHolder";
-            this.pnlHamburgerHolder.Size = new System.Drawing.Size(223, 83);
+            this.pnlHamburgerHolder.Size = new System.Drawing.Size(285, 96);
             this.pnlHamburgerHolder.TabIndex = 0;
             // 
             // lblHamburgerText
@@ -88,18 +88,20 @@
             this.flpSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpSidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpSidebar.Location = new System.Drawing.Point(0, 0);
+            this.flpSidebar.Margin = new System.Windows.Forms.Padding(0);
+            this.flpSidebar.MinimumSize = new System.Drawing.Size(68, 453);
             this.flpSidebar.Name = "flpSidebar";
-            this.flpSidebar.Size = new System.Drawing.Size(55, 453);
+            this.flpSidebar.Size = new System.Drawing.Size(68, 561);
             this.flpSidebar.TabIndex = 0;
             // 
             // pnlSignUp
             // 
             this.pnlSignUp.BackColor = System.Drawing.Color.Transparent;
             this.pnlSignUp.Controls.Add(this.btnSignUp);
-            this.pnlSignUp.Location = new System.Drawing.Point(0, 83);
+            this.pnlSignUp.Location = new System.Drawing.Point(0, 96);
             this.pnlSignUp.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSignUp.Name = "pnlSignUp";
-            this.pnlSignUp.Size = new System.Drawing.Size(258, 47);
+            this.pnlSignUp.Size = new System.Drawing.Size(288, 70);
             this.pnlSignUp.TabIndex = 3;
             // 
             // btnSignUp
@@ -110,13 +112,13 @@
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
             this.btnSignUp.Image = global::SSDCoursework.Properties.Resources.Login_symbol2_1_;
             this.btnSignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSignUp.Location = new System.Drawing.Point(-17, -12);
+            this.btnSignUp.Location = new System.Drawing.Point(-14, -11);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(0);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Padding = new System.Windows.Forms.Padding(20, 4, 0, 0);
-            this.btnSignUp.Size = new System.Drawing.Size(287, 67);
+            this.btnSignUp.Size = new System.Drawing.Size(325, 94);
             this.btnSignUp.TabIndex = 2;
-            this.btnSignUp.Text = "               Sign up";
+            this.btnSignUp.Text = "                                Sign up";
             this.btnSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
@@ -125,10 +127,10 @@
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
             this.pnlLogin.Controls.Add(this.btnLogin);
-            this.pnlLogin.Location = new System.Drawing.Point(0, 130);
+            this.pnlLogin.Location = new System.Drawing.Point(0, 166);
             this.pnlLogin.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(258, 47);
+            this.pnlLogin.Size = new System.Drawing.Size(288, 70);
             this.pnlLogin.TabIndex = 4;
             // 
             // btnLogin
@@ -139,13 +141,13 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = global::SSDCoursework.Properties.Resources.Login_symbol2_1_;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(-17, -12);
+            this.btnLogin.Location = new System.Drawing.Point(-14, -20);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Padding = new System.Windows.Forms.Padding(20, 4, 0, 0);
-            this.btnLogin.Size = new System.Drawing.Size(291, 67);
+            this.btnLogin.Size = new System.Drawing.Size(363, 105);
             this.btnLogin.TabIndex = 2;
-            this.btnLogin.Text = "               Login";
+            this.btnLogin.Text = "                               Login";
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
@@ -155,9 +157,14 @@
             // 
             // pnlChildFormHolder
             // 
-            this.pnlChildFormHolder.Location = new System.Drawing.Point(55, 0);
+            this.pnlChildFormHolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlChildFormHolder.AutoSize = true;
+            this.pnlChildFormHolder.Location = new System.Drawing.Point(68, 0);
+            this.pnlChildFormHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlChildFormHolder.Name = "pnlChildFormHolder";
-            this.pnlChildFormHolder.Size = new System.Drawing.Size(815, 453);
+            this.pnlChildFormHolder.Size = new System.Drawing.Size(916, 561);
             this.pnlChildFormHolder.TabIndex = 1;
             this.pnlChildFormHolder.Tag = "";
             // 
@@ -166,10 +173,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(870, 453);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.flpSidebar);
             this.Controls.Add(this.pnlChildFormHolder);
-            this.MinimumSize = new System.Drawing.Size(800, 400);
+            this.DoubleBuffered = true;
+            this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "Registry";
             this.Text = "Registry";
             this.Resize += new System.EventHandler(this.Registry_Resize);
@@ -180,6 +188,7 @@
             this.pnlSignUp.ResumeLayout(false);
             this.pnlLogin.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

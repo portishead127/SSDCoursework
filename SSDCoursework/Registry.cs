@@ -16,27 +16,19 @@ namespace SSDCoursework
     {
         bool isSidebarExpanded = false;
         bool expandingForMenuItem = false;
-        int sidebarChange = 12;
+        int sidebarChange;
+        int sidebarScaleExpansionFactor = 80;
         int sidebarSpeedMult = 1;
         Form activeChildForm = null;
-        int sidebarExpandedWidth = 200; // Adjust as per your expanded width
-        int sidebarCollapsedWidth = 50; // Adjust as per your expanded width
-
-        public int SidebarExpandedWidth
-        {
-            get { return sidebarExpandedWidth; }
-        }
-
-        public int SidebarCollapsedWidth
-        {
-            get { return sidebarCollapsedWidth; }
-        }
+        int sidebarExpandedWidth = 250;
+        int sidebarCollapsedWidth = 68;
 
         public Registry()
         {
             InitializeComponent();
             InitialiseTimer();
             flpSidebar.MaximumSize = this.MaximumSize;
+            sidebarChange = this.Width / sidebarScaleExpansionFactor;
         }
 
         void InitialiseTimer()
@@ -121,9 +113,7 @@ namespace SSDCoursework
 
         private void Registry_Resize(object sender, EventArgs e)
         {
-            pnlChildFormHolder.Width = this.Width - sidebarCollapsedWidth;
-            pnlChildFormHolder.Height = this.Height;
-            Console.WriteLine(this.Width + "," + this.Height);
+            sidebarChange = this.Width / sidebarScaleExpansionFactor;
         }
     }
 }
