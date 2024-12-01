@@ -5,7 +5,7 @@ using System.Linq;
 namespace SSDCoursework
 {
     internal static class Validation
-    {
+    { 
         static string caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         static string nums = "0123456789";
         static string specialChars = "!\"£$%^&*()_-+={}@~\'#?/>.<,:;|\\¬`";
