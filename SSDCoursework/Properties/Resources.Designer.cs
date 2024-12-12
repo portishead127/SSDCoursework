@@ -63,9 +63,39 @@ namespace SSDCoursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Login_symbol {
+        internal static System.Drawing.Bitmap GrayGrad {
             get {
-                object obj = ResourceManager.GetObject("Login symbol", resourceCulture);
+                object obj = ResourceManager.GetObject("GrayGrad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hamburger {
+            get {
+                object obj = ResourceManager.GetObject("Hamburger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hamburger_icon_svg {
+            get {
+                object obj = ResourceManager.GetObject("Hamburger_icon.svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hamburger_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Hamburger_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

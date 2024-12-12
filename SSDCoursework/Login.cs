@@ -5,44 +5,30 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SSDCoursework
 {
-    public partial class SignUp : Form
+    public partial class Login : Form
     {
-        User newUser;
-
-        public SignUp()
+        public Login()
         {
             InitializeComponent();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (ValidateInput())
-            {
-                CreateUser();
-            }
-        }
-
-        private void rdoAdmin_Click(object sender, EventArgs e)
-        {
-            rdoAdmin.Checked = !rdoAdmin.Checked;
-        }
-
-        private bool ValidateInput()
-        {
-            List<Exception> exceptions = new List<Exception>();
-
             foreach (Control c in tlp.Controls.OfType<TextBox>())
             {
                 Label correspondingLabel = tlp.Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.Equals(c.Tag));
 
-                if (c.Tag.Equals("Username"))
+                List<Exception> exceptions = new List<Exception>();
+
+                
+                if(c.Tag.Equals("Username"))
                 {
                     exceptions = Validation.Validate(c.Text, 8, 20);
                 }
@@ -73,26 +59,11 @@ namespace SSDCoursework
                     correspondingLabel.ForeColor = Color.Black; // Reset label color if no errors
                 }
             }
-
-            if (exceptions.Any())
-            {
-                return false;
-            }
-            return true;
         }
 
-        void CreateUser()
+        private void rdoAdmin_Click(object sender, EventArgs e)
         {
-            if (rdoAdmin.Checked)
-            {
-                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtPassword.Text, true);
-            }
-            else
-            {
-                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtPassword.Text, false);
-            }
-            Database.AddUser(newUser);
-            newUser.LoginUser();
+            rdoAdmin.Checked = !rdoAdmin.Checked;
         }
     }
 }

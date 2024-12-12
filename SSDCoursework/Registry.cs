@@ -14,106 +14,39 @@ namespace SSDCoursework
 {
     public partial class Registry : Form
     {
-        bool isSidebarExpanded = false;
-        bool expandingForMenuItem = false;
-        int sidebarChange;
-        int sidebarScaleExpansionFactor = 80;
-        int sidebarSpeedMult = 1;
-        Form activeChildForm = null;
-        int sidebarExpandedWidth = 250;
-        int sidebarCollapsedWidth = 68;
+        SidebarControl sidebar;
 
         public Registry()
         {
             InitializeComponent();
-            InitialiseTimer();
-            flpSidebar.MaximumSize = this.MaximumSize;
-            sidebarChange = this.Width / sidebarScaleExpansionFactor;
+            InitialiseSidebar();
         }
 
-        void InitialiseTimer()
+        void InitialiseSidebar()
         {
-            sidebarTimer.Interval = 5;
+            sidebar = new SidebarControl(this);
+            sidebar.Dock = DockStyle.Fill;
+            this.Controls.Add(sidebar);
+
+            // Add dynamic content
+            sidebar.AddControl("Sign Up", "C:\\Users\\aaron\\Documents\\School\\SSD\\Projects\\SSDCoursework\\SSDCoursework\\Resources\\Login symbol2.png", btnSignUp_Click);
+            sidebar.AddControl("Login", "C:\\Users\\aaron\\Documents\\School\\SSD\\Projects\\SSDCoursework\\SSDCoursework\\Resources\\Login symbol2.png", btnLogin_Click);
         }
 
-        private void sidebarTimer_Tick(object sender, EventArgs e)
+        void btnSignUp_Click(object sender, EventArgs e)
         {
-            int fullExpandWidth = this.Width; // Sidebar expands fully for menu item selection
-
-            if (expandingForMenuItem)
-            {
-                // Expand to full screen width
-                flpSidebar.Width += sidebarChange * sidebarSpeedMult;
-                if (flpSidebar.Width >= fullExpandWidth)
-                {
-                    flpSidebar.Width = fullExpandWidth; // Ensure exact size
-                    sidebarTimer.Stop();
-                    expandingForMenuItem = false;
-
-                    // Start collapsing the sidebar after opening the form
-                    OpenChildForm(new SignUp());
-                    isSidebarExpanded = true;
-                    sidebarTimer.Start();
-                }
-                return;
-            }
-
-            if (isSidebarExpanded)
-            {
-                flpSidebar.Width -= sidebarChange * sidebarSpeedMult;
-                if (flpSidebar.Width <= sidebarCollapsedWidth)
-                {
-                    flpSidebar.Width = sidebarCollapsedWidth;
-                    isSidebarExpanded = false;
-                    sidebarTimer.Stop();
-                    sidebarSpeedMult = 1;
-                }
-            }
-            else
-            {
-                flpSidebar.Width += sidebarChange * sidebarSpeedMult;
-                if (flpSidebar.Width >= sidebarExpandedWidth)
-                {
-                    flpSidebar.Width = sidebarExpandedWidth;
-                    isSidebarExpanded = true;
-                    sidebarTimer.Stop();
-                    sidebarSpeedMult = 1;
-                }
-            }
+            sidebar.IsExpandingForMenuItem = true;
+            sidebar.SidebarSpeedMult = 3;
+            sidebar.FormToOpen = new SignUp();
+            sidebar.sidebarTimer.Start();
         }
 
-        private void pbxHamburger_Click(object sender, EventArgs e)
+        void btnLogin_Click(object sender, EventArgs e)
         {
-            expandingForMenuItem = false;
-            sidebarTimer.Start();
-        }
-
-        private void OpenChildForm(Form newChildForm)
-        {
-            if (activeChildForm != null)
-            {
-                activeChildForm.Close();
-                pnlChildFormHolder.Controls.Clear();
-            }
-            activeChildForm = newChildForm;
-            activeChildForm.TopLevel = false;
-            activeChildForm.FormBorderStyle = FormBorderStyle.None;
-            activeChildForm.Dock = DockStyle.Fill;
-            activeChildForm.BringToFront();
-            pnlChildFormHolder.Controls.Add(newChildForm);
-            activeChildForm.Show();
-        }
-
-        private void btnSignUp_Click(object sender, EventArgs e)
-        {
-            expandingForMenuItem = true;
-            sidebarSpeedMult = 3;
-            sidebarTimer.Start();
-        }
-
-        private void Registry_Resize(object sender, EventArgs e)
-        {
-            sidebarChange = this.Width / sidebarScaleExpansionFactor;
+            sidebar.IsExpandingForMenuItem = true;
+            sidebar.SidebarSpeedMult = 3;
+            sidebar.FormToOpen = new Login();
+            sidebar.sidebarTimer.Start();
         }
     }
 }
