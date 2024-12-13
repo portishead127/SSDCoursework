@@ -9,9 +9,9 @@ namespace SSDCoursework
 {
     internal static class Database
     {
-        static int numOfUsers = File.ReadAllLines(path).Length;
+        static int numOfUsers = File.ReadAllLines(filePath).Length;
         static int numOfDataPoints = 6;
-        const string path = "Users.csv";//const and static
+        const string filePath = "Users.csv";//const and static
         static List<User> users;
 
         public static int NumOfUsers
@@ -20,14 +20,20 @@ namespace SSDCoursework
             set { numOfUsers = value;}
         }
 
+        public static string FilePath
+        {
+            get { return filePath; }
+        }
+
         public static void RetrieveCSV()
         {
             string[] splitUserDetails;
             User aUser;
 
+            users.Clear();
             for (int i = 0; i < numOfUsers; i++)
             {
-                splitUserDetails = File.ReadAllLines(path)[i].Split(',');
+                splitUserDetails = File.ReadAllLines(filePath)[i].Split(',');
                 if (splitUserDetails[5] == "False")
                 {
                     aUser = new Player(splitUserDetails[0], splitUserDetails[1], DateTime.Parse(splitUserDetails[2]), splitUserDetails[3], splitUserDetails[4], Convert.ToBoolean(splitUserDetails[5]));
@@ -43,27 +49,31 @@ namespace SSDCoursework
         public static void AddUser(User userToAdd)
         {
             users.Add(userToAdd);
+            WriteToCSV();
+            RetrieveCSV();
         }
 
 
         public static void WriteToCSV()
         {
-            File.WriteAllText(path, ""); //Clears file
-            string[] currentLineToWrite = new string[numOfDataPoints];
-            User currentUser;
+            StreamWriter sw = new StreamWriter(filePath, true);
+
+            File.WriteAllText(filePath, ""); //Clears file
+            string[] currentUserDataPoints = new string[numOfDataPoints];
+            User currentUserBeingAddedToCSV;
             for(int i = 0; i < numOfUsers; i++)
             {
-                currentUser = users[i];
-                currentLineToWrite[0] = currentUser.FName;
-                currentLineToWrite[1] = currentUser.SName;
-                currentLineToWrite[2] = currentUser.Dob.ToString();
-                currentLineToWrite[3] = currentUser.Username;
-                currentLineToWrite[4] = currentUser.Password;
-                currentLineToWrite[5] = currentUser.IsAdmin.ToString();
-
+                currentUserBeingAddedToCSV = users[i];
+                currentUserDataPoints[0] = currentUserBeingAddedToCSV.FName;
+                currentUserDataPoints[1] = currentUserBeingAddedToCSV.SName;
+                currentUserDataPoints[2] = currentUserBeingAddedToCSV.Dob.ToString();
+                currentUserDataPoints[3] = currentUserBeingAddedToCSV.Username;
+                currentUserDataPoints[4] = currentUserBeingAddedToCSV.Password;
+                currentUserDataPoints[5] = currentUserBeingAddedToCSV.IsAdmin.ToString();
+                
                 for(int j = 0; j < numOfDataPoints; j++)
                 {
-                    
+                    sw.Write(currentUserDataPoints[j] + ',');
                 }
             }
         }

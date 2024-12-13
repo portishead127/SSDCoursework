@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SSDCoursework
 {
@@ -14,9 +15,14 @@ namespace SSDCoursework
         [STAThread]
         static void Main()
         {
+            File.Create(Database.FilePath);
+            File.WriteAllText(Database.FilePath, ""); // Creates the file
+            Database.RetrieveCSV();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Registry());
+            
         }
     }
 }
