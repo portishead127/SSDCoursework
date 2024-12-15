@@ -1,13 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace SSDCoursework
@@ -24,9 +15,9 @@ namespace SSDCoursework
 
         void InitialiseSidebar()
         {
-            sidebar = new SidebarControl(this);
+            sidebar = new SidebarControl();
             sidebar.Dock = DockStyle.Fill;
-            this.Controls.Add(sidebar);
+            Controls.Add(sidebar);
 
             // Add dynamic content
             sidebar.AddControl("Sign Up", "C:\\Users\\aaron\\Documents\\School\\SSD\\Projects\\SSDCoursework\\SSDCoursework\\Resources\\Login symbol2.png", btnSignUp_Click);

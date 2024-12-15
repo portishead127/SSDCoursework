@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SSDCoursework
 {
@@ -10,8 +6,8 @@ namespace SSDCoursework
     {
         static int numOfPlayers;
 
-        public Player(string fName, string sName, DateTime dob, string username, string password, bool isAdmin) : base(fName, sName, dob, username, password, isAdmin) { }
-
+        public Player(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin) : base(fName, sName, dob, username, email, password, isAdmin) { }
+        
         public int NumOfPlayers
         {
             get { return numOfPlayers; }
@@ -20,6 +16,7 @@ namespace SSDCoursework
 
         public override void ChangePass(User userPassToChange)
         {
+            
             throw new NotImplementedException();
         }
 

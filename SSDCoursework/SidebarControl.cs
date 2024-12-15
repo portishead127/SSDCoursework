@@ -16,8 +16,7 @@ namespace SSDCoursework
         int sidebarSpeedMult = 1;//Adjusted when the user clicks an option from the sidebar (moves faster when a menu option is selected).
         int sidebarChange; //This is adjusted using the sidebarScaleExpansionFactor to find the exact length the sidebar needs to expand
 
-        Form holderForm; //Holds the form that this object is found in
-        Form activeChildForm; //Holds the current active form in the child form holder
+        Form activeChildForm; //Holds the current active form in the child form holder panel
 
         public bool IsSidebarExpanded
         {
@@ -39,16 +38,15 @@ namespace SSDCoursework
 
         public Form FormToOpen { get; set; } //This is a temporary variable that stores what form should be opened, it is mostly referenced outside the class
 
-        public SidebarControl(Form holderForm)
+        public SidebarControl()
         {
             InitializeComponent();
-            this.holderForm = holderForm;
             flpSidebar.MaximumSize = this.MaximumSize;
             sidebarChange = this.Width / sidebarScaleExpansionFactor;
         }
 
-        public void AddControl(string text, string imagePath, EventHandler clickEventHandler) 
-        { 
+        public void AddControl(string text, string imagePath, EventHandler clickEventHandler)
+        {
             Control control = SidebarButtonCreation(text, imagePath, clickEventHandler);
             flpSidebar.Controls.Add(control);
         }
@@ -150,8 +148,8 @@ namespace SSDCoursework
 
         private void SidebarControl_Resize(object sender, EventArgs e)
         {
-            Size = holderForm.Size;
-            pnlChildFormHolder.Width = holderForm.Width - sidebarCollapsedWidth - 16;
+            Size = TopLevelControl.Size;
+            pnlChildFormHolder.Width = TopLevelControl.Width - sidebarCollapsedWidth - 16;
             sidebarChange = Width / sidebarScaleExpansionFactor;
         }
     }

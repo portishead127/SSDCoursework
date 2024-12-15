@@ -42,10 +42,10 @@ namespace SSDCoursework
             this.lblFirstName = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.tlp = new System.Windows.Forms.TableLayoutPanel();
+            this.lblDOB = new System.Windows.Forms.Label();
             this.lstGender = new System.Windows.Forms.ListBox();
             this.txtAdmin = new System.Windows.Forms.Label();
             this.rdoAdmin = new System.Windows.Forms.RadioButton();
-            this.lblDOB = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tlp.SuspendLayout();
             this.SuspendLayout();
@@ -104,7 +104,7 @@ namespace SSDCoursework
             this.btnConfirm.TabIndex = 5;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.btnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
             // lblUsername
             // 
@@ -228,6 +228,19 @@ namespace SSDCoursework
             this.tlp.Size = new System.Drawing.Size(900, 392);
             this.tlp.TabIndex = 4;
             // 
+            // lblDOB
+            // 
+            this.lblDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDOB.AutoSize = true;
+            this.lblDOB.Font = new System.Drawing.Font("Corbel", 21.75F);
+            this.lblDOB.Location = new System.Drawing.Point(558, 99);
+            this.lblDOB.Name = "lblDOB";
+            this.lblDOB.Size = new System.Drawing.Size(102, 72);
+            this.lblDOB.TabIndex = 8;
+            this.lblDOB.Tag = "DOB";
+            this.lblDOB.Text = "Date of birth";
+            this.lblDOB.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // lstGender
             // 
             this.lstGender.Font = new System.Drawing.Font("Corbel", 18F);
@@ -268,20 +281,7 @@ namespace SSDCoursework
             this.rdoAdmin.Tag = "Admin";
             this.rdoAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdoAdmin.UseVisualStyleBackColor = true;
-            this.rdoAdmin.Click += new System.EventHandler(this.rdoAdmin_Click);
-            // 
-            // lblDOB
-            // 
-            this.lblDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDOB.AutoSize = true;
-            this.lblDOB.Font = new System.Drawing.Font("Corbel", 21.75F);
-            this.lblDOB.Location = new System.Drawing.Point(558, 99);
-            this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(102, 72);
-            this.lblDOB.TabIndex = 8;
-            this.lblDOB.Tag = "DOB";
-            this.lblDOB.Text = "Date of birth";
-            this.lblDOB.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.rdoAdmin.Click += new System.EventHandler(this.RdoAdmin_Click);
             // 
             // dateTimePicker1
             // 

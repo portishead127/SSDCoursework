@@ -43,7 +43,7 @@
             // 
             // flpSidebar
             // 
-            this.flpSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.flpSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
             this.flpSidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpSidebar.Controls.Add(this.pnlHamburgerHolder);
             this.flpSidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -96,11 +96,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlChildFormHolder.AutoSize = true;
-            this.pnlChildFormHolder.BackColor = System.Drawing.Color.Transparent;
+            this.pnlChildFormHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(251)))));
             this.pnlChildFormHolder.Location = new System.Drawing.Point(68, 0);
             this.pnlChildFormHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlChildFormHolder.Name = "pnlChildFormHolder";
-            this.pnlChildFormHolder.Size = new System.Drawing.Size(1764, 561);
+            this.pnlChildFormHolder.Size = new System.Drawing.Size(1764, 599);
             this.pnlChildFormHolder.TabIndex = 2;
             this.pnlChildFormHolder.Tag = "";
             // 

@@ -1,14 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace SSDCoursework
 {
@@ -19,7 +14,7 @@ namespace SSDCoursework
             InitializeComponent();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void BtnConfirm_Click(object sender, EventArgs e)
         {
             foreach (Control c in tlp.Controls.OfType<TextBox>())
             {
@@ -27,14 +22,14 @@ namespace SSDCoursework
 
                 List<Exception> exceptions = new List<Exception>();
 
-                
-                if(c.Tag.Equals("Username"))
+
+                if (c.Tag.Equals("Username"))
                 {
                     exceptions = Validation.Validate(c.Text, 8, 20);
                 }
                 else if (c.Tag.Equals("Pass"))
                 {
-                    exceptions = Validation.Validate(c.Text, 8, 20, true);
+                    exceptions = Validation.ValidatePass(c.Text, 8, 20);
                 }
                 else
                 {
@@ -61,7 +56,7 @@ namespace SSDCoursework
             }
         }
 
-        private void rdoAdmin_Click(object sender, EventArgs e)
+        private void RdoAdmin_Click(object sender, EventArgs e)
         {
             rdoAdmin.Checked = !rdoAdmin.Checked;
         }

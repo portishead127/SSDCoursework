@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SSDCoursework
 {
@@ -16,7 +13,6 @@ namespace SSDCoursework
             MASTER
         }
 
-        static int numOfUsers;
         static User currentUser;
 
         string fName;
@@ -25,6 +21,7 @@ namespace SSDCoursework
         int age;
         string username;
         string password;
+        string email;
         bool isAdmin;
         Enum difficultyLevel = difficultyLevels.EASY;
 
@@ -71,17 +68,23 @@ namespace SSDCoursework
             set { password = value; }
         }
 
+        public string Email
+        {
+            get { return email; }
+        }
+
         public bool IsAdmin
         {
             get { return isAdmin; }
         }
 
-        public User(string fName, string sName, DateTime dob, string username, string password, bool isAdmin)
+        public User(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin)
         {
             this.fName = fName;
             this.sName = sName;
             this.dob = dob;
             this.username = username;
+            this.email = email;
             this.password = password;
             this.isAdmin = isAdmin;
             age = CalculateAge();
@@ -95,7 +98,11 @@ namespace SSDCoursework
             return yearDiff;
         }
 
-        public void LoginUser() { }
+        public void LoginUser()
+        {
+            MessageBox.Show($"{fName}, you have successfully logged in as: {username}", "Logged in");
+            throw new NotImplementedException();
+        }
         public abstract void DeleteUser(User userToDelete);
         public abstract void ChangePass(User userPassToChange);
     }

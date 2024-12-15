@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SSDCoursework
@@ -21,7 +16,7 @@ namespace SSDCoursework
             InitializeComponent();
         }
 
-        private void btnConfirm_Click(object sender, EventArgs e)
+        private void BtnConfirm_Click(object sender, EventArgs e)
         {
             if (ValidateInput())
             {
@@ -29,7 +24,7 @@ namespace SSDCoursework
             }
         }
 
-        private void rdoAdmin_Click(object sender, EventArgs e)
+        private void RdoAdmin_Click(object sender, EventArgs e)
         {
             rdoAdmin.Checked = !rdoAdmin.Checked;
         }
@@ -48,7 +43,11 @@ namespace SSDCoursework
                 }
                 else if (c.Tag.Equals("Pass"))
                 {
-                    exceptions = Validation.Validate(c.Text, 8, 20, true);
+                    exceptions = Validation.ValidatePass(c.Text, 8, 20);
+                }
+                else if(c.Tag.Equals("Email"))
+                {
+                    exceptions = Validation.ValidateEmail(c.Text, 8, 50);
                 }
                 else
                 {
@@ -74,7 +73,7 @@ namespace SSDCoursework
                 }
             }
 
-            if (exceptions.Any())
+            if (exceptions.Count > 0)
             {
                 return false;
             }
@@ -85,13 +84,13 @@ namespace SSDCoursework
         {
             if (rdoAdmin.Checked)
             {
-                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtPassword.Text, true);
+                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, "e", txtPassword.Text, true);
             }
             else
             {
-                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtPassword.Text, false);
+                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, "e", txtPassword.Text, false);
             }
-            Database.AddUser(newUser);
+            UserDatabase.Instance.AddEntry(newUser);
             newUser.LoginUser();
         }
     }

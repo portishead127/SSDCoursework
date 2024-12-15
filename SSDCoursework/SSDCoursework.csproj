@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Admin.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="EmailDomainDatabase.cs" />
+    <Compile Include="UserDatabase.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
