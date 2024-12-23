@@ -24,3 +24,17 @@ C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\bin\Debug\SSDCoursework.
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\bin\Debug\SSDCoursework.pdb
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.exe
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.pdb
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\bin\Debug\SSDCoursework.exe.config
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\bin\Debug\SSDCoursework.exe
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\bin\Debug\SSDCoursework.pdb
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.csproj.AssemblyReference.cache
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.csproj.SuggestedBindingRedirects.cache
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.SidebarControl.resources
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Login.resources
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.SignUp.resources
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Registry.resources
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Properties.Resources.resources
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.csproj.GenerateResource.cache
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.csproj.CoreCompileInputs.cache
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.exe
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.pdb

@@ -33,8 +33,8 @@
             this.flpSidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlHamburgerHolder = new System.Windows.Forms.Panel();
             this.pbxHamburger = new System.Windows.Forms.PictureBox();
-            this.lblHamburgerText = new System.Windows.Forms.Label();
             this.pnlChildFormHolder = new System.Windows.Forms.Panel();
+            this.lblHamburgerText = new System.Windows.Forms.Label();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.flpSidebar.SuspendLayout();
             this.pnlHamburgerHolder.SuspendLayout();
@@ -46,13 +46,12 @@
             this.flpSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
             this.flpSidebar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpSidebar.Controls.Add(this.pnlHamburgerHolder);
-            this.flpSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpSidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpSidebar.Location = new System.Drawing.Point(0, 0);
             this.flpSidebar.Margin = new System.Windows.Forms.Padding(0);
             this.flpSidebar.MinimumSize = new System.Drawing.Size(68, 453);
             this.flpSidebar.Name = "flpSidebar";
-            this.flpSidebar.Size = new System.Drawing.Size(68, 599);
+            this.flpSidebar.Size = new System.Drawing.Size(68, 626);
             this.flpSidebar.TabIndex = 1;
             // 
             // pnlHamburgerHolder
@@ -63,7 +62,7 @@
             this.pnlHamburgerHolder.Location = new System.Drawing.Point(0, 0);
             this.pnlHamburgerHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHamburgerHolder.Name = "pnlHamburgerHolder";
-            this.pnlHamburgerHolder.Size = new System.Drawing.Size(67, 96);
+            this.pnlHamburgerHolder.Size = new System.Drawing.Size(67, 67);
             this.pnlHamburgerHolder.TabIndex = 0;
             // 
             // pbxHamburger
@@ -80,16 +79,6 @@
             this.pbxHamburger.TabStop = false;
             this.pbxHamburger.Click += new System.EventHandler(this.pbxHamburger_Click);
             // 
-            // lblHamburgerText
-            // 
-            this.lblHamburgerText.AutoSize = true;
-            this.lblHamburgerText.ForeColor = System.Drawing.Color.White;
-            this.lblHamburgerText.Location = new System.Drawing.Point(102, 37);
-            this.lblHamburgerText.Name = "lblHamburgerText";
-            this.lblHamburgerText.Size = new System.Drawing.Size(45, 13);
-            this.lblHamburgerText.TabIndex = 2;
-            this.lblHamburgerText.Text = "Registry";
-            // 
             // pnlChildFormHolder
             // 
             this.pnlChildFormHolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -100,9 +89,19 @@
             this.pnlChildFormHolder.Location = new System.Drawing.Point(68, 0);
             this.pnlChildFormHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlChildFormHolder.Name = "pnlChildFormHolder";
-            this.pnlChildFormHolder.Size = new System.Drawing.Size(1764, 599);
+            this.pnlChildFormHolder.Size = new System.Drawing.Size(844, 626);
             this.pnlChildFormHolder.TabIndex = 2;
             this.pnlChildFormHolder.Tag = "";
+            // 
+            // lblHamburgerText
+            // 
+            this.lblHamburgerText.AutoSize = true;
+            this.lblHamburgerText.ForeColor = System.Drawing.Color.White;
+            this.lblHamburgerText.Location = new System.Drawing.Point(102, 37);
+            this.lblHamburgerText.Name = "lblHamburgerText";
+            this.lblHamburgerText.Size = new System.Drawing.Size(45, 13);
+            this.lblHamburgerText.TabIndex = 2;
+            this.lblHamburgerText.Text = "Registry";
             // 
             // sidebarTimer
             // 
@@ -118,7 +117,7 @@
             this.Controls.Add(this.flpSidebar);
             this.Controls.Add(this.pnlChildFormHolder);
             this.Name = "SidebarControl";
-            this.Size = new System.Drawing.Size(912, 599);
+            this.Size = new System.Drawing.Size(912, 626);
             this.Resize += new System.EventHandler(this.SidebarControl_Resize);
             this.flpSidebar.ResumeLayout(false);
             this.pnlHamburgerHolder.ResumeLayout(false);

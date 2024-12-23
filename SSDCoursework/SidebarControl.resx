@@ -122,17 +122,18 @@
     <value>
         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
-        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
+        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
+        6T/n21NfVlruAAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="sidebarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
