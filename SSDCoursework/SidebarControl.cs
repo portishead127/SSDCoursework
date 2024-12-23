@@ -41,18 +41,30 @@ namespace SSDCoursework
         public SidebarControl()
         {
             InitializeComponent();
-            flpSidebar.MaximumSize = this.MaximumSize;
-            sidebarChange = this.Width / sidebarScaleExpansionFactor;
+            Console.Write(pbxHamburger.Image.Size.ToString());
+            lblPageIndicator.Text = "Registry";
+            flpSidebar.MaximumSize = MaximumSize;
+            pnlChildFormHolder.Width = Width + 20;
+            pnlChildFormHolder.Height = Height - flpBannerbar.Size.Height;
+            sidebarChange = Width / sidebarScaleExpansionFactor;
         }
 
-        public void AddControl(string text, string imagePath, EventHandler clickEventHandler)
+        public void AddControl(string text, Bitmap image, EventHandler clickEventHandler)
         {
-            Control control = SidebarButtonCreation(text, imagePath, clickEventHandler);
+            Control control = SidebarButtonCreation(text, image, clickEventHandler);
             flpSidebar.Controls.Add(control);
         }
 
-        Control SidebarButtonCreation(string text, string imagePath, EventHandler clickEventHandler)
+        Control SidebarButtonCreation(string text, Bitmap image, EventHandler clickEventHandler)
         {
+            PictureBox newPictureBox = new PictureBox()
+            {
+                Image = image,
+                Padding = Padding.Empty,
+                Enabled = false,
+                SizeMode = PictureBoxSizeMode.Zoom
+            };
+
             Button newButton = new Button()
             {
                 AutoSize = true,
@@ -63,10 +75,9 @@ namespace SSDCoursework
                 FlatStyle = FlatStyle.Flat,
                 Padding = new Padding(0, 0, 40, 0),
                 Dock = DockStyle.Left,
-                FlatAppearance = { BorderSize = 0 }, // Remove the border
-                BackColor = flpSidebar.BackColor, // Background color of the button
-                ForeColor = Color.White // Text color
+                FlatAppearance = { BorderSize = 0 } // Remove the border
             };
+            newButton.Controls.Add(newPictureBox);
             newButton.Click += clickEventHandler;
 
             Panel newPanel = new Panel
@@ -138,19 +149,13 @@ namespace SSDCoursework
                 pnlChildFormHolder.Controls.Clear();
             }
             activeChildForm = newChildForm;
+            lblPageIndicator.Text = newChildForm.Text;
             activeChildForm.TopLevel = false;
             activeChildForm.FormBorderStyle = FormBorderStyle.None;
             activeChildForm.Dock = DockStyle.Fill;
             activeChildForm.BringToFront();
             pnlChildFormHolder.Controls.Add(newChildForm);
             activeChildForm.Show();
-        }
-
-        private void SidebarControl_Resize(object sender, EventArgs e)
-        {
-            Size = TopLevelControl.Size;
-            pnlChildFormHolder.Width = TopLevelControl.Width - sidebarCollapsedWidth - 16;
-            sidebarChange = Width / sidebarScaleExpansionFactor;
         }
     }
 }

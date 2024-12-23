@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SSDCoursework
@@ -19,9 +21,8 @@ namespace SSDCoursework
             sidebar.Dock = DockStyle.Fill;
             Controls.Add(sidebar);
 
-            // Add dynamic content
-            sidebar.AddControl("Sign Up", "C:\\Users\\aaron\\Documents\\School\\SSD\\Projects\\SSDCoursework\\SSDCoursework\\Resources\\Login symbol2.png", btnSignUp_Click);
-            sidebar.AddControl("Login", "C:\\Users\\aaron\\Documents\\School\\SSD\\Projects\\SSDCoursework\\SSDCoursework\\Resources\\Login symbol2.png", btnLogin_Click);
+            sidebar.AddControl("Sign up", Properties.Resources.LoginSymbol, btnSignUp_Click);
+            sidebar.AddControl("Login", Properties.Resources.LoginSymbol, btnLogin_Click);
         }
 
         void btnSignUp_Click(object sender, EventArgs e)

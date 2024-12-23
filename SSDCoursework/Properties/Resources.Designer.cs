@@ -63,16 +63,6 @@ namespace SSDCoursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap GrayGrad {
-            get {
-                object obj = ResourceManager.GetObject("GrayGrad", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Hamburger {
             get {
                 object obj = ResourceManager.GetObject("Hamburger", resourceCulture);
@@ -83,59 +73,9 @@ namespace SSDCoursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hamburger_icon_svg {
+        internal static System.Drawing.Bitmap LoginSymbol {
             get {
-                object obj = ResourceManager.GetObject("Hamburger_icon.svg", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Hamburger_icon1 {
-            get {
-                object obj = ResourceManager.GetObject("Hamburger_icon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Login_symbol1 {
-            get {
-                object obj = ResourceManager.GetObject("Login symbol1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Login_symbol2 {
-            get {
-                object obj = ResourceManager.GetObject("Login symbol2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Login_symbol2_1_ {
-            get {
-                object obj = ResourceManager.GetObject("Login symbol2(1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Login_symbol21 {
-            get {
-                object obj = ResourceManager.GetObject("Login symbol21", resourceCulture);
+                object obj = ResourceManager.GetObject("LoginSymbol", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
