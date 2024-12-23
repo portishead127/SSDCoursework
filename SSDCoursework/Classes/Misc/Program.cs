@@ -14,7 +14,7 @@ namespace SSDCoursework
             // Your application code
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registry());
+            Application.Run(new RegistryHolder());
         }
 
         static void InitilizeDatabases()

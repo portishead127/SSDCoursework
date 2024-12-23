@@ -88,8 +88,6 @@ namespace SSDCoursework
             this.password = password;
             this.isAdmin = isAdmin;
             age = CalculateAge();
-
-            currentUser = this;
         }
 
         int CalculateAge()
@@ -100,6 +98,7 @@ namespace SSDCoursework
 
         public void LoginUser()
         {
+            currentUser = this;
             MessageBox.Show($"{fName}, you have successfully logged in as: {username}", "Logged in");
             throw new NotImplementedException();
         }

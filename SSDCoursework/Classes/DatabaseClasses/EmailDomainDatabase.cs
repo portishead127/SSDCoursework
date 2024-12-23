@@ -32,7 +32,7 @@ namespace SSDCoursework
             string[] domains;
             if (rawDomains == "")
             {
-                domains = new string[] { "@gmail.com", "@c2ken.net", "@outlook.com", "@yahoo.com", "@hotmail.com" };
+                domains = new string[] { "@gmail.com", "@c2ken.net", "@outlook.com", "@yahoo.com"};
             }
             else
             {

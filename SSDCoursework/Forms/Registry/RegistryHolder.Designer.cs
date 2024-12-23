@@ -1,6 +1,6 @@
 ﻿namespace SSDCoursework
 {
-    partial class Registry
+    partial class RegistryHolder
     {
         /// <summary>
         /// Required designer variable.
@@ -30,19 +30,20 @@
         {
             this.SuspendLayout();
             // 
-            // Registry
+            // RegistryHolder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1000, 600);
-            this.Name = "Registry";
+            this.Name = "RegistryHolder";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registry";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }

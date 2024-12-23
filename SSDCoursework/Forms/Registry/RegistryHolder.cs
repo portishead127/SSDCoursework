@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace SSDCoursework
 {
-    public partial class Registry : Form
+    public partial class RegistryHolder : Form
     {
         SidebarControl sidebar;
 
-        public Registry()
+        public RegistryHolder()
         {
             InitializeComponent();
             InitialiseSidebar();

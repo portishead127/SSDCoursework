@@ -38,6 +38,7 @@ internal abstract class Database<T>
         Entries.Add(entry);
         Write();
     }
+
     public void DeleteEntry(T entry)
     {
         Entries.Remove(entry);
