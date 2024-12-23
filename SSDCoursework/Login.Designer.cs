@@ -30,7 +30,6 @@ namespace SSDCoursework
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitle = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
@@ -46,23 +45,9 @@ namespace SSDCoursework
             this.lstGender = new System.Windows.Forms.ListBox();
             this.txtAdmin = new System.Windows.Forms.Label();
             this.rdoAdmin = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.tlp.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(60)))), ((int)(((byte)(80)))));
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitle.Font = new System.Drawing.Font("Corbel", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(900, 130);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Login";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblPassword
             // 
@@ -71,9 +56,9 @@ namespace SSDCoursework
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Corbel", 21.75F);
-            this.lblPassword.Location = new System.Drawing.Point(3, 293);
+            this.lblPassword.Location = new System.Drawing.Point(3, 389);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(169, 99);
+            this.lblPassword.Size = new System.Drawing.Size(169, 133);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Tag = "Pass";
             this.lblPassword.Text = "Password";
@@ -97,7 +82,7 @@ namespace SSDCoursework
             this.btnConfirm.AutoSize = true;
             this.btnConfirm.BackColor = System.Drawing.Color.PaleGreen;
             this.btnConfirm.Font = new System.Drawing.Font("Corbel", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(735, 306);
+            this.btnConfirm.Location = new System.Drawing.Point(735, 436);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 20, 20);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(145, 66);
@@ -113,9 +98,9 @@ namespace SSDCoursework
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Corbel", 21.75F);
-            this.lblUsername.Location = new System.Drawing.Point(3, 195);
+            this.lblUsername.Location = new System.Drawing.Point(3, 259);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(169, 98);
+            this.lblUsername.Size = new System.Drawing.Size(169, 130);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Tag = "Username";
             this.lblUsername.Text = "Username";
@@ -137,9 +122,9 @@ namespace SSDCoursework
             this.lblSurname.AutoSize = true;
             this.lblSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSurname.Font = new System.Drawing.Font("Corbel", 21.75F);
-            this.lblSurname.Location = new System.Drawing.Point(3, 99);
+            this.lblSurname.Location = new System.Drawing.Point(3, 131);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(169, 96);
+            this.lblSurname.Size = new System.Drawing.Size(169, 128);
             this.lblSurname.TabIndex = 1;
             this.lblSurname.Tag = "Surname";
             this.lblSurname.Text = "Surname";
@@ -148,7 +133,7 @@ namespace SSDCoursework
             // 
             this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUsername.Font = new System.Drawing.Font("Corbel", 18F);
-            this.txtUsername.Location = new System.Drawing.Point(178, 201);
+            this.txtUsername.Location = new System.Drawing.Point(178, 265);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(332, 37);
@@ -159,7 +144,7 @@ namespace SSDCoursework
             // 
             this.txtSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSurname.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurname.Location = new System.Drawing.Point(178, 105);
+            this.txtSurname.Location = new System.Drawing.Point(178, 137);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(332, 37);
@@ -175,7 +160,7 @@ namespace SSDCoursework
             this.lblFirstName.Font = new System.Drawing.Font("Corbel", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.Location = new System.Drawing.Point(3, 0);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(169, 99);
+            this.lblFirstName.Size = new System.Drawing.Size(169, 131);
             this.lblFirstName.TabIndex = 1;
             this.lblFirstName.Tag = "FirstName";
             this.lblFirstName.Text = "First name";
@@ -184,7 +169,7 @@ namespace SSDCoursework
             // 
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPassword.Font = new System.Drawing.Font("Corbel", 18F);
-            this.txtPassword.Location = new System.Drawing.Point(178, 299);
+            this.txtPassword.Location = new System.Drawing.Point(178, 395);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -214,10 +199,10 @@ namespace SSDCoursework
             this.tlp.Controls.Add(this.lblGender, 2, 0);
             this.tlp.Controls.Add(this.txtAdmin, 2, 2);
             this.tlp.Controls.Add(this.rdoAdmin, 3, 2);
-            this.tlp.Controls.Add(this.dateTimePicker1, 3, 1);
+            this.tlp.Controls.Add(this.dtpDOB, 3, 1);
             this.tlp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp.Font = new System.Drawing.Font("Arial Narrow", 21.75F);
-            this.tlp.Location = new System.Drawing.Point(0, 130);
+            this.tlp.Location = new System.Drawing.Point(0, 0);
             this.tlp.Name = "tlp";
             this.tlp.RowCount = 4;
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.26316F));
@@ -225,7 +210,7 @@ namespace SSDCoursework
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.08772F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.08772F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp.Size = new System.Drawing.Size(900, 392);
+            this.tlp.Size = new System.Drawing.Size(900, 522);
             this.tlp.TabIndex = 4;
             // 
             // lblDOB
@@ -233,7 +218,7 @@ namespace SSDCoursework
             this.lblDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDOB.AutoSize = true;
             this.lblDOB.Font = new System.Drawing.Font("Corbel", 21.75F);
-            this.lblDOB.Location = new System.Drawing.Point(558, 99);
+            this.lblDOB.Location = new System.Drawing.Point(558, 131);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(102, 72);
             this.lblDOB.TabIndex = 8;
@@ -261,7 +246,7 @@ namespace SSDCoursework
             this.txtAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAdmin.AutoSize = true;
             this.txtAdmin.Font = new System.Drawing.Font("Corbel", 21.75F);
-            this.txtAdmin.Location = new System.Drawing.Point(565, 195);
+            this.txtAdmin.Location = new System.Drawing.Point(565, 259);
             this.txtAdmin.Name = "txtAdmin";
             this.txtAdmin.Size = new System.Drawing.Size(95, 36);
             this.txtAdmin.TabIndex = 7;
@@ -273,7 +258,7 @@ namespace SSDCoursework
             // 
             this.rdoAdmin.AutoCheck = false;
             this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(666, 198);
+            this.rdoAdmin.Location = new System.Drawing.Point(666, 262);
             this.rdoAdmin.Name = "rdoAdmin";
             this.rdoAdmin.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
             this.rdoAdmin.Size = new System.Drawing.Size(114, 54);
@@ -283,16 +268,16 @@ namespace SSDCoursework
             this.rdoAdmin.UseVisualStyleBackColor = true;
             this.rdoAdmin.Click += new System.EventHandler(this.RdoAdmin_Click);
             // 
-            // dateTimePicker1
+            // dtpDOB
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Corbel", 18F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(666, 102);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2024, 12, 9, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(231, 41);
-            this.dateTimePicker1.TabIndex = 13;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 12, 9, 0, 0, 0, 0);
+            this.dtpDOB.CalendarFont = new System.Drawing.Font("Corbel", 18F);
+            this.dtpDOB.Location = new System.Drawing.Point(666, 134);
+            this.dtpDOB.MaxDate = new System.DateTime(2024, 12, 9, 0, 0, 0, 0);
+            this.dtpDOB.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(231, 41);
+            this.dtpDOB.TabIndex = 13;
+            this.dtpDOB.Value = new System.DateTime(2024, 12, 9, 0, 0, 0, 0);
             // 
             // Login
             // 
@@ -301,12 +286,11 @@ namespace SSDCoursework
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(900, 522);
             this.Controls.Add(this.tlp);
-            this.Controls.Add(this.lblTitle);
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(916, 561);
             this.Name = "Login";
             this.Tag = "childForm";
-            this.Text = "SignUp";
+            this.Text = "Login";
             this.tlp.ResumeLayout(false);
             this.tlp.PerformLayout();
             this.ResumeLayout(false);
@@ -314,8 +298,6 @@ namespace SSDCoursework
         }
 
         #endregion
-
-        private Label lblTitle;
         private Label lblPassword;
         private Label lblGender;
         private Button btnConfirm;
@@ -331,6 +313,6 @@ namespace SSDCoursework
         private Label txtAdmin;
         private RadioButton rdoAdmin;
         private Label lblDOB;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpDOB;
     }
 }

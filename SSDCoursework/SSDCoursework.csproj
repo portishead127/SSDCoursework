@@ -49,13 +49,13 @@
     <Compile Include="Admin.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="EmailDomainDatabase.cs" />
-    <Compile Include="UserDatabase.cs" />
-    <Compile Include="Player.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserDatabase.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="SidebarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +84,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Validation.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SidebarControl.resx">
       <DependentUpon>SidebarControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,11 +100,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registry.resx">
       <DependentUpon>Registry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,28 +115,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login symbol1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login symbol2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login symbol2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login symbol2%281%29.jpg" />
+    <None Include="Resources\LoginSymbol.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Hamburger.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hamburger_icon.svg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hamburger_icon.svg1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GrayGrad.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

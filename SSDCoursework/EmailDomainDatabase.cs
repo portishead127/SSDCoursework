@@ -9,17 +9,11 @@ namespace SSDCoursework
 {
     internal class EmailDomainDatabase : Database<string>
     {
-        public EmailDomainDatabase(string emailDomainFilePath): base(emailDomainFilePath)
-        {
-            Retrieve();
-        }
+        public EmailDomainDatabase(string emailDomainFilePath): base(emailDomainFilePath) { Retrieve();}
 
         public static new  EmailDomainDatabase Instance
         {
-            get
-            {
-                return (EmailDomainDatabase)Database<string>.Instance;
-            }
+            get { return (EmailDomainDatabase)Database<string>.Instance;}
         } 
 
         // Initialize the Singleton instance with the correct file path
