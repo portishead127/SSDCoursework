@@ -16,15 +16,18 @@ namespace SSDCoursework
             get { return (EmailDomainDatabase)Database<string>.Instance;}
         } 
 
-        // Initialize the Singleton instance with the correct file path
+        /// <summary>
+        /// Initialize the Singleton instance with the correct file path.
+        /// </summary>
+        /// <param name="emailDomainFilePath"></param>
         public static void Init(string emailDomainFilePath)
         {
-            if (Database<string>.Instance == null)
-            {
-                Init(new EmailDomainDatabase(emailDomainFilePath));
-            }
+            Init(new EmailDomainDatabase(emailDomainFilePath)); //Calls the base class's Init(Database<T>) function.
         }
 
+        /// <summary>
+        /// Replaces the entries list with the contents of the CSV and rewrites it to the CSV to sync it. If the CSV is empty, defaults to a few preset email domains.
+        /// </summary>
         protected override void Retrieve()
         {
             Entries.Clear();
@@ -32,15 +35,19 @@ namespace SSDCoursework
             string[] domains;
             if (rawDomains == "")
             {
-                domains = new string[] { "@gmail.com", "@c2ken.net", "@outlook.com", "@yahoo.com"};
+                domains = new string[] { "@gmail.com", "@c2ken.net", "@outlook.com", "@yahoo.com" };
             }
             else
             {
                 domains = rawDomains.Split(',');
             }
             Entries.AddRange(domains);
+            Write();
         }
 
+        /// <summary>
+        /// Overwrites the contents of the CSV with the contents of the entries list.
+        /// </summary>
         protected override void Write()
         {
             using (StreamWriter sw = new StreamWriter(FilePath, false)) // Overwrite the file

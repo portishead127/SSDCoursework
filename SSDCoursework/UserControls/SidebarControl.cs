@@ -10,7 +10,7 @@ namespace SSDCoursework
         const int sidebarCollapsedWidth = 120; //Collapsed size
         const int sidebarScaleExpansionFactor = 80; //This controls the rate of increase of the panel. The smaller it is, the quicker the panel grows/shrinks.
 
-        readonly int buttonHeight = 90;
+        const int buttonHeight = 90;
 
         bool isSidebarExpanded = false; //Flag that tracks the current state of the sidebar
         bool expandingForMenuItem = false; //Flag that tracks if an option has been selected
