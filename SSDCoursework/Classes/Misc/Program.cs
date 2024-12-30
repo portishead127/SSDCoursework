@@ -21,13 +21,11 @@ namespace SSDCoursework
 
         static void InitilizeDatabases()
         {
-            Directory.CreateDirectory(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Databases"));
-            
-            EmailDomainDatabase.Init(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Databases", "EmailDomains.csv"));
-            UserDatabase.Init(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Databases", "Users.csv"));
+            string DatabasesPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Databases");
+            Directory.CreateDirectory(DatabasesPath);
 
-            //Passes the an instance of each database with the path from each individual Init() method to the base Init() method so that it can initialise the instance property with that object
-            //This only happens if there is not already a value for instance
+            new EmailDomainDatabase(Path.Combine(DatabasesPath, "EmailDomains.csv"));
+            new UserDatabase(Path.Combine(DatabasesPath, "Users.csv"));
         }
     }
 }

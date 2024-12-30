@@ -90,7 +90,7 @@ namespace SSDCoursework
             {
                 newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false);
             }
-            UserDatabase.Instance.AddEntry(newUser);
+            UserDatabase.Instance.Entries.Add(newUser);
             newUser.LoginUser();
         }
     }

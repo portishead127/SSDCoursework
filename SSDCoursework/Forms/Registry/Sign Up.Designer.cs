@@ -43,11 +43,11 @@ namespace SSDCoursework
             this.tlp = new System.Windows.Forms.TableLayoutPanel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lstGender = new System.Windows.Forms.ListBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.rdoAdmin = new System.Windows.Forms.RadioButton();
             this.datDOB = new System.Windows.Forms.DateTimePicker();
             this.txtAdmin = new System.Windows.Forms.Label();
+            this.lstGender = new System.Windows.Forms.ListBox();
             this.tlp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -247,22 +247,6 @@ namespace SSDCoursework
             this.lblEmail.Tag = "Email";
             this.lblEmail.Text = "Email";
             // 
-            // lstGender
-            // 
-            this.lstGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstGender.ForeColor = System.Drawing.Color.Black;
-            this.lstGender.FormattingEnabled = true;
-            this.lstGender.ItemHeight = 42;
-            this.lstGender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Prefer not to say"});
-            this.lstGender.Location = new System.Drawing.Point(671, 3);
-            this.lstGender.Name = "lstGender";
-            this.lstGender.Size = new System.Drawing.Size(211, 46);
-            this.lstGender.TabIndex = 11;
-            this.lstGender.Tag = "Gender";
-            // 
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
@@ -317,6 +301,22 @@ namespace SSDCoursework
             this.txtAdmin.Tag = "Admin";
             this.txtAdmin.Text = "Admin";
             this.txtAdmin.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lstGender
+            // 
+            this.lstGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstGender.ForeColor = System.Drawing.Color.Black;
+            this.lstGender.FormattingEnabled = true;
+            this.lstGender.ItemHeight = 42;
+            this.lstGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Prefer not to say"});
+            this.lstGender.Location = new System.Drawing.Point(671, 3);
+            this.lstGender.Name = "lstGender";
+            this.lstGender.Size = new System.Drawing.Size(211, 46);
+            this.lstGender.TabIndex = 11;
+            this.lstGender.Tag = "Gender";
             // 
             // SignUp
             // 

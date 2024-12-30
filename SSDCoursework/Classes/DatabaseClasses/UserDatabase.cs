@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Runtime.CompilerServices;
 
@@ -7,31 +8,19 @@ namespace SSDCoursework
 {
     internal class UserDatabase : Database<User>
     {
+        private static UserDatabase instance;
 
-        // Private constructor to prevent instantiation outside of the class
-        private UserDatabase(string userFilePath) : base(userFilePath)
+        public UserDatabase(string filePath) : base(filePath)
         {
+            if (instance != null)
+            {
+                throw new Exception("Instance of this class has already been created.");
+            }
+            instance = this;
             Retrieve();
         }
 
-        // Static property to access the singleton instance of UserDatabase
-        public static new UserDatabase Instance
-        {
-            get
-            {
-                return (UserDatabase)Database<User>.Instance;
-            }
-        }
-
-        // Initialize the Singleton instance with the correct file path
-        public static void Init(string userFilePath)
-        {
-            if (Database<User>.Instance == null)
-            {
-                // Create a new instance of UserDatabase and initialize the singleton
-                Init(new UserDatabase(userFilePath));
-            }
-        }
+        public static UserDatabase Instance => instance;
 
         protected override void Retrieve()
         {
