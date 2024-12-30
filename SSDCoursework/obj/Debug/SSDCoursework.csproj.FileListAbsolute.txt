@@ -38,3 +38,4 @@ C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.exe
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.pdb
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.RegistryHolder.resources
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.SplashScreen.resources

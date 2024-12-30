@@ -58,7 +58,7 @@ namespace SSDCoursework
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.Color.Black;
+            this.lblPassword.ForeColor = System.Drawing.Color.White;
             this.lblPassword.Location = new System.Drawing.Point(3, 433);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(194, 89);
@@ -71,13 +71,13 @@ namespace SSDCoursework
             this.lblGender.AutoSize = true;
             this.lblGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.ForeColor = System.Drawing.Color.Black;
+            this.lblGender.ForeColor = System.Drawing.Color.White;
             this.lblGender.Location = new System.Drawing.Point(521, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(144, 109);
             this.lblGender.TabIndex = 6;
             this.lblGender.Tag = "Gender";
-            this.lblGender.Text = " Gender";
+            this.lblGender.Text = "Gender";
             this.lblGender.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnConfirm
@@ -99,7 +99,7 @@ namespace SSDCoursework
             this.lblUsername.AutoSize = true;
             this.lblUsername.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.Black;
+            this.lblUsername.ForeColor = System.Drawing.Color.White;
             this.lblUsername.Location = new System.Drawing.Point(3, 215);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(194, 109);
@@ -125,7 +125,7 @@ namespace SSDCoursework
             this.lblSurname.AutoSize = true;
             this.lblSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurname.ForeColor = System.Drawing.Color.Black;
+            this.lblSurname.ForeColor = System.Drawing.Color.White;
             this.lblSurname.Location = new System.Drawing.Point(3, 109);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(194, 106);
@@ -162,7 +162,7 @@ namespace SSDCoursework
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.ForeColor = System.Drawing.Color.Black;
+            this.lblFirstName.ForeColor = System.Drawing.Color.White;
             this.lblFirstName.Location = new System.Drawing.Point(3, 0);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(194, 109);
@@ -186,7 +186,7 @@ namespace SSDCoursework
             // tlp
             // 
             this.tlp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tlp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(235)))), ((int)(((byte)(216)))));
+            this.tlp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(5)))), ((int)(((byte)(11)))));
             this.tlp.ColumnCount = 4;
             this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -200,7 +200,6 @@ namespace SSDCoursework
             this.tlp.Controls.Add(this.lblSurname, 0, 1);
             this.tlp.Controls.Add(this.txtFirstName, 1, 0);
             this.tlp.Controls.Add(this.lblUsername, 0, 2);
-            this.tlp.Controls.Add(this.lstGender, 3, 0);
             this.tlp.Controls.Add(this.txtPassword, 1, 4);
             this.tlp.Controls.Add(this.lblGender, 2, 0);
             this.tlp.Controls.Add(this.lblDOB, 2, 1);
@@ -209,6 +208,7 @@ namespace SSDCoursework
             this.tlp.Controls.Add(this.lblPassword, 0, 4);
             this.tlp.Controls.Add(this.txtAdmin, 2, 2);
             this.tlp.Controls.Add(this.btnConfirm, 3, 4);
+            this.tlp.Controls.Add(this.lstGender, 3, 0);
             this.tlp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlp.Font = new System.Drawing.Font("Arial Narrow", 21.75F);
             this.tlp.Location = new System.Drawing.Point(0, 0);
@@ -239,7 +239,7 @@ namespace SSDCoursework
             this.lblEmail.AutoSize = true;
             this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.Black;
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
             this.lblEmail.Location = new System.Drawing.Point(3, 324);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(194, 109);
@@ -259,7 +259,7 @@ namespace SSDCoursework
             "Prefer not to say"});
             this.lstGender.Location = new System.Drawing.Point(671, 3);
             this.lstGender.Name = "lstGender";
-            this.lstGender.Size = new System.Drawing.Size(211, 4);
+            this.lstGender.Size = new System.Drawing.Size(211, 46);
             this.lstGender.TabIndex = 11;
             this.lstGender.Tag = "Gender";
             // 
@@ -268,7 +268,7 @@ namespace SSDCoursework
             this.lblDOB.AutoSize = true;
             this.lblDOB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDOB.ForeColor = System.Drawing.Color.Black;
+            this.lblDOB.ForeColor = System.Drawing.Color.White;
             this.lblDOB.Location = new System.Drawing.Point(521, 109);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(144, 106);
@@ -309,7 +309,7 @@ namespace SSDCoursework
             this.txtAdmin.AutoSize = true;
             this.txtAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdmin.ForeColor = System.Drawing.Color.Black;
+            this.txtAdmin.ForeColor = System.Drawing.Color.White;
             this.txtAdmin.Location = new System.Drawing.Point(521, 215);
             this.txtAdmin.Name = "txtAdmin";
             this.txtAdmin.Size = new System.Drawing.Size(144, 109);
@@ -322,7 +322,7 @@ namespace SSDCoursework
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(217)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(5)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(900, 522);
             this.Controls.Add(this.tlp);
             this.DoubleBuffered = true;

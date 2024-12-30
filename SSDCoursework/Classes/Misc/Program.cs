@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SSDCoursework.Forms;
+using System;
 using System.IO;
 using System.Windows.Forms;
 
@@ -12,9 +13,10 @@ namespace SSDCoursework
             InitilizeDatabases();
 
             // Your application code
-            Application.EnableVisualStyles();
+            //Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegistryHolder());
+
+            Application.Run(new SplashScreen());
         }
 
         static void InitilizeDatabases()

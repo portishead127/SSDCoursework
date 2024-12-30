@@ -20,12 +20,6 @@ namespace SSDCoursework
 
         Form activeChildForm; //Holds the current active form in the child form holder panel
 
-        public bool IsSidebarExpanded
-        {
-            get { return isSidebarExpanded; }
-            set { isSidebarExpanded = value; }
-        }
-
         public bool IsExpandingForMenuItem
         {
             get { return expandingForMenuItem; }
@@ -70,19 +64,22 @@ namespace SSDCoursework
                 Height = buttonHeight,
                 BackColor = Color.Transparent
             };
-
+            
+            
             Button newButton = new Button()
             {
                 AutoSize = true,
                 Width = sidebarExpandedWidth,
                 Height = buttonHeight,
                 Text = text,
+                ForeColor = Color.White,
                 TextAlign = ContentAlignment.MiddleRight,
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.FromArgb(13, 19, 33),
-                Padding = new Padding(0, 0, 0, 0),
+                Padding = new Padding(0, 0, 20, 0),
                 Dock = DockStyle.Left,
-                FlatAppearance = { BorderSize = 0, MouseOverBackColor = Color.FromArgb(13, 19, 33) }
+                Cursor = Cursors.Hand,
+                FlatAppearance = { BorderSize = 0, MouseOverBackColor = Color.Transparent, MouseDownBackColor = Color.Transparent}
             };
 
             newButton.Controls.Add(newPictureBox);

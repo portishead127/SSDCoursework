@@ -118,7 +118,7 @@
             // pnlChildFormHolder
             // 
             this.pnlChildFormHolder.AutoSize = true;
-            this.pnlChildFormHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(251)))));
+            this.pnlChildFormHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(5)))), ((int)(((byte)(11)))));
             this.pnlChildFormHolder.Location = new System.Drawing.Point(120, 96);
             this.pnlChildFormHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlChildFormHolder.Name = "pnlChildFormHolder";
