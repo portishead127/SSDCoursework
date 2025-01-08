@@ -14,15 +14,28 @@ namespace SSDCoursework
             set { numOfPlayers = value; }
         }
 
-        public override void ChangePass(User userPassToChange)
+        public override void ChangePass(User userPassToChange, string newPass)
         {
-            
-            throw new NotImplementedException();
+            if (userPassToChange == this)
+            {
+                Password = newPass;
+            }
+            else
+            {
+                throw new InvalidOperationException("Players cannot change the password of other users.");
+            }
         }
 
         public override void DeleteUser(User userToDelete)
         {
-            throw new NotImplementedException();
+            if(userToDelete == this)
+            {
+                UserDatabase.Instance.Entries.Remove(this);
+            }
+            else
+            {
+                throw new InvalidOperationException("Players cannot delete other users.");
+            }
         }
     }
 }

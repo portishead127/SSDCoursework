@@ -10,15 +10,15 @@ namespace SSDCoursework
         const int sidebarCollapsedWidth = 120; //Collapsed size
         const int sidebarScaleExpansionFactor = 80; //This controls the rate of increase of the panel. The smaller it is, the quicker the panel grows/shrinks.
 
-        const int buttonHeight = 90;
+        const int buttonHeight = 100;
 
-        bool isSidebarExpanded = false; //Flag that tracks the current state of the sidebar
-        bool expandingForMenuItem = false; //Flag that tracks if an option has been selected
+        bool isSidebarExpanded = false; //Flag that tracks the current state of the sidebar.
+        bool expandingForMenuItem = false; //Flag that tracks if an option has been selected.
 
         int sidebarSpeedMult = 1;//Adjusted when the user clicks an option from the sidebar (moves faster when a menu option is selected).
-        int sidebarChange; //This is adjusted using the sidebarScaleExpansionFactor to find the exact length the sidebar needs to expand
+        int sidebarChange; //This is adjusted using the sidebarScaleExpansionFactor to find the exact length the sidebar needs to expand.
 
-        Form activeChildForm; //Holds the current active form in the child form holder panel
+        Form activeChildForm; //Holds the current active form in the child form holder panel.
 
         public bool IsExpandingForMenuItem
         {
@@ -32,7 +32,7 @@ namespace SSDCoursework
             set { sidebarSpeedMult = value; }
         }
 
-        public Form FormToOpen { get; set; } //This is a temporary variable that stores what form should be opened, it is mostly referenced outside the class
+        public Form FormToOpen { get; set; } //This is a temporary variable that stores what form should be opened, it is mostly referenced outside the class.
 
 
         public SidebarControl()
@@ -64,7 +64,6 @@ namespace SSDCoursework
                 Height = buttonHeight,
                 BackColor = Color.Transparent
             };
-            
             
             Button newButton = new Button()
             {

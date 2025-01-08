@@ -14,14 +14,14 @@ namespace SSDCoursework
             set { numOfAdmins = value; }
         }
 
-        public override void ChangePass(User userPassToChange)
+        public override void ChangePass(User userPassToChange, string newPass)
         {
-            throw new NotImplementedException();
+            userPassToChange.Password = newPass;
         }
 
         public override void DeleteUser(User userToDelete)
         {
-            throw new NotImplementedException();
+            UserDatabase.Instance.Entries.Remove(userToDelete);
         }
     }
 }

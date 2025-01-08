@@ -21,7 +21,7 @@ namespace SSDCoursework
             sidebar.Dock = DockStyle.Fill;
             Controls.Add(sidebar);
 
-            sidebar.AddControl("Sign up", Properties.Resources.LoginSymbol, btnSignUp_Click);
+            sidebar.AddControl("Sign up", Properties.Resources.SignUpSymbol, btnSignUp_Click);
             sidebar.AddControl("Login", Properties.Resources.LoginSymbol, btnLogin_Click);
         }
 
