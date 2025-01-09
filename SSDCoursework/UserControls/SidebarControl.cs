@@ -42,8 +42,8 @@ namespace SSDCoursework
             Size = Screen.PrimaryScreen.Bounds.Size;
             lblPageIndicator.Text = "Registry";
             flpSidebar.MaximumSize = MaximumSize;
-            pnlChildFormHolder.Width = Width - flpSidebar.Width;
-            pnlChildFormHolder.Height = Height - flpBannerbar.Size.Height;
+            pnlFormHolder.Width = Width - flpSidebar.Width;
+            pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
             sidebarChange = Width / sidebarScaleExpansionFactor;
         }
 
@@ -85,15 +85,15 @@ namespace SSDCoursework
             newButton.Controls.Add(newPictureBox);
             newButton.Click += clickEventHandler;
 
-            Panel newPanel = new Panel
-            {
-                Width = sidebarExpandedWidth,
-                Height = buttonHeight,
-                Padding = new Padding(0),
-                Dock = DockStyle.Left
-            };
-            newPanel.Controls.Add(newButton);
-            return newPanel;
+            //Panel newPanel = new Panel
+            //{
+            //    Width = sidebarExpandedWidth,
+            //    Height = buttonHeight,
+            //    Padding = new Padding(0),
+            //    Dock = DockStyle.Left
+            //};
+            //newPanel.Controls.Add(newButton);
+            return newButton;
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -151,7 +151,7 @@ namespace SSDCoursework
             if (activeChildForm != null)
             {
                 activeChildForm.Close();
-                pnlChildFormHolder.Controls.Clear();
+                pnlFormHolder.Controls.Clear();
             }
             activeChildForm = newChildForm;
             lblPageIndicator.Text = newChildForm.Text;
@@ -159,7 +159,7 @@ namespace SSDCoursework
             activeChildForm.FormBorderStyle = FormBorderStyle.None;
             activeChildForm.Dock = DockStyle.Fill;
             activeChildForm.BringToFront();
-            pnlChildFormHolder.Controls.Add(newChildForm);
+            pnlFormHolder.Controls.Add(newChildForm);
             activeChildForm.Show();
         }
     }
