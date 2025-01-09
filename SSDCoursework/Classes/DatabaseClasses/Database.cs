@@ -14,23 +14,17 @@ internal abstract class Database<T>
         Entries = new List<T>();
         if (!File.Exists(filePath))
         {
-            Console.WriteLine($"File not found: {filePath}. Initializing with an empty database.");
             File.Create(filePath).Close();
         }
     }
 
-    public void AddEntry(T entry)
-    {
-        Entries.Add(entry);
-        Write();
-    }
-
-    public void DeleteEntry(T entry)
-    {
-        Entries.Remove(entry);
-        Write();
-    }
-
+    /// <summary>
+    /// Retrieves the contents from the CSV file and updates the list.
+    /// </summary>
     protected abstract void Retrieve();
+
+    /// <summary>
+    /// Updates the CSV file according to the list.
+    /// </summary>
     protected abstract void Write();
 }

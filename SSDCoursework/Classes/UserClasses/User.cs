@@ -103,6 +103,6 @@ namespace SSDCoursework
             throw new NotImplementedException();
         }
         public abstract void DeleteUser(User userToDelete);
-        public abstract void ChangePass(User userPassToChange);
+        public abstract void ChangePass(User userPassToChange, string newPass);
     }
 }

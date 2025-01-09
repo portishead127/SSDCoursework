@@ -83,6 +83,16 @@ namespace SSDCoursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SignUpSymbol {
+            get {
+                object obj = ResourceManager.GetObject("SignUpSymbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap StemLogo {
             get {
                 object obj = ResourceManager.GetObject("StemLogo", resourceCulture);

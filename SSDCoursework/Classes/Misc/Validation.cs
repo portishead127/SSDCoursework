@@ -10,17 +10,21 @@ namespace SSDCoursework
         const string nums = "0123456789";
         const string specialChars = "!\"£$%^&*()_-+={}@~\'#?/>.<,:;|\\¬`";
 
+        //This list will contain the exceptions that are present in the given data.
         static readonly List<Exception> exceptions = new List<Exception>();
+
+        //Possible exceptions:
         static readonly Exception noCaps = new Exception("\t• No capital letters were included in the entered text");
         static readonly Exception noNums = new Exception("\t• No numbers were included in the entered text");
         static readonly Exception noSpecialChars = new Exception("\t• No special characters were included in the entered text");
         static readonly Exception invalidLength = new Exception("\t• The input was of invalid length");
         static readonly Exception empty = new Exception("\t• The input was empty");
         static readonly Exception incorrectEmailDomain = new Exception("\t• The email domain was not registered in our database");
+        static readonly Exception duplicateUsername = new Exception("\t• The username is not unique.");
 
 
         /// <summary>
-        /// Checks if a string is empty
+        /// Checks if a string is empty.
         /// </summary>
         /// <param name="textToValidate"></param>
         /// <returns>A list of exceptions</returns>
@@ -44,12 +48,8 @@ namespace SSDCoursework
         /// <returns>A list of exceptions</returns>
         public static List<Exception> Validate(string textToValidate, int minLength, int maxLength)
         {
-            ResetValidationFlags();
+            exceptions.AddRange(Validate(textToValidate));
 
-            if (string.IsNullOrEmpty(textToValidate))
-            {
-                exceptions.Add(empty);
-            }
             if (textToValidate.Length < minLength || textToValidate.Length > maxLength)
             {
                 exceptions.Add(invalidLength);
@@ -58,7 +58,7 @@ namespace SSDCoursework
         }
 
         /// <summary>
-        /// Checks if a string is empty, outside of a length range or doesn't include specified password characters
+        /// Checks if a string is empty, outside of a length range or doesn't include the specified password characters.
         /// </summary>
         /// <param name="textToValidate"></param>
         /// <param name="minLength"></param>
@@ -67,16 +67,8 @@ namespace SSDCoursework
         /// <returns>A list of exceptions</returns>
         public static List<Exception> ValidatePass(string textToValidate, int minLength, int maxLength)
         {
-            ResetValidationFlags();
+            exceptions.AddRange(ValidatePass(textToValidate, minLength, maxLength));
 
-            if (string.IsNullOrEmpty(textToValidate))
-            {
-                exceptions.Add(empty);
-            }
-            if (textToValidate.Length < minLength || textToValidate.Length > maxLength)
-            {
-                exceptions.Add(invalidLength);
-            }
             if (!textToValidate.Any(c => caps.Contains(c)))
             {
                 exceptions.Add(noCaps);
@@ -93,35 +85,53 @@ namespace SSDCoursework
         }
 
         /// <summary>
-        /// Checks if a string is empty, outside of a length range or doesn't include an email domain
+        /// Checks if a string is empty, outside of a length range or isn't a unique username.
         /// </summary>
-        /// <param name="textToValidate"></param>
+        /// <param name="usernameToValidate"></param>
+        /// <param name="minLength"></param>
+        /// <param name="maxLength"></param>
+        /// <param name="passRequiredChars"></param>
+        /// <returns>A list of exceptions</returns>
+        public static List<Exception> ValidateUsername(string usernameToValidate, int minLength, int maxLength)
+        {
+            exceptions.AddRange(Validate(usernameToValidate, minLength, maxLength));
+            
+            //Checks 
+            foreach(User tempUser in UserDatabase.Instance.Entries)
+            {
+                if (tempUser.Username == usernameToValidate)
+                {
+                    exceptions.Add(duplicateUsername);
+                }
+            }
+
+            return exceptions;
+        }
+
+        /// <summary>
+        /// Checks if a string is empty, outside of a length range or doesn't include an email domain.
+        /// </summary>
+        /// <param name="emailToValidate"></param>
         /// <param name="minLength"></param>
         /// <param name="maxLength"></param>
         /// <returns>A list of exceptions</returns>
-        public static List<Exception> ValidateEmail(string textToValidate, int minLength, int maxLength)
+        public static List<Exception> ValidateEmail(string emailToValidate, int minLength, int maxLength)
         {
-            ResetValidationFlags();
             string domain;
 
+            //Attempts to get the domain of the email.
             try 
             { 
-                 domain = textToValidate.Substring(textToValidate.IndexOf('@'));
+                 domain = emailToValidate.Substring(emailToValidate.IndexOf('@'));
             }
-            catch(Exception)
+            catch
             {
                 exceptions.Add(incorrectEmailDomain);
                 return exceptions;
             }
 
-            if (string.IsNullOrEmpty(textToValidate))
-            {
-                exceptions.Add(empty);
-            }
-            if (textToValidate.Length < minLength || textToValidate.Length > maxLength)
-            {
-                exceptions.Add(invalidLength);
-            }
+            exceptions.AddRange(Validate(emailToValidate, minLength, maxLength));
+
             if (!EmailDomainDatabase.Instance.Entries.Contains(domain))
             {
                 exceptions.Add(incorrectEmailDomain);

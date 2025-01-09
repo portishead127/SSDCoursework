@@ -9,24 +9,31 @@ namespace SSDCoursework
     internal class UserDatabase : Database<User>
     {
         private static UserDatabase instance;
+        public static UserDatabase Instance
+        {
+            get { return instance; }
+        }
 
+        /// <summary>
+        /// Creates a database object and sets the instance field equal to this instance. Throws an exception if the instance has already been set.
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <exception cref="Exception"></exception>
         public UserDatabase(string filePath) : base(filePath)
         {
             if (instance != null)
             {
-                throw new Exception("Instance of this class has already been created.");
+                throw new Exception("Singleton instance of this class has already been created.");
             }
             instance = this;
             Retrieve();
         }
 
-        public static UserDatabase Instance => instance;
-
         protected override void Retrieve()
         {
             Entries.Clear();
             string[] lines = File.ReadAllLines(FilePath);
-            foreach (var line in lines)
+            foreach (string line in lines)
             {
                 string[] splitUserDetails = line.Split(',');
                 User aUser;
@@ -45,7 +52,7 @@ namespace SSDCoursework
 
         protected override void Write()
         {
-            using (StreamWriter sw = new StreamWriter(FilePath, false)) // Overwrite the file
+            using (StreamWriter sw = new StreamWriter(FilePath, false)) // Overwrite the file.
             {
                 foreach (User user in Entries)
                 {
