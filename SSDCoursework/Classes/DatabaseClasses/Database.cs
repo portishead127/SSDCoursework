@@ -18,6 +18,18 @@ internal abstract class Database<T>
         }
     }
 
+    public void AddEntry(T entry)
+    {
+        Entries.Add(entry);
+        Write();
+    }
+
+    public void RemoveEntry(T entry)
+    { 
+        Entries.Remove(entry);
+        Write();
+    }
+
     /// <summary>
     /// Retrieves the contents from the CSV file and updates the list.
     /// </summary>

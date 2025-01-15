@@ -1,18 +1,11 @@
-﻿using System;
+﻿using SSDCoursework.Forms;
+using System;
 using System.Windows.Forms;
 
 namespace SSDCoursework
 {
     internal abstract class User
     {
-        enum difficultyLevels
-        {
-            EASY,
-            MEDIUM,
-            HARD,
-            MASTER
-        }
-
         static User currentUser;
 
         string fName;
@@ -23,19 +16,12 @@ namespace SSDCoursework
         string password;
         string email;
         bool isAdmin;
-        Enum difficultyLevel = difficultyLevels.EASY;
 
 
         public static User CurrentUser
         {
             get { return currentUser; }
             set { currentUser = value; }
-        }
-
-        public Enum DifficultyLevel
-        {
-            get { return difficultyLevel; }
-            set { difficultyLevel = value; }
         }
 
         public string FName
@@ -100,8 +86,9 @@ namespace SSDCoursework
         {
             currentUser = this;
             MessageBox.Show($"{fName}, you have successfully logged in as: {username}", "Logged in");
-            throw new NotImplementedException();
+            (Application.OpenForms[0] as SplashScreen).Reset(0.1, new RegistryHolder()); //Can guarantee that Application.OpenForms[0] will be a splashscreen as it starts the program with a splashscreen.
         }
+
         public abstract void DeleteUser(User userToDelete);
         public abstract void ChangePass(User userPassToChange, string newPass);
     }

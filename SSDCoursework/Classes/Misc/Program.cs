@@ -2,6 +2,8 @@
 using System;
 using System.Drawing.Text;
 using System.IO;
+using System.Media;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -20,7 +22,7 @@ namespace SSDCoursework
 
             Application.SetCompatibleTextRenderingDefault(true);
 
-            Application.Run(new SplashScreen());
+            Application.Run(new SplashScreen(0.05, new RegistryHolder()));
         }
 
         static void InitilizeFonts()

@@ -17,7 +17,7 @@ namespace SSDCoursework
 
         void InitialiseSidebar()
         {
-            sidebar = new SidebarControl();
+            sidebar = new SidebarControl("Registry");
             sidebar.Dock = DockStyle.Fill;
             Controls.Add(sidebar);
 
@@ -28,7 +28,6 @@ namespace SSDCoursework
         void btnSignUp_Click(object sender, EventArgs e)
         {
             sidebar.IsExpandingForMenuItem = true;
-            sidebar.SidebarSpeedMult = 3;
             sidebar.FormToOpen = new SignUp();
             sidebar.sidebarTimer.Start();
         }
@@ -36,7 +35,6 @@ namespace SSDCoursework
         void btnLogin_Click(object sender, EventArgs e)
         {
             sidebar.IsExpandingForMenuItem = true;
-            sidebar.SidebarSpeedMult = 3;
             sidebar.FormToOpen = new Login();
             sidebar.sidebarTimer.Start();
         }

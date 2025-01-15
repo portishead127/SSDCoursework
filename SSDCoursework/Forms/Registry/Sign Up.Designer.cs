@@ -59,9 +59,9 @@ namespace SSDCoursework
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(3, 433);
+            this.lblPassword.Location = new System.Drawing.Point(3, 526);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(194, 89);
+            this.lblPassword.Size = new System.Drawing.Size(194, 107);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Tag = "Pass";
             this.lblPassword.Text = "Password";
@@ -72,9 +72,9 @@ namespace SSDCoursework
             this.lblGender.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.ForeColor = System.Drawing.Color.White;
-            this.lblGender.Location = new System.Drawing.Point(521, 0);
+            this.lblGender.Location = new System.Drawing.Point(851, 0);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(144, 109);
+            this.lblGender.Size = new System.Drawing.Size(144, 133);
             this.lblGender.TabIndex = 6;
             this.lblGender.Tag = "Gender";
             this.lblGender.Text = "Gender";
@@ -85,7 +85,7 @@ namespace SSDCoursework
             this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnConfirm.BackColor = System.Drawing.Color.PaleGreen;
             this.btnConfirm.Font = new System.Drawing.Font("Corbel", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(668, 440);
+            this.btnConfirm.Location = new System.Drawing.Point(998, 542);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(0);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(232, 74);
@@ -100,9 +100,9 @@ namespace SSDCoursework
             this.lblUsername.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(3, 215);
+            this.lblUsername.Location = new System.Drawing.Point(3, 262);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(194, 109);
+            this.lblUsername.Size = new System.Drawing.Size(194, 132);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Tag = "Username";
             this.lblUsername.Text = "Username";
@@ -116,7 +116,7 @@ namespace SSDCoursework
             this.txtFirstName.Location = new System.Drawing.Point(203, 6);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(312, 49);
+            this.txtFirstName.Size = new System.Drawing.Size(642, 49);
             this.txtFirstName.TabIndex = 0;
             this.txtFirstName.Tag = "FirstName";
             // 
@@ -126,9 +126,9 @@ namespace SSDCoursework
             this.lblSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSurname.ForeColor = System.Drawing.Color.White;
-            this.lblSurname.Location = new System.Drawing.Point(3, 109);
+            this.lblSurname.Location = new System.Drawing.Point(3, 133);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(194, 106);
+            this.lblSurname.Size = new System.Drawing.Size(194, 129);
             this.lblSurname.TabIndex = 1;
             this.lblSurname.Tag = "Surname";
             this.lblSurname.Text = "Surname";
@@ -138,10 +138,10 @@ namespace SSDCoursework
             this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtUsername.Location = new System.Drawing.Point(203, 221);
+            this.txtUsername.Location = new System.Drawing.Point(203, 268);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(312, 49);
+            this.txtUsername.Size = new System.Drawing.Size(642, 49);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Tag = "Username";
             // 
@@ -150,10 +150,10 @@ namespace SSDCoursework
             this.txtSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtSurname.Location = new System.Drawing.Point(203, 115);
+            this.txtSurname.Location = new System.Drawing.Point(203, 139);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(312, 49);
+            this.txtSurname.Size = new System.Drawing.Size(642, 49);
             this.txtSurname.TabIndex = 1;
             this.txtSurname.Tag = "Surname";
             // 
@@ -165,7 +165,7 @@ namespace SSDCoursework
             this.lblFirstName.ForeColor = System.Drawing.Color.White;
             this.lblFirstName.Location = new System.Drawing.Point(3, 0);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(194, 109);
+            this.lblFirstName.Size = new System.Drawing.Size(194, 133);
             this.lblFirstName.TabIndex = 1;
             this.lblFirstName.Tag = "FirstName";
             this.lblFirstName.Text = "First name";
@@ -175,11 +175,11 @@ namespace SSDCoursework
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtPassword.Location = new System.Drawing.Point(203, 439);
+            this.txtPassword.Location = new System.Drawing.Point(203, 532);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(312, 49);
+            this.txtPassword.Size = new System.Drawing.Size(642, 49);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.Tag = "Pass";
             // 
@@ -219,7 +219,7 @@ namespace SSDCoursework
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.90643F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.90643F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlp.Size = new System.Drawing.Size(900, 522);
+            this.tlp.Size = new System.Drawing.Size(1230, 633);
             this.tlp.TabIndex = 4;
             // 
             // txtEmail
@@ -227,10 +227,10 @@ namespace SSDCoursework
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtEmail.Location = new System.Drawing.Point(203, 330);
+            this.txtEmail.Location = new System.Drawing.Point(203, 400);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(312, 49);
+            this.txtEmail.Size = new System.Drawing.Size(642, 49);
             this.txtEmail.TabIndex = 17;
             this.txtEmail.Tag = "Email";
             // 
@@ -240,9 +240,9 @@ namespace SSDCoursework
             this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(3, 324);
+            this.lblEmail.Location = new System.Drawing.Point(3, 394);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(194, 109);
+            this.lblEmail.Size = new System.Drawing.Size(194, 132);
             this.lblEmail.TabIndex = 16;
             this.lblEmail.Tag = "Email";
             this.lblEmail.Text = "Email";
@@ -253,9 +253,9 @@ namespace SSDCoursework
             this.lblDOB.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDOB.ForeColor = System.Drawing.Color.White;
-            this.lblDOB.Location = new System.Drawing.Point(521, 109);
+            this.lblDOB.Location = new System.Drawing.Point(851, 133);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(144, 106);
+            this.lblDOB.Size = new System.Drawing.Size(144, 129);
             this.lblDOB.TabIndex = 14;
             this.lblDOB.Tag = "DOB";
             this.lblDOB.Text = "Date of birth";
@@ -265,7 +265,7 @@ namespace SSDCoursework
             // 
             this.rdoAdmin.AutoCheck = false;
             this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(671, 218);
+            this.rdoAdmin.Location = new System.Drawing.Point(1001, 265);
             this.rdoAdmin.Name = "rdoAdmin";
             this.rdoAdmin.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
             this.rdoAdmin.Size = new System.Drawing.Size(114, 54);
@@ -280,7 +280,7 @@ namespace SSDCoursework
             this.datDOB.CalendarFont = new System.Drawing.Font("Corbel", 18F);
             this.datDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datDOB.Location = new System.Drawing.Point(671, 112);
+            this.datDOB.Location = new System.Drawing.Point(1001, 136);
             this.datDOB.MaxDate = new System.DateTime(2024, 12, 9, 0, 0, 0, 0);
             this.datDOB.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
             this.datDOB.Name = "datDOB";
@@ -294,9 +294,9 @@ namespace SSDCoursework
             this.txtAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAdmin.ForeColor = System.Drawing.Color.White;
-            this.txtAdmin.Location = new System.Drawing.Point(521, 215);
+            this.txtAdmin.Location = new System.Drawing.Point(851, 262);
             this.txtAdmin.Name = "txtAdmin";
-            this.txtAdmin.Size = new System.Drawing.Size(144, 109);
+            this.txtAdmin.Size = new System.Drawing.Size(144, 132);
             this.txtAdmin.TabIndex = 7;
             this.txtAdmin.Tag = "Admin";
             this.txtAdmin.Text = "Admin";
@@ -312,7 +312,7 @@ namespace SSDCoursework
             "Male",
             "Female",
             "Prefer not to say"});
-            this.lstGender.Location = new System.Drawing.Point(671, 3);
+            this.lstGender.Location = new System.Drawing.Point(1001, 3);
             this.lstGender.Name = "lstGender";
             this.lstGender.Size = new System.Drawing.Size(211, 46);
             this.lstGender.TabIndex = 11;
@@ -323,7 +323,7 @@ namespace SSDCoursework
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(5)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(900, 522);
+            this.ClientSize = new System.Drawing.Size(1230, 633);
             this.Controls.Add(this.tlp);
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(916, 561);

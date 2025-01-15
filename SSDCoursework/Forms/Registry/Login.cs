@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,12 +17,20 @@ namespace SSDCoursework
 
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
+            if (ValidateInput())
+            {
+                FindUser();
+            }
+        }
+
+        private bool ValidateInput()
+        {
+            List<Exception> exceptions = new List<Exception>();
+            bool valid = true;
+
             foreach (Control c in tlp.Controls.OfType<TextBox>())
             {
                 Label correspondingLabel = tlp.Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.Equals(c.Tag));
-
-                List<Exception> exceptions = new List<Exception>();
-
 
                 if (c.Tag.Equals("Username"))
                 {
@@ -46,19 +55,38 @@ namespace SSDCoursework
                 // Change label color if there are exceptions
                 if (exceptions.Any() && correspondingLabel != null)
                 {
+                    valid = false;
                     correspondingLabel.ForeColor = Color.Red; // Change label text color to red
                     MessageBox.Show($"The {correspondingLabel.Text} entry contains the following issues:\n\n{errorMessage}", "Invalid credentials");
                 }
                 else if (correspondingLabel != null)
                 {
-                    correspondingLabel.ForeColor = Color.Black; // Reset label color if no errors
+                    correspondingLabel.ForeColor = Color.White; // Reset label color if no errors
                 }
             }
+            return valid;
         }
 
-        private void RdoAdmin_Click(object sender, EventArgs e)
+        private void FindUser()
         {
-            rdoAdmin.Checked = !rdoAdmin.Checked;
+            User userFound = null;
+
+            foreach (User tempUser in UserDatabase.Instance.Entries)
+            {
+                if (tempUser.Username == txtUsername.Text)
+                {
+                    if (tempUser.Password == txtPassword.Text)
+                    {
+                        userFound = tempUser; break;
+                    }
+                }
+            }
+
+            if (userFound == null) {
+                MessageBox.Show("User could not be found.", "Invalid credentials");
+                return;
+            }
+            userFound.LoginUser();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SSDCoursework.Forms;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -35,12 +36,11 @@ namespace SSDCoursework
         public Form FormToOpen { get; set; } //This is a temporary variable that stores what form should be opened, it is mostly referenced outside the class.
 
 
-        public SidebarControl()
+        public SidebarControl(string formName)
         {
             InitializeComponent();
-            Console.Write(pbxHamburger.Image.Size.ToString());
             Size = Screen.PrimaryScreen.Bounds.Size;
-            lblPageIndicator.Text = "Registry";
+            lblPageIndicator.Text = formName;
             flpSidebar.MaximumSize = MaximumSize;
             pnlFormHolder.Width = Width - flpSidebar.Width;
             pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
@@ -51,6 +51,7 @@ namespace SSDCoursework
         {
             Control control = SidebarButtonCreation(text, image, clickEventHandler);
             flpSidebar.Controls.Add(control);
+            flpSidebar.Controls.SetChildIndex(control, 1);
         }
 
         Control SidebarButtonCreation(string text, Bitmap image, EventHandler clickEventHandler)
@@ -83,15 +84,6 @@ namespace SSDCoursework
 
             newButton.Controls.Add(newPictureBox);
             newButton.Click += clickEventHandler;
-
-            //Panel newPanel = new Panel
-            //{
-            //    Width = sidebarExpandedWidth,
-            //    Height = buttonHeight,
-            //    Padding = new Padding(0),
-            //    Dock = DockStyle.Left
-            //};
-            //newPanel.Controls.Add(newButton);
             return newButton;
         }
 
@@ -99,6 +91,7 @@ namespace SSDCoursework
         {
             if (expandingForMenuItem)
             {
+                sidebarSpeedMult = 3;
                 // Expand to full screen width
                 flpSidebar.Width += sidebarChange * sidebarSpeedMult;
                 if (flpSidebar.Width >= Width)
@@ -141,6 +134,7 @@ namespace SSDCoursework
 
         private void pbxHamburger_Click(object sender, EventArgs e)
         {
+            Console.WriteLine(pnlFormHolder.Size.ToString());
             expandingForMenuItem = false;
             sidebarTimer.Start();
         }
@@ -160,6 +154,13 @@ namespace SSDCoursework
             activeChildForm.BringToFront();
             pnlFormHolder.Controls.Add(newChildForm);
             activeChildForm.Show();
+        }
+
+        private void pbxSettingsIcon_Click(object sender, EventArgs e)
+        {
+            expandingForMenuItem = true;
+            FormToOpen = new Settings();
+            sidebarTimer.Start();
         }
     }
 }

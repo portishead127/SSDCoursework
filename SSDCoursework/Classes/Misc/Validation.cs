@@ -67,7 +67,7 @@ namespace SSDCoursework
         /// <returns>A list of exceptions</returns>
         public static List<Exception> ValidatePass(string textToValidate, int minLength, int maxLength)
         {
-            exceptions.AddRange(ValidatePass(textToValidate, minLength, maxLength));
+            exceptions.AddRange(Validate(textToValidate, minLength, maxLength));
 
             if (!textToValidate.Any(c => caps.Contains(c)))
             {
@@ -138,6 +138,7 @@ namespace SSDCoursework
             }
             return exceptions;
         }
+
         static void ResetValidationFlags()
         {
             exceptions.Clear();
