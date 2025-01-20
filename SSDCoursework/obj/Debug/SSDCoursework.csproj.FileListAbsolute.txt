@@ -12,9 +12,6 @@ C:\Users\aaron\Documents\School\SSD\Projects\SSDCoursework\SSDCoursework\obj\Deb
 C:\Users\aaron\Documents\School\SSD\Projects\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.SidebarControl.resources
 C:\Users\aaron\Documents\School\SSD\Projects\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Login.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.csproj.AssemblyReference.cache
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.SidebarControl.resources
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Login.resources
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.SignUp.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.csproj.GenerateResource.cache
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\bin\Debug\SSDCoursework.exe.config
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\bin\Debug\SSDCoursework.exe
@@ -37,6 +34,10 @@ C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.pdb
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.RegistryHolder.resources
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.SplashScreen.resources
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.SplashScreen.resources
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.RegistryHolder.resources
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Settings.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.MainMenuHolder.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Misc.Settings.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Misc.SplashScreen.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.UserControls.SidebarControl.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Registry.Login.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Registry.SignUp.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Registry.RegistryHolder.resources

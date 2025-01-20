@@ -1,8 +1,10 @@
-﻿using System;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.UserClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SSDCoursework
+namespace SSDCoursework.Classes.Misc
 {
     internal static class Validation
     {

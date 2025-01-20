@@ -1,9 +1,10 @@
 ﻿using SSDCoursework.Forms;
+using SSDCoursework.Forms.Misc;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SSDCoursework
+namespace SSDCoursework.UserControls
 {
     public partial class SidebarControl : UserControl
     {

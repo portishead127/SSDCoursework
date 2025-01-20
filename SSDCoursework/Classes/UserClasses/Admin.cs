@@ -1,6 +1,7 @@
-﻿using System;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using System;
 
-namespace SSDCoursework
+namespace SSDCoursework.Classes.UserClasses
 {
     internal class Admin : User
     {

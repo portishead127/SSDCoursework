@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using SSDCoursework.Classes.UserClasses;
+using System;
 using System.IO;
-using System.Runtime.CompilerServices;
 
-namespace SSDCoursework
+namespace SSDCoursework.Classes.DatabaseClasses
 {
     internal class UserDatabase : Database<User>
     {
@@ -37,7 +35,7 @@ namespace SSDCoursework
             {
                 string[] splitUserDetails = line.Split(',');
                 User aUser;
-                if (splitUserDetails[5] == "False")
+                if (splitUserDetails[5] == bool.FalseString)
                 {
                     aUser = new Player(splitUserDetails[0], splitUserDetails[1], DateTime.Parse(splitUserDetails[2]), splitUserDetails[3], splitUserDetails[4], splitUserDetails[5], false);
                 }
@@ -58,7 +56,7 @@ namespace SSDCoursework
                 {
                     string[] userDataPoints =
                     {
-                        user.FName, user.SName, user.Dob.ToString(), user.Username, user.Password, user.IsAdmin.ToString()
+                        user.FName, user.SName, user.Dob.ToString(), user.Username, user.Email, user.Password, user.IsAdmin.ToString()
                     };
                     sw.WriteLine(string.Join(",", userDataPoints));
                 }

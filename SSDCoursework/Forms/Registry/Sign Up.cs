@@ -1,11 +1,14 @@
-﻿using System;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.Misc;
+using SSDCoursework.Classes.UserClasses;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SSDCoursework
+namespace SSDCoursework.Forms.Registry
 {
     public partial class SignUp : Form
     {
@@ -86,7 +89,7 @@ namespace SSDCoursework
             {
                 newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false);
             }
-            UserDatabase.Instance.Entries.Add(newUser);
+            UserDatabase.Instance.AddEntry(newUser);
             newUser.LoginUser();
         }
     }

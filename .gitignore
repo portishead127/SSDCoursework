@@ -344,5 +344,3 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/SSDCoursework/bin/Debug/Databases/EmailDomains.csv
-/SSDCoursework/bin/Debug/Databases/Users.csv

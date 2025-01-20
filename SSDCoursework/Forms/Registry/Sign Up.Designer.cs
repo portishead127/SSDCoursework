@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace SSDCoursework
+namespace SSDCoursework.Forms.Registry
 {
     partial class SignUp
     {

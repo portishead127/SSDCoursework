@@ -65,19 +65,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DatabaseClasses\QuestionDatabase.cs" />
+    <Compile Include="Classes\QuestionClasses\MultipleChoiceQuestion.cs" />
+    <Compile Include="Classes\QuestionClasses\Question.cs" />
+    <Compile Include="Classes\QuestionClasses\Quiz.cs" />
+    <Compile Include="Classes\QuestionClasses\TrueOrFalseQuestion.cs" />
+    <Compile Include="Classes\QuestionClasses\WrittenQuestion.cs" />
     <Compile Include="Classes\UserClasses\Admin.cs" />
     <Compile Include="Classes\DatabaseClasses\Database.cs" />
     <Compile Include="Classes\DatabaseClasses\EmailDomainDatabase.cs" />
-    <Compile Include="Forms\Settings.cs">
+    <Compile Include="Forms\MainMenu\MainMenuHolder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Settings.Designer.cs">
+    <Compile Include="Forms\MainMenu\MainMenuHolder.Designer.cs">
+      <DependentUpon>MainMenuHolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Misc\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Misc\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SplashScreen.cs">
+    <Compile Include="Forms\Misc\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SplashScreen.Designer.cs">
+    <Compile Include="Forms\Misc\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -115,10 +127,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\UserClasses\User.cs" />
     <Compile Include="Classes\Misc\Validation.cs" />
-    <EmbeddedResource Include="Forms\Settings.resx">
+    <EmbeddedResource Include="Forms\MainMenu\MainMenuHolder.resx">
+      <DependentUpon>MainMenuHolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Misc\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SplashScreen.resx">
+    <EmbeddedResource Include="Forms\Misc\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

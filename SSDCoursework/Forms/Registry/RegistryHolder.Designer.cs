@@ -1,4 +1,4 @@
-﻿namespace SSDCoursework
+﻿namespace SSDCoursework.Forms.Registry
 {
     partial class RegistryHolder
     {
@@ -34,6 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.DoubleBuffered = true;

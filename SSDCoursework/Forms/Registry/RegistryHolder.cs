@@ -1,9 +1,10 @@
-﻿using System;
+﻿using SSDCoursework.UserControls;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace SSDCoursework
+namespace SSDCoursework.Forms.Registry
 {
     public partial class RegistryHolder : Form
     {

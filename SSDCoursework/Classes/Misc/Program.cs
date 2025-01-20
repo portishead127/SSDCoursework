@@ -1,13 +1,11 @@
-﻿using SSDCoursework.Forms;
+﻿using SSDCoursework.Forms.Misc;
+using SSDCoursework.Forms.Registry;
+using SSDCoursework.Classes.DatabaseClasses;
 using System;
-using System.Drawing.Text;
 using System.IO;
-using System.Media;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace SSDCoursework
+namespace SSDCoursework.Classes.Misc
 {
     internal static class Program
     {

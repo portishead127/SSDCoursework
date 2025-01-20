@@ -1,4 +1,4 @@
-﻿namespace SSDCoursework
+﻿namespace SSDCoursework.UserControls
 {
     partial class SidebarControl
     {
