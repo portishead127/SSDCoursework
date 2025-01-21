@@ -1,10 +1,13 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace SSDCoursework.Classes.DatabaseClasses
 {
     internal class EmailDomainDatabase : Database<string>
     {
+        static string[] defaultDomains = new string[3] { "@gmail.com", "@outlook.com", "@yahoo.com" };
+
         private static EmailDomainDatabase instance;
         public static EmailDomainDatabase Instance
         {
@@ -30,7 +33,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
         {
             Entries.Clear();
             string rawDomains = File.ReadAllText(FilePath);
-            if (string.IsNullOrWhiteSpace(rawDomains))
+            if (String.IsNullOrWhiteSpace(rawDomains))
             {
                 Entries.AddRange(new[] { "@gmail.com", "@outlook.com", "@yahoo.com" });
             }
@@ -44,6 +47,15 @@ namespace SSDCoursework.Classes.DatabaseClasses
         protected override void Write()
         {
             File.WriteAllText(FilePath, string.Join(",", Entries));
+        }
+
+        public new void RemoveEntry(string entry)
+        {
+            if (!defaultDomains.Contains<string>(entry))
+            {
+                Entries.Remove(entry);
+                Write();
+            }
         }
     }
 }

@@ -87,7 +87,7 @@ namespace SSDCoursework.Classes.UserClasses
         {
             currentUser = this;
             MessageBox.Show($"{fName}, you have successfully logged in as: {username}", "Logged in");
-            (Application.OpenForms[0] as SplashScreen).Reset(0.1, new MainMenuHolder()); //Can guarantee that Application.OpenForms[0] will be a splashscreen as it starts the program with a splashscreen.
+            (Application.OpenForms[0] as SplashScreen).Reset(0.05, new MainMenuHolder()); //Can guarantee that Application.OpenForms[0] will be a splashscreen as it starts the program with a splashscreen.
         }
 
         public abstract void DeleteUser(User userToDelete);

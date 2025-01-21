@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
-    internal class TrueOrFalseQuestion : Question<bool>
+    internal class TrueOrFalseQuestion : Question<bool> 
     {
         public TrueOrFalseQuestion(string questionTerm, bool answer) : base(questionTerm, answer) { }
     }

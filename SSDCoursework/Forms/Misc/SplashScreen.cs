@@ -56,9 +56,10 @@ namespace SSDCoursework.Forms.Misc
             int progressToAdd;
             do
             {
-                await Task.Delay(maxProgressUpdate * timeMultiplier);
 
                 progressToAdd = random.Next(0, maxProgressUpdate);
+                await Task.Delay(progressToAdd * timeMultiplier);
+
                 try
                 {
                     pgrLoadingBar.Value += progressToAdd;
@@ -88,11 +89,8 @@ namespace SSDCoursework.Forms.Misc
         private void TransitionToNewForm()
         {
             CloseAllOtherForms();
-            formToOpen.Activate();
             formToOpen.Visible = false;
-
             TopMost = true;
-
             formToOpen.Visible = true;
             isOpening = false;
             tmrSplash.Start();
@@ -125,7 +123,7 @@ namespace SSDCoursework.Forms.Misc
         private static void CloseAllOtherForms()
         {
             // Iterate through all open forms except the first one
-            for (int i = Application.OpenForms.Count - 1; i >= 1; i--)
+            for (int i = 1; i < Application.OpenForms.Count; i++)
             {
                 Form form = Application.OpenForms[i];
                 form.Close();
@@ -138,6 +136,8 @@ namespace SSDCoursework.Forms.Misc
             this.formToOpen = formToOpen;
             Opacity = 0;
             isOpening = true;
+            pgrLoadingBar.Value = 0;
+            Show();
             tmrSplash.Start();
             GenerateTaglines();
         }
