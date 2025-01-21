@@ -17,7 +17,7 @@ namespace SSDCoursework.Forms.Registry
             InitializeComponent();
         }
 
-        private void BtnConfirm_Click(object sender, EventArgs e)
+        private void btnConfirm_Click(object sender, EventArgs e)
         {
             if (ValidateInput())
             {

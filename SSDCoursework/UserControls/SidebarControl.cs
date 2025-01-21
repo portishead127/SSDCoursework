@@ -36,6 +36,15 @@ namespace SSDCoursework.UserControls
 
         public Form FormToOpen { get; set; } //This is a temporary variable that stores what form should be opened, it is mostly referenced outside the class.
 
+        public SidebarControl() 
+        {
+            InitializeComponent(); 
+            Size = Screen.PrimaryScreen.Bounds.Size;
+            flpSidebar.MaximumSize = MaximumSize;
+            pnlFormHolder.Width = Width - flpSidebar.Width;
+            pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
+            sidebarChange = Width / sidebarScaleExpansionFactor;
+        }
 
         public SidebarControl(string formName)
         {
@@ -53,6 +62,7 @@ namespace SSDCoursework.UserControls
             Control control = SidebarButtonCreation(text, image, clickEventHandler);
             flpSidebar.Controls.Add(control);
             flpSidebar.Controls.SetChildIndex(control, 1);
+            pnlEmptySpace.Height -= buttonHeight + 5;
         }
 
         Control SidebarButtonCreation(string text, Bitmap image, EventHandler clickEventHandler)
@@ -162,6 +172,15 @@ namespace SSDCoursework.UserControls
             expandingForMenuItem = true;
             FormToOpen = new Settings();
             sidebarTimer.Start();
+        }
+
+        private void pbxExit_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult =  MessageBox.Show("Are you sure you want to exit?", "Exit?", MessageBoxButtons.YesNo);
+            if(dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

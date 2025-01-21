@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
-    internal class TrueOrFalseQuestion : Question<bool> 
+    internal class TrueOrFalseQuestion : Question
     {
-        public TrueOrFalseQuestion(string questionTerm, bool answer) : base(questionTerm, answer) { }
+        public bool CorrectAnswer { get; }
+
+        protected override object Answer => CorrectAnswer;
+
+        public TrueOrFalseQuestion(string questionText, bool correctAnswer) : base(questionText)
+        {
+            CorrectAnswer = correctAnswer;
+        }
     }
 }

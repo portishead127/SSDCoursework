@@ -1,4 +1,5 @@
 ﻿using SSDCoursework.Classes.UserClasses;
+using SSDCoursework.Forms.MainMenu.Arcade;
 using SSDCoursework.Forms.Registry;
 using SSDCoursework.UserControls;
 using System;
@@ -40,7 +41,7 @@ namespace SSDCoursework.Forms.MainMenu
         void btnLogin_Click(object sender, EventArgs e)
         {
             sidebar.IsExpandingForMenuItem = true;
-            sidebar.FormToOpen = new Login();
+            sidebar.FormToOpen = new ArcadeHolder();
             sidebar.sidebarTimer.Start();
         }
     }

@@ -6,25 +6,19 @@ using System.Threading.Tasks;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
-    internal class MultipleChoiceQuestion : Question<string>
+    internal class MultipleChoiceQuestion : Question
     {
-        string fakeAnswer1;
-        string fakeAnswer2;
+        public string CorrectAnswer { get; }
+        public string FakeAnswer1 { get; }
+        public string FakeAnswer2 { get; }
 
-        public MultipleChoiceQuestion(string questionTerm, string answer, string fakeAnswer1, string fakeAnswer2) : base(questionTerm, answer)
-        {
-            this.fakeAnswer1 = fakeAnswer1;
-            this.fakeAnswer2 = fakeAnswer2;
-        }
+        protected override object Answer => CorrectAnswer;
 
-        public string FakeAnswer1
+        public MultipleChoiceQuestion(string questionText, string correctAnswer, string fakeAnswer1, string fakeAnswer2) : base(questionText)
         {
-            get { return fakeAnswer1; }
-        }
-
-        public string FakeAnswer2
-        {
-            get { return fakeAnswer2; }
+            CorrectAnswer = correctAnswer;
+            FakeAnswer1 = fakeAnswer1;
+            FakeAnswer2 = fakeAnswer2;
         }
     }
 }

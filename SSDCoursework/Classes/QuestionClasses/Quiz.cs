@@ -8,15 +8,22 @@ namespace SSDCoursework.Classes.QuestionClasses
 {
     internal class Quiz
     {
-        List<Question<object>> questions; //Questions can be of any type.
-        int numOfQuestions;
-        int numOfQuestionsAnswered;
-        int numOfQuestionsAnsweredCorrectly;
+        public enum DifficultyLevel
+        {
+            Easy,
+            Medium,
+            Hard
+        }
 
-        public Quiz(List<Question<object>> questions)
+        DifficultyLevel difficultyLevel;
+        List<Question> questions; //Questions can be of any type.
+        int numOfQuestions;
+
+        public Quiz(List<Question> questions, DifficultyLevel difficultyLevel)
         {
             this.questions = questions;
             numOfQuestions = questions.Count;
+            this.difficultyLevel = difficultyLevel;
         }
 
         public int NumOfQuestions
@@ -24,7 +31,7 @@ namespace SSDCoursework.Classes.QuestionClasses
             get { return numOfQuestions; }
         }
 
-        public List<Question<object>> Questions
+        public List<Question> Questions
         {
             get { return questions; }
         }
