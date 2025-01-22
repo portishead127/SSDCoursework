@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
@@ -16,10 +13,10 @@ namespace SSDCoursework.Classes.QuestionClasses
         }
 
         DifficultyLevel difficultyLevel;
-        List<Question> questions; //Questions can be of any type.
+        List<IQuestion> questions; //Questions can be of any type.
         int numOfQuestions;
 
-        public Quiz(List<Question> questions, DifficultyLevel difficultyLevel)
+        public Quiz(List<IQuestion> questions, DifficultyLevel difficultyLevel)
         {
             this.questions = questions;
             numOfQuestions = questions.Count;
@@ -31,7 +28,7 @@ namespace SSDCoursework.Classes.QuestionClasses
             get { return numOfQuestions; }
         }
 
-        public List<Question> Questions
+        public List<IQuestion> Questions
         {
             get { return questions; }
         }

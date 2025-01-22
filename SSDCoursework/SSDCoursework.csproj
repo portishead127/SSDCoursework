@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DatabaseClasses\QuestionDatabase.cs" />
     <Compile Include="Classes\QuestionClasses\MultipleChoiceQuestion.cs" />
     <Compile Include="Classes\QuestionClasses\Question.cs" />
     <Compile Include="Classes\QuestionClasses\Quiz.cs" />

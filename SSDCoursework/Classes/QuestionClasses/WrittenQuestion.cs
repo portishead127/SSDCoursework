@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
-    internal class WrittenQuestion : Question
+    internal class WrittenQuestion : IQuestion
     {
+        public string QuestionText { get; }
         public string CorrectAnswer {  get; }
+        public object Answer => CorrectAnswer;
 
-        public WrittenQuestion(string questionText, string correctAnswer) : base(questionText)
+        public WrittenQuestion(string questionText, string correctAnswer)
         {
+            QuestionText = questionText;
             CorrectAnswer = correctAnswer;
         }
 
-        protected override object Answer => CorrectAnswer;
+
     }
 }

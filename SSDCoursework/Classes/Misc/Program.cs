@@ -52,6 +52,7 @@ namespace SSDCoursework.Classes.Misc
             Directory.CreateDirectory(DatabasesPath);
             new EmailDomainDatabase(Path.Combine(DatabasesPath, "EmailDomains.csv"));
             new UserDatabase(Path.Combine(DatabasesPath, "Users.csv"));
+            new QuestionDatabase(Path.Combine(DatabasesPath, "Questions.csv"));
         }
     }
 }

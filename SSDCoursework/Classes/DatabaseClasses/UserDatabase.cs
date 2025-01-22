@@ -1,4 +1,5 @@
-﻿using SSDCoursework.Classes.UserClasses;
+﻿using SSDCoursework.Classes.QuestionClasses;
+using SSDCoursework.Classes.UserClasses;
 using System;
 using System.IO;
 
@@ -30,27 +31,27 @@ namespace SSDCoursework.Classes.DatabaseClasses
         protected override void Retrieve()
         {
             Entries.Clear();
-            string[] lines = File.ReadAllLines(FilePath);
-            foreach (string line in lines)
+            using(StreamReader sr = new StreamReader(FilePath))
             {
-                string[] splitUserDetails = line.Split(',');
-                User aUser;
-                if (splitUserDetails[5] == bool.FalseString)
+                while (!sr.EndOfStream)
                 {
-                    aUser = new Player(splitUserDetails[0], splitUserDetails[1], DateTime.Parse(splitUserDetails[2]), splitUserDetails[3], splitUserDetails[4], splitUserDetails[5], false);
+                    string line = sr.ReadLine();
+                    string[] items = line.Split(',');
+                    if (items[5] == bool.FalseString)
+                    {
+                        Entries.Add(new Player(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], false));
+                    }
+                    else
+                    {
+                        Entries.Add(new Admin(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], true));
+                    }
                 }
-                else
-                {
-                    aUser = new Admin(splitUserDetails[0], splitUserDetails[1], DateTime.Parse(splitUserDetails[2]), splitUserDetails[3], splitUserDetails[4], splitUserDetails[5], true);
-                }
-
-                Entries.Add(aUser);
             }
         }
 
         protected override void Write()
         {
-            using (StreamWriter sw = new StreamWriter(FilePath, false)) // Overwrite the file.
+            using (StreamWriter sw = new StreamWriter(FilePath, true)) // Overwrite the file.
             {
                 foreach (User user in Entries)
                 {

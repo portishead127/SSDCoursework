@@ -33,9 +33,9 @@ namespace SSDCoursework.Classes.DatabaseClasses
         {
             Entries.Clear();
             string rawDomains = File.ReadAllText(FilePath);
-            if (String.IsNullOrWhiteSpace(rawDomains))
+            if (!rawDomains.Contains(defaultDomains[0]) || !rawDomains.Contains(defaultDomains[1]) || !rawDomains.Contains(defaultDomains[2]))
             {
-                Entries.AddRange(new[] { "@gmail.com", "@outlook.com", "@yahoo.com" });
+                Entries.AddRange(defaultDomains);
             }
             else
             {
@@ -51,7 +51,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
 
         public new void RemoveEntry(string entry)
         {
-            if (!defaultDomains.Contains<string>(entry))
+            if (!defaultDomains.Contains(entry))
             {
                 Entries.Remove(entry);
                 Write();

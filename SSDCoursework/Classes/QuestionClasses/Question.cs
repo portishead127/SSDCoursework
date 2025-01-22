@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
-    internal abstract class Question
+    internal interface IQuestion
     {
-        protected string QuestionText { get; }
-        protected abstract object Answer { get; }
-
-        protected Question(string questionText)
-        {
-            QuestionText = questionText;
-        }
+        string QuestionText { get; }
+        object Answer { get; }  //Needs to be of type object as the type of answer will be either string or bool
     }
 }

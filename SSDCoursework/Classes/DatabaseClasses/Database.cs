@@ -5,7 +5,7 @@ using System.IO;
 
 namespace SSDCoursework.Classes.DatabaseClasses
 {
-    internal abstract class Database<T>
+    internal abstract class Database<T> where T : class
     {
         public string FilePath { get; }
         public List<T> Entries { get; }
