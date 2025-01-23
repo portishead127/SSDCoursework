@@ -7,17 +7,11 @@ using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
-    internal class TrueOrFalseQuestion : IQuestion
+    internal class TrueOrFalseQuestion : Question
     {
-        public string QuestionText { get; }
-        public bool CorrectAnswer { get; }
-
-        public object Answer => CorrectAnswer;
-
-        public TrueOrFalseQuestion(string questionText, bool correctAnswer)
+        public TrueOrFalseQuestion(string tfQuestionText, bool tfCorrectAnswer) : base(tfQuestionText, tfCorrectAnswer)
         {
-            QuestionText = questionText;
-            CorrectAnswer = correctAnswer;
+            Difficulty = DifficultyLvl.TrueFalse;
         }
     }
 }

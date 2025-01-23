@@ -4,6 +4,7 @@ using SSDCoursework.Classes.DatabaseClasses;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using SSDCoursework.Classes.QuestionClasses;
 
 namespace SSDCoursework.Classes.Misc
 {
@@ -19,7 +20,6 @@ namespace SSDCoursework.Classes.Misc
             //Application.EnableVisualStyles();
 
             Application.SetCompatibleTextRenderingDefault(true);
-
             Application.Run(new SplashScreen(0.05, new RegistryHolder()));
         }
 

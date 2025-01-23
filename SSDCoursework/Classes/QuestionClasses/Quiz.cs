@@ -1,36 +1,51 @@
-﻿using System;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
     internal class Quiz
     {
-        public enum DifficultyLevel
-        {
-            Easy,
-            Medium,
-            Hard
-        }
+        const int numOfQuestions = 10;
+        public List<Question> Questions { get; }
+        public DifficultyLvl Difficulty { get; }
 
-        DifficultyLevel difficultyLevel;
-        List<IQuestion> questions; //Questions can be of any type.
-        int numOfQuestions;
-
-        public Quiz(List<IQuestion> questions, DifficultyLevel difficultyLevel)
+        public Quiz(DifficultyLvl difficulty)
         {
-            this.questions = questions;
-            numOfQuestions = questions.Count;
-            this.difficultyLevel = difficultyLevel;
-        }
+            Random rand = new Random();
+            List<Question> shuffledEntries = QuestionDatabase.Instance.Entries.OrderBy(_ => rand.Next()).ToList();
 
-        public int NumOfQuestions
-        {
-            get { return numOfQuestions; }
-        }
+            switch (difficulty)
+            {
+                case DifficultyLvl.TrueFalse:
+                    Questions = shuffledEntries
+                        .Select(question => new TrueOrFalseQuestion(question.TFQuestionTerm, question.TFCorrectAnswer))
+                        .Take(numOfQuestions)
+                        .Cast<Question>()
+                        .ToList();
+                    break;
 
-        public List<IQuestion> Questions
-        {
-            get { return questions; }
+                case DifficultyLvl.MultipleChoice:
+                    Questions = shuffledEntries
+                        .Select(question => new MultipleChoiceQuestion(question.QuestionTerm, question.CorrectAnswer, question.FakeAnswers))
+                        .Take(numOfQuestions)
+                        .Cast<Question>()
+                        .ToList();
+                    break;
+
+                case DifficultyLvl.WrittenQuestion:
+                    Questions = shuffledEntries
+                        .Select(question => new WrittenQuestion(question.TFQuestionTerm, question.CorrectAnswer))
+                        .Take(numOfQuestions)
+                        .Cast<Question>()
+                        .ToList();
+                    break;
+
+                default:
+                    throw new Exception("Incorrect difficulty type.");
+            }
+            Difficulty = difficulty;
         }
     }
 }

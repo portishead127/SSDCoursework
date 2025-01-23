@@ -1,20 +1,22 @@
-﻿namespace SSDCoursework.Classes.QuestionClasses
+﻿using System;
+using System.Linq;
+
+namespace SSDCoursework.Classes.QuestionClasses
 {
-    internal class MultipleChoiceQuestion : IQuestion
+    internal class MultipleChoiceQuestion : Question
     {
-        public string QuestionText { get; }
-        public string CorrectAnswer { get; }
-        public string FakeAnswer1 { get; }
-        public string FakeAnswer2 { get; }
-
-        public object Answer => CorrectAnswer;
-
-        public MultipleChoiceQuestion(string questionText, string correctAnswer, string fakeAnswer1, string fakeAnswer2)
+        public MultipleChoiceQuestion(string questionText, string correctAnswer, string[] fakeAnswers): base(questionText, correctAnswer, fakeAnswers) 
         {
-            QuestionText = questionText;            
-            CorrectAnswer = correctAnswer;
-            FakeAnswer1 = fakeAnswer1;
-            FakeAnswer2 = fakeAnswer2;
+            Difficulty = DifficultyLvl.MultipleChoice;
+        }
+
+        public new bool CheckAnswer(string userAnswer)
+        {
+            if (!FakeAnswers.Contains(userAnswer) && userAnswer != CorrectAnswer)
+            {
+                throw new Exception("Input was not one of the possible options.");
+            }
+            return base.CheckAnswer(userAnswer);
         }
     }
 }
