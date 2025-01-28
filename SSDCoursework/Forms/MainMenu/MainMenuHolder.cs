@@ -24,12 +24,12 @@ namespace SSDCoursework.Forms.MainMenu
             sidebar.Dock = DockStyle.Fill;
             Controls.Add(sidebar);
 
-            sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, btnSignUp_Click);
-            sidebar.AddControl("Arcade", Properties.Resources.LoginSymbol, btnLogin_Click);
             if (User.CurrentUser.IsAdmin)
             {
                 sidebar.AddControl("Admin Options", Properties.Resources.Hamburger, btnLogin_Click);
             }
+            sidebar.AddControl("Arcade", Properties.Resources.LoginSymbol, btnLogin_Click);
+            sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, btnSignUp_Click);
         }
 
         void btnSignUp_Click(object sender, EventArgs e)

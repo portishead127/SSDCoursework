@@ -1,12 +1,6 @@
-﻿using SSDCoursework.Forms.Misc;
+﻿using SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes;
+using SSDCoursework.Forms.Misc;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SSDCoursework.Forms.MainMenu.QuizMenu
@@ -25,7 +19,12 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            (Application.OpenForms[0] as SplashScreen).Reset(5, new WrittenQuiz());
+            (Application.OpenForms[0] as SplashScreen).Reset(5, new MultipleChoiceQuiz());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            (Application.OpenForms[0] as SplashScreen).Reset(5, new TrueOrFalseQuiz());
         }
     }
 }

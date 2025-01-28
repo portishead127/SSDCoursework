@@ -45,5 +45,6 @@ C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.UserControls.GameBannerControl.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Arcade.ArcadeHolder.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.QuizMenuHolder.resources
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.WrittenQuiz.resources
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.MultipleChoiceQuiz.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes.TrueOrFalseQuiz.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes.MultipleChoiceQuiz.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes.WrittenQuiz.resources
