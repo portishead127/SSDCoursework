@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 using SSDCoursework.Classes.QuestionClasses;
+using SSDCoursework.Forms.MainMenu.QuizMenu;
 
 namespace SSDCoursework.Classes.Misc
 {
@@ -18,9 +19,8 @@ namespace SSDCoursework.Classes.Misc
 
             // Your application code
             //Application.EnableVisualStyles();
-
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new SplashScreen(0.05, new RegistryHolder()));
+            Application.Run(new SplashScreen(2, new RegistryHolder()));
         }
 
         static void InitilizeFonts()

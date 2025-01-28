@@ -36,21 +36,10 @@ namespace SSDCoursework.UserControls
 
         public Form FormToOpen { get; set; } //This is a temporary variable that stores what form should be opened, it is mostly referenced outside the class.
 
-        public SidebarControl() 
-        {
-            InitializeComponent(); 
-            Size = Screen.PrimaryScreen.Bounds.Size;
-            flpSidebar.MaximumSize = MaximumSize;
-            pnlFormHolder.Width = Width - flpSidebar.Width;
-            pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
-            sidebarChange = Width / sidebarScaleExpansionFactor;
-        }
-
-        public SidebarControl(string formName)
+        public SidebarControl()
         {
             InitializeComponent();
             Size = Screen.PrimaryScreen.Bounds.Size;
-            lblPageIndicator.Text = formName;
             flpSidebar.MaximumSize = MaximumSize;
             pnlFormHolder.Width = Width - flpSidebar.Width;
             pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
@@ -181,6 +170,11 @@ namespace SSDCoursework.UserControls
             {
                 Application.Exit();
             }
+        }
+
+        private void SidebarControl_Load(object sender, EventArgs e)
+        {
+            lblPageIndicator.Text = FindForm().Text;
         }
     }
 }

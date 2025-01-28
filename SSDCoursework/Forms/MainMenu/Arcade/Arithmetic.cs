@@ -17,10 +17,5 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
         {
             InitializeComponent();
         }
-
-        private void gameBannerControl1_Load(object sender, EventArgs e)
-        {
-            gameBannerControl1.LblGameIndicator.Text = "Arithmetic";
-        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.LblGameIndicator = new System.Windows.Forms.Label();
+            this.lblGameIndicator = new System.Windows.Forms.Label();
             this.pbxExit = new System.Windows.Forms.PictureBox();
             this.flpBannerbar = new System.Windows.Forms.FlowLayoutPanel();
             this.tmr = new System.Windows.Forms.Timer(this.components);
@@ -37,16 +37,16 @@
             this.flpBannerbar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LblGameIndicator
+            // lblGameIndicator
             // 
-            this.LblGameIndicator.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGameIndicator.ForeColor = System.Drawing.Color.White;
-            this.LblGameIndicator.Location = new System.Drawing.Point(3, 0);
-            this.LblGameIndicator.Name = "LblGameIndicator";
-            this.LblGameIndicator.Size = new System.Drawing.Size(1213, 96);
-            this.LblGameIndicator.TabIndex = 0;
-            this.LblGameIndicator.Text = "Current Game";
-            this.LblGameIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblGameIndicator.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameIndicator.ForeColor = System.Drawing.Color.White;
+            this.lblGameIndicator.Location = new System.Drawing.Point(3, 0);
+            this.lblGameIndicator.Name = "lblGameIndicator";
+            this.lblGameIndicator.Size = new System.Drawing.Size(1213, 96);
+            this.lblGameIndicator.TabIndex = 0;
+            this.lblGameIndicator.Text = "Current Game";
+            this.lblGameIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pbxExit
             // 
@@ -63,7 +63,7 @@
             // flpBannerbar
             // 
             this.flpBannerbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(68)))));
-            this.flpBannerbar.Controls.Add(this.LblGameIndicator);
+            this.flpBannerbar.Controls.Add(this.lblGameIndicator);
             this.flpBannerbar.Controls.Add(this.pbxExit);
             this.flpBannerbar.Location = new System.Drawing.Point(0, 0);
             this.flpBannerbar.Margin = new System.Windows.Forms.Padding(0);
@@ -79,6 +79,7 @@
             this.Controls.Add(this.flpBannerbar);
             this.Name = "GameBannerControl";
             this.Size = new System.Drawing.Size(1928, 96);
+            this.Load += new System.EventHandler(this.GameBannerControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).EndInit();
             this.flpBannerbar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -89,6 +90,6 @@
         private System.Windows.Forms.PictureBox pbxExit;
         private System.Windows.Forms.FlowLayoutPanel flpBannerbar;
         private System.Windows.Forms.Timer tmr;
-        public System.Windows.Forms.Label LblGameIndicator;
+        private System.Windows.Forms.Label lblGameIndicator;
     }
 }

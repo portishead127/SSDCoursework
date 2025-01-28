@@ -155,6 +155,7 @@
             this.Controls.Add(this.pnlFormHolder);
             this.Name = "SidebarControl";
             this.Size = new System.Drawing.Size(1920, 1080);
+            this.Load += new System.EventHandler(this.SidebarControl_Load);
             this.flpSidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxHamburger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSettingsIcon)).EndInit();

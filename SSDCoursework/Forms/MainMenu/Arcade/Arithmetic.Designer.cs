@@ -48,7 +48,6 @@
             this.gameBannerControl1.Name = "gameBannerControl1";
             this.gameBannerControl1.Size = new System.Drawing.Size(1928, 96);
             this.gameBannerControl1.TabIndex = 1;
-            this.gameBannerControl1.Load += new System.EventHandler(this.gameBannerControl1_Load);
             // 
             // Arithmetic
             // 

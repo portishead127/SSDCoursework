@@ -15,8 +15,8 @@ namespace SSDCoursework.Forms.Misc
 {
     public partial class SplashScreen : Form
     {
-        const int maxProgressUpdate = 3;
-        double transparencyUpdate;
+        int maxProgressUpdate;
+        const double transparencyUpdate = 0.2;
         const int timeMultiplier = 20;
         bool isOpening = true; //Will be opening on creation.
         Form formToOpen;
@@ -38,12 +38,12 @@ namespace SSDCoursework.Forms.Misc
 
         public SoundPlayer SP = new SoundPlayer(Properties.Resources.BacksideOfTheTV);
 
-        public SplashScreen(double transparencyUpdate, Form formToOpen)
+        public SplashScreen(int maxProgressUpdate, Form formToOpen)
         {
             InitializeComponent();
             //SP.Load();
             //SP.PlayLooping();
-            Reset(transparencyUpdate, formToOpen);
+            Reset(maxProgressUpdate, formToOpen);
         }
 
         /// <summary>
@@ -130,9 +130,9 @@ namespace SSDCoursework.Forms.Misc
             }
         }
 
-        public void Reset(double transparencyUpdate, Form formToOpen)
+        public void Reset(int maxProgressUpdate, Form formToOpen)
         {
-            this.transparencyUpdate = transparencyUpdate;
+            this.maxProgressUpdate = maxProgressUpdate;
             this.formToOpen = formToOpen;
             Opacity = 0;
             isOpening = true;

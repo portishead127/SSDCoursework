@@ -1,5 +1,6 @@
 ﻿using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.MainMenu.Arcade;
+using SSDCoursework.Forms.MainMenu.QuizMenu;
 using SSDCoursework.Forms.Registry;
 using SSDCoursework.UserControls;
 using System;
@@ -19,7 +20,7 @@ namespace SSDCoursework.Forms.MainMenu
 
         void InitialiseSidebar()
         {
-            sidebar = new SidebarControl("Main Menu");
+            sidebar = new SidebarControl();
             sidebar.Dock = DockStyle.Fill;
             Controls.Add(sidebar);
 
@@ -34,14 +35,14 @@ namespace SSDCoursework.Forms.MainMenu
         void btnSignUp_Click(object sender, EventArgs e)
         {
             sidebar.IsExpandingForMenuItem = true;
-            sidebar.FormToOpen = new SignUp();
+            sidebar.FormToOpen = new QuizMenuHolder();
             sidebar.sidebarTimer.Start();
         }
 
         void btnLogin_Click(object sender, EventArgs e)
         {
             sidebar.IsExpandingForMenuItem = true;
-            sidebar.FormToOpen = new ArcadeHolder();
+            sidebar.FormToOpen = new Arcade.ArcadeHolder();
             sidebar.sidebarTimer.Start();
         }
     }

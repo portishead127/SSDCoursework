@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 
 namespace SSDCoursework.Classes.DatabaseClasses
@@ -49,7 +48,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
                     string line = sr.ReadLine();
                     string[] items = line.Split(',');
 
-                    new Question(items[0], items[1], new string[] { items[2], items[3] } , items[4], bool.Parse(items[5]));
+                    Entries.Add(new Question(items[0], items[1], new string[] { items[2], items[3] } , items[4], bool.Parse(items[5])));
                 }
             }
             Write();

@@ -19,7 +19,7 @@ namespace SSDCoursework.Forms.Registry
 
         void InitialiseSidebar()
         {
-            sidebar = new SidebarControl("Registry");
+            sidebar = new SidebarControl();
             sidebar.Dock = DockStyle.Fill;
             Controls.Add(sidebar);
 

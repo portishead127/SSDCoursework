@@ -75,7 +75,7 @@ namespace SSDCoursework.Classes.QuestionClasses
         public bool CheckAnswer(string userAnswer)
         {
             UserAnswer = userAnswer;
-            if((string)UserAnswer == CorrectAnswer)
+            if(((string)UserAnswer).ToLower() == CorrectAnswer.ToLower())
             {
                 return true;
             }

@@ -7,7 +7,7 @@ namespace SSDCoursework.Classes.QuestionClasses
 {
     internal class Quiz
     {
-        const int numOfQuestions = 10;
+        public const int NumOfQuestions = 5;
         public List<Question> Questions { get; }
         public DifficultyLvl Difficulty { get; }
 
@@ -21,7 +21,7 @@ namespace SSDCoursework.Classes.QuestionClasses
                 case DifficultyLvl.TrueFalse:
                     Questions = shuffledEntries
                         .Select(question => new TrueOrFalseQuestion(question.TFQuestionTerm, question.TFCorrectAnswer))
-                        .Take(numOfQuestions)
+                        .Take(NumOfQuestions)
                         .Cast<Question>()
                         .ToList();
                     break;
@@ -29,15 +29,15 @@ namespace SSDCoursework.Classes.QuestionClasses
                 case DifficultyLvl.MultipleChoice:
                     Questions = shuffledEntries
                         .Select(question => new MultipleChoiceQuestion(question.QuestionTerm, question.CorrectAnswer, question.FakeAnswers))
-                        .Take(numOfQuestions)
+                        .Take(NumOfQuestions)
                         .Cast<Question>()
                         .ToList();
                     break;
 
                 case DifficultyLvl.WrittenQuestion:
                     Questions = shuffledEntries
-                        .Select(question => new WrittenQuestion(question.TFQuestionTerm, question.CorrectAnswer))
-                        .Take(numOfQuestions)
+                        .Select(question => new WrittenQuestion(question.QuestionTerm, question.CorrectAnswer))
+                        .Take(NumOfQuestions)
                         .Cast<Question>()
                         .ToList();
                     break;

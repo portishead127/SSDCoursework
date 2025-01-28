@@ -19,54 +19,7 @@ namespace SSDCoursework.Forms.Registry
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            if (ValidateInput())
-            {
-                FindUser();
-            }
-        }
-
-        private bool ValidateInput()
-        {
-            List<Exception> exceptions = new List<Exception>();
-            bool valid = true;
-
-            foreach (Control c in tlp.Controls.OfType<TextBox>())
-            {
-                Label correspondingLabel = tlp.Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.Equals(c.Tag));
-
-                if (c.Tag.Equals("Username"))
-                {
-                    exceptions = Validation.Validate(c.Text, 8, 20);
-                }
-                else if (c.Tag.Equals("Pass"))
-                {
-                    exceptions = Validation.ValidatePass(c.Text, 8, 20);
-                }
-                else
-                {
-                    exceptions = Validation.Validate(c.Text);
-                }
-
-                //Constructing the error message
-                StringBuilder errorMessage = new StringBuilder();
-                foreach (Exception ex in exceptions)
-                {
-                    errorMessage.AppendLine(ex.Message);
-                }
-
-                // Change label color if there are exceptions
-                if (exceptions.Any() && correspondingLabel != null)
-                {
-                    valid = false;
-                    correspondingLabel.ForeColor = Color.Red; // Change label text color to red
-                    MessageBox.Show($"The {correspondingLabel.Text} entry contains the following issues:\n\n{errorMessage}", "Invalid credentials");
-                }
-                else if (correspondingLabel != null)
-                {
-                    correspondingLabel.ForeColor = Color.White; // Reset label color if no errors
-                }
-            }
-            return valid;
+            FindUser();
         }
 
         private void FindUser()

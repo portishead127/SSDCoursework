@@ -92,6 +92,24 @@
     <Compile Include="Forms\MainMenu\MainMenuHolder.Designer.cs">
       <DependentUpon>MainMenuHolder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MainMenu\QuizMenu\MultipleChoiceQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu\QuizMenu\MultipleChoiceQuestion.Designer.cs">
+      <DependentUpon>MultipleChoiceQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainMenu\QuizMenu\QuizMenuHolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu\QuizMenu\QuizMenuHolder.Designer.cs">
+      <DependentUpon>QuizMenuHolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainMenu\QuizMenu\WrittenQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu\QuizMenu\WrittenQuiz.Designer.cs">
+      <DependentUpon>WrittenQuiz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Misc\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +171,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu\MainMenuHolder.resx">
       <DependentUpon>MainMenuHolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenu\QuizMenu\MultipleChoiceQuestion.resx">
+      <DependentUpon>MultipleChoiceQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenu\QuizMenu\QuizMenuHolder.resx">
+      <DependentUpon>QuizMenuHolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenu\QuizMenu\WrittenQuiz.resx">
+      <DependentUpon>WrittenQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Misc\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>

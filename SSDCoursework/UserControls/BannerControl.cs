@@ -17,8 +17,13 @@ namespace SSDCoursework.UserControls
             DialogResult dialogResult = MessageBox.Show("Quit game?", "Quit?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                (Application.OpenForms[0] as SplashScreen).Reset(0.2, new MainMenuHolder());
+                (Application.OpenForms[0] as SplashScreen).Reset(3, new MainMenuHolder());
             }
+        }
+
+        private void GameBannerControl_Load(object sender, EventArgs e)
+        {
+            lblGameIndicator.Text = FindForm().Text;
         }
     }
 }

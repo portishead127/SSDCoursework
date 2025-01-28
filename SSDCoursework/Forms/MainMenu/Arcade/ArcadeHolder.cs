@@ -20,7 +20,7 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (Application.OpenForms[0] as SplashScreen).Reset(0.2, new Arithmetic());
+            (Application.OpenForms[0] as SplashScreen).Reset(6, new Arithmetic());
         }
     }
 }
