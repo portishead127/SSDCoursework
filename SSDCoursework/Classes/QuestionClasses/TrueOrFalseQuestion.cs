@@ -9,9 +9,16 @@ namespace SSDCoursework.Classes.QuestionClasses
 {
     internal class TrueOrFalseQuestion : Question
     {
-        public TrueOrFalseQuestion(string tfQuestionText, bool tfCorrectAnswer) : base(tfQuestionText, tfCorrectAnswer)
+        public TrueOrFalseQuestion(string tfQuestionText, bool tfCorrectAnswer) : base(tfQuestionText, tfCorrectAnswer){}
+
+        public bool CheckAnswer(bool userAnswer)
         {
-            Difficulty = DifficultyLvl.TrueFalse;
+            UserAnswer = userAnswer;
+            if ((bool)UserAnswer == TFCorrectAnswer)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -42,15 +42,15 @@ namespace SSDCoursework.Forms.Registry
 
                 if (c.Tag.Equals("Username"))
                 {
-                    exceptions = Validation.ValidateUsername(c.Text, 8, 20);
+                    exceptions = Validation.ValidateUsername(c.Text);
                 }
                 else if (c.Tag.Equals("Pass"))
                 {
-                    exceptions = Validation.ValidatePass(c.Text, 8, 20);
+                    exceptions = Validation.ValidatePass(c.Text);
                 }
                 else if(c.Tag.Equals("Email"))
                 {
-                    exceptions = Validation.ValidateEmail(c.Text, 8, 50);
+                    exceptions = Validation.ValidateEmail(c.Text);
                 }
                 else
                 {

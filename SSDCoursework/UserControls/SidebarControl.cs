@@ -44,6 +44,7 @@ namespace SSDCoursework.UserControls
             pnlFormHolder.Width = Width - flpSidebar.Width;
             pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
             sidebarChange = Width / sidebarScaleExpansionFactor;
+            DoubleBuffered = true;
         }
 
         public void AddControl(string text, Bitmap image, EventHandler clickEventHandler)

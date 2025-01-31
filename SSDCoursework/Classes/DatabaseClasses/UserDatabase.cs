@@ -2,6 +2,7 @@
 using SSDCoursework.Classes.UserClasses;
 using System;
 using System.IO;
+using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.DatabaseClasses
 {
@@ -49,7 +50,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
             }
         }
 
-        protected override void Write()
+        public override void Write()
         {
             using (StreamWriter sw = new StreamWriter(FilePath, true)) // Overwrite the file.
             {
@@ -62,6 +63,41 @@ namespace SSDCoursework.Classes.DatabaseClasses
                     sw.WriteLine(string.Join(",", userDataPoints));
                 }
             }
+        }
+
+        public static void FindUserToLogin(string desiredUsername, string desiredPass)
+        {
+            User userFound = null;
+
+            foreach (User tempUser in Instance.Entries)
+            {
+                if (tempUser.Username == desiredUsername)
+                {
+                    if (tempUser.Password == desiredPass)
+                    {
+                        userFound = tempUser; break;
+                    }
+                }
+            }
+
+            if (userFound == null)
+            {
+                MessageBox.Show("User could not be found.", "Invalid credentials");
+                return;
+            }
+            userFound.LoginUser();
+        }
+
+        public static User FindUser(string username)
+        {
+            foreach (User tempUser in Instance.Entries)
+            {
+                if (tempUser.Username == username)
+                {
+                    return tempUser;
+                }
+            }
+            return null;
         }
     }
 }

@@ -6,6 +6,15 @@ using System.IO;
 
 namespace SSDCoursework.Classes.DatabaseClasses
 {
+    // Outside of the class so it can be referenced by the Quiz class too.
+    public enum DifficultyLvl
+    {
+        Unset,
+        TrueFalse,
+        MultipleChoice,
+        WrittenQuestion
+    }
+
     internal class QuestionDatabase : Database<Question>
     {
         public static QuestionDatabase Instance { get; private set; }
@@ -54,7 +63,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
             Write();
         }
 
-        protected override void Write()
+        public override void Write()
         {
             using (StreamWriter sw = new StreamWriter(FilePath, false))
             {

@@ -7,14 +7,6 @@ using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.QuestionClasses
 {
-    // Outside of the class so it can be referenced by the Quiz class too.
-    public enum DifficultyLvl
-    {
-        TrueFalse,
-        MultipleChoice,
-        WrittenQuestion
-    }
-
     internal class Question
     {
         public string QuestionTerm { get; }
@@ -25,11 +17,10 @@ namespace SSDCoursework.Classes.QuestionClasses
         public string TFQuestionTerm { get; }
         public bool TFCorrectAnswer { get; }
 
-        public DifficultyLvl Difficulty { get; protected set; }
         public object UserAnswer { get; protected set; }
 
         /// <summary>
-        /// Written question constructor
+        /// Written question constructor.
         /// </summary>
         /// <param name="questionTerm"></param>
         /// <param name="correctAnswer"></param>
@@ -76,16 +67,6 @@ namespace SSDCoursework.Classes.QuestionClasses
         {
             UserAnswer = userAnswer;
             if(((string)UserAnswer).ToLower() == CorrectAnswer.ToLower())
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public bool CheckAnswer(bool userAnswer)
-        {
-            UserAnswer = userAnswer;
-            if ((bool)UserAnswer == TFCorrectAnswer)
             {
                 return true;
             }

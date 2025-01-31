@@ -2,13 +2,14 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.DatabaseClasses
 {
     internal abstract class Database<T> where T : class
     {
         public string FilePath { get; }
-        public List<T> Entries { get; }
+        public List<T> Entries { get; set; }
 
         protected Database(string filePath)
         {
@@ -22,14 +23,30 @@ namespace SSDCoursework.Classes.DatabaseClasses
 
         public void AddEntry(T entry)
         {
-            Entries.Add(entry);
-            Write();
+            if (!Entries.Contains(entry))
+            {
+                Entries.Add(entry);
+                Write();
+                Retrieve();
+            }
+            else
+            {
+                MessageBox.Show("Entry already exists.");
+            }
         }
 
         public void RemoveEntry(T entry)
         {
-            Entries.Remove(entry);
-            Write();
+            if (Entries.Contains(entry))
+            {
+                Entries.Remove(entry);
+                Write();
+                Retrieve();
+            }
+            else
+            {
+                MessageBox.Show("Entry already exists.");
+            }
         }
 
         /// <summary>
@@ -40,6 +57,6 @@ namespace SSDCoursework.Classes.DatabaseClasses
         /// <summary>
         /// Updates the CSV file according to the list.
         /// </summary>
-        protected abstract void Write();
+        public abstract void Write();
     }
 }

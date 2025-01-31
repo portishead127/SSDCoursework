@@ -5,10 +5,7 @@ namespace SSDCoursework.Classes.QuestionClasses
 {
     internal class MultipleChoiceQuestion : Question
     {
-        public MultipleChoiceQuestion(string questionText, string correctAnswer, string[] fakeAnswers): base(questionText, correctAnswer, fakeAnswers) 
-        {
-            Difficulty = DifficultyLvl.MultipleChoice;
-        }
+        public MultipleChoiceQuestion(string questionText, string correctAnswer, string[] fakeAnswers): base(questionText, correctAnswer, fakeAnswers) {}
 
         public new bool CheckAnswer(string userAnswer)
         {

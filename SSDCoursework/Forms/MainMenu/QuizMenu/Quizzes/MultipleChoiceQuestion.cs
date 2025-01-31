@@ -1,4 +1,5 @@
-﻿using SSDCoursework.Classes.QuestionClasses;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Windows.Forms;
@@ -8,7 +9,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
     public partial class MultipleChoiceQuiz : Form
     {
         Quiz quiz;
-        Question currentQuestion;
+        MultipleChoiceQuestion currentQuestion;
         Random rand = new Random();
         int currentQuestionIndex = -1;
         int score = 0;
@@ -27,7 +28,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             if (currentQuestionIndex < Quiz.NumOfQuestions - 1)
             {
                 currentQuestionIndex++;
-                currentQuestion = quiz.Questions[currentQuestionIndex];
+                currentQuestion = (MultipleChoiceQuestion)quiz.Questions[currentQuestionIndex];
                 lblQuestionText.Text = currentQuestion.QuestionTerm;
 
                 switch (correctAnswerPos)

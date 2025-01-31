@@ -42,7 +42,7 @@ namespace SSDCoursework.Forms.MainMenu
         void btnLogin_Click(object sender, EventArgs e)
         {
             sidebar.IsExpandingForMenuItem = true;
-            sidebar.FormToOpen = new Arcade.ArcadeHolder();
+            sidebar.FormToOpen = new AdminOptions();
             sidebar.sidebarTimer.Start();
         }
     }

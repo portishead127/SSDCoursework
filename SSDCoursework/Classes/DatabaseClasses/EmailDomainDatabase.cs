@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.DatabaseClasses
 {
@@ -44,7 +45,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
             Write();
         }
 
-        protected override void Write()
+        public override void Write()
         {
             File.WriteAllText(FilePath, string.Join(",", Entries));
         }
@@ -53,8 +54,11 @@ namespace SSDCoursework.Classes.DatabaseClasses
         {
             if (!defaultDomains.Contains(entry))
             {
-                Entries.Remove(entry);
-                Write();
+                base.RemoveEntry(entry);
+            }
+            else
+            {
+                MessageBox.Show("Cannot remove a default email domain.");
             }
         }
     }

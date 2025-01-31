@@ -1,4 +1,5 @@
-﻿using SSDCoursework.Classes.QuestionClasses;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
     public partial class WrittenQuiz : Form
     {
         Quiz quiz;
-        Question currentQuestion;
+        WrittenQuestion currentQuestion;
         int currentQuestionIndex = -1;
         int score = 0;
         const int maxTime = 60;
@@ -32,7 +33,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             if(currentQuestionIndex < Quiz.NumOfQuestions - 1)
             {
                 currentQuestionIndex++;
-                currentQuestion = quiz.Questions[currentQuestionIndex];
+                currentQuestion = (WrittenQuestion)quiz.Questions[currentQuestionIndex];
                 lblQuestionText.Text = currentQuestion.QuestionTerm;
                 txtUserAnswer.Text = "";
             }

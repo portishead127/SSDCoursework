@@ -12,10 +12,10 @@ namespace SSDCoursework.Classes.Misc
         const string nums = "0123456789";
         const string specialChars = "!\"£$%^&*()_-+={}@~\'#?/>.<,:;|\\¬`";
 
-        //This list will contain the exceptions that are present in the given data.
-        static readonly List<Exception> exceptions = new List<Exception>();
+        const int minEntryLength = 8;
+        const int maxEntryLength = 25;
 
-        //Possible exceptions:
+        // Possible exceptions:
         static readonly Exception noCaps = new Exception("\t• No capital letters were included in the entered text");
         static readonly Exception noNums = new Exception("\t• No numbers were included in the entered text");
         static readonly Exception noSpecialChars = new Exception("\t• No special characters were included in the entered text");
@@ -24,15 +24,12 @@ namespace SSDCoursework.Classes.Misc
         static readonly Exception incorrectEmailDomain = new Exception("\t• The email domain was not registered in our database");
         static readonly Exception duplicateUsername = new Exception("\t• The username is not unique.");
 
-
         /// <summary>
         /// Checks if a string is empty.
         /// </summary>
-        /// <param name="textToValidate"></param>
-        /// <returns>A list of exceptions</returns>
         public static List<Exception> Validate(string textToValidate)
         {
-            ResetValidationFlags();
+            var exceptions = new List<Exception>(); // Create a new list for each validation call
 
             if (string.IsNullOrEmpty(textToValidate))
             {
@@ -42,17 +39,13 @@ namespace SSDCoursework.Classes.Misc
         }
 
         /// <summary>
-        /// Checks if a string is empty or outside of a length range
+        /// Checks if a string is empty or outside of a length range.
         /// </summary>
-        /// <param name="textToValidate"></param>
-        /// <param name="minLength"></param>
-        /// <param name="maxLength"></param>
-        /// <returns>A list of exceptions</returns>
-        public static List<Exception> Validate(string textToValidate, int minLength, int maxLength)
+        public static List<Exception> ValidateWithLength(string textToValidate)
         {
-            exceptions.AddRange(Validate(textToValidate));
+            var exceptions = Validate(textToValidate); // Start with basic validation
 
-            if (textToValidate.Length < minLength || textToValidate.Length > maxLength)
+            if (textToValidate.Length < minEntryLength || textToValidate.Length > maxEntryLength)
             {
                 exceptions.Add(invalidLength);
             }
@@ -60,16 +53,11 @@ namespace SSDCoursework.Classes.Misc
         }
 
         /// <summary>
-        /// Checks if a string is empty, outside of a length range or doesn't include the specified password characters.
+        /// Checks if a string is empty, outside of a length range, or doesn't include the specified password characters.
         /// </summary>
-        /// <param name="textToValidate"></param>
-        /// <param name="minLength"></param>
-        /// <param name="maxLength"></param>
-        /// <param name="passRequiredChars"></param>
-        /// <returns>A list of exceptions</returns>
-        public static List<Exception> ValidatePass(string textToValidate, int minLength, int maxLength)
+        public static List<Exception> ValidatePass(string textToValidate)
         {
-            exceptions.AddRange(Validate(textToValidate, minLength, maxLength));
+            var exceptions = ValidateWithLength(textToValidate); // Start with length validation
 
             if (!textToValidate.Any(c => caps.Contains(c)))
             {
@@ -87,63 +75,65 @@ namespace SSDCoursework.Classes.Misc
         }
 
         /// <summary>
-        /// Checks if a string is empty, outside of a length range or isn't a unique username.
+        /// Checks if a string is empty, outside of a length range, or isn't a unique username.
         /// </summary>
-        /// <param name="usernameToValidate"></param>
-        /// <param name="minLength"></param>
-        /// <param name="maxLength"></param>
-        /// <param name="passRequiredChars"></param>
-        /// <returns>A list of exceptions</returns>
-        public static List<Exception> ValidateUsername(string usernameToValidate, int minLength, int maxLength)
+        public static List<Exception> ValidateUsername(string usernameToValidate)
         {
-            exceptions.AddRange(Validate(usernameToValidate, minLength, maxLength));
-            
-            //Checks 
-            foreach(User tempUser in UserDatabase.Instance.Entries)
+            var exceptions = ValidateWithLength(usernameToValidate); // Start with length validation
+
+            // Check in user database
+            if (UserDatabase.Instance.Entries.Any(user => user.Username == usernameToValidate))
             {
-                if (tempUser.Username == usernameToValidate)
-                {
-                    exceptions.Add(duplicateUsername);
-                }
+                exceptions.Add(duplicateUsername);
             }
 
             return exceptions;
         }
 
         /// <summary>
-        /// Checks if a string is empty, outside of a length range or doesn't include an email domain.
+        /// Checks if a string is empty, outside of a length range, or doesn't include an email domain.
         /// </summary>
-        /// <param name="emailToValidate"></param>
-        /// <param name="minLength"></param>
-        /// <param name="maxLength"></param>
-        /// <returns>A list of exceptions</returns>
-        public static List<Exception> ValidateEmail(string emailToValidate, int minLength, int maxLength)
+        public static List<Exception> ValidateEmail(string emailToValidate)
         {
-            string domain;
+            var exceptions = new List<Exception>();
 
-            //Attempts to get the domain of the email.
-            try 
-            { 
-                 domain = emailToValidate.Substring(emailToValidate.IndexOf('@'));
+            try
+            {
+                string domain = emailToValidate.Substring(emailToValidate.IndexOf('@'));
+
+                exceptions.AddRange(ValidateDomain(domain));
+
+                if (!EmailDomainDatabase.Instance.Entries.Contains(domain))
+                {
+                    exceptions.Add(incorrectEmailDomain);
+                }
             }
             catch
             {
                 exceptions.Add(incorrectEmailDomain);
-                return exceptions;
             }
 
-            exceptions.AddRange(Validate(emailToValidate, minLength, maxLength));
-
-            if (!EmailDomainDatabase.Instance.Entries.Contains(domain))
-            {
-                exceptions.Add(incorrectEmailDomain);
-            }
             return exceptions;
         }
 
-        static void ResetValidationFlags()
+        public static List<Exception> ValidateDomain(string domain)
         {
-            exceptions.Clear();
+            var exceptions = new List<Exception>();
+
+            try
+            {
+                if (domain.First() != '@')
+                {
+                    exceptions.Add(incorrectEmailDomain);
+                }
+            }
+            catch
+            {
+                exceptions.Add(incorrectEmailDomain);
+            }
+
+            exceptions.AddRange(Validate(domain));
+            return exceptions;
         }
     }
 }

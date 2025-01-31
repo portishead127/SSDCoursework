@@ -8,9 +8,6 @@ namespace SSDCoursework.Classes.QuestionClasses
 {
     internal class WrittenQuestion : Question
     {
-        public WrittenQuestion(string questionText, string correctAnswer): base(questionText, correctAnswer) 
-        {
-            Difficulty = DifficultyLvl.WrittenQuestion;
-        }
+        public WrittenQuestion(string questionText, string correctAnswer): base(questionText, correctAnswer) {}
     }
 }
