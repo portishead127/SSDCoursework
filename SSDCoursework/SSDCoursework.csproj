@@ -92,6 +92,12 @@
     <Compile Include="Forms\MainMenu\Arcade\Arithmetic.Designer.cs">
       <DependentUpon>Arithmetic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MainMenu\Leaderboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu\Leaderboard.Designer.cs">
+      <DependentUpon>Leaderboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainMenu\MainMenuHolder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu\Arcade\Arithmetic.resx">
       <DependentUpon>Arithmetic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenu\Leaderboard.resx">
+      <DependentUpon>Leaderboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu\MainMenuHolder.resx">
       <DependentUpon>MainMenuHolder.cs</DependentUpon>
