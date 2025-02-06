@@ -49,3 +49,4 @@ C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes.MultipleChoiceQuiz.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes.WrittenQuiz.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.AdminOptions.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Leaderboard.resources

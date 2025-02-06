@@ -1,4 +1,5 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.UserClasses.UserAttributes;
 using System;
 
 namespace SSDCoursework.Classes.UserClasses
@@ -7,7 +8,7 @@ namespace SSDCoursework.Classes.UserClasses
     {
         private static int numOfAdmins;
 
-        public Admin(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin) : base(fName, sName, dob, username, email, password, isAdmin) { }
+        public Admin(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard) : base(fName, sName, dob, username, email, password, isAdmin, scorecard) { }
 
         public static int NumOfAdmins
         {

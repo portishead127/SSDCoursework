@@ -1,5 +1,6 @@
 ﻿using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Classes.UserClasses;
+using SSDCoursework.Classes.UserClasses.UserAttributes;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -32,23 +33,34 @@ namespace SSDCoursework.Classes.DatabaseClasses
         protected override void Retrieve()
         {
             Entries.Clear();
-            using(StreamReader sr = new StreamReader(FilePath))
+            using (StreamReader sr = new StreamReader(FilePath))
             {
                 while (!sr.EndOfStream)
                 {
                     string line = sr.ReadLine();
                     string[] items = line.Split(',');
-                    if (items[5] == bool.FalseString)
+
+                    bool isAdmin = bool.Parse(items[6]);
+
+                    Scorecard scorecard = new Scorecard(
+                        int.Parse(items[7]),
+                        int.Parse(items[8]),
+                        int.Parse(items[9]),
+                        int.Parse(items[10])
+                    );
+
+                    if (!isAdmin)
                     {
-                        Entries.Add(new Player(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], false));
+                        Entries.Add(new Player(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], false, scorecard));
                     }
                     else
                     {
-                        Entries.Add(new Admin(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], true));
+                        Entries.Add(new Admin(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], true, scorecard));
                     }
                 }
             }
         }
+
 
         public override void Write()
         {
@@ -58,7 +70,17 @@ namespace SSDCoursework.Classes.DatabaseClasses
                 {
                     string[] userDataPoints =
                     {
-                        user.FName, user.SName, user.Dob.ToString(), user.Username, user.Email, user.Password, user.IsAdmin.ToString()
+                        user.FName,
+                        user.SName,
+                        user.Dob.ToString(),
+                        user.Username,
+                        user.Email,
+                        user.Password,
+                        user.IsAdmin.ToString(),
+                        user.Scorecard.OverallScore.ToString(),
+                        user.Scorecard.TrueFalseHighScore.ToString(),
+                        user.Scorecard.MultipleChoiceHighScore.ToString(),
+                        user.Scorecard.WrittenHighScore.ToString(),
                     };
                     sw.WriteLine(string.Join(",", userDataPoints));
                 }

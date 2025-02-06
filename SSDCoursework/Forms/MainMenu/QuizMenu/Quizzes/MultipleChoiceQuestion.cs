@@ -1,5 +1,6 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
 using SSDCoursework.Classes.QuestionClasses;
+using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
     {
         Quiz quiz;
         MultipleChoiceQuestion currentQuestion;
+        GameType gameType = GameType.MultipleChoice;
         Random rand = new Random();
         int currentQuestionIndex = -1;
         int score = 0;
@@ -19,7 +21,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         public MultipleChoiceQuiz()
         {
             InitializeComponent();
-            quiz = new Quiz(DifficultyLvl.MultipleChoice);
+            quiz = new Quiz(gameType);
         }
 
         private void UpdateQuestion()
@@ -74,6 +76,8 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
             btnStart.Visible = true;
             btnStart.Enabled = true;
+
+            User.CurrentUser.Scorecard.UpdateScore(gameType, score);
         }
 
         private void button1_Click(object sender, EventArgs e)

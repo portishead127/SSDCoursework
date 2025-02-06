@@ -66,6 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DatabaseClasses\QuestionDatabase.cs" />
+    <Compile Include="Classes\Misc\Colours\ColourPalettes\DarkMode.cs" />
+    <Compile Include="Classes\Misc\Colours\IColourPalette.cs" />
+    <Compile Include="Classes\Misc\Colours\ColourPalettes\LightMode.cs" />
+    <Compile Include="Classes\UserClasses\UserAttributes\Scorecard.cs" />
     <Compile Include="Classes\QuestionClasses\MultipleChoiceQuestion.cs" />
     <Compile Include="Classes\QuestionClasses\Question.cs" />
     <Compile Include="Classes\QuestionClasses\Quiz.cs" />

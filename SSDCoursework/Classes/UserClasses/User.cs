@@ -3,6 +3,7 @@ using SSDCoursework.Forms.MainMenu;
 using System;
 using System.Windows.Forms;
 using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.UserClasses.UserAttributes;
 
 namespace SSDCoursework.Classes.UserClasses
 {
@@ -18,6 +19,7 @@ namespace SSDCoursework.Classes.UserClasses
         string password;
         string email;
         bool isAdmin;
+        Scorecard scorecard;
 
 
         public static User CurrentUser
@@ -47,7 +49,6 @@ namespace SSDCoursework.Classes.UserClasses
         public string Username
         {
             get { return username; }
-            set { username = value; }
         }
 
         public string Password
@@ -66,7 +67,12 @@ namespace SSDCoursework.Classes.UserClasses
             get { return isAdmin; }
         }
 
-        public User(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin)
+        public Scorecard Scorecard
+        {
+            get { return scorecard; }
+        }
+
+        public User(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard)
         {
             this.fName = fName;
             this.sName = sName;
@@ -75,6 +81,7 @@ namespace SSDCoursework.Classes.UserClasses
             this.email = email;
             this.password = password;
             this.isAdmin = isAdmin;
+            this.scorecard = scorecard;
             age = CalculateAge();
         }
 

@@ -114,7 +114,7 @@
             // 
             // pnlChangePass
             // 
-            this.pnlChangePass.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.pnlChangePass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlChangePass.Controls.Add(this.button1);
             this.pnlChangePass.Controls.Add(this.txtUsername);
@@ -139,7 +139,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblExample);
             this.panel1.Controls.Add(this.button4);
@@ -175,7 +175,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(307, 23);
             this.button4.TabIndex = 12;
-            this.button4.Text = "Remove domain";
+            this.button4.Text = "Remove selected domain";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -225,7 +225,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.ckbTFAnswer);
             this.panel2.Controls.Add(this.txtTFQuestionTerm);
@@ -244,7 +244,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 292);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1386, 353);
+            this.panel2.Size = new System.Drawing.Size(1386, 381);
             this.panel2.TabIndex = 11;
             // 
             // ckbTFAnswer
@@ -337,7 +337,7 @@
             this.dgvQuestions.Location = new System.Drawing.Point(909, 0);
             this.dgvQuestions.Name = "dgvQuestions";
             this.dgvQuestions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestions.Size = new System.Drawing.Size(473, 349);
+            this.dgvQuestions.Size = new System.Drawing.Size(473, 377);
             this.dgvQuestions.TabIndex = 13;
             // 
             // btnRemoveQuestion

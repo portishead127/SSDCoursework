@@ -1,6 +1,7 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
 using SSDCoursework.Classes.Misc;
 using SSDCoursework.Classes.UserClasses;
+using SSDCoursework.Classes.UserClasses.UserAttributes;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -83,11 +84,11 @@ namespace SSDCoursework.Forms.Registry
         {
             if (rdoAdmin.Checked)
             {
-                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, true);
+                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard());
             }
             else
             {
-                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false);
+                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard());
             }
             UserDatabase.Instance.AddEntry(newUser);
             newUser.LoginUser();
