@@ -160,7 +160,7 @@ namespace SSDCoursework.UserControls
         private void pbxSettingsIcon_Click(object sender, EventArgs e)
         {
             expandingForMenuItem = true;
-            FormToOpen = new Settings();
+            FormToOpen = new SettingsForm();
             sidebarTimer.Start();
         }
 

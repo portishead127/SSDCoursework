@@ -54,6 +54,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,7 +68,7 @@
   <ItemGroup>
     <Compile Include="Classes\DatabaseClasses\QuestionDatabase.cs" />
     <Compile Include="Classes\Misc\Colours\ColourPalettes\DarkMode.cs" />
-    <Compile Include="Classes\Misc\Colours\IColourPalette.cs" />
+    <Compile Include="Classes\Misc\Colours\ColourPalette.cs" />
     <Compile Include="Classes\Misc\Colours\ColourPalettes\LightMode.cs" />
     <Compile Include="Classes\UserClasses\UserAttributes\Scorecard.cs" />
     <Compile Include="Classes\QuestionClasses\MultipleChoiceQuestion.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Classes\UserClasses\Admin.cs" />
     <Compile Include="Classes\DatabaseClasses\Database.cs" />
     <Compile Include="Classes\DatabaseClasses\EmailDomainDatabase.cs" />
+    <Compile Include="Classes\UserClasses\UserAttributes\Settings.cs" />
     <Compile Include="Forms\MainMenu\AdminOptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,11 +134,11 @@
     <Compile Include="Forms\MainMenu\QuizMenu\Quizzes\WrittenQuiz.Designer.cs">
       <DependentUpon>WrittenQuiz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Misc\Settings.cs">
+    <Compile Include="Forms\Misc\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Misc\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="Forms\Misc\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Misc\SplashScreen.cs">
       <SubType>Form</SubType>
@@ -212,8 +214,8 @@
     <EmbeddedResource Include="Forms\MainMenu\QuizMenu\Quizzes\WrittenQuiz.resx">
       <DependentUpon>WrittenQuiz.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Misc\Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Misc\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Misc\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>

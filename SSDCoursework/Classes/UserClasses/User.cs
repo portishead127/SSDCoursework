@@ -33,9 +33,11 @@ namespace SSDCoursework.Classes.UserClasses
 
         public bool IsAdmin { get; }
 
-        public Scorecard Scorecard{ get; }
+        public Scorecard Scorecard { get; }
 
-        public User(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard)
+        public Settings Settings { get; }
+
+        public User(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard, Settings settings)
         {
             FName = fName;
             SName = sName;
@@ -45,6 +47,7 @@ namespace SSDCoursework.Classes.UserClasses
             Password = password;
             IsAdmin = isAdmin;
             Scorecard = scorecard;
+            Settings = settings;
             Age = CalculateAge();
         }
 
@@ -61,8 +64,8 @@ namespace SSDCoursework.Classes.UserClasses
             (Application.OpenForms[0] as SplashScreen).Reset(4, new MainMenuHolder()); //Can guarantee that Application.OpenForms[0] will be a splashscreen as it starts the program with a splashscreen.
         }
 
-
+        public abstract void ChangeUsername(User userToChange, string newUsername);
         public abstract void DeleteUser(User userToDelete);
-        public abstract void ChangePass(User userPassToChange, string newPass);
+        public abstract void ChangePass(User userToChange, string newPass);
     }
 }
