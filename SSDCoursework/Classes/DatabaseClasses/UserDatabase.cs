@@ -64,7 +64,8 @@ namespace SSDCoursework.Classes.DatabaseClasses
 
         public override void Write()
         {
-            using (StreamWriter sw = new StreamWriter(FilePath, true)) // Overwrite the file.
+            File.WriteAllText(FilePath, ""); //Clears file
+            using (StreamWriter sw = new StreamWriter(FilePath, true)) //Appends
             {
                 foreach (User user in Entries)
                 {
