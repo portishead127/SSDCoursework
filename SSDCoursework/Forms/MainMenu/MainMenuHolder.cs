@@ -28,6 +28,7 @@ namespace SSDCoursework.Forms.MainMenu
             {
                 sidebar.AddControl("Admin Options", Properties.Resources.Hamburger, btnLogin_Click);
             }
+            sidebar.AddControl("Leaderboard", Properties.Resources.SignUpSymbol, btnLeaderboard_Click);
             sidebar.AddControl("Arcade", Properties.Resources.LoginSymbol, btnLogin_Click);
             sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, btnSignUp_Click);
         }
@@ -43,6 +44,13 @@ namespace SSDCoursework.Forms.MainMenu
         {
             sidebar.IsExpandingForMenuItem = true;
             sidebar.FormToOpen = new AdminOptions();
+            sidebar.sidebarTimer.Start();
+        }
+        
+        void btnLeaderboard_Click(object sender, EventArgs e)
+        {
+            sidebar.IsExpandingForMenuItem= true;
+            sidebar.FormToOpen = new Leaderboard();
             sidebar.sidebarTimer.Start();
         }
     }
