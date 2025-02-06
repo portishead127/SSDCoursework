@@ -251,7 +251,7 @@
             // 
             this.ckbTFAnswer.AutoSize = true;
             this.ckbTFAnswer.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbTFAnswer.Location = new System.Drawing.Point(325, 135);
+            this.ckbTFAnswer.Location = new System.Drawing.Point(13, 196);
             this.ckbTFAnswer.Name = "ckbTFAnswer";
             this.ckbTFAnswer.Size = new System.Drawing.Size(145, 17);
             this.ckbTFAnswer.TabIndex = 23;
@@ -260,16 +260,16 @@
             // 
             // txtTFQuestionTerm
             // 
-            this.txtTFQuestionTerm.Location = new System.Drawing.Point(456, 110);
+            this.txtTFQuestionTerm.Location = new System.Drawing.Point(144, 171);
             this.txtTFQuestionTerm.Name = "txtTFQuestionTerm";
-            this.txtTFQuestionTerm.Size = new System.Drawing.Size(221, 20);
+            this.txtTFQuestionTerm.Size = new System.Drawing.Size(235, 20);
             this.txtTFQuestionTerm.TabIndex = 21;
             this.txtTFQuestionTerm.Tag = "Username";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(325, 113);
+            this.label8.Location = new System.Drawing.Point(13, 174);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 13);
             this.label8.TabIndex = 20;
@@ -278,16 +278,16 @@
             // 
             // txtFakeAnswer2
             // 
-            this.txtFakeAnswer2.Location = new System.Drawing.Point(98, 188);
+            this.txtFakeAnswer2.Location = new System.Drawing.Point(102, 148);
             this.txtFakeAnswer2.Name = "txtFakeAnswer2";
-            this.txtFakeAnswer2.Size = new System.Drawing.Size(221, 20);
+            this.txtFakeAnswer2.Size = new System.Drawing.Size(275, 20);
             this.txtFakeAnswer2.TabIndex = 19;
             this.txtFakeAnswer2.Tag = "Username";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 191);
+            this.label7.Location = new System.Drawing.Point(13, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 13);
             this.label7.TabIndex = 18;
@@ -296,16 +296,16 @@
             // 
             // txtFakeAnswer1
             // 
-            this.txtFakeAnswer1.Location = new System.Drawing.Point(98, 162);
+            this.txtFakeAnswer1.Location = new System.Drawing.Point(102, 122);
             this.txtFakeAnswer1.Name = "txtFakeAnswer1";
-            this.txtFakeAnswer1.Size = new System.Drawing.Size(221, 20);
+            this.txtFakeAnswer1.Size = new System.Drawing.Size(275, 20);
             this.txtFakeAnswer1.TabIndex = 17;
             this.txtFakeAnswer1.Tag = "Username";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 165);
+            this.label6.Location = new System.Drawing.Point(13, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 16;
@@ -314,16 +314,16 @@
             // 
             // txtWrittenAnswer
             // 
-            this.txtWrittenAnswer.Location = new System.Drawing.Point(98, 136);
+            this.txtWrittenAnswer.Location = new System.Drawing.Point(102, 96);
             this.txtWrittenAnswer.Name = "txtWrittenAnswer";
-            this.txtWrittenAnswer.Size = new System.Drawing.Size(221, 20);
+            this.txtWrittenAnswer.Size = new System.Drawing.Size(275, 20);
             this.txtWrittenAnswer.TabIndex = 15;
             this.txtWrittenAnswer.Tag = "Username";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 139);
+            this.label5.Location = new System.Drawing.Point(13, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 14;
@@ -334,19 +334,19 @@
             // 
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuestions.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvQuestions.Location = new System.Drawing.Point(909, 0);
+            this.dgvQuestions.Location = new System.Drawing.Point(539, 0);
             this.dgvQuestions.Name = "dgvQuestions";
             this.dgvQuestions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestions.Size = new System.Drawing.Size(473, 377);
+            this.dgvQuestions.Size = new System.Drawing.Size(843, 377);
             this.dgvQuestions.TabIndex = 13;
             // 
             // btnRemoveQuestion
             // 
             this.btnRemoveQuestion.BackColor = System.Drawing.Color.DimGray;
             this.btnRemoveQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveQuestion.Location = new System.Drawing.Point(328, 251);
+            this.btnRemoveQuestion.Location = new System.Drawing.Point(10, 257);
             this.btnRemoveQuestion.Name = "btnRemoveQuestion";
-            this.btnRemoveQuestion.Size = new System.Drawing.Size(349, 23);
+            this.btnRemoveQuestion.Size = new System.Drawing.Size(364, 23);
             this.btnRemoveQuestion.TabIndex = 12;
             this.btnRemoveQuestion.Text = "Remove selected question";
             this.btnRemoveQuestion.UseVisualStyleBackColor = false;
@@ -356,9 +356,9 @@
             // 
             this.btnAddQuestion.BackColor = System.Drawing.Color.DimGray;
             this.btnAddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddQuestion.Location = new System.Drawing.Point(12, 251);
+            this.btnAddQuestion.Location = new System.Drawing.Point(10, 228);
             this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(310, 23);
+            this.btnAddQuestion.Size = new System.Drawing.Size(364, 23);
             this.btnAddQuestion.TabIndex = 10;
             this.btnAddQuestion.Text = "Add specified question";
             this.btnAddQuestion.UseVisualStyleBackColor = false;
@@ -366,16 +366,16 @@
             // 
             // txtQuestionTerm
             // 
-            this.txtQuestionTerm.Location = new System.Drawing.Point(98, 110);
+            this.txtQuestionTerm.Location = new System.Drawing.Point(102, 70);
             this.txtQuestionTerm.Name = "txtQuestionTerm";
-            this.txtQuestionTerm.Size = new System.Drawing.Size(221, 20);
+            this.txtQuestionTerm.Size = new System.Drawing.Size(275, 20);
             this.txtQuestionTerm.TabIndex = 8;
             this.txtQuestionTerm.Tag = "Username";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 113);
+            this.label3.Location = new System.Drawing.Point(13, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 7;

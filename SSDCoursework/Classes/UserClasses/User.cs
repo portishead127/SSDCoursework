@@ -11,90 +11,53 @@ namespace SSDCoursework.Classes.UserClasses
     {
         static User currentUser;
 
-        string fName;
-        string sName;
-        DateTime dob;
-        int age;
-        string username;
-        string password;
-        string email;
-        bool isAdmin;
-        Scorecard scorecard;
-
-
         public static User CurrentUser
         {
             get { return currentUser; }
             set { currentUser = value; }
         }
 
-        public string FName
-        {
-            get { return fName; }
-            set { fName = value; }
-        }
+        public DateTime Dob { get; set; }
 
-        public string SName
-        {
-            get { return sName; }
-            set { sName = value; }
-        }
+        public string FName{ get; set; }
 
-        public DateTime Dob
-        {
-            get { return dob; }
-            set { dob = value; }
-        }
+        public string SName { get; set; }
 
-        public string Username
-        {
-            get { return username; }
-        }
+        public int Age { get; set; }
 
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
+        public string Username { get; set; }
 
-        public string Email
-        {
-            get { return email; }
-        }
+        public string Password { get; set; }
 
-        public bool IsAdmin
-        {
-            get { return isAdmin; }
-        }
+        public string Email { get; set; }
 
-        public Scorecard Scorecard
-        {
-            get { return scorecard; }
-        }
+        public bool IsAdmin { get; }
+
+        public Scorecard Scorecard{ get; }
 
         public User(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard)
         {
-            this.fName = fName;
-            this.sName = sName;
-            this.dob = dob;
-            this.username = username;
-            this.email = email;
-            this.password = password;
-            this.isAdmin = isAdmin;
-            this.scorecard = scorecard;
-            age = CalculateAge();
+            FName = fName;
+            SName = sName;
+            Dob = dob;
+            Username = username;
+            Email = email;
+            Password = password;
+            IsAdmin = isAdmin;
+            Scorecard = scorecard;
+            Age = CalculateAge();
         }
 
         int CalculateAge()
         {
-            int yearDiff = dob.Year - DateTime.Today.Year;
+            int yearDiff = Dob.Year - DateTime.Today.Year;
             return yearDiff;
         }
 
         public void LoginUser()
         {
             currentUser = this;
-            MessageBox.Show($"{fName}, you have successfully logged in as: {username}", "Logged in", MessageBoxButtons.OK, MessageBoxIcon.None);
+            MessageBox.Show($"{FName}, you have successfully logged in as: {Username}", "Logged in", MessageBoxButtons.OK, MessageBoxIcon.None);
             (Application.OpenForms[0] as SplashScreen).Reset(4, new MainMenuHolder()); //Can guarantee that Application.OpenForms[0] will be a splashscreen as it starts the program with a splashscreen.
         }
 
