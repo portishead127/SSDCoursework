@@ -1,4 +1,5 @@
-﻿using SSDCoursework.Classes.QuestionClasses;
+﻿using SSDCoursework.Classes.Misc;
+using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Classes.UserClasses.UserAttributes;
 using System;
@@ -49,13 +50,20 @@ namespace SSDCoursework.Classes.DatabaseClasses
                         int.Parse(items[10])
                     );
 
+                    Settings settings = new Settings(
+                        ColourPalette.Parse(items[11]),
+                        items[12],
+                        bool.Parse(items[13]
+                    ));
+
+
                     if (!isAdmin)
                     {
-                        Entries.Add(new Player(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], false, scorecard));
+                        Entries.Add(new Player(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], false, scorecard, settings));
                     }
                     else
                     {
-                        Entries.Add(new Admin(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], true, scorecard));
+                        Entries.Add(new Admin(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], true, scorecard, settings));
                     }
                 }
             }
@@ -82,7 +90,11 @@ namespace SSDCoursework.Classes.DatabaseClasses
                         user.Scorecard.TrueFalseHighScore.ToString(),
                         user.Scorecard.MultipleChoiceHighScore.ToString(),
                         user.Scorecard.WrittenHighScore.ToString(),
+                        user.Settings.ColourPalette.ToString(),
+                        user.Settings.PFPPath.ToString(),
+                        user.Settings.IsShownOnLeaderboard.ToString(),
                     };
+
                     sw.WriteLine(string.Join(",", userDataPoints));
                 }
             }

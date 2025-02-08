@@ -14,7 +14,7 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
     {
         public ColourPalette ColourPalette {  get; set; }
         public string PFPPath { get; set; }
-        public Bitmap PFP { get; set; }
+        public Image PFP { get; set; }
         public bool IsShownOnLeaderboard { get; set; }
 
         /// <summary>
@@ -23,13 +23,18 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
         public Settings() 
         {
             ColourPalette = new DarkMode();
+            PFPPath = "NONE";
+            IsShownOnLeaderboard = false;
         }
 
-        public Settings(ColourPalette colourPalette, string pFPPath, Bitmap pFP, bool isShownOnLeaderboard)
+        public Settings(ColourPalette colourPalette, string pFPPath, bool isShownOnLeaderboard)
         {
             ColourPalette = colourPalette;
             PFPPath = pFPPath;
-            PFP = pFP;
+            if(pFPPath != "NONE")
+            {
+                PFP = Bitmap.FromFile(PFPPath);
+            }
             IsShownOnLeaderboard = isShownOnLeaderboard;
         }
         

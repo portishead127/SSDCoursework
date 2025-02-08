@@ -6,9 +6,9 @@ namespace SSDCoursework.Classes.Misc.Colours
     {
         public DarkMode()
         {
-            MainColour = Color.FromArgb(0,0,0);
-            Accent1 = Color.FromArgb(0,0,0);
-            Accent2 = Color.FromArgb(0,0,0);
+            PaletteHash["MainColour"] = Color.Black;
+            PaletteHash["Accent1"] = Color.Blue;
+            PaletteHash["Accent2"] = Color.Black;
         }
 
         public override string ToString()

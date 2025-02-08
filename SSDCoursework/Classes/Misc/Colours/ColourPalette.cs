@@ -10,9 +10,12 @@ namespace SSDCoursework.Classes.Misc
 {
     internal abstract class ColourPalette
     {
-        protected Color MainColour { get; set; }
-        protected Color Accent1 { get; set; }
-        protected Color Accent2 { get; set; }
+        protected Dictionary<string, Color> PaletteHash = new Dictionary<string, Color>()
+        {
+            {"MainColour", Color.Purple},
+            {"Accent1", Color.Purple },
+            {"Accent2", Color.Purple }
+        };
         
         public static ColourPalette Parse(string colourPaletteName)
         {

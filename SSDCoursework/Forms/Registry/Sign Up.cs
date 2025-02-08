@@ -84,11 +84,11 @@ namespace SSDCoursework.Forms.Registry
         {
             if (rdoAdmin.Checked)
             {
-                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard());
+                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard(), new Settings());
             }
             else
             {
-                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard());
+                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard(), new Settings());
             }
             UserDatabase.Instance.AddEntry(newUser);
             newUser.LoginUser();
