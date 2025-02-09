@@ -280,5 +280,8 @@
   <ItemGroup>
     <None Include="Resources\Backside of the tv.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmptyProfilePic.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

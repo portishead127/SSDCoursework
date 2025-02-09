@@ -116,7 +116,7 @@
             this.lblPageIndicator.ForeColor = System.Drawing.Color.White;
             this.lblPageIndicator.Location = new System.Drawing.Point(3, 0);
             this.lblPageIndicator.Name = "lblPageIndicator";
-            this.lblPageIndicator.Size = new System.Drawing.Size(1120, 96);
+            this.lblPageIndicator.Size = new System.Drawing.Size(1108, 96);
             this.lblPageIndicator.TabIndex = 0;
             this.lblPageIndicator.Text = "Current Page";
             this.lblPageIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +125,7 @@
             // 
             this.pbxExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxExit.Image = global::SSDCoursework.Properties.Resources.StemLogo;
-            this.pbxExit.Location = new System.Drawing.Point(1129, 3);
+            this.pbxExit.Location = new System.Drawing.Point(1117, 3);
             this.pbxExit.Name = "pbxExit";
             this.pbxExit.Size = new System.Drawing.Size(87, 75);
             this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

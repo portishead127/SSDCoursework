@@ -1,4 +1,5 @@
-﻿using SSDCoursework.Classes.Misc;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.Misc;
 using SSDCoursework.Classes.Misc.Colours;
 using System;
 using System.Collections.Generic;
@@ -7,11 +8,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.UserClasses.UserAttributes
 {
     internal class Settings
     {
+        public static string UserImagesDirectory = Path.GetDirectoryName(Application.ExecutablePath) + @"\UserImages\";
         public ColourPalette ColourPalette {  get; set; }
         public string PFPPath { get; set; }
         public Image PFP { get; set; }
@@ -23,7 +26,7 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
         public Settings() 
         {
             ColourPalette = new DarkMode();
-            PFPPath = "NONE";
+            PFPPath = string.Empty;
             IsShownOnLeaderboard = false;
         }
 
@@ -31,7 +34,7 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
         {
             ColourPalette = colourPalette;
             PFPPath = pFPPath;
-            if(pFPPath != "NONE")
+            if(pFPPath != string.Empty)
             {
                 PFP = Bitmap.FromFile(PFPPath);
             }
@@ -42,17 +45,18 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
         {
             PFP = pfp;
             PFPPath = pfpPath;
+            UserDatabase.Instance.Write();
         }
 
         public void RemovePFP()
         {
             if(PFP != null)
             {
-                File.Delete(PFPPath);
                 PFP.Dispose();
                 PFP = null;
-                PFPPath = null;
+                PFPPath = string.Empty;
             }
+            UserDatabase.Instance.Write();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using SSDCoursework.Forms;
+﻿using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Drawing;
@@ -39,6 +39,22 @@ namespace SSDCoursework.UserControls
         public SidebarControl()
         {
             InitializeComponent();
+            if(User.CurrentUser == null)
+            {
+                pbxSettingsIcon.Visible = false;
+                pbxSettingsIcon.Enabled = false;
+            }
+            else
+            {
+                if(User.CurrentUser.Settings.PFPPath != string.Empty)
+                {
+                    pbxSettingsIcon.Image = User.CurrentUser.Settings.PFP;
+                }
+                else
+                {
+                    pbxSettingsIcon.Image = Properties.Resources.EmptyProfilePic;
+                }
+            }
             Size = Screen.PrimaryScreen.Bounds.Size;
             flpSidebar.MaximumSize = MaximumSize;
             pnlFormHolder.Width = Width - flpSidebar.Width;
