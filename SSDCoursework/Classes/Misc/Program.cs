@@ -16,6 +16,7 @@ namespace SSDCoursework.Classes.Misc
         static void Main()
         {
             InitilizeFonts();
+            InitializeUserImages();
             InitilizeDatabases();
 
             // Your application code
@@ -44,6 +45,11 @@ namespace SSDCoursework.Classes.Misc
 
             //// pass the font to the font collection
             //pfc.AddMemoryFont(data, fontLength);
+        }
+
+        static void InitializeUserImages()
+        {
+
         }
 
         static void InitilizeDatabases()
