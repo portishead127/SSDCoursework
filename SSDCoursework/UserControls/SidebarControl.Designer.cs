@@ -40,6 +40,7 @@
             this.pnlFormHolder = new System.Windows.Forms.Panel();
             this.flpSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHamburger)).BeginInit();
+            this.pnlEmptySpace.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSettingsIcon)).BeginInit();
             this.flpBannerbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).BeginInit();
@@ -50,7 +51,6 @@
             this.flpSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
             this.flpSidebar.Controls.Add(this.pbxHamburger);
             this.flpSidebar.Controls.Add(this.pnlEmptySpace);
-            this.flpSidebar.Controls.Add(this.pbxSettingsIcon);
             this.flpSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.flpSidebar.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpSidebar.Location = new System.Drawing.Point(0, 0);
@@ -76,17 +76,20 @@
             // 
             // pnlEmptySpace
             // 
+            this.pnlEmptySpace.Controls.Add(this.pbxSettingsIcon);
+            this.pnlEmptySpace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEmptySpace.Location = new System.Drawing.Point(3, 99);
             this.pnlEmptySpace.Name = "pnlEmptySpace";
-            this.pnlEmptySpace.Size = new System.Drawing.Size(117, 543);
+            this.pnlEmptySpace.Size = new System.Drawing.Size(114, 870);
             this.pnlEmptySpace.TabIndex = 2;
             // 
             // pbxSettingsIcon
             // 
+            this.pbxSettingsIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxSettingsIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbxSettingsIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSettingsIcon.Image = global::SSDCoursework.Properties.Resources.StemLogo;
-            this.pbxSettingsIcon.Location = new System.Drawing.Point(3, 648);
+            this.pbxSettingsIcon.Location = new System.Drawing.Point(0, 426);
             this.pbxSettingsIcon.Name = "pbxSettingsIcon";
             this.pbxSettingsIcon.Size = new System.Drawing.Size(117, 101);
             this.pbxSettingsIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +119,7 @@
             this.lblPageIndicator.ForeColor = System.Drawing.Color.White;
             this.lblPageIndicator.Location = new System.Drawing.Point(3, 0);
             this.lblPageIndicator.Name = "lblPageIndicator";
-            this.lblPageIndicator.Size = new System.Drawing.Size(1108, 96);
+            this.lblPageIndicator.Size = new System.Drawing.Size(923, 96);
             this.lblPageIndicator.TabIndex = 0;
             this.lblPageIndicator.Text = "Current Page";
             this.lblPageIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +128,7 @@
             // 
             this.pbxExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxExit.Image = global::SSDCoursework.Properties.Resources.StemLogo;
-            this.pbxExit.Location = new System.Drawing.Point(1117, 3);
+            this.pbxExit.Location = new System.Drawing.Point(932, 3);
             this.pbxExit.Name = "pbxExit";
             this.pbxExit.Size = new System.Drawing.Size(87, 75);
             this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -154,10 +157,11 @@
             this.Controls.Add(this.flpBannerbar);
             this.Controls.Add(this.pnlFormHolder);
             this.Name = "SidebarControl";
-            this.Size = new System.Drawing.Size(1920, 1080);
+            this.Size = new System.Drawing.Size(1231, 1080);
             this.Load += new System.EventHandler(this.SidebarControl_Load);
             this.flpSidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxHamburger)).EndInit();
+            this.pnlEmptySpace.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxSettingsIcon)).EndInit();
             this.flpBannerbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).EndInit();
