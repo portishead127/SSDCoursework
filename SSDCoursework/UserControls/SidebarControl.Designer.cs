@@ -128,7 +128,7 @@
             // 
             this.pbxExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxExit.Image = global::SSDCoursework.Properties.Resources.StemLogo;
-            this.pbxExit.Location = new System.Drawing.Point(932, 3);
+            this.pbxExit.Location = new System.Drawing.Point(1129, 3);
             this.pbxExit.Name = "pbxExit";
             this.pbxExit.Size = new System.Drawing.Size(87, 75);
             this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
