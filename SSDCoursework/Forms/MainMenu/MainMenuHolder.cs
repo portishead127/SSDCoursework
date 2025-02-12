@@ -26,24 +26,31 @@ namespace SSDCoursework.Forms.MainMenu
 
             if (User.CurrentUser.IsAdmin)
             {
-                sidebar.AddControl("Admin Options", Properties.Resources.Hamburger, btnLogin_Click);
+                sidebar.AddControl("Admin Options", Properties.Resources.Hamburger, AdminOptions_Click);
             }
             sidebar.AddControl("Leaderboard", Properties.Resources.SignUpSymbol, btnLeaderboard_Click);
-            sidebar.AddControl("Arcade", Properties.Resources.LoginSymbol, btnLogin_Click);
-            sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, btnSignUp_Click);
+            sidebar.AddControl("Arcade", Properties.Resources.LoginSymbol, Arcade_Click);
+            sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, Quizzes_Click);
         }
 
-        void btnSignUp_Click(object sender, EventArgs e)
+        void Quizzes_Click(object sender, EventArgs e)
         {
             sidebar.IsExpandingForMenuItem = true;
             sidebar.FormToOpen = new QuizMenuHolder();
             sidebar.sidebarTimer.Start();
         }
 
-        void btnLogin_Click(object sender, EventArgs e)
+        void AdminOptions_Click(object sender, EventArgs e)
         {
             sidebar.IsExpandingForMenuItem = true;
             sidebar.FormToOpen = new AdminOptions();
+            sidebar.sidebarTimer.Start();
+        }
+
+        void Arcade_Click(object sender, EventArgs e)
+        {
+            sidebar.IsExpandingForMenuItem = true;
+            sidebar.FormToOpen = new ArcadeHolder();
             sidebar.sidebarTimer.Start();
         }
         

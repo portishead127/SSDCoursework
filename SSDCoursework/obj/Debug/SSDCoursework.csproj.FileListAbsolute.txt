@@ -30,7 +30,6 @@ C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.exe
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.pdb
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.MainMenuHolder.resources
-C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Misc.Settings.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Misc.SplashScreen.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.UserControls.SidebarControl.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Registry.Login.resources
@@ -61,3 +60,5 @@ C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Registry.Login.resources
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Registry.SignUp.resources
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Registry.RegistryHolder.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Misc.SettingsForm.resources
+C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Arcade.DragAndDropQuiz.resources

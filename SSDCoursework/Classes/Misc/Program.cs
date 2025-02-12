@@ -7,6 +7,9 @@ using System.IO;
 using System.Windows.Forms;
 using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Forms.MainMenu.QuizMenu;
+using SSDCoursework.Forms.MainMenu.Arcade;
+
+//SCREEN BOUNDARIES ARE 1386 x 768
 
 namespace SSDCoursework.Classes.Misc
 {
@@ -22,7 +25,7 @@ namespace SSDCoursework.Classes.Misc
             // Your application code
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new SplashScreen(2, new RegistryHolder()));
+            Application.Run(new SplashScreen(2, new DragAndDropQuiz()));
         }
 
         static void InitilizeFonts()

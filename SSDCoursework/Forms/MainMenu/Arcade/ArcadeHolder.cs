@@ -22,5 +22,10 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
         {
             (Application.OpenForms[0] as SplashScreen).Reset(6, new Arithmetic());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            (Application.OpenForms[0] as SplashScreen).Reset(6, new DragAndDropQuiz());
+        }
     }
 }
