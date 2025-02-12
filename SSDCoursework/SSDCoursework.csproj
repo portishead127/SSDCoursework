@@ -98,6 +98,12 @@
     <Compile Include="Forms\MainMenu\Arcade\Arithmetic.Designer.cs">
       <DependentUpon>Arithmetic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MainMenu\DragAndDropQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu\DragAndDropQuiz.Designer.cs">
+      <DependentUpon>DragAndDropQuiz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainMenu\Leaderboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu\Arcade\Arithmetic.resx">
       <DependentUpon>Arithmetic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenu\DragAndDropQuiz.resx">
+      <DependentUpon>DragAndDropQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu\Leaderboard.resx">
       <DependentUpon>Leaderboard.cs</DependentUpon>
