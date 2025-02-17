@@ -91,6 +91,7 @@ namespace SSDCoursework.Forms.Registry
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
+            this.button1.Tag = "MainColour";
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnConfirm_Click);
@@ -109,7 +110,7 @@ namespace SSDCoursework.Forms.Registry
             this.DoubleBuffered = true;
             this.MinimumSize = new System.Drawing.Size(999, 726);
             this.Name = "Login";
-            this.Tag = "childForm";
+            this.Tag = "childForm, Accent1";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

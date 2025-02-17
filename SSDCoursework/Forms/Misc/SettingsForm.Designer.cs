@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblDarkMode = new System.Windows.Forms.Label();
-            this.rdoAdmin = new System.Windows.Forms.RadioButton();
+            this.rdoDarkMode = new System.Windows.Forms.RadioButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,6 +38,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,24 +49,25 @@
             this.lblDarkMode.AutoSize = true;
             this.lblDarkMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarkMode.ForeColor = System.Drawing.Color.White;
-            this.lblDarkMode.Location = new System.Drawing.Point(25, 419);
+            this.lblDarkMode.Location = new System.Drawing.Point(34, 442);
             this.lblDarkMode.Name = "lblDarkMode";
             this.lblDarkMode.Size = new System.Drawing.Size(197, 31);
             this.lblDarkMode.TabIndex = 0;
             this.lblDarkMode.Text = "Use dark mode";
             // 
-            // rdoAdmin
+            // rdoDarkMode
             // 
-            this.rdoAdmin.AutoCheck = false;
-            this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(1117, 419);
-            this.rdoAdmin.Name = "rdoAdmin";
-            this.rdoAdmin.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
-            this.rdoAdmin.Size = new System.Drawing.Size(114, 54);
-            this.rdoAdmin.TabIndex = 13;
-            this.rdoAdmin.Tag = "";
-            this.rdoAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdoAdmin.UseVisualStyleBackColor = true;
+            this.rdoDarkMode.AutoCheck = false;
+            this.rdoDarkMode.AutoSize = true;
+            this.rdoDarkMode.Location = new System.Drawing.Point(1117, 419);
+            this.rdoDarkMode.Name = "rdoDarkMode";
+            this.rdoDarkMode.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
+            this.rdoDarkMode.Size = new System.Drawing.Size(114, 54);
+            this.rdoDarkMode.TabIndex = 13;
+            this.rdoDarkMode.Tag = "";
+            this.rdoDarkMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdoDarkMode.UseVisualStyleBackColor = true;
+            this.rdoDarkMode.Click += new System.EventHandler(this.rdoAdmin_Click);
             // 
             // textBox1
             // 
@@ -122,6 +126,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(1011, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(207, 187);
@@ -139,12 +144,52 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.AutoSize = true;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.button5.Location = new System.Drawing.Point(31, 556);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(243, 41);
+            this.button5.TabIndex = 22;
+            this.button5.Text = "Change password";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoCheck = false;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(1117, 463);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
+            this.radioButton1.Size = new System.Drawing.Size(114, 54);
+            this.radioButton1.TabIndex = 24;
+            this.radioButton1.Tag = "";
+            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(34, 486);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(358, 31);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Show scores on leaderboard";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(1230, 633);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
@@ -152,7 +197,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.rdoAdmin);
+            this.Controls.Add(this.rdoDarkMode);
             this.Controls.Add(this.lblDarkMode);
             this.Name = "SettingsForm";
             this.Text = "Settings";
@@ -165,7 +210,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblDarkMode;
-        private System.Windows.Forms.RadioButton rdoAdmin;
+        private System.Windows.Forms.RadioButton rdoDarkMode;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -174,5 +219,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label1;
     }
 }

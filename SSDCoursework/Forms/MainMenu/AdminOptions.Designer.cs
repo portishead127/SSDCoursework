@@ -34,6 +34,10 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlChangePass = new System.Windows.Forms.Panel();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblExample = new System.Windows.Forms.Label();
@@ -57,6 +61,7 @@
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.txtQuestionTerm = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.pnlChangePass.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -116,16 +121,61 @@
             // 
             this.pnlChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.pnlChangePass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlChangePass.Controls.Add(this.listBox2);
+            this.pnlChangePass.Controls.Add(this.button5);
             this.pnlChangePass.Controls.Add(this.button1);
             this.pnlChangePass.Controls.Add(this.txtUsername);
+            this.pnlChangePass.Controls.Add(this.button7);
             this.pnlChangePass.Controls.Add(this.txtPassword);
+            this.pnlChangePass.Controls.Add(this.textBox2);
             this.pnlChangePass.Controls.Add(this.label1);
+            this.pnlChangePass.Controls.Add(this.label9);
             this.pnlChangePass.Controls.Add(this.label2);
             this.pnlChangePass.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlChangePass.Location = new System.Drawing.Point(0, 0);
             this.pnlChangePass.Name = "pnlChangePass";
             this.pnlChangePass.Size = new System.Drawing.Size(1386, 146);
             this.pnlChangePass.TabIndex = 6;
+            // 
+            // listBox2
+            // 
+            this.listBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(909, 0);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(473, 142);
+            this.listBox2.TabIndex = 19;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DimGray;
+            this.button5.Enabled = false;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(596, 71);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(307, 23);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Remove user";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(682, 10);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(221, 20);
+            this.textBox2.TabIndex = 15;
+            this.textBox2.Tag = "Username";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(561, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(115, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Tag = "Username";
+            this.label9.Text = "Reassigned username:";
             // 
             // listBox1
             // 
@@ -382,6 +432,18 @@
             this.label3.Tag = "Username";
             this.label3.Text = "Question term:";
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DimGray;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(596, 39);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(307, 23);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "Edit username";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button4Click);
+            // 
             // AdminOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,5 +499,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvQuestions;
         private System.Windows.Forms.Label lblExample;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button7;
     }
 }

@@ -1,4 +1,7 @@
-﻿using SSDCoursework.Classes.UserClasses;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.Misc;
+using SSDCoursework.Classes.Misc.Colours;
+using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Classes.UserClasses.UserAttributes;
 using System;
 using System.Collections.Generic;
@@ -18,7 +21,18 @@ namespace SSDCoursework.Forms.Misc
         public SettingsForm()
         {
             InitializeComponent();
-            
+
+            if(User.CurrentUser.Settings.ColourPalette.GetType() == typeof(DarkMode))
+            {
+                rdoDarkMode.Checked = true;
+            }
+            else
+            {
+                rdoDarkMode.Checked = false;
+            }
+
+            radioButton1.Checked = User.CurrentUser.Settings.IsShownOnLeaderboard;
+
             if(User.CurrentUser.Settings.PFP != null)
             {
                 pictureBox1.Image = User.CurrentUser.Settings.PFP;
@@ -43,7 +57,7 @@ namespace SSDCoursework.Forms.Misc
         private void button3_Click(object sender, EventArgs e)
         {
             OpenFileDialog opFile = new OpenFileDialog();
-            opFile.Title = "Select a Image";
+            opFile.Title = "Select an Image";
             opFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";                                                                     
 
             if (opFile.ShowDialog() == DialogResult.OK)
@@ -84,6 +98,32 @@ namespace SSDCoursework.Forms.Misc
         {
             pictureBox1.Image = null;
             User.CurrentUser.Settings.RemovePFP();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            User.CurrentUser.DeleteUser(User.CurrentUser);
+        }
+
+        private void rdoAdmin_Click(object sender, EventArgs e)
+        {
+            rdoDarkMode.Checked = !rdoDarkMode.Checked;
+            if (rdoDarkMode.Checked)
+            {
+                User.CurrentUser.Settings.ColourPalette = new DarkMode();
+            }
+            else
+            {
+                User.CurrentUser.Settings.ColourPalette = new LightMode();
+            }
+            UserDatabase.Instance.Write();
+        }
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            radioButton1.Checked = !radioButton1.Checked;
+            User.CurrentUser.Settings.IsShownOnLeaderboard = radioButton1.Checked;
+            UserDatabase.Instance.Write();
         }
     }
 }

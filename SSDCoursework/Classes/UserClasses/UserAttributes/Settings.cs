@@ -15,7 +15,7 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
     internal class Settings
     {
         public static string UserImagesDirectory = Path.GetDirectoryName(Application.ExecutablePath) + @"\UserImages\";
-        public ColourPalette ColourPalette {  get; set; }
+        public ColourPalette ColourPalette { get; set; }
         public string PFPPath { get; set; }
         public Image PFP { get; set; }
         public bool IsShownOnLeaderboard { get; set; }
@@ -27,6 +27,7 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
         {
             ColourPalette = new DarkMode();
             PFPPath = string.Empty;
+            PFP = Properties.Resources.EmptyProfilePic;
             IsShownOnLeaderboard = false;
         }
 
@@ -38,6 +39,11 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
             {
                 PFP = Bitmap.FromFile(PFPPath);
             }
+            else
+            {
+                PFP = Properties.Resources.EmptyProfilePic;
+            }
+            
             IsShownOnLeaderboard = isShownOnLeaderboard;
         }
         

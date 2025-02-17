@@ -5,17 +5,28 @@ using SSDCoursework.Classes.QuestionClasses;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace SSDCoursework.Forms.MainMenu
 {
     public partial class AdminOptions : Form
     {
         DataTable dt = new DataTable();
-        
+        List<string> usernames = new List<string>();
+
 
         public AdminOptions()
         {
             InitializeComponent();
+
+            foreach(User temp in UserDatabase.Instance.Entries)
+            {
+                usernames.Add(temp.Username);
+            }
+
+            listBox2.DataSource = usernames;
+
+
             dt.Columns.Add("Term", typeof(string));
             dt.Columns.Add("WrittenAnswer", typeof(string));
             dt.Columns.Add("FakeAnswer1", typeof(string));
@@ -164,6 +175,27 @@ namespace SSDCoursework.Forms.MainMenu
 
             dt.Rows.Add(textBoxEntries);
             UpdateBaseDatabase();
+        }
+
+        private void button4Click(object sender, EventArgs e)
+        {
+            usernames[listBox2.SelectedIndex] = textBox2.Text;
+            for (int i = 0; i < UserDatabase.Instance.Entries.Count; i++)
+            {
+                UserDatabase.Instance.Entries[i].Username = usernames[i];
+            }
+            ReconstructUsers();
+        }
+
+        private void ReconstructUsers()
+        {
+            listBox2.DataSource = UserDatabase.Instance.Entries;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            UserDatabase.Instance.RemoveEntry(UserDatabase.FindUser(listBox2.SelectedItem.ToString()));
+            ReconstructUsers();
         }
     }
 }

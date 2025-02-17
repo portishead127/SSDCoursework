@@ -25,7 +25,7 @@ namespace SSDCoursework.Classes.Misc
             // Your application code
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new SplashScreen(2, new DragAndDropQuiz()));
+            Application.Run(new SplashScreen(2, new RegistryHolder()));
         }
 
         static void InitilizeFonts()

@@ -78,16 +78,16 @@
             // 
             this.pnlEmptySpace.Location = new System.Drawing.Point(3, 107);
             this.pnlEmptySpace.Name = "pnlEmptySpace";
-            this.pnlEmptySpace.Size = new System.Drawing.Size(117, 550);
+            this.pnlEmptySpace.Size = new System.Drawing.Size(117, 540);
             this.pnlEmptySpace.TabIndex = 2;
             // 
             // pbxSettingsIcon
             // 
-            this.pbxSettingsIcon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxSettingsIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pbxSettingsIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxSettingsIcon.Dock = System.Windows.Forms.DockStyle.Left;
             this.pbxSettingsIcon.Image = global::SSDCoursework.Properties.Resources.StemLogo;
-            this.pbxSettingsIcon.Location = new System.Drawing.Point(3, 663);
+            this.pbxSettingsIcon.Location = new System.Drawing.Point(3, 653);
             this.pbxSettingsIcon.Name = "pbxSettingsIcon";
             this.pbxSettingsIcon.Size = new System.Drawing.Size(117, 101);
             this.pbxSettingsIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
