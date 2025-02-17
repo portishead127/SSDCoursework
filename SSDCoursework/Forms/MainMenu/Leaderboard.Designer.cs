@@ -85,7 +85,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(999, 564);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -98,7 +98,7 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(864, 70);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 494);
+            this.label11.Size = new System.Drawing.Size(132, 514);
             this.label11.TabIndex = 9;
             this.label11.Text = "label11";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,7 +112,7 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(590, 70);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 494);
+            this.label9.Size = new System.Drawing.Size(131, 514);
             this.label9.TabIndex = 8;
             this.label9.Text = "label9";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,7 +126,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(727, 70);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 494);
+            this.label10.Size = new System.Drawing.Size(131, 514);
             this.label10.TabIndex = 7;
             this.label10.Text = "label10";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -140,7 +140,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(453, 70);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 494);
+            this.label8.Size = new System.Drawing.Size(131, 514);
             this.label8.TabIndex = 6;
             this.label8.Text = "label8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,7 +154,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(160, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(287, 494);
+            this.label7.Size = new System.Drawing.Size(287, 514);
             this.label7.TabIndex = 5;
             this.label7.Text = "label7";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -242,7 +242,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 488);
+            this.pictureBox1.Size = new System.Drawing.Size(151, 508);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;

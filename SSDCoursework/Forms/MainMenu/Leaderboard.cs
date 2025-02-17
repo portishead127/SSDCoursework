@@ -17,6 +17,7 @@ namespace SSDCoursework.Forms.MainMenu
         public Leaderboard()
         {
             InitializeComponent();
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
             Populate();
         }
 
@@ -37,7 +38,7 @@ namespace SSDCoursework.Forms.MainMenu
                 if (user.Settings.IsShownOnLeaderboard)
                 {
                     tableLayoutPanel1.RowCount = tableLayoutPanel1.RowCount + 1;
-                    tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 70f));
+                    tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize));
                     tableLayoutPanel1.Controls.Add(new PictureBox() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom, Image = user.Settings.PFP }, 0, tableLayoutPanel1.RowCount - 1);
                     tableLayoutPanel1.Controls.Add(new Label() { Text = user.Username, TextAlign = ContentAlignment.MiddleRight, Dock = DockStyle.Fill, Font = font }, 1, tableLayoutPanel1.RowCount - 1);
                     tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.OverallScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font }, 2, tableLayoutPanel1.RowCount - 1);

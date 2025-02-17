@@ -1,4 +1,5 @@
-﻿using SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes;
+﻿using SSDCoursework.Classes.UserClasses;
+using SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu
         public QuizMenuHolder()
         {
             InitializeComponent();
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
         }
 
         private void button1_Click(object sender, EventArgs e)

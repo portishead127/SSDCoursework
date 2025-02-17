@@ -13,9 +13,10 @@ namespace SSDCoursework.Classes.Misc.Colours
 
         public LightMode()
         {
-            PaletteHash["MainColour"] = Color.White;
-            PaletteHash["Accent1"] = Color.Blue;
+            PaletteHash["MainColour"] = Color.FromArgb(244, 245, 250);
+            PaletteHash["Accent1"] = Color.Red;
             PaletteHash["Accent2"] = Color.White;
+            PaletteHash["TextColour"] = Color.Black;
         }
 
         public override string ToString()

@@ -1,4 +1,5 @@
 ﻿using SSDCoursework.Classes.Misc.Colours;
+using SSDCoursework.Classes.UserClasses;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -12,14 +13,14 @@ namespace SSDCoursework.Classes.Misc
     internal abstract class ColourPalette
     {
         protected abstract Dictionary<string, Color> PaletteHash { get; }
-        
+
         public static ColourPalette Parse(string colourPaletteName)
         {
-            if(colourPaletteName == "DarkMode")
+            if (colourPaletteName == "DarkMode")
             {
                 return new DarkMode();
             }
-            else if(colourPaletteName == "LightMode")
+            else if (colourPaletteName == "LightMode")
             {
                 return new LightMode();
             }
@@ -31,19 +32,30 @@ namespace SSDCoursework.Classes.Misc
 
         public void ApplyColour(Form form)
         {
-            foreach(Control c in form.Controls)
+            // Apply colour to the form itself
+            if (form.Tag != null && PaletteHash.TryGetValue(form.Tag.ToString(), out Color formColor))
             {
-                if(c.Tag.ToString().Contains("MainColour"))
+                form.BackColor = formColor;
+            }
+
+            // Apply colours to controls
+            foreach (Control c in form.Controls)
+            {
+                c.ForeColor = PaletteHash["TextColour"];
+
+                if (c.Tag == null) continue;
+
+                switch (c.Tag.ToString())
                 {
-                    c.BackColor = PaletteHash["MainColour"];
-                }
-                else if (c.Tag.ToString().Contains("Accent1"))
-                {
-                    c.BackColor = PaletteHash["Accent1"];
-                }
-                else if (c.Tag.ToString().Contains("Accent2"))
-                {
-                    c.BackColor = PaletteHash["Accent2"];
+                    case "MainColour":
+                        c.BackColor = PaletteHash["MainColour"];
+                        break;
+                    case "Accent1":
+                        c.BackColor = PaletteHash["Accent1"];
+                        break;
+                    case "Accent2":
+                        c.BackColor = PaletteHash["Accent2"];
+                        break;
                 }
             }
         }
