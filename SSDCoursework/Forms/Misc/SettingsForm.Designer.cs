@@ -64,13 +64,14 @@
             this.rdoDarkMode.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
             this.rdoDarkMode.Size = new System.Drawing.Size(114, 54);
             this.rdoDarkMode.TabIndex = 13;
-            this.rdoDarkMode.Tag = "";
+            this.rdoDarkMode.Tag = "MainColour";
             this.rdoDarkMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdoDarkMode.UseVisualStyleBackColor = true;
             this.rdoDarkMode.Click += new System.EventHandler(this.rdoAdmin_Click);
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox1.Location = new System.Drawing.Point(954, 299);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(264, 20);
@@ -79,11 +80,12 @@
             // button1
             // 
             this.button1.AutoSize = true;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.button1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.Location = new System.Drawing.Point(31, 308);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(243, 41);
+            this.button1.Size = new System.Drawing.Size(243, 44);
             this.button1.TabIndex = 16;
+            this.button1.Tag = "Accent1";
             this.button1.Text = "Change password";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -96,12 +98,14 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(243, 41);
             this.button2.TabIndex = 17;
+            this.button2.Tag = "Accent1";
             this.button2.Text = "Change password";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox2.Location = new System.Drawing.Point(954, 377);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(264, 20);
@@ -120,6 +124,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(270, 41);
             this.button3.TabIndex = 19;
+            this.button3.Tag = "Accent1";
             this.button3.Text = "Select profile picture";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -127,7 +132,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(1011, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(691, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(207, 187);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,6 +145,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 21;
+            this.button4.Tag = "Accent2";
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -152,6 +158,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(243, 41);
             this.button5.TabIndex = 22;
+            this.button5.Tag = "Accent1";
             this.button5.Text = "Change password";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -165,7 +172,7 @@
             this.radioButton1.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
             this.radioButton1.Size = new System.Drawing.Size(114, 54);
             this.radioButton1.TabIndex = 24;
-            this.radioButton1.Tag = "";
+            this.radioButton1.Tag = "MainColour";
             this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
@@ -200,6 +207,7 @@
             this.Controls.Add(this.rdoDarkMode);
             this.Controls.Add(this.lblDarkMode);
             this.Name = "SettingsForm";
+            this.Tag = "MainColour";
             this.Text = "Settings";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

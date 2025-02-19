@@ -17,8 +17,9 @@ namespace SSDCoursework.Forms.MainMenu
         public Leaderboard()
         {
             InitializeComponent();
-            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
             Populate();
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
+
         }
 
         private void Populate()
@@ -26,7 +27,7 @@ namespace SSDCoursework.Forms.MainMenu
             FontFamily fontFamilty = new FontFamily("Microsoft Sans Serif");
             Font font = new Font(fontFamilty, 15.25f, FontStyle.Regular);
             pictureBox1.Image = User.CurrentUser.Settings.PFP;
-            label7.Text = User.CurrentUser.Username;
+            label7.Text = User.CurrentUser.Username + " (You)";
             label8.Text = User.CurrentUser.Scorecard.OverallScore.ToString();
             label9.Text = User.CurrentUser.Scorecard.TrueFalseHighScore.ToString();
             label10.Text = User.CurrentUser.Scorecard.MultipleChoiceHighScore.ToString();
@@ -38,7 +39,7 @@ namespace SSDCoursework.Forms.MainMenu
                 if (user.Settings.IsShownOnLeaderboard)
                 {
                     tableLayoutPanel1.RowCount = tableLayoutPanel1.RowCount + 1;
-                    tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                    tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 70f));
                     tableLayoutPanel1.Controls.Add(new PictureBox() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom, Image = user.Settings.PFP }, 0, tableLayoutPanel1.RowCount - 1);
                     tableLayoutPanel1.Controls.Add(new Label() { Text = user.Username, TextAlign = ContentAlignment.MiddleRight, Dock = DockStyle.Fill, Font = font }, 1, tableLayoutPanel1.RowCount - 1);
                     tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.OverallScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font }, 2, tableLayoutPanel1.RowCount - 1);
@@ -65,6 +66,11 @@ namespace SSDCoursework.Forms.MainMenu
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

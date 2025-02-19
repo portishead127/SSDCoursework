@@ -52,7 +52,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.MaximumSize = new System.Drawing.Size(999, 726);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(999, 113);
+            this.label1.Size = new System.Drawing.Size(999, 162);
             this.label1.TabIndex = 0;
             this.label1.Text = "LEADERBOARD";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,7 +60,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoScroll = true;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkGray;
             this.tableLayoutPanel1.ColumnCount = 6;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 293F));
@@ -79,15 +79,16 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 162);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(999, 564);
             this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.Tag = "Accent2";
             // 
             // label11
             // 
@@ -98,8 +99,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(864, 70);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 514);
+            this.label11.Size = new System.Drawing.Size(132, 494);
             this.label11.TabIndex = 9;
+            this.label11.Tag = "Accent3";
             this.label11.Text = "label11";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -112,8 +114,9 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(590, 70);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(131, 514);
+            this.label9.Size = new System.Drawing.Size(131, 494);
             this.label9.TabIndex = 8;
+            this.label9.Tag = "Accent3";
             this.label9.Text = "label9";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -126,8 +129,9 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(727, 70);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 514);
+            this.label10.Size = new System.Drawing.Size(131, 494);
             this.label10.TabIndex = 7;
+            this.label10.Tag = "Accent3";
             this.label10.Text = "label10";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -140,8 +144,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(453, 70);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 514);
+            this.label8.Size = new System.Drawing.Size(131, 494);
             this.label8.TabIndex = 6;
+            this.label8.Tag = "Accent3";
             this.label8.Text = "label8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -154,8 +159,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(160, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(287, 514);
+            this.label7.Size = new System.Drawing.Size(287, 494);
             this.label7.TabIndex = 5;
+            this.label7.Tag = "Accent3";
             this.label7.Text = "label7";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -171,7 +177,8 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 70);
             this.label6.TabIndex = 4;
-            this.label6.Text = "label6";
+            this.label6.Tag = "Accent1";
+            this.label6.Text = "True/False Quiz";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
@@ -187,7 +194,8 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(131, 70);
             this.label5.TabIndex = 3;
-            this.label5.Text = "label5";
+            this.label5.Tag = "Accent1";
+            this.label5.Text = "Multiple Choice Quiz";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -203,7 +211,8 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 70);
             this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.label4.Tag = "Accent1";
+            this.label4.Text = "Written Quiz";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
@@ -219,7 +228,8 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 70);
             this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
+            this.label3.Tag = "Accent1";
+            this.label3.Text = "Overall";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
@@ -229,23 +239,27 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(160, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(287, 70);
             this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Tag = "Accent1";
+            this.label2.Text = "Username";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(3, 73);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 508);
+            this.pictureBox1.Size = new System.Drawing.Size(151, 488);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "Accent3";
             // 
             // Leaderboard
             // 
@@ -257,6 +271,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Leaderboard";
+            this.Tag = "MainColour";
             this.Text = "Leaderboard";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

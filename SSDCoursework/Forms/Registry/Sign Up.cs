@@ -37,9 +37,9 @@ namespace SSDCoursework.Forms.Registry
         {
             List<Exception> exceptions = new List<Exception>();
             bool valid = true;
-            foreach (Control c in tlp.Controls.OfType<TextBox>())
+            foreach (Control c in Controls.OfType<TextBox>())
             {
-                Label correspondingLabel = tlp.Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.Equals(c.Tag));
+                Label correspondingLabel = Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.Equals(c.Tag));
 
                 if (c.Tag.Equals("Username"))
                 {

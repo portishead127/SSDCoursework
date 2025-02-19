@@ -43,6 +43,7 @@
             this.Name = "RegistryHolder";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Tag = "MainColour";
             this.Text = "Registry";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);

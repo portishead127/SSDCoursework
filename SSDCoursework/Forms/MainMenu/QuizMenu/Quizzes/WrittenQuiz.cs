@@ -47,6 +47,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
         private void EndOfQuiz()
         {
+            tmr.Stop();
             lblQuestionText.Text = "Done";
             txtUserAnswer.Text = "";
 
@@ -55,7 +56,6 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             remainingTime = 0;
             lblTimer.Text = 0.ToString();
 
-            tmr.Stop();
             button1.Enabled = false;
             button1.Visible = false;
 

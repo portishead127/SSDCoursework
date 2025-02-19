@@ -1,6 +1,7 @@
 ﻿using SSDCoursework.Classes.Misc.Colours;
 using SSDCoursework.Classes.UserClasses;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -41,22 +42,38 @@ namespace SSDCoursework.Classes.Misc
             // Apply colours to controls
             foreach (Control c in form.Controls)
             {
+                if (c.GetType() == typeof(TableLayoutPanel))
+                {
+                    foreach (Control control in c.Controls)
+                    {
+                        ParseTag(control);
+                    }
+                }
+
                 c.ForeColor = PaletteHash["TextColour"];
 
                 if (c.Tag == null) continue;
+                ParseTag(c);
+            }
+        }
 
-                switch (c.Tag.ToString())
-                {
-                    case "MainColour":
-                        c.BackColor = PaletteHash["MainColour"];
-                        break;
-                    case "Accent1":
-                        c.BackColor = PaletteHash["Accent1"];
-                        break;
-                    case "Accent2":
-                        c.BackColor = PaletteHash["Accent2"];
-                        break;
-                }
+        private void ParseTag(Control c)
+        {
+            c.ForeColor = PaletteHash["TextColour"];
+
+            if (c.Tag == null) return;
+
+            switch (c.Tag.ToString())
+            {
+                case "MainColour":
+                    c.BackColor = PaletteHash["MainColour"];
+                    break;
+                case "Accent1":
+                    c.BackColor = PaletteHash["Accent1"];
+                    break;
+                case "Accent2":
+                    c.BackColor = PaletteHash["Accent2"];
+                    break;
             }
         }
     }

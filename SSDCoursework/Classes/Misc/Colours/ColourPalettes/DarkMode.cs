@@ -11,7 +11,8 @@ namespace SSDCoursework.Classes.Misc.Colours
         {
             PaletteHash["MainColour"] = Color.FromArgb(6, 9, 15);
             PaletteHash["Accent1"] = Color.FromArgb(52, 76, 132);
-            PaletteHash["Accent2"] = Color.Black;
+            PaletteHash["Accent2"] = Color.DarkSlateGray;
+            PaletteHash["Accent3"] = Color.DimGray;
             PaletteHash["TextColour"] = Color.WhiteSmoke;
         }
 

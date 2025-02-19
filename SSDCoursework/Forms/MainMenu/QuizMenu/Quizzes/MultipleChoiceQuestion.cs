@@ -60,24 +60,23 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
         private void EndOfQuiz()
         {
+            tmr.Stop();
             lblQuestionText.Text = "Done";
             button1.Text = "";
             button2.Text = "";
             button3.Text = "";
 
-            score += remainingTime;
+            score += Convert.ToInt32(Math.Floor(Convert.ToDouble(remainingTime/2)));
             lblScore.Text = "Score: " + score;
             remainingTime = 0;
             lblTimer.Text = 0.ToString();
 
-            tmr.Stop();
+
             button1.Enabled = false;
             button1.Visible = false;
 
             btnStart.Visible = true;
             btnStart.Enabled = true;
-
-            User.CurrentUser.Scorecard.UpdateScore(gameType, score);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,6 +103,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (remainingTime == 0)
             {
+                EndOfQuiz();
                 (Application.OpenForms[0] as SplashScreen).Reset(2, new MainMenuHolder());
             }
             tmr.Start();
