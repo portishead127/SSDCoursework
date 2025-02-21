@@ -31,7 +31,7 @@ namespace SSDCoursework.Forms.Misc
                 rdoDarkMode.Checked = false;
             }
 
-            radioButton1.Checked = User.CurrentUser.Settings.IsShownOnLeaderboard;
+            rdoLeaderboard.Checked = User.CurrentUser.Settings.IsShownOnLeaderboard;
 
             if(User.CurrentUser.Settings.PFP != null)
             {
@@ -41,20 +41,21 @@ namespace SSDCoursework.Forms.Misc
             {
                 pictureBox1.Image = Properties.Resources.EmptyProfilePic;
             }
-            
+
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPass_Click(object sender, EventArgs e)
         {
             User.CurrentUser.ChangePass(User.CurrentUser, textBox1.Text);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnUsername_Click(object sender, EventArgs e)
         {
             User.CurrentUser.ChangeUsername(User.CurrentUser, textBox2.Text);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnSelectPFP_Click(object sender, EventArgs e)
         {
             OpenFileDialog opFile = new OpenFileDialog();
             opFile.Title = "Select an Image";
@@ -94,20 +95,21 @@ namespace SSDCoursework.Forms.Misc
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnRemovePFP_Click(object sender, EventArgs e)
         {
             pictureBox1.Image = null;
             User.CurrentUser.Settings.RemovePFP();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
             User.CurrentUser.DeleteUser(User.CurrentUser);
         }
 
-        private void rdoAdmin_Click(object sender, EventArgs e)
+        private void rdoDarkMode_Click(object sender, EventArgs e)
         {
             rdoDarkMode.Checked = !rdoDarkMode.Checked;
+
             if (rdoDarkMode.Checked)
             {
                 User.CurrentUser.Settings.ColourPalette = new DarkMode();
@@ -116,13 +118,22 @@ namespace SSDCoursework.Forms.Misc
             {
                 User.CurrentUser.Settings.ColourPalette = new LightMode();
             }
+
+            // Apply updated colors
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
+
+            // Force UI refresh
+            this.Invalidate();
+            this.Refresh();
+
             UserDatabase.Instance.Write();
         }
 
-        private void radioButton1_Click(object sender, EventArgs e)
+
+        private void rdoLeaderboard_Click(object sender, EventArgs e)
         {
-            radioButton1.Checked = !radioButton1.Checked;
-            User.CurrentUser.Settings.IsShownOnLeaderboard = radioButton1.Checked;
+            rdoLeaderboard.Checked = !rdoLeaderboard.Checked;
+            User.CurrentUser.Settings.IsShownOnLeaderboard = rdoLeaderboard.Checked;
             UserDatabase.Instance.Write();
         }
     }

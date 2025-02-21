@@ -28,7 +28,7 @@ namespace SSDCoursework.Forms.Misc
             "\"Your body contains enough carbon to fill 9,000 pencils.\"",
             "\"10x times better than getting handed a freakin packet yo\"",
             "\"Just like getting taught face to face\"",*/
-            "\"ts ts ts pmo br tkh h shkspr icl ngl tbf smhmh fpy (Freaking packet, yo!) (I bend swerve bend that corner woaooah) 💔💔💔💔\""
+            "\"(Freaking packet, yo!) (I bend swerve bend that corner woaooah) 💔💔💔💔\""
         };
 
         public SoundPlayer SP = new SoundPlayer(Properties.Resources.BacksideOfTheTV);

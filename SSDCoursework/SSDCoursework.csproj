@@ -281,9 +281,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SignUpSymbol.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\LoginSymbol.png" />
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +288,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EmptyProfilePic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignUpSymbol.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

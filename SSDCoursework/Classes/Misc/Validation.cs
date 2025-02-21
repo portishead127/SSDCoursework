@@ -12,7 +12,7 @@ namespace SSDCoursework.Classes.Misc
         const string nums = "0123456789";
         const string specialChars = "!\"£$%^&*()_-+={}@~\'#?/>.<,:;|\\¬`";
 
-        const int minEntryLength = 8;
+        const int minEntryLength = 5;
         const int maxEntryLength = 25;
 
         // Possible exceptions:

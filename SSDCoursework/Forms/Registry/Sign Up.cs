@@ -1,5 +1,6 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
 using SSDCoursework.Classes.Misc;
+using SSDCoursework.Classes.Misc.Colours;
 using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Classes.UserClasses.UserAttributes;
 using System;
@@ -18,6 +19,7 @@ namespace SSDCoursework.Forms.Registry
         public SignUp()
         {
             InitializeComponent();
+            new DarkMode().ApplyColour(this);
         }
 
         private void BtnConfirm_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace SSDCoursework.Forms.Registry
             bool valid = true;
             foreach (Control c in Controls.OfType<TextBox>())
             {
-                Label correspondingLabel = Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.Equals(c.Tag));
+                Label correspondingLabel = Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.ToString().Contains(c.Tag.ToString()));
 
                 if (c.Tag.Equals("Username"))
                 {
@@ -92,6 +94,18 @@ namespace SSDCoursework.Forms.Registry
             }
             UserDatabase.Instance.AddEntry(newUser);
             newUser.LoginUser();
+        }
+
+        private void btnPasswordVis_Click(object sender, EventArgs e)
+        {
+            if(txtPassword.PasswordChar == '*')
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
         }
     }
 }

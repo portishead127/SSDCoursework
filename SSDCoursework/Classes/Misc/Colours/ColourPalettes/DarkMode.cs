@@ -9,11 +9,12 @@ namespace SSDCoursework.Classes.Misc.Colours
 
         public DarkMode()
         {
-            PaletteHash["MainColour"] = Color.FromArgb(6, 9, 15);
+            PaletteHash["MainColour"] = Color.DarkSlateBlue;
             PaletteHash["Accent1"] = Color.FromArgb(52, 76, 132);
             PaletteHash["Accent2"] = Color.DarkSlateGray;
             PaletteHash["Accent3"] = Color.DimGray;
-            PaletteHash["TextColour"] = Color.WhiteSmoke;
+            PaletteHash["ButtonAccent"] = Color.Silver;
+            PaletteHash["TextColour"] = Color.Black;
         }
 
         public override string ToString()
