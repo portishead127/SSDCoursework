@@ -9,16 +9,16 @@ namespace SSDCoursework.Classes.QuestionClasses
     {
         public const int NumOfQuestions = 5;
         public List<Question> Questions { get; }
-        public DifficultyLvl Difficulty { get; }
+        public GameType GameType { get; }
 
-        public Quiz(DifficultyLvl difficulty)
+        public Quiz(GameType gameType)
         {
             Random rand = new Random();
             List<Question> shuffledEntries = QuestionDatabase.Instance.Entries.OrderBy(_ => rand.Next()).ToList();
 
-            switch (difficulty)
+            switch (gameType)
             {
-                case DifficultyLvl.TrueFalse:
+                case GameType.TrueFalse:
                     Questions = shuffledEntries
                         .Select(question => new TrueOrFalseQuestion(question.TFQuestionTerm, question.TFCorrectAnswer))
                         .Take(NumOfQuestions)
@@ -26,7 +26,7 @@ namespace SSDCoursework.Classes.QuestionClasses
                         .ToList();
                     break;
 
-                case DifficultyLvl.MultipleChoice:
+                case GameType.MultipleChoice:
                     Questions = shuffledEntries
                         .Select(question => new MultipleChoiceQuestion(question.QuestionTerm, question.CorrectAnswer, question.FakeAnswers))
                         .Take(NumOfQuestions)
@@ -34,7 +34,7 @@ namespace SSDCoursework.Classes.QuestionClasses
                         .ToList();
                     break;
 
-                case DifficultyLvl.WrittenQuestion:
+                case GameType.WrittenQuestion:
                     Questions = shuffledEntries
                         .Select(question => new WrittenQuestion(question.QuestionTerm, question.CorrectAnswer))
                         .Take(NumOfQuestions)
@@ -45,7 +45,7 @@ namespace SSDCoursework.Classes.QuestionClasses
                 default:
                     throw new Exception("Incorrect difficulty type.");
             }
-            Difficulty = difficulty;
+            GameType = gameType;
         }
     }
 }

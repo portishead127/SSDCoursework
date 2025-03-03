@@ -34,6 +34,10 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlChangePass = new System.Windows.Forms.Panel();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblExample = new System.Windows.Forms.Label();
@@ -57,6 +61,7 @@
             this.btnAddQuestion = new System.Windows.Forms.Button();
             this.txtQuestionTerm = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.pnlChangePass.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -114,18 +119,63 @@
             // 
             // pnlChangePass
             // 
-            this.pnlChangePass.BackColor = System.Drawing.Color.DarkGray;
+            this.pnlChangePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.pnlChangePass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlChangePass.Controls.Add(this.listBox2);
+            this.pnlChangePass.Controls.Add(this.button5);
             this.pnlChangePass.Controls.Add(this.button1);
             this.pnlChangePass.Controls.Add(this.txtUsername);
+            this.pnlChangePass.Controls.Add(this.button7);
             this.pnlChangePass.Controls.Add(this.txtPassword);
+            this.pnlChangePass.Controls.Add(this.textBox2);
             this.pnlChangePass.Controls.Add(this.label1);
+            this.pnlChangePass.Controls.Add(this.label9);
             this.pnlChangePass.Controls.Add(this.label2);
             this.pnlChangePass.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlChangePass.Location = new System.Drawing.Point(0, 0);
             this.pnlChangePass.Name = "pnlChangePass";
             this.pnlChangePass.Size = new System.Drawing.Size(1386, 146);
             this.pnlChangePass.TabIndex = 6;
+            // 
+            // listBox2
+            // 
+            this.listBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(909, 0);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(473, 142);
+            this.listBox2.TabIndex = 19;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DimGray;
+            this.button5.Enabled = false;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(596, 71);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(307, 23);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Remove user";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(682, 10);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(221, 20);
+            this.textBox2.TabIndex = 15;
+            this.textBox2.Tag = "Username";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(561, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(115, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Tag = "Username";
+            this.label9.Text = "Reassigned username:";
             // 
             // listBox1
             // 
@@ -139,7 +189,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.lblExample);
             this.panel1.Controls.Add(this.button4);
@@ -175,7 +225,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(307, 23);
             this.button4.TabIndex = 12;
-            this.button4.Text = "Remove domain";
+            this.button4.Text = "Remove selected domain";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -225,7 +275,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.ckbTFAnswer);
             this.panel2.Controls.Add(this.txtTFQuestionTerm);
@@ -244,14 +294,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 292);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1386, 353);
+            this.panel2.Size = new System.Drawing.Size(1386, 381);
             this.panel2.TabIndex = 11;
             // 
             // ckbTFAnswer
             // 
             this.ckbTFAnswer.AutoSize = true;
             this.ckbTFAnswer.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ckbTFAnswer.Location = new System.Drawing.Point(325, 135);
+            this.ckbTFAnswer.Location = new System.Drawing.Point(13, 196);
             this.ckbTFAnswer.Name = "ckbTFAnswer";
             this.ckbTFAnswer.Size = new System.Drawing.Size(145, 17);
             this.ckbTFAnswer.TabIndex = 23;
@@ -260,16 +310,16 @@
             // 
             // txtTFQuestionTerm
             // 
-            this.txtTFQuestionTerm.Location = new System.Drawing.Point(456, 110);
+            this.txtTFQuestionTerm.Location = new System.Drawing.Point(144, 171);
             this.txtTFQuestionTerm.Name = "txtTFQuestionTerm";
-            this.txtTFQuestionTerm.Size = new System.Drawing.Size(221, 20);
+            this.txtTFQuestionTerm.Size = new System.Drawing.Size(235, 20);
             this.txtTFQuestionTerm.TabIndex = 21;
             this.txtTFQuestionTerm.Tag = "Username";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(325, 113);
+            this.label8.Location = new System.Drawing.Point(13, 174);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 13);
             this.label8.TabIndex = 20;
@@ -278,16 +328,16 @@
             // 
             // txtFakeAnswer2
             // 
-            this.txtFakeAnswer2.Location = new System.Drawing.Point(98, 188);
+            this.txtFakeAnswer2.Location = new System.Drawing.Point(102, 148);
             this.txtFakeAnswer2.Name = "txtFakeAnswer2";
-            this.txtFakeAnswer2.Size = new System.Drawing.Size(221, 20);
+            this.txtFakeAnswer2.Size = new System.Drawing.Size(275, 20);
             this.txtFakeAnswer2.TabIndex = 19;
             this.txtFakeAnswer2.Tag = "Username";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 191);
+            this.label7.Location = new System.Drawing.Point(13, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 13);
             this.label7.TabIndex = 18;
@@ -296,16 +346,16 @@
             // 
             // txtFakeAnswer1
             // 
-            this.txtFakeAnswer1.Location = new System.Drawing.Point(98, 162);
+            this.txtFakeAnswer1.Location = new System.Drawing.Point(102, 122);
             this.txtFakeAnswer1.Name = "txtFakeAnswer1";
-            this.txtFakeAnswer1.Size = new System.Drawing.Size(221, 20);
+            this.txtFakeAnswer1.Size = new System.Drawing.Size(275, 20);
             this.txtFakeAnswer1.TabIndex = 17;
             this.txtFakeAnswer1.Tag = "Username";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 165);
+            this.label6.Location = new System.Drawing.Point(13, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 16;
@@ -314,16 +364,16 @@
             // 
             // txtWrittenAnswer
             // 
-            this.txtWrittenAnswer.Location = new System.Drawing.Point(98, 136);
+            this.txtWrittenAnswer.Location = new System.Drawing.Point(102, 96);
             this.txtWrittenAnswer.Name = "txtWrittenAnswer";
-            this.txtWrittenAnswer.Size = new System.Drawing.Size(221, 20);
+            this.txtWrittenAnswer.Size = new System.Drawing.Size(275, 20);
             this.txtWrittenAnswer.TabIndex = 15;
             this.txtWrittenAnswer.Tag = "Username";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 139);
+            this.label5.Location = new System.Drawing.Point(13, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 14;
@@ -334,19 +384,19 @@
             // 
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuestions.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvQuestions.Location = new System.Drawing.Point(909, 0);
+            this.dgvQuestions.Location = new System.Drawing.Point(539, 0);
             this.dgvQuestions.Name = "dgvQuestions";
             this.dgvQuestions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestions.Size = new System.Drawing.Size(473, 349);
+            this.dgvQuestions.Size = new System.Drawing.Size(843, 377);
             this.dgvQuestions.TabIndex = 13;
             // 
             // btnRemoveQuestion
             // 
             this.btnRemoveQuestion.BackColor = System.Drawing.Color.DimGray;
             this.btnRemoveQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveQuestion.Location = new System.Drawing.Point(328, 251);
+            this.btnRemoveQuestion.Location = new System.Drawing.Point(10, 257);
             this.btnRemoveQuestion.Name = "btnRemoveQuestion";
-            this.btnRemoveQuestion.Size = new System.Drawing.Size(349, 23);
+            this.btnRemoveQuestion.Size = new System.Drawing.Size(364, 23);
             this.btnRemoveQuestion.TabIndex = 12;
             this.btnRemoveQuestion.Text = "Remove selected question";
             this.btnRemoveQuestion.UseVisualStyleBackColor = false;
@@ -356,9 +406,9 @@
             // 
             this.btnAddQuestion.BackColor = System.Drawing.Color.DimGray;
             this.btnAddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddQuestion.Location = new System.Drawing.Point(12, 251);
+            this.btnAddQuestion.Location = new System.Drawing.Point(10, 228);
             this.btnAddQuestion.Name = "btnAddQuestion";
-            this.btnAddQuestion.Size = new System.Drawing.Size(310, 23);
+            this.btnAddQuestion.Size = new System.Drawing.Size(364, 23);
             this.btnAddQuestion.TabIndex = 10;
             this.btnAddQuestion.Text = "Add specified question";
             this.btnAddQuestion.UseVisualStyleBackColor = false;
@@ -366,21 +416,33 @@
             // 
             // txtQuestionTerm
             // 
-            this.txtQuestionTerm.Location = new System.Drawing.Point(98, 110);
+            this.txtQuestionTerm.Location = new System.Drawing.Point(102, 70);
             this.txtQuestionTerm.Name = "txtQuestionTerm";
-            this.txtQuestionTerm.Size = new System.Drawing.Size(221, 20);
+            this.txtQuestionTerm.Size = new System.Drawing.Size(275, 20);
             this.txtQuestionTerm.TabIndex = 8;
             this.txtQuestionTerm.Tag = "Username";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 113);
+            this.label3.Location = new System.Drawing.Point(13, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 7;
             this.label3.Tag = "Username";
             this.label3.Text = "Question term:";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DimGray;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(596, 39);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(307, 23);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "Edit username";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button4Click);
             // 
             // AdminOptions
             // 
@@ -437,5 +499,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvQuestions;
         private System.Windows.Forms.Label lblExample;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button7;
     }
 }

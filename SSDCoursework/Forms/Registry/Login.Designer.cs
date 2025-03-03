@@ -30,107 +30,78 @@ namespace SSDCoursework.Forms.Registry
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnConfirm = new System.Windows.Forms.Button();
-            this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.tlp = new System.Windows.Forms.TableLayoutPanel();
+            this.lblUsername = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.tlp.SuspendLayout();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirm.AutoSize = true;
-            this.btnConfirm.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnConfirm.Font = new System.Drawing.Font("Corbel", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(735, 436);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(0, 0, 20, 20);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(145, 66);
-            this.btnConfirm.TabIndex = 5;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Corbel", 21.75F);
-            this.lblUsername.Location = new System.Drawing.Point(3, 259);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(137, 130);
-            this.lblUsername.TabIndex = 1;
-            this.lblUsername.Tag = "Username";
-            this.lblUsername.Text = "Username";
             // 
             // txtUsername
             // 
-            this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUsername.Font = new System.Drawing.Font("Corbel", 18F);
-            this.txtUsername.Location = new System.Drawing.Point(146, 265);
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsername.Font = new System.Drawing.Font("Corbel", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(449, 202);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(332, 37);
-            this.txtUsername.TabIndex = 2;
-            this.txtUsername.Tag = "Username";
+            this.txtUsername.Size = new System.Drawing.Size(719, 37);
+            this.txtUsername.TabIndex = 12;
+            this.txtUsername.Tag = "ButtonAccent";
             // 
-            // tlp
+            // lblUsername
             // 
-            this.tlp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tlp.ColumnCount = 6;
-            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlp.Controls.Add(this.txtUsername, 1, 2);
-            this.tlp.Controls.Add(this.lblUsername, 0, 2);
-            this.tlp.Controls.Add(this.txtPassword, 1, 3);
-            this.tlp.Controls.Add(this.lblPassword, 0, 3);
-            this.tlp.Controls.Add(this.btnConfirm, 5, 3);
-            this.tlp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlp.Font = new System.Drawing.Font("Arial Narrow", 21.75F);
-            this.tlp.Location = new System.Drawing.Point(0, 0);
-            this.tlp.Name = "tlp";
-            this.tlp.RowCount = 4;
-            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.26316F));
-            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.5614F));
-            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.08772F));
-            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.08772F));
-            this.tlp.Size = new System.Drawing.Size(900, 522);
-            this.tlp.TabIndex = 4;
+            this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsername.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblUsername.Location = new System.Drawing.Point(165, 190);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(247, 60);
+            this.lblUsername.TabIndex = 10;
+            this.lblUsername.Tag = "";
+            this.lblUsername.Text = "Username";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPassword
             // 
-            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Font = new System.Drawing.Font("Corbel", 18F);
-            this.txtPassword.Location = new System.Drawing.Point(146, 395);
+            this.txtPassword.Location = new System.Drawing.Point(449, 342);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(332, 37);
-            this.txtPassword.TabIndex = 9;
-            this.txtPassword.Tag = "Pass";
+            this.txtPassword.Size = new System.Drawing.Size(719, 37);
+            this.txtPassword.TabIndex = 13;
+            this.txtPassword.Tag = "ButtonAccent";
             // 
             // lblPassword
             // 
-            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Corbel", 21.75F);
-            this.lblPassword.Location = new System.Drawing.Point(3, 389);
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lblPassword.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblPassword.Location = new System.Drawing.Point(178, 330);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(137, 133);
-            this.lblPassword.TabIndex = 1;
-            this.lblPassword.Tag = "Pass";
+            this.lblPassword.Size = new System.Drawing.Size(234, 60);
+            this.lblPassword.TabIndex = 11;
+            this.lblPassword.Tag = "";
             this.lblPassword.Text = "Password";
+            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirm.BackColor = System.Drawing.Color.Silver;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.Location = new System.Drawing.Point(403, 425);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(565, 49);
+            this.btnConfirm.TabIndex = 14;
+            this.btnConfirm.Tag = "ButtonAccent";
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // Login
             // 
@@ -138,25 +109,27 @@ namespace SSDCoursework.Forms.Registry
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(900, 522);
-            this.Controls.Add(this.tlp);
-            this.DoubleBuffered = true;
-            this.MinimumSize = new System.Drawing.Size(916, 561);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.lblPassword);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtPassword);
+            this.MinimumSize = new System.Drawing.Size(999, 726);
             this.Name = "Login";
-            this.Tag = "childForm";
+            this.Tag = "MainColour";
             this.Text = "Login";
-            this.tlp.ResumeLayout(false);
-            this.tlp.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Button btnConfirm;
-        private Label lblUsername;
+
         private TextBox txtUsername;
-        private TableLayoutPanel tlp;
+        private Label lblUsername;
         private TextBox txtPassword;
         private Label lblPassword;
+        private Button btnConfirm;
     }
 }

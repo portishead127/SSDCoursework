@@ -1,4 +1,4 @@
-﻿using SSDCoursework.Forms;
+﻿using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Drawing;
@@ -39,20 +39,24 @@ namespace SSDCoursework.UserControls
         public SidebarControl()
         {
             InitializeComponent();
+            SetSettingsIcon();
+
             Size = Screen.PrimaryScreen.Bounds.Size;
             flpSidebar.MaximumSize = MaximumSize;
+
             pnlFormHolder.Width = Width - flpSidebar.Width;
             pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
+
             sidebarChange = Width / sidebarScaleExpansionFactor;
             DoubleBuffered = true;
         }
 
         public void AddControl(string text, Bitmap image, EventHandler clickEventHandler)
         {
+            pnlEmptySpace.Height -= buttonHeight + 15;
             Control control = SidebarButtonCreation(text, image, clickEventHandler);
             flpSidebar.Controls.Add(control);
             flpSidebar.Controls.SetChildIndex(control, 1);
-            pnlEmptySpace.Height -= buttonHeight + 5;
         }
 
         Control SidebarButtonCreation(string text, Bitmap image, EventHandler clickEventHandler)
@@ -147,6 +151,7 @@ namespace SSDCoursework.UserControls
                 activeChildForm.Close();
                 pnlFormHolder.Controls.Clear();
             }
+
             activeChildForm = newChildForm;
             lblPageIndicator.Text = newChildForm.Text;
             activeChildForm.TopLevel = false;
@@ -160,7 +165,7 @@ namespace SSDCoursework.UserControls
         private void pbxSettingsIcon_Click(object sender, EventArgs e)
         {
             expandingForMenuItem = true;
-            FormToOpen = new Settings();
+            FormToOpen = new SettingsForm();
             sidebarTimer.Start();
         }
 
@@ -176,6 +181,26 @@ namespace SSDCoursework.UserControls
         private void SidebarControl_Load(object sender, EventArgs e)
         {
             lblPageIndicator.Text = FindForm().Text;
+        }
+
+        private void SetSettingsIcon()
+        {
+            if (User.CurrentUser == null)
+            {
+                pbxSettingsIcon.Visible = false;
+                pbxSettingsIcon.Enabled = false;
+            }
+            else
+            {
+                if (User.CurrentUser.Settings.PFPPath != string.Empty)
+                {
+                    pbxSettingsIcon.Image = User.CurrentUser.Settings.PFP;
+                }
+                else
+                {
+                    pbxSettingsIcon.Image = Properties.Resources.EmptyProfilePic;
+                }
+            }
         }
     }
 }

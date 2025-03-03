@@ -1,5 +1,6 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
 using SSDCoursework.Classes.QuestionClasses;
+using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Windows.Forms;
@@ -10,6 +11,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
     {
         Quiz quiz;
         MultipleChoiceQuestion currentQuestion;
+        GameType gameType = GameType.MultipleChoice;
         Random rand = new Random();
         int currentQuestionIndex = -1;
         int score = 0;
@@ -19,7 +21,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         public MultipleChoiceQuiz()
         {
             InitializeComponent();
-            quiz = new Quiz(DifficultyLvl.MultipleChoice);
+            quiz = new Quiz(gameType);
         }
 
         private void UpdateQuestion()
@@ -58,17 +60,18 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
         private void EndOfQuiz()
         {
+            tmr.Stop();
             lblQuestionText.Text = "Done";
             button1.Text = "";
             button2.Text = "";
             button3.Text = "";
 
-            score += remainingTime;
+            score += Convert.ToInt32(Math.Floor(Convert.ToDouble(remainingTime/2)));
             lblScore.Text = "Score: " + score;
             remainingTime = 0;
             lblTimer.Text = 0.ToString();
 
-            tmr.Stop();
+
             button1.Enabled = false;
             button1.Visible = false;
 
@@ -100,6 +103,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (remainingTime == 0)
             {
+                EndOfQuiz();
                 (Application.OpenForms[0] as SplashScreen).Reset(2, new MainMenuHolder());
             }
             tmr.Start();

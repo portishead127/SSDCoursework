@@ -1,6 +1,8 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
 using SSDCoursework.Classes.Misc;
+using SSDCoursework.Classes.Misc.Colours;
 using SSDCoursework.Classes.UserClasses;
+using SSDCoursework.Classes.UserClasses.UserAttributes;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -17,6 +19,7 @@ namespace SSDCoursework.Forms.Registry
         public SignUp()
         {
             InitializeComponent();
+            new DarkMode().ApplyColour(this);
         }
 
         private void BtnConfirm_Click(object sender, EventArgs e)
@@ -36,9 +39,9 @@ namespace SSDCoursework.Forms.Registry
         {
             List<Exception> exceptions = new List<Exception>();
             bool valid = true;
-            foreach (Control c in tlp.Controls.OfType<TextBox>())
+            foreach (Control c in Controls.OfType<TextBox>())
             {
-                Label correspondingLabel = tlp.Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.Equals(c.Tag));
+                Label correspondingLabel = Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.ToString().Contains(c.Tag.ToString()));
 
                 if (c.Tag.Equals("Username"))
                 {
@@ -73,7 +76,7 @@ namespace SSDCoursework.Forms.Registry
                 }
                 else if (correspondingLabel != null)
                 {
-                    correspondingLabel.ForeColor = Color.White; // Reset label color if no errors
+                    correspondingLabel.ForeColor = new DarkMode().PaletteHash["ButtonTextColour"]; // Reset label color if no errors
                 }
             }
             return valid;
@@ -83,14 +86,26 @@ namespace SSDCoursework.Forms.Registry
         {
             if (rdoAdmin.Checked)
             {
-                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, true);
+                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard(), new Settings());
             }
             else
             {
-                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false);
+                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard(), new Settings());
             }
             UserDatabase.Instance.AddEntry(newUser);
             newUser.LoginUser();
+        }
+
+        private void btnPasswordVis_Click(object sender, EventArgs e)
+        {
+            if(txtPassword.PasswordChar == '*')
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
         }
     }
 }

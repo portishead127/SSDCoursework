@@ -1,5 +1,6 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
 using SSDCoursework.Classes.QuestionClasses;
+using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 {
     public partial class TrueOrFalseQuiz : Form
     {
+        GameType gameType = GameType.TrueFalse;
         Quiz quiz;
         TrueOrFalseQuestion currentQuestion;
         int currentQuestionIndex = -1;
@@ -25,7 +27,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         public TrueOrFalseQuiz()
         {
             InitializeComponent();
-            quiz = new Quiz(DifficultyLvl.TrueFalse);
+            quiz = new Quiz(gameType);
         }
 
         private void UpdateQuestion()
@@ -44,6 +46,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
         private void EndOfQuiz()
         {
+            tmr.Stop();
             lblQuestionText.Text = "Done";
 
             score += remainingTime;
@@ -51,7 +54,6 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             remainingTime = 0;
             lblTimer.Text = 0.ToString();
 
-            tmr.Stop();
             button1.Enabled = false;
             button1.Visible = false;
 
@@ -84,6 +86,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             if (remainingTime == 0)
             {
                 (Application.OpenForms[0] as SplashScreen).Reset(3, new MainMenuHolder());
+                User.CurrentUser.Scorecard.UpdateScore(gameType, score);
             }
             tmr.Start();
             lblTimer.Text = remainingTime.ToString();

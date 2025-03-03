@@ -7,6 +7,9 @@ using System.IO;
 using System.Windows.Forms;
 using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Forms.MainMenu.QuizMenu;
+using SSDCoursework.Forms.MainMenu.Arcade;
+
+//SCREEN BOUNDARIES ARE 1386 x 768
 
 namespace SSDCoursework.Classes.Misc
 {
@@ -16,10 +19,11 @@ namespace SSDCoursework.Classes.Misc
         static void Main()
         {
             InitilizeFonts();
+            InitializeUserImages();
             InitilizeDatabases();
 
             // Your application code
-            //Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
             Application.Run(new SplashScreen(2, new RegistryHolder()));
         }
@@ -44,6 +48,11 @@ namespace SSDCoursework.Classes.Misc
 
             //// pass the font to the font collection
             //pfc.AddMemoryFont(data, fontLength);
+        }
+
+        static void InitializeUserImages()
+        {
+
         }
 
         static void InitilizeDatabases()

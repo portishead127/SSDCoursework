@@ -1,4 +1,5 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.UserClasses.UserAttributes;
 using System;
 
 namespace SSDCoursework.Classes.UserClasses
@@ -7,7 +8,7 @@ namespace SSDCoursework.Classes.UserClasses
     {
         static int numOfPlayers;
 
-        public Player(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin) : base(fName, sName, dob, username, email, password, isAdmin) { }
+        public Player(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard, Settings settings) : base(fName, sName, dob, username, email, password, isAdmin, scorecard, settings) { }
         
         public int NumOfPlayers
         {
@@ -15,9 +16,21 @@ namespace SSDCoursework.Classes.UserClasses
             set { numOfPlayers = value; }
         }
 
-        public override void ChangePass(User userPassToChange, string newPass)
+        public override void ChangeUsername(User userToChange, string newUsername)
         {
-            if (userPassToChange == this)
+            if(userToChange == this)
+            {
+                Username = newUsername;
+            }
+            else
+            {
+                throw new InvalidOperationException("Players cannot change the username of other users.");
+            }
+        }
+
+        public override void ChangePass(User userToChange, string newPass)
+        {
+            if (userToChange == this)
             {
                 Password = newPass;
             }

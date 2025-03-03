@@ -1,4 +1,6 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.Misc.Colours;
+using SSDCoursework.Classes.UserClasses;
 using System;
 using System.Windows.Forms;
 
@@ -9,6 +11,7 @@ namespace SSDCoursework.Forms.Registry
         public Login()
         {
             InitializeComponent();
+            new DarkMode().ApplyColour(this);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

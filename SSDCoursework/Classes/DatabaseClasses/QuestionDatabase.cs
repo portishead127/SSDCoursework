@@ -7,7 +7,7 @@ using System.IO;
 namespace SSDCoursework.Classes.DatabaseClasses
 {
     // Outside of the class so it can be referenced by the Quiz class too.
-    public enum DifficultyLvl
+    public enum GameType
     {
         Unset,
         TrueFalse,

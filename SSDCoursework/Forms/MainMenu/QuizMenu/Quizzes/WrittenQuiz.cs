@@ -1,6 +1,7 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
 using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Forms.Misc;
+using SSDCoursework.Classes.UserClasses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 {
     public partial class WrittenQuiz : Form
     {
+        GameType gameType = GameType.WrittenQuestion;
         Quiz quiz;
         WrittenQuestion currentQuestion;
         int currentQuestionIndex = -1;
@@ -25,7 +27,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         public WrittenQuiz()
         {
             InitializeComponent();
-            quiz = new Quiz(DifficultyLvl.WrittenQuestion);
+            quiz = new Quiz(gameType);
         }
 
         private void UpdateQuestion()
@@ -45,6 +47,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
         private void EndOfQuiz()
         {
+            tmr.Stop();
             lblQuestionText.Text = "Done";
             txtUserAnswer.Text = "";
 
@@ -53,12 +56,14 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             remainingTime = 0;
             lblTimer.Text = 0.ToString();
 
-            tmr.Stop();
             button1.Enabled = false;
             button1.Visible = false;
 
             btnStart.Visible = true;
             btnStart.Enabled = true;
+
+            User.CurrentUser.Scorecard.UpdateScore(gameType, score);
+
         }
 
         private void button1_Click(object sender, EventArgs e)

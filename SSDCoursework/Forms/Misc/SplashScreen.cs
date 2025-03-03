@@ -25,7 +25,7 @@ namespace SSDCoursework.Forms.Misc
             "\"There are more possible ways to shuffle a deck of cards than there are atoms on Earth.\"",
             "\"The moon is slowly moving away from Earth—about 1.5 inches per year.\"",
             "\"The Golden Gate Bridge cables contain enough steel to circle the Earth three times.\"",
-            "\"Your body contains enough carbon to fill 9,000 pencils.\""
+            "\"Your body contains enough carbon to fill 9,000 pencils.\"",
         };
 
         public SoundPlayer SP = new SoundPlayer(Properties.Resources.BacksideOfTheTV);
