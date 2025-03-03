@@ -46,7 +46,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(719, 37);
             this.txtUsername.TabIndex = 12;
-            this.txtUsername.Tag = "Username";
+            this.txtUsername.Tag = "ButtonAccent";
             // 
             // lblUsername
             // 
@@ -72,7 +72,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(719, 37);
             this.txtPassword.TabIndex = 13;
-            this.txtPassword.Tag = "Pass";
+            this.txtPassword.Tag = "ButtonAccent";
             // 
             // lblPassword
             // 

@@ -28,7 +28,7 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
             ColourPalette = new DarkMode();
             PFPPath = string.Empty;
             PFP = Properties.Resources.EmptyProfilePic;
-            IsShownOnLeaderboard = false;
+            IsShownOnLeaderboard = true;
         }
 
         public Settings(ColourPalette colourPalette, string pFPPath, bool isShownOnLeaderboard)

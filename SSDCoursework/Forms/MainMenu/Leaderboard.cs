@@ -39,13 +39,13 @@ namespace SSDCoursework.Forms.MainMenu
                 if (user.Settings.IsShownOnLeaderboard)
                 {
                     tableLayoutPanel1.RowCount = tableLayoutPanel1.RowCount + 1;
-                    tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 70f));
-                    tableLayoutPanel1.Controls.Add(new PictureBox() { Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom, Image = user.Settings.PFP }, 0, tableLayoutPanel1.RowCount - 1);
-                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Username, TextAlign = ContentAlignment.MiddleRight, Dock = DockStyle.Fill, Font = font }, 1, tableLayoutPanel1.RowCount - 1);
-                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.OverallScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font }, 2, tableLayoutPanel1.RowCount - 1);
-                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.TrueFalseHighScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font }, 3, tableLayoutPanel1.RowCount - 1);
-                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.MultipleChoiceHighScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font }, 4, tableLayoutPanel1.RowCount - 1);
-                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.WrittenHighScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font }, 5, tableLayoutPanel1.RowCount - 1);
+                    tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                    tableLayoutPanel1.Controls.Add(new PictureBox() {Margin = Padding.Empty, Dock = DockStyle.Fill, SizeMode = PictureBoxSizeMode.Zoom, Image = user.Settings.PFP, BackColor = Color.FromName("DimGray")}, 0, tableLayoutPanel1.RowCount - 1);
+                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Username, TextAlign = ContentAlignment.MiddleRight, Dock = DockStyle.Fill, Font = font, BackColor = Color.FromName("DimGray") }, 1, tableLayoutPanel1.RowCount - 1);
+                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.OverallScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font, BackColor = Color.FromName("DimGray") }, 2, tableLayoutPanel1.RowCount - 1);
+                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.TrueFalseHighScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font , BackColor = Color.FromName("DimGray") }, 3, tableLayoutPanel1.RowCount - 1);
+                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.MultipleChoiceHighScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font , BackColor = Color.FromName("DimGray") }, 4, tableLayoutPanel1.RowCount - 1);
+                    tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.WrittenHighScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font , BackColor = Color.FromName("DimGray") }, 5, tableLayoutPanel1.RowCount - 1);
                 }
             }
         }
@@ -71,6 +71,26 @@ namespace SSDCoursework.Forms.MainMenu
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }

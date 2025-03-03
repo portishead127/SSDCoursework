@@ -16,7 +16,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            (Application.OpenForms[0] as SplashScreen).Reset(5, new WrittenQuiz());
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -27,21 +27,6 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu
         private void button3_Click(object sender, EventArgs e)
         {
             (Application.OpenForms[0] as SplashScreen).Reset(5, new TrueOrFalseQuiz());
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
