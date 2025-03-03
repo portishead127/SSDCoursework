@@ -151,6 +151,7 @@ namespace SSDCoursework.UserControls
                 activeChildForm.Close();
                 pnlFormHolder.Controls.Clear();
             }
+
             activeChildForm = newChildForm;
             lblPageIndicator.Text = newChildForm.Text;
             activeChildForm.TopLevel = false;

@@ -52,13 +52,13 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.lblUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsername.AutoSize = true;
-            this.lblUsername.BackColor = System.Drawing.Color.Silver;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblUsername.Location = new System.Drawing.Point(165, 190);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(247, 60);
             this.lblUsername.TabIndex = 10;
-            this.lblUsername.Tag = "ButtonAccent";
+            this.lblUsername.Tag = "";
             this.lblUsername.Text = "Username";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -78,13 +78,13 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPassword.AutoSize = true;
-            this.lblPassword.BackColor = System.Drawing.Color.Silver;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblPassword.Location = new System.Drawing.Point(178, 330);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(234, 60);
             this.lblPassword.TabIndex = 11;
-            this.lblPassword.Tag = "ButtonAccent";
+            this.lblPassword.Tag = "";
             this.lblPassword.Text = "Password";
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

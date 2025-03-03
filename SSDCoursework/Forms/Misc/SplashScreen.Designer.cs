@@ -39,8 +39,8 @@
             // 
             // pbxStemLogo
             // 
-            this.pbxStemLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pbxStemLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxStemLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxStemLogo.Image = global::SSDCoursework.Properties.Resources.StemLogo;
@@ -53,7 +53,7 @@
             // 
             // pgrLoadingBar
             // 
-            this.pgrLoadingBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+            this.pgrLoadingBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pgrLoadingBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(68)))));
             this.pgrLoadingBar.Location = new System.Drawing.Point(158, 375);
@@ -73,7 +73,7 @@
             this.lblTagline.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTagline.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTagline.ForeColor = System.Drawing.Color.White;
-            this.lblTagline.Location = new System.Drawing.Point(0, 351);
+            this.lblTagline.Location = new System.Drawing.Point(0, 339);
             this.lblTagline.Name = "lblTagline";
             this.lblTagline.Size = new System.Drawing.Size(800, 24);
             this.lblTagline.TabIndex = 2;

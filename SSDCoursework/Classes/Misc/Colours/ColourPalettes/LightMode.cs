@@ -9,7 +9,7 @@ namespace SSDCoursework.Classes.Misc.Colours
 {
     internal class LightMode : ColourPalette
     {
-        protected override Dictionary<string, Color> PaletteHash { get; } = new Dictionary<string, Color>();
+        public override Dictionary<string, Color> PaletteHash { get; } = new Dictionary<string, Color>();
 
         public LightMode()
         {

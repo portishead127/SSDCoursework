@@ -52,7 +52,7 @@
             this.lblDarkMode.ForeColor = System.Drawing.Color.Black;
             this.lblDarkMode.Location = new System.Drawing.Point(332, 359);
             this.lblDarkMode.Name = "lblDarkMode";
-            this.lblDarkMode.Size = new System.Drawing.Size(384, 55);
+            this.lblDarkMode.Size = new System.Drawing.Size(384, 40);
             this.lblDarkMode.TabIndex = 0;
             this.lblDarkMode.Tag = "ButtonAccent";
             this.lblDarkMode.Text = "Use dark mode";
@@ -62,7 +62,7 @@
             // 
             this.rdoDarkMode.AutoCheck = false;
             this.rdoDarkMode.AutoSize = true;
-            this.rdoDarkMode.Location = new System.Drawing.Point(1104, 359);
+            this.rdoDarkMode.Location = new System.Drawing.Point(1104, 355);
             this.rdoDarkMode.Name = "rdoDarkMode";
             this.rdoDarkMode.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
             this.rdoDarkMode.Size = new System.Drawing.Size(114, 54);
@@ -153,11 +153,12 @@
             // 
             this.btnDeleteAccount.AutoSize = true;
             this.btnDeleteAccount.BackColor = System.Drawing.Color.Silver;
+            this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteAccount.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold);
             this.btnDeleteAccount.ForeColor = System.Drawing.Color.Red;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(454, 456);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(338, 572);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(322, 49);
+            this.btnDeleteAccount.Size = new System.Drawing.Size(378, 49);
             this.btnDeleteAccount.TabIndex = 22;
             this.btnDeleteAccount.Tag = "ButtonAccent";
             this.btnDeleteAccount.Text = "DELETE ACCOUNT";
@@ -168,7 +169,7 @@
             // 
             this.rdoLeaderboard.AutoCheck = false;
             this.rdoLeaderboard.AutoSize = true;
-            this.rdoLeaderboard.Location = new System.Drawing.Point(1104, 281);
+            this.rdoLeaderboard.Location = new System.Drawing.Point(1104, 274);
             this.rdoLeaderboard.Name = "rdoLeaderboard";
             this.rdoLeaderboard.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
             this.rdoLeaderboard.Size = new System.Drawing.Size(114, 54);
@@ -186,11 +187,12 @@
             this.lblScoreOnLeaderboard.ForeColor = System.Drawing.Color.Black;
             this.lblScoreOnLeaderboard.Location = new System.Drawing.Point(332, 281);
             this.lblScoreOnLeaderboard.Name = "lblScoreOnLeaderboard";
-            this.lblScoreOnLeaderboard.Size = new System.Drawing.Size(384, 55);
+            this.lblScoreOnLeaderboard.Size = new System.Drawing.Size(384, 40);
             this.lblScoreOnLeaderboard.TabIndex = 23;
             this.lblScoreOnLeaderboard.Tag = "ButtonAccent";
             this.lblScoreOnLeaderboard.Text = "Show scores on leaderboard";
             this.lblScoreOnLeaderboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblScoreOnLeaderboard.Click += new System.EventHandler(this.lblScoreOnLeaderboard_Click);
             // 
             // pictureBox1
             // 

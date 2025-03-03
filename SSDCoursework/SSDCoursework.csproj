@@ -86,22 +86,10 @@
     <Compile Include="Forms\MainMenu\AdminOptions.Designer.cs">
       <DependentUpon>AdminOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainMenu\Arcade\ArcadeHolder.cs">
+    <Compile Include="Forms\MainMenu\DragAndDropQuiz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainMenu\Arcade\ArcadeHolder.Designer.cs">
-      <DependentUpon>ArcadeHolder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MainMenu\Arcade\Arithmetic.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MainMenu\Arcade\Arithmetic.Designer.cs">
-      <DependentUpon>Arithmetic.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MainMenu\Arcade\DragAndDropQuiz.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MainMenu\Arcade\DragAndDropQuiz.Designer.cs">
+    <Compile Include="Forms\MainMenu\DragAndDropQuiz.Designer.cs">
       <DependentUpon>DragAndDropQuiz.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainMenu\Leaderboard.cs">
@@ -196,13 +184,7 @@
     <EmbeddedResource Include="Forms\MainMenu\AdminOptions.resx">
       <DependentUpon>AdminOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenu\Arcade\ArcadeHolder.resx">
-      <DependentUpon>ArcadeHolder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenu\Arcade\Arithmetic.resx">
-      <DependentUpon>Arithmetic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenu\Arcade\DragAndDropQuiz.resx">
+    <EmbeddedResource Include="Forms\MainMenu\DragAndDropQuiz.resx">
       <DependentUpon>DragAndDropQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu\Leaderboard.resx">
@@ -294,6 +276,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SignUpSymbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EasyDifficulty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MedDifficulty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FullDifficulty.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

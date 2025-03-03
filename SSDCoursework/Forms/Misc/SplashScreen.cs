@@ -15,7 +15,7 @@ namespace SSDCoursework.Forms.Misc
 
         string[] taglines = new string[]
         {
-            /*"\"Not quite Duolingo.\"",
+            "\"Not quite Duolingo.\"",
             "\"100% bug-free!\"",
             "\"May the mass X acceleration be with you.\"",
             "\"Keyboard and mouse sold seperately.\"",
@@ -26,9 +26,6 @@ namespace SSDCoursework.Forms.Misc
             "\"The moon is slowly moving away from Earth—about 1.5 inches per year.\"",
             "\"The Golden Gate Bridge cables contain enough steel to circle the Earth three times.\"",
             "\"Your body contains enough carbon to fill 9,000 pencils.\"",
-            "\"10x times better than getting handed a freakin packet yo\"",
-            "\"Just like getting taught face to face\"",*/
-            "\"(Freaking packet, yo!) (I bend swerve bend that corner woaooah) 💔💔💔💔\""
         };
 
         public SoundPlayer SP = new SoundPlayer(Properties.Resources.BacksideOfTheTV);

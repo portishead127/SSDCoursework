@@ -1,7 +1,7 @@
 ﻿using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.MainMenu.Arcade;
 using SSDCoursework.Forms.MainMenu.QuizMenu;
-using SSDCoursework.Forms.Registry;
+using SSDCoursework.Forms.Misc;
 using SSDCoursework.UserControls;
 using System;
 using System.Windows.Forms;
@@ -29,7 +29,7 @@ namespace SSDCoursework.Forms.MainMenu
                 sidebar.AddControl("Admin Options", Properties.Resources.Hamburger, AdminOptions_Click);
             }
             sidebar.AddControl("Leaderboard", Properties.Resources.SignUpSymbol, btnLeaderboard_Click);
-            sidebar.AddControl("Arcade", Properties.Resources.LoginSymbol, Arcade_Click);
+            sidebar.AddControl("Formula Playground", Properties.Resources.LoginSymbol, FormulaPlayground_Click);
             sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, Quizzes_Click);
         }
 
@@ -47,11 +47,9 @@ namespace SSDCoursework.Forms.MainMenu
             sidebar.sidebarTimer.Start();
         }
 
-        void Arcade_Click(object sender, EventArgs e)
+        void FormulaPlayground_Click(object sender, EventArgs e)
         {
-            sidebar.IsExpandingForMenuItem = true;
-            sidebar.FormToOpen = new ArcadeHolder();
-            sidebar.sidebarTimer.Start();
+            (Application.OpenForms[0] as SplashScreen).Reset(10, new DragAndDropQuiz());
         }
         
         void btnLeaderboard_Click(object sender, EventArgs e)

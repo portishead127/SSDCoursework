@@ -76,7 +76,7 @@ namespace SSDCoursework.Forms.Registry
                 }
                 else if (correspondingLabel != null)
                 {
-                    correspondingLabel.ForeColor = Color.White; // Reset label color if no errors
+                    correspondingLabel.ForeColor = new DarkMode().PaletteHash["ButtonTextColour"]; // Reset label color if no errors
                 }
             }
             return valid;

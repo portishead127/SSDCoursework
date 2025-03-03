@@ -82,9 +82,29 @@ namespace SSDCoursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EasyDifficulty {
+            get {
+                object obj = ResourceManager.GetObject("EasyDifficulty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EmptyProfilePic {
             get {
                 object obj = ResourceManager.GetObject("EmptyProfilePic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FullDifficulty {
+            get {
+                object obj = ResourceManager.GetObject("FullDifficulty", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,6 +125,16 @@ namespace SSDCoursework.Properties {
         internal static System.Drawing.Bitmap LoginSymbol {
             get {
                 object obj = ResourceManager.GetObject("LoginSymbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MedDifficulty {
+            get {
+                object obj = ResourceManager.GetObject("MedDifficulty", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

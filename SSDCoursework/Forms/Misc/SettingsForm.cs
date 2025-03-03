@@ -136,5 +136,10 @@ namespace SSDCoursework.Forms.Misc
             User.CurrentUser.Settings.IsShownOnLeaderboard = rdoLeaderboard.Checked;
             UserDatabase.Instance.Write();
         }
+
+        private void lblScoreOnLeaderboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
