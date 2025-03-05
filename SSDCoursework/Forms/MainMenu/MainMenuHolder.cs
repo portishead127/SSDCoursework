@@ -29,7 +29,7 @@ namespace SSDCoursework.Forms.MainMenu
                 sidebar.AddControl("Admin Options", Properties.Resources.Hamburger, AdminOptions_Click);
             }
             sidebar.AddControl("Leaderboard", Properties.Resources.SignUpSymbol, btnLeaderboard_Click);
-            sidebar.AddControl("Formula Playground", Properties.Resources.LoginSymbol, FormulaPlayground_Click);
+            sidebar.AddControl("Formulae", Properties.Resources.LoginSymbol, FormulaPlayground_Click);
             sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, Quizzes_Click);
         }
 
