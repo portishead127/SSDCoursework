@@ -11,7 +11,7 @@ namespace SSDCoursework.Forms.Registry
         public Login()
         {
             InitializeComponent();
-            new DarkMode().ApplyColour(this);
+            new DarkMode().ApplyColour(this.Controls, this);
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)

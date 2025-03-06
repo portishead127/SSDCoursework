@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SSDCoursework.Classes.UserClasses.UserAttributes
 {
-    internal class Scorecard
+    public class Scorecard
     {
         public int OverallScore { get; private set; }
         public int TrueFalseHighScore { get; private set; }

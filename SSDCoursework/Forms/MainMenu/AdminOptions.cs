@@ -6,25 +6,22 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace SSDCoursework.Forms.MainMenu
 {
-    public partial class AdminOptions : Form
+    internal partial class AdminOptions : Form
     {
-        DataTable dt = new DataTable();
-        List<string> usernames = new List<string>();
-
-
+        DataTable dt;
+        List<string> usernames;
         public AdminOptions()
         {
             InitializeComponent();
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
+            dt = new DataTable();
+            usernames = new List<string>();
 
-            foreach(User temp in UserDatabase.Instance.Entries)
-            {
-                usernames.Add(temp.Username);
-            }
-
-            listBox2.DataSource = usernames;
+            ReconstructUsers();
 
 
             dt.Columns.Add("Term", typeof(string));
@@ -54,12 +51,10 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User userToChange = UserDatabase.FindUser(txtUsername.Text);
+            User userToChange = UserDatabase.FindUser(listBox2.SelectedValue.ToString());
             if (userToChange != null)
             {
-                UserDatabase.Instance.RemoveEntry(userToChange);
-                userToChange.Password = txtPassword.Text;
-                UserDatabase.Instance.AddEntry(userToChange);
+                userToChange.ChangePass(userToChange, txtPassword.Text);
                 MessageBox.Show("Updated user password.", "Password Changed", MessageBoxButtons.OK);
             }
             else
@@ -177,19 +172,23 @@ namespace SSDCoursework.Forms.MainMenu
             UpdateBaseDatabase();
         }
 
-        private void button4Click(object sender, EventArgs e)
+        private void ChangeUsername_Click(object sender, EventArgs e)
         {
-            usernames[listBox2.SelectedIndex] = textBox2.Text;
-            for (int i = 0; i < UserDatabase.Instance.Entries.Count; i++)
-            {
-                UserDatabase.Instance.Entries[i].Username = usernames[i];
-            }
+            User userToChange = UserDatabase.FindUser(listBox2.SelectedItem.ToString());
+            if (userToChange != null) {
+                userToChange.ChangeUsername(userToChange, textBox2.Text);
+            } 
             ReconstructUsers();
         }
 
         private void ReconstructUsers()
         {
-            listBox2.DataSource = UserDatabase.Instance.Entries;
+            foreach (User temp in UserDatabase.Instance.Entries)
+            {
+                usernames.Add(temp.Username);
+            }
+
+            listBox2.DataSource = usernames;
         }
 
         private void button5_Click(object sender, EventArgs e)

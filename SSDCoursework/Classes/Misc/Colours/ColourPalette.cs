@@ -31,34 +31,31 @@ namespace SSDCoursework.Classes.Misc
             }
         }
 
-        public void ApplyColour(Form form)
+        public void ApplyFormColour(Form form)
         {
             // Apply colour to the form itself
             if (form.Tag != null && PaletteHash.TryGetValue(form.Tag.ToString(), out Color formColor))
             {
                 form.BackColor = formColor;
             }
+        }
 
+        public void ApplyColour(Control.ControlCollection controls, Form form)
+        {
+            ApplyFormColour(form);
+            ApplyColour(controls);
+        }
+
+        public void ApplyColour(Control.ControlCollection controls)
+        {
             // Apply colours to controls
-            foreach (Control c in form.Controls)
+            foreach (Control c in controls)
             {
                 if (c.Tag == null) continue;
 
-                if (c.GetType() == typeof(TableLayoutPanel))
+                if (c.GetType() == typeof(TableLayoutPanel) || c.GetType() == typeof(Panel))
                 {
-                    foreach (Control control in c.Controls)
-                    {
-                        ParseTag(control);
-                    }
-                }
-
-                if (c.Tag.ToString().Contains("ButtonAccent"))
-                {
-                    c.ForeColor = PaletteHash["ButtonTextColour"];
-                }
-                else
-                {
-                    c.ForeColor = PaletteHash["TextColour"];
+                    ApplyColour(c.Controls);
                 }
 
                 ParseTag(c);
@@ -84,6 +81,15 @@ namespace SSDCoursework.Classes.Misc
                 case "ButtonAccent":
                     c.BackColor = PaletteHash["ButtonAccent"];
                     break; 
+            }
+
+            if (c.Tag.ToString().Contains("ButtonAccent"))
+            {
+                c.ForeColor = PaletteHash["ButtonTextColour"];
+            }
+            else
+            {
+                c.ForeColor = PaletteHash["TextColour"];
             }
         }
     }

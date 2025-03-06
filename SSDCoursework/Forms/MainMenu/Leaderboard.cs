@@ -16,10 +16,10 @@ namespace SSDCoursework.Forms.MainMenu
     {
         public Leaderboard()
         {
+            UserDatabase.Instance.Entries = UserDatabase.Instance.Entries.OrderByDescending(x => x.Scorecard.OverallScore).ToList();
             InitializeComponent();
             Populate();
-            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
-
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
         }
 
         private void Populate()
@@ -48,51 +48,6 @@ namespace SSDCoursework.Forms.MainMenu
                     tableLayoutPanel1.Controls.Add(new Label() { Text = user.Scorecard.WrittenHighScore.ToString(), TextAlign = ContentAlignment.MiddleCenter, Dock = DockStyle.Fill, Font = font , BackColor = Color.FromName("DimGray") }, 5, tableLayoutPanel1.RowCount - 1);
                 }
             }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

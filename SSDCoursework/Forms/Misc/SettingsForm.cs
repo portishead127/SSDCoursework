@@ -42,7 +42,7 @@ namespace SSDCoursework.Forms.Misc
                 pictureBox1.Image = Properties.Resources.EmptyProfilePic;
             }
 
-            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
         }
 
         private void btnPass_Click(object sender, EventArgs e)
@@ -120,7 +120,7 @@ namespace SSDCoursework.Forms.Misc
             }
 
             // Apply updated colors
-            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
 
             // Force UI refresh
             this.Invalidate();

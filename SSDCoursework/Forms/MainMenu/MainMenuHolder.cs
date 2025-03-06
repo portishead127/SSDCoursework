@@ -1,9 +1,11 @@
-﻿using SSDCoursework.Classes.UserClasses;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.MainMenu.Arcade;
 using SSDCoursework.Forms.MainMenu.QuizMenu;
 using SSDCoursework.Forms.Misc;
 using SSDCoursework.UserControls;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SSDCoursework.Forms.MainMenu
@@ -29,7 +31,7 @@ namespace SSDCoursework.Forms.MainMenu
                 sidebar.AddControl("Admin Options", Properties.Resources.Hamburger, AdminOptions_Click);
             }
             sidebar.AddControl("Leaderboard", Properties.Resources.SignUpSymbol, btnLeaderboard_Click);
-            sidebar.AddControl("Formula Playground", Properties.Resources.LoginSymbol, FormulaPlayground_Click);
+            sidebar.AddControl("Formulae", Properties.Resources.LoginSymbol, FormulaPlayground_Click);
             sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, Quizzes_Click);
         }
 

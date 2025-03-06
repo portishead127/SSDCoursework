@@ -22,6 +22,9 @@ namespace SSDCoursework.UserControls
 
         Form activeChildForm; //Holds the current active form in the child form holder panel.
 
+        FontFamily family;
+        Font font;
+
         public bool IsExpandingForMenuItem
         {
             get { return expandingForMenuItem; }
@@ -40,6 +43,9 @@ namespace SSDCoursework.UserControls
         {
             InitializeComponent();
             SetSettingsIcon();
+
+            family = new FontFamily("Adobe Fan Heiti Std B");
+            font = new Font(family, 13);
 
             Size = Screen.PrimaryScreen.Bounds.Size;
             flpSidebar.MaximumSize = MaximumSize;
@@ -78,6 +84,7 @@ namespace SSDCoursework.UserControls
                 Height = buttonHeight,
                 Text = text,
                 ForeColor = Color.White,
+                Font = font,
                 TextAlign = ContentAlignment.MiddleRight,
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.FromArgb(13, 19, 33),
