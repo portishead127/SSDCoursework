@@ -11,7 +11,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu
         public QuizMenuHolder()
         {
             InitializeComponent();
-            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
         }
 
         private void button1_Click(object sender, EventArgs e)

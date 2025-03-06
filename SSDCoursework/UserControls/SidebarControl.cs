@@ -45,7 +45,7 @@ namespace SSDCoursework.UserControls
             SetSettingsIcon();
 
             family = new FontFamily("Adobe Fan Heiti Std B");
-            font = new Font(family, 14);
+            font = new Font(family, 13);
 
             Size = Screen.PrimaryScreen.Bounds.Size;
             flpSidebar.MaximumSize = MaximumSize;

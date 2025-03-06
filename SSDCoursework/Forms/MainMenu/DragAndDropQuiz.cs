@@ -23,7 +23,7 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
         public DragAndDropQuiz()
         {
             InitializeComponent();
-            User.CurrentUser.Settings.ColourPalette.ApplyColour(this);
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
             CheckResult();
         }
 

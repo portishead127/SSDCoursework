@@ -1,9 +1,11 @@
-﻿using SSDCoursework.Classes.UserClasses;
+﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.MainMenu.Arcade;
 using SSDCoursework.Forms.MainMenu.QuizMenu;
 using SSDCoursework.Forms.Misc;
 using SSDCoursework.UserControls;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace SSDCoursework.Forms.MainMenu
