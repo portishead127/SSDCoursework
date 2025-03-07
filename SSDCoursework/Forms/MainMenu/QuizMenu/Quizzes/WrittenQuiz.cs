@@ -27,6 +27,13 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         public WrittenQuiz()
         {
             InitializeComponent();
+            lblQNum.Visible = false;
+            lblQNum.Enabled = false;
+            lblQuestionText.Visible = false;
+            lblQuestionText.Enabled = false;
+            txtUserAnswer.Visible = false;
+            txtUserAnswer.Enabled = false;
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);   
             quiz = new Quiz(gameType);
         }
 
@@ -36,6 +43,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 currentQuestionIndex++;
                 currentQuestion = (WrittenQuestion)quiz.Questions[currentQuestionIndex];
+                lblQNum.Text = "Question " + (currentQuestionIndex + 1) + " of " + Quiz.NumOfQuestions;
                 lblQuestionText.Text = currentQuestion.QuestionTerm;
                 txtUserAnswer.Text = "";
             }
@@ -83,7 +91,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 EndOfQuiz();
             }
             remainingTime--;
-            lblTimer.Text = remainingTime.ToString();
+            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -93,10 +101,25 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 (Application.OpenForms[0] as SplashScreen).Reset(3, new MainMenuHolder());
             }
             tmr.Start();
-            lblTimer.Text = remainingTime.ToString();
+            lblTimer.Text = "Remaining time: "+ remainingTime.ToString();
             UpdateQuestion();
             btnStart.Enabled = false;
             btnStart.Visible = false;
+            lblQNum.Visible = true;
+            lblQNum.Enabled = true;
+            lblQuestionText.Visible = true;
+            lblQuestionText.Enabled = true;
+            txtUserAnswer.Visible = true;
+            txtUserAnswer.Enabled = true;
+            txtUserAnswer.Focus();
+        }
+
+        private void txtUserAnswer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                button1_Click(sender, e);
+            }
         }
     }
 }

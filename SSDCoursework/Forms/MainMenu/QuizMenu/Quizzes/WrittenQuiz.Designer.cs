@@ -36,46 +36,56 @@
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.btnStart = new System.Windows.Forms.Button();
             this.lblScore = new System.Windows.Forms.Label();
+            this.lblQNum = new System.Windows.Forms.Label();
             this.gmcBanner = new SSDCoursework.UserControls.GameBannerControl();
             this.SuspendLayout();
             // 
             // lblQuestionText
             // 
-            this.lblQuestionText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lblQuestionText.AutoSize = true;
-            this.lblQuestionText.Location = new System.Drawing.Point(351, 211);
+            this.lblQuestionText.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblQuestionText.Font = new System.Drawing.Font("Adobe Heiti Std R", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQuestionText.ForeColor = System.Drawing.Color.White;
+            this.lblQuestionText.Location = new System.Drawing.Point(136, 267);
             this.lblQuestionText.Name = "lblQuestionText";
-            this.lblQuestionText.Size = new System.Drawing.Size(73, 13);
+            this.lblQuestionText.Size = new System.Drawing.Size(1115, 165);
             this.lblQuestionText.TabIndex = 0;
+            this.lblQuestionText.Tag = "ButtonAccent";
             this.lblQuestionText.Text = "Question Text";
+            this.lblQuestionText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtUserAnswer
             // 
-            this.txtUserAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtUserAnswer.Location = new System.Drawing.Point(303, 261);
+            this.txtUserAnswer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtUserAnswer.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold);
+            this.txtUserAnswer.Location = new System.Drawing.Point(433, 657);
             this.txtUserAnswer.Name = "txtUserAnswer";
-            this.txtUserAnswer.Size = new System.Drawing.Size(166, 20);
+            this.txtUserAnswer.Size = new System.Drawing.Size(521, 61);
             this.txtUserAnswer.TabIndex = 1;
+            this.txtUserAnswer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserAnswer_KeyPress);
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button1.Location = new System.Drawing.Point(349, 287);
+            this.button1.Location = new System.Drawing.Point(1201, 424);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 361);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTimer
             // 
+            this.lblTimer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Location = new System.Drawing.Point(47, 132);
+            this.lblTimer.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTimer.Location = new System.Drawing.Point(12, 111);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(36, 13);
+            this.lblTimer.Size = new System.Drawing.Size(135, 34);
             this.lblTimer.TabIndex = 4;
-            this.lblTimer.Text = "Timer:";
+            this.lblTimer.Tag = "ButtonAccent";
+            this.lblTimer.Text = "Timer: 60";
             // 
             // tmr
             // 
@@ -84,22 +94,45 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(713, 102);
+            this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStart.BackColor = System.Drawing.Color.White;
+            this.btnStart.Font = new System.Drawing.Font("Adobe Heiti Std R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Image = global::SSDCoursework.Properties.Resources.LoginSymbol;
+            this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStart.Location = new System.Drawing.Point(495, 314);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
+            this.btnStart.Size = new System.Drawing.Size(408, 462);
             this.btnStart.TabIndex = 5;
-            this.btnStart.Text = "button2";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Text = "START";
+            this.btnStart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // lblScore
             // 
+            this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblScore.AutoSize = true;
-            this.lblScore.Location = new System.Drawing.Point(50, 167);
+            this.lblScore.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(1257, 111);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(47, 13);
+            this.lblScore.Size = new System.Drawing.Size(117, 34);
             this.lblScore.TabIndex = 6;
+            this.lblScore.Tag = "ButtonAccent";
             this.lblScore.Text = "Score: 0";
+            // 
+            // lblQNum
+            // 
+            this.lblQNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblQNum.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQNum.ForeColor = System.Drawing.Color.White;
+            this.lblQNum.Location = new System.Drawing.Point(142, 203);
+            this.lblQNum.Name = "lblQNum";
+            this.lblQNum.Size = new System.Drawing.Size(1115, 30);
+            this.lblQNum.TabIndex = 7;
+            this.lblQNum.Tag = "ButtonAccent";
+            this.lblQNum.Text = "Question Text";
+            this.lblQNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gmcBanner
             // 
@@ -114,16 +147,18 @@
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblScore);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gmcBanner);
             this.Controls.Add(this.txtUserAnswer);
             this.Controls.Add(this.lblQuestionText);
+            this.Controls.Add(this.lblQNum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WrittenQuiz";
+            this.Tag = "MainColour";
             this.Text = "Written Quiz";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
@@ -141,5 +176,6 @@
         private System.Windows.Forms.Timer tmr;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblQNum;
     }
 }

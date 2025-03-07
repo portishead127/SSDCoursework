@@ -28,7 +28,7 @@ namespace SSDCoursework.Forms.MainMenu
 
             if (User.CurrentUser.IsAdmin)
             {
-                sidebar.AddControl("Admin Options", Properties.Resources.Hamburger, AdminOptions_Click);
+                sidebar.AddControl("Admin", Properties.Resources.Hamburger, AdminOptions_Click);
             }
             sidebar.AddControl("Leaderboard", Properties.Resources.SignUpSymbol, btnLeaderboard_Click);
             sidebar.AddControl("Formulae", Properties.Resources.LoginSymbol, FormulaPlayground_Click);

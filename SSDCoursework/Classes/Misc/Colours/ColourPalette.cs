@@ -53,6 +53,10 @@ namespace SSDCoursework.Classes.Misc
             {
                 if (c.Tag == null) continue;
 
+                
+                
+                c.ForeColor = PaletteHash["TextColour"];
+                
                 if (c.GetType() == typeof(TableLayoutPanel) || c.GetType() == typeof(Panel))
                 {
                     ApplyColour(c.Controls);
@@ -87,10 +91,7 @@ namespace SSDCoursework.Classes.Misc
             {
                 c.ForeColor = PaletteHash["ButtonTextColour"];
             }
-            else
-            {
-                c.ForeColor = PaletteHash["TextColour"];
-            }
+            
         }
     }
 }
