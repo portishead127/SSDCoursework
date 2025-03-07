@@ -58,6 +58,7 @@
             // panel1
             // 
             this.panel1.AllowDrop = true;
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lblResult);
             this.panel1.Location = new System.Drawing.Point(344, 246);
@@ -68,6 +69,7 @@
             // lblResult
             // 
             this.lblResult.AllowDrop = true;
+            this.lblResult.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblResult.BackColor = System.Drawing.Color.Gray;
             this.lblResult.Font = new System.Drawing.Font("Rockwell", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.Location = new System.Drawing.Point(5, 5);
@@ -94,11 +96,12 @@
             this.flowLayoutPanel1.Controls.Add(this.label14);
             this.flowLayoutPanel1.Controls.Add(this.label15);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 672);
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 687);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1386, 116);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1386, 101);
             this.flowLayoutPanel1.TabIndex = 5;
-            this.flowLayoutPanel1.Tag = "ButtonAccent";
+            this.flowLayoutPanel1.Tag = "Accent1";
             // 
             // label4
             // 
@@ -271,6 +274,7 @@
             // panel2
             // 
             this.panel2.AllowDrop = true;
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.lblSecond);
             this.panel2.Location = new System.Drawing.Point(687, 251);
@@ -281,6 +285,7 @@
             // lblSecond
             // 
             this.lblSecond.AllowDrop = true;
+            this.lblSecond.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSecond.BackColor = System.Drawing.Color.Gray;
             this.lblSecond.Font = new System.Drawing.Font("Rockwell", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSecond.Location = new System.Drawing.Point(5, 5);
@@ -295,6 +300,7 @@
             // panel3
             // 
             this.panel3.AllowDrop = true;
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.lblThird);
             this.panel3.Location = new System.Drawing.Point(933, 251);
@@ -305,6 +311,7 @@
             // lblThird
             // 
             this.lblThird.AllowDrop = true;
+            this.lblThird.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblThird.BackColor = System.Drawing.Color.Gray;
             this.lblThird.Font = new System.Drawing.Font("Rockwell", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThird.Location = new System.Drawing.Point(5, 5);
@@ -318,6 +325,7 @@
             // 
             // lblExplanation
             // 
+            this.lblExplanation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblExplanation.BackColor = System.Drawing.Color.Silver;
             this.lblExplanation.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblExplanation.Location = new System.Drawing.Point(265, 415);

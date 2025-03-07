@@ -103,6 +103,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             tmr.Start();
             lblTimer.Text = "Remaining time: "+ remainingTime.ToString();
             UpdateQuestion();
+            btnStart.Text = "DONE!";
             btnStart.Enabled = false;
             btnStart.Visible = false;
             lblQNum.Visible = true;

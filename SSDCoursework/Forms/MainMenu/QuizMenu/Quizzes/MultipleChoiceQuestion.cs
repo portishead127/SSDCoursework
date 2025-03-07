@@ -83,6 +83,10 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             remainingTime = 0;
             lblTimer.Text = 0.ToString();
 
+            btnStart.Text = "DONE!";
+
+            btnStart.Enabled = true;
+            btnStart.Visible = true;
 
             button1.Enabled = false;
             button1.Visible = false;
