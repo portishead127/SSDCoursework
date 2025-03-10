@@ -10,11 +10,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
 {
     internal class UserDatabase : Database<User>
     {
-        private static UserDatabase instance;
-        public static UserDatabase Instance
-        {
-            get { return instance; }
-        }
+        public static UserDatabase Instance { get; set; }
 
         /// <summary>
         /// Creates a database object and sets the instance field equal to this instance. Throws an exception if the instance has already been set.
@@ -23,11 +19,11 @@ namespace SSDCoursework.Classes.DatabaseClasses
         /// <exception cref="Exception"></exception>
         public UserDatabase(string filePath) : base(filePath)
         {
-            if (instance != null)
+            if (Instance != null)
             {
                 throw new Exception("Singleton instance of this class has already been created.");
             }
-            instance = this;
+            Instance = this;
             Retrieve();
         }
 

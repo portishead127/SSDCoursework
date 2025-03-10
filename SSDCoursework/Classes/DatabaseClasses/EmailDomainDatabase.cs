@@ -9,11 +9,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
     {
         static string[] defaultDomains = new string[3] { "@gmail.com", "@outlook.com", "@yahoo.com" };
 
-        private static EmailDomainDatabase instance;
-        public static EmailDomainDatabase Instance
-        {
-            get { return instance; }
-        }
+        public static EmailDomainDatabase Instance { get; set; }
 
         /// <summary>
         /// Creates a database object and sets the instance field equal to this instance. Throws an exception if the instance has already been set.
@@ -22,11 +18,11 @@ namespace SSDCoursework.Classes.DatabaseClasses
         /// <exception cref="Exception"></exception>
         public EmailDomainDatabase(string filePath) : base(filePath)
         {
-            if (instance != null)
+            if (Instance != null)
             {
                 throw new Exception("Singleton instance of this class has already been created.");
             }
-            instance = this;
+            Instance = this;
             Retrieve();
         }
 
