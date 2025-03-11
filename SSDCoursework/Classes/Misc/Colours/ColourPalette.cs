@@ -31,7 +31,7 @@ namespace SSDCoursework.Classes.Misc
             }
         }
 
-        public void ApplyFormColour(Form form)
+        void ApplyFormColour(Form form)
         {
             // Apply colour to the form itself
             if (form.Tag != null && PaletteHash.TryGetValue(form.Tag.ToString(), out Color formColor))
@@ -43,19 +43,21 @@ namespace SSDCoursework.Classes.Misc
         public void ApplyColour(Control.ControlCollection controls, Form form)
         {
             ApplyFormColour(form);
-            ApplyColour(controls);
+            ApplyControlsColour(controls);
         }
 
-        public void ApplyColour(Control.ControlCollection controls)
+        void ApplyControlsColour(Control.ControlCollection controls)
         {
             // Apply colours to controls
             foreach (Control c in controls)
             {
                 if (c.Tag == null) continue;
-
+                
+                c.ForeColor = PaletteHash["TextColour"];
+                
                 if (c.GetType() == typeof(TableLayoutPanel) || c.GetType() == typeof(Panel))
                 {
-                    ApplyColour(c.Controls);
+                    ApplyControlsColour(c.Controls);
                 }
 
                 ParseTag(c);
@@ -86,11 +88,7 @@ namespace SSDCoursework.Classes.Misc
             if (c.Tag.ToString().Contains("ButtonAccent"))
             {
                 c.ForeColor = PaletteHash["ButtonTextColour"];
-            }
-            else
-            {
-                c.ForeColor = PaletteHash["TextColour"];
-            }
+            } 
         }
     }
 }

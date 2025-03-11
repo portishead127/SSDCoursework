@@ -22,6 +22,17 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             InitializeComponent();
             quiz = new Quiz(gameType);
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
+            lblQNum.Visible = false;
+            lblQNum.Enabled = false;
+            lblQuestionText.Visible = false;
+            lblQuestionText.Enabled = false;
+            button1.Enabled = false;
+            button1.Visible = false;
+            button2.Enabled = false;
+            button2.Visible = false;
+            button3.Enabled = false;
+            button3.Visible = false;
         }
 
         private void UpdateQuestion()
@@ -32,6 +43,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 currentQuestionIndex++;
                 currentQuestion = (MultipleChoiceQuestion)quiz.Questions[currentQuestionIndex];
                 lblQuestionText.Text = currentQuestion.QuestionTerm;
+                lblQNum.Text = "Question " + (currentQuestionIndex + 1) + "/" + Quiz.NumOfQuestions;
 
                 switch (correctAnswerPos)
                 {
@@ -71,9 +83,21 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             remainingTime = 0;
             lblTimer.Text = 0.ToString();
 
+            btnStart.Text = "DONE!";
+
+            btnStart.Enabled = true;
+            btnStart.Visible = true;
 
             button1.Enabled = false;
             button1.Visible = false;
+            button2.Enabled = false;
+            button2.Visible = false;
+            button3.Enabled = false;
+            button3.Visible = false;
+            lblQNum.Visible = false;
+            lblQNum.Enabled = false;
+            lblQuestionText.Visible = false;
+            lblQuestionText.Enabled = false;
 
             btnStart.Visible = true;
             btnStart.Enabled = true;
@@ -96,7 +120,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 EndOfQuiz();
             }
             remainingTime--;
-            lblTimer.Text = remainingTime.ToString();
+            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
@@ -107,10 +131,20 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 (Application.OpenForms[0] as SplashScreen).Reset(2, new MainMenuHolder());
             }
             tmr.Start();
-            lblTimer.Text = remainingTime.ToString();
+            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
             UpdateQuestion();
             btnStart.Enabled = false;
             btnStart.Visible = false;
+            lblQNum.Visible = true;
+            lblQNum.Enabled = true;
+            lblQuestionText.Visible = true;
+            lblQuestionText.Enabled = true;
+            button1.Enabled = true;
+            button1.Visible = true;
+            button2.Enabled = true;
+            button2.Visible = true;
+            button3.Enabled = true;
+            button3.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
