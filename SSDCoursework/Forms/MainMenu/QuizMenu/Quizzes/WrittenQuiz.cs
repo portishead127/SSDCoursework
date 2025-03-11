@@ -16,7 +16,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 {
     public partial class WrittenQuiz : Form
     {
-        GameType gameType = GameType.WrittenQuestion;
+        const GameType gameType = GameType.WrittenQuestion;
         Quiz quiz;
         WrittenQuestion currentQuestion;
         int currentQuestionIndex = -1;
@@ -62,7 +62,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             score += remainingTime;
             lblScore.Text = "Score: " + score;
             remainingTime = 0;
-            lblTimer.Text = 0.ToString();
+            lblTimer.Text = "Remaining time: " + 0.ToString();
 
             button1.Enabled = false;
             button1.Visible = false;
@@ -78,7 +78,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (currentQuestion.CheckAnswer(txtUserAnswer.Text))
             {
-                score += 3;
+                score += 25;
                 lblScore.Text = "Score: " + score;
             }
             UpdateQuestion();

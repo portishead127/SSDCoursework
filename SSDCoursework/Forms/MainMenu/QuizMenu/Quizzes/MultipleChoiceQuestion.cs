@@ -107,7 +107,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (currentQuestion.CheckAnswer(button1.Text))
             {
-                score += 2;
+                score += 20;
                 lblScore.Text = "Score: " + score;
             }
             UpdateQuestion();
@@ -151,7 +151,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (currentQuestion.CheckAnswer(button2.Text))
             {
-                score += 2;
+                score += 20;
                 lblScore.Text = "Score: " + score;
             }
             UpdateQuestion();
@@ -161,7 +161,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (currentQuestion.CheckAnswer(button3.Text))
             {
-                score += 2;
+                score += 20;
                 lblScore.Text = "Score: " + score; 
             }
             UpdateQuestion();
