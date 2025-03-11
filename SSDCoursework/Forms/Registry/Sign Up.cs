@@ -15,7 +15,6 @@ namespace SSDCoursework.Forms.Registry
     public partial class SignUp : Form
     {
         User newUser;
-
         public SignUp()
         {
             InitializeComponent();
