@@ -61,6 +61,7 @@
             this.txtUserAnswer.Name = "txtUserAnswer";
             this.txtUserAnswer.Size = new System.Drawing.Size(521, 61);
             this.txtUserAnswer.TabIndex = 1;
+            this.txtUserAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUserAnswer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserAnswer_KeyPress);
             // 
             // button1
@@ -99,7 +100,7 @@
             this.btnStart.Font = new System.Drawing.Font("Adobe Heiti Std R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Image = global::SSDCoursework.Properties.Resources.LoginSymbol;
             this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStart.Location = new System.Drawing.Point(495, 314);
+            this.btnStart.Location = new System.Drawing.Point(489, 189);
             this.btnStart.Name = "btnStart";
             this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
             this.btnStart.Size = new System.Drawing.Size(408, 462);
@@ -112,11 +113,10 @@
             // lblScore
             // 
             this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(1257, 111);
+            this.lblScore.Location = new System.Drawing.Point(1195, 111);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(117, 34);
+            this.lblScore.Size = new System.Drawing.Size(188, 34);
             this.lblScore.TabIndex = 6;
             this.lblScore.Tag = "ButtonAccent";
             this.lblScore.Text = "Score: 0";

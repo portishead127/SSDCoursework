@@ -7,7 +7,7 @@ namespace SSDCoursework.Classes.QuestionClasses
 {
     internal class Quiz
     {
-        public const int NumOfQuestions = 5;
+        public const int NumOfQuestions = 10;
         public List<Question> Questions { get; }
         public GameType GameType { get; }
 

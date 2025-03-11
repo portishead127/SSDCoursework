@@ -84,7 +84,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (currentQuestion.CheckAnswer(true))
             {
-                score += 1;
+                score += 15;
                 lblScore.Text = "Score: " + score;
             }
             UpdateQuestion();
@@ -127,7 +127,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (currentQuestion.CheckAnswer(false))
             {
-                score += 1;
+                score += 15;
                 lblScore.Text = "Score: " + score;
             }
             UpdateQuestion();

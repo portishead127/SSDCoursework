@@ -121,11 +121,10 @@
             // lblScore
             // 
             this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(1260, 99);
+            this.lblScore.Location = new System.Drawing.Point(1187, 99);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(117, 34);
+            this.lblScore.Size = new System.Drawing.Size(194, 34);
             this.lblScore.TabIndex = 16;
             this.lblScore.Tag = "ButtonAccent";
             this.lblScore.Text = "Score: 0";
