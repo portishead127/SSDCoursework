@@ -42,7 +42,8 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Adobe Heiti Std R", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.Location = new System.Drawing.Point(214, 600);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 109);
@@ -53,7 +54,8 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Adobe Heiti Std R", 24F, System.Drawing.FontStyle.Bold);
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(976, 600);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(205, 109);
@@ -78,7 +80,7 @@
             // lblQNum
             // 
             this.lblQNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblQNum.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQNum.ForeColor = System.Drawing.Color.White;
             this.lblQNum.Location = new System.Drawing.Point(134, 162);
             this.lblQNum.Name = "lblQNum";
@@ -92,7 +94,7 @@
             // 
             this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStart.BackColor = System.Drawing.Color.White;
-            this.btnStart.Font = new System.Drawing.Font("Adobe Heiti Std R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Image = global::SSDCoursework.Properties.Resources.LoginSymbol;
             this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStart.Location = new System.Drawing.Point(490, 285);
@@ -108,7 +110,7 @@
             // lblQuestionText
             // 
             this.lblQuestionText.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblQuestionText.Font = new System.Drawing.Font("Adobe Heiti Std R", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQuestionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQuestionText.ForeColor = System.Drawing.Color.White;
             this.lblQuestionText.Location = new System.Drawing.Point(134, 162);
             this.lblQuestionText.Name = "lblQuestionText";
@@ -120,8 +122,8 @@
             // 
             // lblScore
             // 
-            this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblScore.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.Location = new System.Drawing.Point(1187, 99);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(194, 34);
@@ -131,12 +133,11 @@
             // 
             // lblTimer
             // 
-            this.lblTimer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTimer.Location = new System.Drawing.Point(12, 99);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(135, 34);
+            this.lblTimer.Size = new System.Drawing.Size(137, 31);
             this.lblTimer.TabIndex = 15;
             this.lblTimer.Tag = "ButtonAccent";
             this.lblTimer.Text = "Timer: 60";

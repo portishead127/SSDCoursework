@@ -28,11 +28,11 @@ namespace SSDCoursework.Forms.MainMenu
 
             if (User.CurrentUser.IsAdmin)
             {
-                sidebar.AddControl("Admin", Properties.Resources.Hamburger, AdminOptions_Click);
+                sidebar.AddControl("Admin", Properties.Resources.Admin, AdminOptions_Click);
             }
-            sidebar.AddControl("Leaderboard", Properties.Resources.SignUpSymbol, btnLeaderboard_Click);
-            sidebar.AddControl("Formulae", Properties.Resources.LoginSymbol, FormulaPlayground_Click);
-            sidebar.AddControl("Quizzes", Properties.Resources.SignUpSymbol, Quizzes_Click);
+            sidebar.AddControl("Leaderboard", Properties.Resources.Leaderboard, btnLeaderboard_Click);
+            sidebar.AddControl("Formulae", Properties.Resources.Algebra, FormulaPlayground_Click);
+            sidebar.AddControl("Quizzes", Properties.Resources.Quiz, Quizzes_Click);
         }
 
         void Quizzes_Click(object sender, EventArgs e)

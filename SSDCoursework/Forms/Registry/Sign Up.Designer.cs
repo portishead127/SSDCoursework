@@ -253,10 +253,10 @@ namespace SSDCoursework.Forms.Registry
             this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfirm.BackColor = System.Drawing.Color.PaleGreen;
             this.btnConfirm.Font = new System.Drawing.Font("Corbel", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(916, 544);
+            this.btnConfirm.Location = new System.Drawing.Point(1279, 544);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(0);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(387, 129);
+            this.btnConfirm.Size = new System.Drawing.Size(578, 129);
             this.btnConfirm.TabIndex = 10;
             this.btnConfirm.Tag = "ButtonAccent";
             this.btnConfirm.Text = "Confirm";
@@ -273,9 +273,9 @@ namespace SSDCoursework.Forms.Registry
             this.pnlExplain.Controls.Add(this.label1);
             this.pnlExplain.Controls.Add(this.lblExplain2);
             this.pnlExplain.Controls.Add(this.lblExplain1);
-            this.pnlExplain.Location = new System.Drawing.Point(916, 121);
+            this.pnlExplain.Location = new System.Drawing.Point(1279, 121);
             this.pnlExplain.Name = "pnlExplain";
-            this.pnlExplain.Size = new System.Drawing.Size(458, 319);
+            this.pnlExplain.Size = new System.Drawing.Size(649, 319);
             this.pnlExplain.TabIndex = 35;
             this.pnlExplain.Tag = "ButtonAccent";
             // 
@@ -283,9 +283,9 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 277);
+            this.label4.Location = new System.Drawing.Point(3, 282);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(478, 27);
+            this.label4.Size = new System.Drawing.Size(669, 27);
             this.label4.TabIndex = 5;
             this.label4.Text = "(Not all email domains will be accepted)";
             // 
@@ -293,9 +293,9 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 162);
+            this.label3.Location = new System.Drawing.Point(3, 167);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(478, 27);
+            this.label3.Size = new System.Drawing.Size(669, 27);
             this.label3.TabIndex = 4;
             this.label3.Text = "- At least one number";
             // 
@@ -303,9 +303,9 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 189);
+            this.label2.Location = new System.Drawing.Point(3, 194);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(478, 27);
+            this.label2.Size = new System.Drawing.Size(669, 27);
             this.label2.TabIndex = 3;
             this.label2.Text = "- At least one special character\r\n";
             // 
@@ -313,9 +313,9 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 135);
+            this.label1.Location = new System.Drawing.Point(3, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 27);
+            this.label1.Size = new System.Drawing.Size(669, 27);
             this.label1.TabIndex = 2;
             this.label1.Text = "- At least one capital";
             // 
@@ -323,9 +323,9 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.lblExplain2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExplain2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplain2.Location = new System.Drawing.Point(3, 108);
+            this.lblExplain2.Location = new System.Drawing.Point(3, 113);
             this.lblExplain2.Name = "lblExplain2";
-            this.lblExplain2.Size = new System.Drawing.Size(478, 27);
+            this.lblExplain2.Size = new System.Drawing.Size(669, 27);
             this.lblExplain2.TabIndex = 1;
             this.lblExplain2.Text = "Passwords must contain:";
             // 
@@ -333,9 +333,9 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.lblExplain1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExplain1.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExplain1.Location = new System.Drawing.Point(3, 12);
+            this.lblExplain1.Location = new System.Drawing.Point(3, 17);
             this.lblExplain1.Name = "lblExplain1";
-            this.lblExplain1.Size = new System.Drawing.Size(478, 40);
+            this.lblExplain1.Size = new System.Drawing.Size(669, 40);
             this.lblExplain1.TabIndex = 0;
             this.lblExplain1.Text = "Username and password entries must be between 5 and 25 characters long.";
             // 
@@ -375,7 +375,7 @@ namespace SSDCoursework.Forms.Registry
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(5)))), ((int)(((byte)(11)))));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1940, 1100);
             this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.btnPasswordVis);
             this.Controls.Add(this.pnlExplain);

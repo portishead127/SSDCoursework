@@ -59,7 +59,7 @@ namespace SSDCoursework.UserControls
 
         public void AddControl(string text, Bitmap image, EventHandler clickEventHandler)
         {
-            pnlEmptySpace.Height -= buttonHeight + 15;
+            //pnlEmptySpace.Height -= buttonHeight + 15;
             Control control = SidebarButtonCreation(text, image, clickEventHandler);
             flpSidebar.Controls.Add(control);
             flpSidebar.Controls.SetChildIndex(control, 1);

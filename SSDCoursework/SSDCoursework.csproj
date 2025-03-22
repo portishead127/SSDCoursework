@@ -140,13 +140,13 @@
     <Compile Include="Forms\Misc\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\DatabaseClasses\UserDatabase.cs" />
+    <Compile Include="Classes\UserClasses\Player.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DatabaseClasses\UserDatabase.cs" />
-    <Compile Include="Classes\UserClasses\Player.cs" />
     <Compile Include="UserControls\BannerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -266,9 +266,6 @@
     <None Include="Resources\LoginSymbol.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Backside of the tv.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\EmptyProfilePic.png" />
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +282,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FullDifficulty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\algebra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ideas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,8 +28,6 @@ namespace SSDCoursework.Forms.Misc
             "\"Your body contains enough carbon to fill 9,000 pencils.\"",
         };
 
-        public SoundPlayer SP = new SoundPlayer(Properties.Resources.BacksideOfTheTV);
-
         public SplashScreen(int maxProgressUpdate, Form formToOpen)
         {
             InitializeComponent();

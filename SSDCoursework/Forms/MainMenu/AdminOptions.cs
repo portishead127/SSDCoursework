@@ -51,7 +51,7 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User userToChange = UserDatabase.FindUser(listBox2.SelectedValue.ToString());
+            User userToChange = UserDatabase.FindUser(lstUsers.SelectedValue.ToString());
             if (userToChange != null)
             {
                 userToChange.ChangePass(userToChange, txtPassword.Text);
@@ -178,7 +178,7 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void ChangeUsername_Click(object sender, EventArgs e)
         {
-            User userToChange = UserDatabase.FindUser(listBox2.SelectedItem.ToString());
+            User userToChange = UserDatabase.FindUser(lstUsers.SelectedItem.ToString());
             if (userToChange != null) {
                 userToChange.ChangeUsername(userToChange, textBox2.Text);
             } 
@@ -187,17 +187,18 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void ReconstructUsers()
         {
+            usernames.Clear();
             foreach (User temp in UserDatabase.Instance.Entries)
             {
                 usernames.Add(temp.Username);
             }
 
-            listBox2.DataSource = usernames;
+            lstUsers.DataSource = usernames;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            UserDatabase.Instance.RemoveEntry(UserDatabase.FindUser(listBox2.SelectedItem.ToString()));
+            UserDatabase.Instance.RemoveEntry(UserDatabase.FindUser(lstUsers.SelectedItem.ToString()));
             ReconstructUsers();
         }
     }
