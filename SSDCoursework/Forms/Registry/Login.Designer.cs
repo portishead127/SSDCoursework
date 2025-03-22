@@ -45,7 +45,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(719, 37);
-            this.txtUsername.TabIndex = 12;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.Tag = "ButtonAccent";
             // 
             // lblUsername
@@ -71,7 +71,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(719, 37);
-            this.txtPassword.TabIndex = 13;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.Tag = "ButtonAccent";
             // 
             // lblPassword
@@ -97,7 +97,7 @@ namespace SSDCoursework.Forms.Registry
             this.btnConfirm.Location = new System.Drawing.Point(403, 425);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(565, 49);
-            this.btnConfirm.TabIndex = 14;
+            this.btnConfirm.TabIndex = 2;
             this.btnConfirm.Tag = "ButtonAccent";
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;

@@ -153,7 +153,6 @@
             // 
             this.btnDeleteAccount.AutoSize = true;
             this.btnDeleteAccount.BackColor = System.Drawing.Color.Silver;
-            this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteAccount.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold);
             this.btnDeleteAccount.ForeColor = System.Drawing.Color.Red;
             this.btnDeleteAccount.Location = new System.Drawing.Point(338, 572);
@@ -192,7 +191,6 @@
             this.lblScoreOnLeaderboard.Tag = "ButtonAccent";
             this.lblScoreOnLeaderboard.Text = "Show scores on leaderboard";
             this.lblScoreOnLeaderboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblScoreOnLeaderboard.Click += new System.EventHandler(this.lblScoreOnLeaderboard_Click);
             // 
             // pictureBox1
             // 

@@ -48,11 +48,13 @@ namespace SSDCoursework.Forms.Misc
         private void btnPass_Click(object sender, EventArgs e)
         {
             User.CurrentUser.ChangePass(User.CurrentUser, textBox1.Text);
+            textBox1.Text = string.Empty;
         }
 
         private void btnUsername_Click(object sender, EventArgs e)
         {
             User.CurrentUser.ChangeUsername(User.CurrentUser, textBox2.Text);
+            textBox2.Text = string.Empty;
         }
 
         private void btnSelectPFP_Click(object sender, EventArgs e)
@@ -97,7 +99,7 @@ namespace SSDCoursework.Forms.Misc
 
         private void btnRemovePFP_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = null;
+            pictureBox1.Image = Properties.Resources.EmptyProfilePic;
             User.CurrentUser.Settings.RemovePFP();
         }
 
@@ -135,11 +137,6 @@ namespace SSDCoursework.Forms.Misc
             rdoLeaderboard.Checked = !rdoLeaderboard.Checked;
             User.CurrentUser.Settings.IsShownOnLeaderboard = rdoLeaderboard.Checked;
             UserDatabase.Instance.Write();
-        }
-
-        private void lblScoreOnLeaderboard_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

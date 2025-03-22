@@ -27,7 +27,7 @@ namespace SSDCoursework.Classes.Misc
             }
             else
             {
-                throw new Exception("Could not parse colour palette.");
+                return new DarkMode();
             }
         }
 
@@ -51,8 +51,11 @@ namespace SSDCoursework.Classes.Misc
             // Apply colours to controls
             foreach (Control c in controls)
             {
-                if (c.Tag == null) continue;
-                
+                if (c.Tag == null || c.Tag.ToString().Contains("exempt"))
+                {
+                    continue;
+                }
+
                 c.ForeColor = PaletteHash["TextColour"];
                 
                 if (c.GetType() == typeof(TableLayoutPanel) || c.GetType() == typeof(Panel))
@@ -67,8 +70,6 @@ namespace SSDCoursework.Classes.Misc
 
         private void ParseTag(Control c)
         {
-            if (c.Tag == null) return;
-
             switch (c.Tag.ToString())
             {
                 case "MainColour":
@@ -82,7 +83,9 @@ namespace SSDCoursework.Classes.Misc
                     break;
                 case "ButtonAccent":
                     c.BackColor = PaletteHash["ButtonAccent"];
-                    break; 
+                    break;
+                default:
+                    break;
             }
 
             if (c.Tag.ToString().Contains("ButtonAccent"))

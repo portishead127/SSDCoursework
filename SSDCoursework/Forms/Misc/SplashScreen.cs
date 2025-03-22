@@ -96,6 +96,7 @@ namespace SSDCoursework.Forms.Misc
                 if (Opacity <= 0)
                 {
                     tmrSplash.Stop();
+                    formToOpen.Focus();
                     Hide();
                 }
             }

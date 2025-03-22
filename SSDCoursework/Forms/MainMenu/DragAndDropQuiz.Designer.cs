@@ -83,6 +83,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Controls.Add(this.label4);
             this.flowLayoutPanel1.Controls.Add(this.label5);
             this.flowLayoutPanel1.Controls.Add(this.label6);
@@ -101,7 +102,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1386, 101);
             this.flowLayoutPanel1.TabIndex = 5;
-            this.flowLayoutPanel1.Tag = "Accent1";
+            this.flowLayoutPanel1.Tag = "";
             // 
             // label4
             // 
@@ -112,7 +113,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 100);
             this.label4.TabIndex = 8;
-            this.label4.Tag = "ButtonAccent";
+            this.label4.Tag = "";
             this.label4.Text = "F";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -126,7 +127,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 100);
             this.label5.TabIndex = 9;
-            this.label5.Tag = "ButtonAccent";
+            this.label5.Tag = "";
             this.label5.Text = "m";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -140,7 +141,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 100);
             this.label6.TabIndex = 10;
-            this.label6.Tag = "ButtonAccent";
+            this.label6.Tag = "";
             this.label6.Text = "a";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -154,7 +155,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 100);
             this.label7.TabIndex = 11;
-            this.label7.Tag = "ButtonAccent";
+            this.label7.Tag = "";
             this.label7.Text = "W";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -168,7 +169,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 100);
             this.label8.TabIndex = 12;
-            this.label8.Tag = "ButtonAccent";
+            this.label8.Tag = "";
             this.label8.Text = "P";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -182,7 +183,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 100);
             this.label9.TabIndex = 13;
-            this.label9.Tag = "ButtonAccent";
+            this.label9.Tag = "";
             this.label9.Text = "v";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -196,7 +197,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 100);
             this.label10.TabIndex = 14;
-            this.label10.Tag = "ButtonAccent";
+            this.label10.Tag = "";
             this.label10.Text = "Q";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -210,7 +211,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(100, 100);
             this.label11.TabIndex = 15;
-            this.label11.Tag = "ButtonAccent";
+            this.label11.Tag = "";
             this.label11.Text = "c";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -224,7 +225,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(100, 100);
             this.label12.TabIndex = 16;
-            this.label12.Tag = "ButtonAccent";
+            this.label12.Tag = "";
             this.label12.Text = "V";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -238,7 +239,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(100, 100);
             this.label13.TabIndex = 17;
-            this.label13.Tag = "ButtonAccent";
+            this.label13.Tag = "";
             this.label13.Text = "I";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -252,7 +253,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(100, 100);
             this.label14.TabIndex = 18;
-            this.label14.Tag = "ButtonAccent";
+            this.label14.Tag = "";
             this.label14.Text = "R";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
@@ -266,7 +267,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(100, 100);
             this.label15.TabIndex = 19;
-            this.label15.Tag = "ButtonAccent";
+            this.label15.Tag = "";
             this.label15.Text = "p";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label15.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);

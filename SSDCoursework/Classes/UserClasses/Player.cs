@@ -1,6 +1,12 @@
-﻿using SSDCoursework.Classes.DatabaseClasses;
+﻿using Microsoft.Win32;
+using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.Misc;
 using SSDCoursework.Classes.UserClasses.UserAttributes;
+using SSDCoursework.Forms.Misc;
+using SSDCoursework.Forms.Registry;
 using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.UserClasses
 {
@@ -8,7 +14,7 @@ namespace SSDCoursework.Classes.UserClasses
     {
         static int numOfPlayers;
 
-        public Player(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard, Settings settings) : base(fName, sName, dob, username, email, password, isAdmin, scorecard, settings) { }
+        public Player(string fName, string sName, DateTime dob, string gender, string username, string email, string password, bool isAdmin, Scorecard scorecard, Settings settings) : base(fName, sName, dob, gender, username, email, password, isAdmin, scorecard, settings) { }
         
         public int NumOfPlayers
         {
@@ -18,33 +24,57 @@ namespace SSDCoursework.Classes.UserClasses
 
         public override void ChangeUsername(User userToChange, string newUsername)
         {
-            if(userToChange == this)
+            if (Validation.ValidateUsername(newUsername).Any())
             {
-                Username = newUsername;
+                MessageBox.Show("Username is invalid. Please try again.", "Invalid Username", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                throw new InvalidOperationException("Players cannot change the username of other users.");
+                if (userToChange == this)
+                {
+                    Username = newUsername;
+                    UserDatabase.Instance.Write();
+                    MessageBox.Show("Username changed successfully.", "Username Changed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    throw new InvalidOperationException("Players cannot change the username of other users.");
+                }
             }
         }
 
         public override void ChangePass(User userToChange, string newPass)
         {
-            if (userToChange == this)
+            if(Validation.ValidatePass(newPass).Any())
             {
-                Password = newPass;
+                MessageBox.Show("Password is invalid. Please try again.", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                throw new InvalidOperationException("Players cannot change the password of other users.");
-            }
+                if (userToChange == this)
+                {
+                    Password = newPass;
+                    UserDatabase.Instance.Write();
+                    MessageBox.Show("Password changed successfully.", "Password Changed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    throw new InvalidOperationException("Players cannot change the password of other users.");
+                }
+            }   
         }
 
         public override void DeleteUser(User userToDelete)
         {
             if(userToDelete == this)
             {
-                UserDatabase.Instance.Entries.Remove(this);
+                if (MessageBox.Show("Are you sure you want to delete your account?", "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    UserDatabase.Instance.Entries.Remove(this);
+                    CurrentUser = null;
+                    (Application.OpenForms[0] as SplashScreen).Reset(4, new RegistryHolder());
+                    UserDatabase.Instance.Write();
+                }
             }
             else
             {

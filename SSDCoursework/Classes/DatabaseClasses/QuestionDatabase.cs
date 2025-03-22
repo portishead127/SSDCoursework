@@ -58,7 +58,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
         {
             if(Instance != null)
             {
-                throw new Exception("Singleton instance has already been created.");
+                throw new InvalidOperationException("Singleton instance has already been created.");
             }
             Instance = this;
             Retrieve();

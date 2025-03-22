@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.lblQuestionText = new System.Windows.Forms.Label();
             this.txtUserAnswer = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
             this.lblTimer = new System.Windows.Forms.Label();
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.btnStart = new System.Windows.Forms.Button();
@@ -43,11 +43,11 @@
             // lblQuestionText
             // 
             this.lblQuestionText.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblQuestionText.Font = new System.Drawing.Font("Adobe Heiti Std R", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQuestionText.Font = new System.Drawing.Font("Adobe Heiti Std R", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQuestionText.ForeColor = System.Drawing.Color.White;
             this.lblQuestionText.Location = new System.Drawing.Point(136, 267);
             this.lblQuestionText.Name = "lblQuestionText";
-            this.lblQuestionText.Size = new System.Drawing.Size(1115, 165);
+            this.lblQuestionText.Size = new System.Drawing.Size(1115, 193);
             this.lblQuestionText.TabIndex = 0;
             this.lblQuestionText.Tag = "ButtonAccent";
             this.lblQuestionText.Text = "Question Text";
@@ -55,26 +55,25 @@
             // 
             // txtUserAnswer
             // 
+            this.txtUserAnswer.AcceptsReturn = true;
             this.txtUserAnswer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtUserAnswer.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold);
-            this.txtUserAnswer.Location = new System.Drawing.Point(433, 657);
+            this.txtUserAnswer.Location = new System.Drawing.Point(392, 657);
             this.txtUserAnswer.Name = "txtUserAnswer";
             this.txtUserAnswer.Size = new System.Drawing.Size(521, 61);
             this.txtUserAnswer.TabIndex = 1;
             this.txtUserAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtUserAnswer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUserAnswer_KeyPress);
             // 
-            // button1
+            // btnEnter
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button1.Location = new System.Drawing.Point(1201, 424);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 361);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEnter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnEnter.Location = new System.Drawing.Point(919, 657);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(61, 61);
+            this.btnEnter.TabIndex = 3;
+            this.btnEnter.Tag = "ButtonAccent";
+            this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTimer
             // 
@@ -105,6 +104,7 @@
             this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
             this.btnStart.Size = new System.Drawing.Size(408, 462);
             this.btnStart.TabIndex = 5;
+            this.btnStart.Tag = "ButtonAccent";
             this.btnStart.Text = "START";
             this.btnStart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStart.UseVisualStyleBackColor = false;
@@ -144,14 +144,14 @@
             // 
             // WrittenQuiz
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.btnEnter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblTimer);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.gmcBanner);
             this.Controls.Add(this.txtUserAnswer);
             this.Controls.Add(this.lblQuestionText);
@@ -171,7 +171,7 @@
         private System.Windows.Forms.Label lblQuestionText;
         private System.Windows.Forms.TextBox txtUserAnswer;
         private UserControls.GameBannerControl gmcBanner;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.Label lblTimer;
         private System.Windows.Forms.Timer tmr;
         private System.Windows.Forms.Button btnStart;

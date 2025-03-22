@@ -42,21 +42,21 @@ namespace SSDCoursework.Forms.Registry
             {
                 Label correspondingLabel = Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.ToString().Contains(c.Tag.ToString()));
 
-                if (c.Tag.Equals("Username"))
+                if (c.Tag.ToString().Contains("Username"))
                 {
-                    exceptions = Validation.ValidateUsername(c.Text);
+                    exceptions = Validation.ValidateUsername(c.Text.Trim());
                 }
-                else if (c.Tag.Equals("Pass"))
+                else if (c.Tag.ToString().Contains("Pass"))
                 {
-                    exceptions = Validation.ValidatePass(c.Text);
+                    exceptions = Validation.ValidatePass(c.Text.Trim());
                 }
-                else if(c.Tag.Equals("Email"))
+                else if(c.Tag.ToString().Contains("Email"))
                 {
-                    exceptions = Validation.ValidateEmail(c.Text);
+                    exceptions = Validation.ValidateEmail(c.Text.Trim());
                 }
                 else
                 {
-                    exceptions = Validation.Validate(c.Text);
+                    exceptions = Validation.Validate(c.Text.Trim());
                 }
 
                 //Constructing the error message
@@ -85,11 +85,11 @@ namespace SSDCoursework.Forms.Registry
         {
             if (rdoAdmin.Checked)
             {
-                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard(), new Settings());
+                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, cmbGender.SelectedItem.ToString(), txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard(), new Settings());
             }
             else
             {
-                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard(), new Settings());
+                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, cmbGender.SelectedItem.ToString(), txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard(), new Settings());
             }
             UserDatabase.Instance.AddEntry(newUser);
             newUser.LoginUser();

@@ -46,7 +46,6 @@ namespace SSDCoursework.Forms.Registry
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblAdmin = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
-            this.lstGender = new System.Windows.Forms.ListBox();
             this.pnlExplain = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@ namespace SSDCoursework.Forms.Registry
             this.lblExplain2 = new System.Windows.Forms.Label();
             this.lblExplain1 = new System.Windows.Forms.Label();
             this.btnPasswordVis = new System.Windows.Forms.Button();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
             this.pnlExplain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +66,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(561, 37);
-            this.txtEmail.TabIndex = 34;
+            this.txtEmail.TabIndex = 9;
             this.txtEmail.Tag = "Email ButtonAccent";
             // 
             // lblEmail
@@ -103,7 +103,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(528, 37);
-            this.txtSurname.TabIndex = 20;
+            this.txtSurname.TabIndex = 1;
             this.txtSurname.Tag = "Surname ButtonAccent";
             // 
             // txtUsername
@@ -114,7 +114,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(562, 37);
-            this.txtUsername.TabIndex = 24;
+            this.txtUsername.TabIndex = 6;
             this.txtUsername.Tag = "Username ButtonAccent";
             // 
             // lblSurname
@@ -139,7 +139,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(527, 37);
-            this.txtFirstName.TabIndex = 18;
+            this.txtFirstName.TabIndex = 0;
             this.txtFirstName.Tag = "FirstName ButtonAccent";
             // 
             // lblUsername
@@ -164,7 +164,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(522, 37);
-            this.txtPassword.TabIndex = 28;
+            this.txtPassword.TabIndex = 7;
             this.txtPassword.Tag = "Pass ButtonAccent";
             // 
             // lblGender
@@ -201,7 +201,7 @@ namespace SSDCoursework.Forms.Registry
             this.rdoAdmin.Name = "rdoAdmin";
             this.rdoAdmin.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
             this.rdoAdmin.Size = new System.Drawing.Size(114, 54);
-            this.rdoAdmin.TabIndex = 30;
+            this.rdoAdmin.TabIndex = 5;
             this.rdoAdmin.Tag = "Admin";
             this.rdoAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdoAdmin.UseVisualStyleBackColor = true;
@@ -213,13 +213,13 @@ namespace SSDCoursework.Forms.Registry
             this.datDOB.Font = new System.Drawing.Font("Corbel", 18F);
             this.datDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datDOB.Location = new System.Drawing.Point(248, 234);
-            this.datDOB.MaxDate = new System.DateTime(2024, 12, 9, 0, 0, 0, 0);
-            this.datDOB.MinDate = new System.DateTime(1950, 1, 1, 0, 0, 0, 0);
+            this.datDOB.MaxDate = new System.DateTime(2013, 1, 1, 0, 0, 0, 0);
+            this.datDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.datDOB.Name = "datDOB";
             this.datDOB.Size = new System.Drawing.Size(528, 37);
-            this.datDOB.TabIndex = 32;
-            this.datDOB.Tag = "ButtonAccent";
-            this.datDOB.Value = new System.DateTime(2024, 12, 9, 0, 0, 0, 0);
+            this.datDOB.TabIndex = 3;
+            this.datDOB.Tag = "";
+            this.datDOB.Value = new System.DateTime(2013, 1, 1, 0, 0, 0, 0);
             // 
             // lblPassword
             // 
@@ -259,27 +259,11 @@ namespace SSDCoursework.Forms.Registry
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(0);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(232, 74);
-            this.btnConfirm.TabIndex = 25;
+            this.btnConfirm.TabIndex = 10;
             this.btnConfirm.Tag = "ButtonAccent";
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
-            // 
-            // lstGender
-            // 
-            this.lstGender.Font = new System.Drawing.Font("Corbel", 18F);
-            this.lstGender.ForeColor = System.Drawing.Color.Black;
-            this.lstGender.FormattingEnabled = true;
-            this.lstGender.ItemHeight = 29;
-            this.lstGender.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Prefer not to say"});
-            this.lstGender.Location = new System.Drawing.Point(248, 174);
-            this.lstGender.Name = "lstGender";
-            this.lstGender.Size = new System.Drawing.Size(527, 33);
-            this.lstGender.TabIndex = 29;
-            this.lstGender.Tag = "Gender ButtonAccent";
             // 
             // pnlExplain
             // 
@@ -358,20 +342,39 @@ namespace SSDCoursework.Forms.Registry
             this.btnPasswordVis.Location = new System.Drawing.Point(752, 508);
             this.btnPasswordVis.Name = "btnPasswordVis";
             this.btnPasswordVis.Size = new System.Drawing.Size(33, 37);
-            this.btnPasswordVis.TabIndex = 36;
+            this.btnPasswordVis.TabIndex = 8;
             this.btnPasswordVis.Tag = "ButtonAccent";
             this.btnPasswordVis.Text = "*";
             this.btnPasswordVis.UseVisualStyleBackColor = true;
             this.btnPasswordVis.Click += new System.EventHandler(this.btnPasswordVis_Click);
             // 
+            // cmbGender
+            // 
+            this.cmbGender.BackColor = System.Drawing.Color.White;
+            this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGender.Font = new System.Drawing.Font("Corbel", 18F);
+            this.cmbGender.ForeColor = System.Drawing.Color.Black;
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Prefer not to say"});
+            this.cmbGender.Location = new System.Drawing.Point(248, 171);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(528, 37);
+            this.cmbGender.TabIndex = 2;
+            this.cmbGender.Tag = "exempt";
+            // 
             // SignUp
             // 
+            this.AcceptButton = this.btnConfirm;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(5)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.btnPasswordVis);
             this.Controls.Add(this.pnlExplain);
             this.Controls.Add(this.txtEmail);
@@ -390,7 +393,6 @@ namespace SSDCoursework.Forms.Registry
             this.Controls.Add(this.rdoAdmin);
             this.Controls.Add(this.datDOB);
             this.Controls.Add(this.lblAdmin);
-            this.Controls.Add(this.lstGender);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
@@ -420,7 +422,6 @@ namespace SSDCoursework.Forms.Registry
         private Label lblPassword;
         private Label lblAdmin;
         private Button btnConfirm;
-        private ListBox lstGender;
         private Panel pnlExplain;
         private Label lblExplain2;
         private Label lblExplain1;
@@ -429,5 +430,6 @@ namespace SSDCoursework.Forms.Registry
         private Label label1;
         private Label label4;
         private Button btnPasswordVis;
+        private ComboBox cmbGender;
     }
 }

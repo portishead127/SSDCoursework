@@ -21,7 +21,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
         {
             if (Instance != null)
             {
-                throw new Exception("Singleton instance of this class has already been created.");
+                throw new InvalidOperationException("Singleton instance of this class has already been created.");
             }
             Instance = this;
             Retrieve();
@@ -37,29 +37,29 @@ namespace SSDCoursework.Classes.DatabaseClasses
                     string line = sr.ReadLine();
                     string[] items = line.Split(',');
 
-                    bool isAdmin = bool.Parse(items[6]);
+                    bool isAdmin = bool.Parse(items[7]);
 
                     Scorecard scorecard = new Scorecard(
-                        int.Parse(items[7]),
                         int.Parse(items[8]),
                         int.Parse(items[9]),
-                        int.Parse(items[10])
+                        int.Parse(items[10]),
+                        int.Parse(items[11])
                     );
 
                     Settings settings = new Settings(
-                        ColourPalette.Parse(items[11]),
-                        items[12],
-                        bool.Parse(items[13]
+                        ColourPalette.Parse(items[12]),
+                        items[13],
+                        bool.Parse(items[14]
                     ));
 
 
                     if (!isAdmin)
                     {
-                        Entries.Add(new Player(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], false, scorecard, settings));
+                        Entries.Add(new Player(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], items[6], false, scorecard, settings));
                     }
                     else
                     {
-                        Entries.Add(new Admin(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], true, scorecard, settings));
+                        Entries.Add(new Admin(items[0], items[1], DateTime.Parse(items[2]), items[3], items[4], items[5], items[6], true, scorecard, settings));
                     }
                 }
             }
@@ -78,6 +78,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
                         user.FName,
                         user.SName,
                         user.Dob.ToString(),
+                        user.Gender,
                         user.Username,
                         user.Email,
                         user.Password,

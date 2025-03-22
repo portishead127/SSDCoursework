@@ -64,8 +64,8 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             remainingTime = 0;
             lblTimer.Text = "Remaining time: " + 0.ToString();
 
-            button1.Enabled = false;
-            button1.Visible = false;
+            btnEnter.Enabled = false;
+            btnEnter.Visible = false;
 
             btnStart.Visible = true;
             btnStart.Enabled = true;
@@ -113,14 +113,6 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             txtUserAnswer.Visible = true;
             txtUserAnswer.Enabled = true;
             txtUserAnswer.Focus();
-        }
-
-        private void txtUserAnswer_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(e.KeyChar == (char)Keys.Enter)
-            {
-                button1_Click(sender, e);
-            }
         }
     }
 }

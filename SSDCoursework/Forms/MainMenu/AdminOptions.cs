@@ -55,7 +55,6 @@ namespace SSDCoursework.Forms.MainMenu
             if (userToChange != null)
             {
                 userToChange.ChangePass(userToChange, txtPassword.Text);
-                MessageBox.Show("Updated user password.", "Password Changed", MessageBoxButtons.OK);
             }
             else
             {
@@ -142,7 +141,12 @@ namespace SSDCoursework.Forms.MainMenu
         {
             QuestionDatabase.Instance.Entries.Clear();
 
-            foreach(DataRow dr in dt.Rows)
+            if(dt.Rows.Count == 0)
+            {
+                QuestionDatabase.Instance.Write();
+                return;
+            }
+            foreach (DataRow dr in dt.Rows)
             {
                 QuestionDatabase.Instance.AddEntry(
                     new Question(
