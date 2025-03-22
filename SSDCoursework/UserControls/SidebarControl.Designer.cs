@@ -34,15 +34,15 @@
             this.pnlEmptySpace = new System.Windows.Forms.Panel();
             this.pbxSettingsIcon = new System.Windows.Forms.PictureBox();
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
-            this.flpBannerbar = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblPageIndicator = new System.Windows.Forms.Label();
-            this.pbxExit = new System.Windows.Forms.PictureBox();
             this.pnlFormHolder = new System.Windows.Forms.Panel();
+            this.pbxExit = new System.Windows.Forms.PictureBox();
+            this.lblPageIndicator = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.flpSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHamburger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSettingsIcon)).BeginInit();
-            this.flpBannerbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flpSidebar
@@ -100,40 +100,6 @@
             this.sidebarTimer.Interval = 5;
             this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
             // 
-            // flpBannerbar
-            // 
-            this.flpBannerbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(45)))), ((int)(((byte)(68)))));
-            this.flpBannerbar.Controls.Add(this.lblPageIndicator);
-            this.flpBannerbar.Controls.Add(this.pbxExit);
-            this.flpBannerbar.Location = new System.Drawing.Point(120, 0);
-            this.flpBannerbar.Margin = new System.Windows.Forms.Padding(0);
-            this.flpBannerbar.Name = "flpBannerbar";
-            this.flpBannerbar.Size = new System.Drawing.Size(1266, 100);
-            this.flpBannerbar.TabIndex = 2;
-            // 
-            // lblPageIndicator
-            // 
-            this.lblPageIndicator.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPageIndicator.ForeColor = System.Drawing.Color.White;
-            this.lblPageIndicator.Location = new System.Drawing.Point(3, 0);
-            this.lblPageIndicator.Name = "lblPageIndicator";
-            this.lblPageIndicator.Size = new System.Drawing.Size(1142, 100);
-            this.lblPageIndicator.TabIndex = 0;
-            this.lblPageIndicator.Text = "Current Page";
-            this.lblPageIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pbxExit
-            // 
-            this.pbxExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxExit.Image = global::SSDCoursework.Properties.Resources.close_1_;
-            this.pbxExit.Location = new System.Drawing.Point(1151, 3);
-            this.pbxExit.Name = "pbxExit";
-            this.pbxExit.Size = new System.Drawing.Size(87, 75);
-            this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxExit.TabIndex = 1;
-            this.pbxExit.TabStop = false;
-            this.pbxExit.Click += new System.EventHandler(this.pbxExit_Click);
-            // 
             // pnlFormHolder
             // 
             this.pnlFormHolder.AutoSize = true;
@@ -145,6 +111,42 @@
             this.pnlFormHolder.TabIndex = 2;
             this.pnlFormHolder.Tag = "";
             // 
+            // pbxExit
+            // 
+            this.pbxExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxExit.Image = global::SSDCoursework.Properties.Resources.close_1_;
+            this.pbxExit.Location = new System.Drawing.Point(1173, 12);
+            this.pbxExit.Name = "pbxExit";
+            this.pbxExit.Size = new System.Drawing.Size(87, 75);
+            this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxExit.TabIndex = 1;
+            this.pbxExit.TabStop = false;
+            this.pbxExit.Click += new System.EventHandler(this.pbxExit_Click);
+            // 
+            // lblPageIndicator
+            // 
+            this.lblPageIndicator.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblPageIndicator.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPageIndicator.ForeColor = System.Drawing.Color.White;
+            this.lblPageIndicator.Location = new System.Drawing.Point(0, 0);
+            this.lblPageIndicator.Name = "lblPageIndicator";
+            this.lblPageIndicator.Size = new System.Drawing.Size(683, 100);
+            this.lblPageIndicator.TabIndex = 0;
+            this.lblPageIndicator.Text = "Current Page";
+            this.lblPageIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.pbxExit);
+            this.panel1.Controls.Add(this.lblPageIndicator);
+            this.panel1.Location = new System.Drawing.Point(120, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1263, 100);
+            this.panel1.TabIndex = 3;
+            // 
             // SidebarControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,16 +154,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Controls.Add(this.flpSidebar);
-            this.Controls.Add(this.flpBannerbar);
             this.Controls.Add(this.pnlFormHolder);
+            this.Controls.Add(this.panel1);
             this.Name = "SidebarControl";
             this.Size = new System.Drawing.Size(1386, 768);
             this.Load += new System.EventHandler(this.SidebarControl_Load);
             this.flpSidebar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxHamburger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSettingsIcon)).EndInit();
-            this.flpBannerbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,11 +173,11 @@
         private System.Windows.Forms.PictureBox pbxHamburger;
         internal System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.FlowLayoutPanel flpSidebar;
-        private System.Windows.Forms.FlowLayoutPanel flpBannerbar;
         private System.Windows.Forms.Panel pnlFormHolder;
-        private System.Windows.Forms.Label lblPageIndicator;
         private System.Windows.Forms.PictureBox pbxSettingsIcon;
         private System.Windows.Forms.Panel pnlEmptySpace;
+        private System.Windows.Forms.Label lblPageIndicator;
         private System.Windows.Forms.PictureBox pbxExit;
+        private System.Windows.Forms.Panel panel1;
     }
 }

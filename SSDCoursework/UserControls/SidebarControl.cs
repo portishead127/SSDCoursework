@@ -44,14 +44,14 @@ namespace SSDCoursework.UserControls
             InitializeComponent();
             SetSettingsIcon();
 
-            family = new FontFamily("Adobe Fan Heiti Std B");
+            family = new FontFamily("Corbel");
             font = new Font(family, 13);
 
             Size = Screen.PrimaryScreen.Bounds.Size;
             flpSidebar.MaximumSize = MaximumSize;
 
             pnlFormHolder.Width = Width - flpSidebar.Width;
-            pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
+            pnlFormHolder.Height = Height - panel1.Height;
 
             sidebarChange = Width / sidebarScaleExpansionFactor;
             DoubleBuffered = true;

@@ -43,8 +43,6 @@ C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.AdminOptions.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Leaderboard.resources
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.AdminOptions.resources
-C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Arcade.ArcadeHolder.resources
-C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Arcade.Arithmetic.resources
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Leaderboard.resources
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.MainMenuHolder.resources
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes.MultipleChoiceQuiz.resources
@@ -60,3 +58,4 @@ C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework
 C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Registry.RegistryHolder.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Arcade.DragAndDropQuiz.resources
 C:\Users\aaron\source\repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.Misc.SettingsForm.resources
+C:\Users\aaron_\Source\Repos\SSDCoursework\SSDCoursework\obj\Debug\SSDCoursework.Forms.MainMenu.Arcade.DragAndDropQuiz.resources

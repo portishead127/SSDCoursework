@@ -60,21 +60,21 @@ namespace SSDCoursework.Forms.Registry
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Corbel", 18F);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtEmail.Location = new System.Drawing.Point(223, 567);
+            this.txtEmail.Location = new System.Drawing.Point(224, 654);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(561, 37);
+            this.txtEmail.Size = new System.Drawing.Size(627, 38);
             this.txtEmail.TabIndex = 9;
             this.txtEmail.Tag = "Email ButtonAccent";
             // 
             // lblEmail
             // 
             this.lblEmail.BackColor = System.Drawing.Color.Silver;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.Gray;
-            this.lblEmail.Location = new System.Drawing.Point(13, 564);
+            this.lblEmail.Location = new System.Drawing.Point(13, 654);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(195, 42);
             this.lblEmail.TabIndex = 33;
@@ -85,9 +85,9 @@ namespace SSDCoursework.Forms.Registry
             // lblFirstName
             // 
             this.lblFirstName.BackColor = System.Drawing.Color.Silver;
-            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFirstName.ForeColor = System.Drawing.Color.Gray;
-            this.lblFirstName.Location = new System.Drawing.Point(13, 13);
+            this.lblFirstName.Location = new System.Drawing.Point(15, 121);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(220, 42);
             this.lblFirstName.TabIndex = 19;
@@ -97,32 +97,32 @@ namespace SSDCoursework.Forms.Registry
             // 
             // txtSurname
             // 
-            this.txtSurname.Font = new System.Drawing.Font("Corbel", 18F);
+            this.txtSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtSurname.Location = new System.Drawing.Point(248, 84);
+            this.txtSurname.Location = new System.Drawing.Point(250, 192);
             this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(528, 37);
+            this.txtSurname.Size = new System.Drawing.Size(602, 38);
             this.txtSurname.TabIndex = 1;
             this.txtSurname.Tag = "Surname ButtonAccent";
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Corbel", 18F);
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtUsername.Location = new System.Drawing.Point(223, 445);
+            this.txtUsername.Location = new System.Drawing.Point(224, 516);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(562, 37);
+            this.txtUsername.Size = new System.Drawing.Size(626, 38);
             this.txtUsername.TabIndex = 6;
             this.txtUsername.Tag = "Username ButtonAccent";
             // 
             // lblSurname
             // 
             this.lblSurname.BackColor = System.Drawing.Color.Silver;
-            this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSurname.ForeColor = System.Drawing.Color.Gray;
-            this.lblSurname.Location = new System.Drawing.Point(13, 79);
+            this.lblSurname.Location = new System.Drawing.Point(15, 187);
             this.lblSurname.Name = "lblSurname";
             this.lblSurname.Size = new System.Drawing.Size(220, 42);
             this.lblSurname.TabIndex = 21;
@@ -133,21 +133,21 @@ namespace SSDCoursework.Forms.Registry
             // txtFirstName
             // 
             this.txtFirstName.CausesValidation = false;
-            this.txtFirstName.Font = new System.Drawing.Font("Corbel", 18F);
+            this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtFirstName.Location = new System.Drawing.Point(248, 18);
+            this.txtFirstName.Location = new System.Drawing.Point(250, 126);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(527, 37);
+            this.txtFirstName.Size = new System.Drawing.Size(601, 38);
             this.txtFirstName.TabIndex = 0;
             this.txtFirstName.Tag = "FirstName ButtonAccent";
             // 
             // lblUsername
             // 
             this.lblUsername.BackColor = System.Drawing.Color.Silver;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.Gray;
-            this.lblUsername.Location = new System.Drawing.Point(13, 440);
+            this.lblUsername.Location = new System.Drawing.Point(13, 516);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(195, 42);
             this.lblUsername.TabIndex = 22;
@@ -157,22 +157,22 @@ namespace SSDCoursework.Forms.Registry
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Corbel", 18F);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(52)))), ((int)(((byte)(105)))));
-            this.txtPassword.Location = new System.Drawing.Point(223, 508);
+            this.txtPassword.Location = new System.Drawing.Point(224, 590);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(522, 37);
+            this.txtPassword.Size = new System.Drawing.Size(587, 38);
             this.txtPassword.TabIndex = 7;
             this.txtPassword.Tag = "Pass ButtonAccent";
             // 
             // lblGender
             // 
             this.lblGender.BackColor = System.Drawing.Color.Silver;
-            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.ForeColor = System.Drawing.Color.Gray;
-            this.lblGender.Location = new System.Drawing.Point(13, 169);
+            this.lblGender.Location = new System.Drawing.Point(15, 277);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(220, 42);
             this.lblGender.TabIndex = 26;
@@ -183,9 +183,9 @@ namespace SSDCoursework.Forms.Registry
             // lblDOB
             // 
             this.lblDOB.BackColor = System.Drawing.Color.Silver;
-            this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDOB.ForeColor = System.Drawing.Color.Gray;
-            this.lblDOB.Location = new System.Drawing.Point(13, 232);
+            this.lblDOB.Location = new System.Drawing.Point(15, 340);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(220, 42);
             this.lblDOB.TabIndex = 31;
@@ -197,7 +197,8 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.rdoAdmin.AutoCheck = false;
             this.rdoAdmin.AutoSize = true;
-            this.rdoAdmin.Location = new System.Drawing.Point(662, 298);
+            this.rdoAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoAdmin.Location = new System.Drawing.Point(738, 406);
             this.rdoAdmin.Name = "rdoAdmin";
             this.rdoAdmin.Padding = new System.Windows.Forms.Padding(70, 11, 30, 30);
             this.rdoAdmin.Size = new System.Drawing.Size(114, 54);
@@ -210,26 +211,23 @@ namespace SSDCoursework.Forms.Registry
             // datDOB
             // 
             this.datDOB.CalendarFont = new System.Drawing.Font("Corbel", 18F);
-            this.datDOB.Font = new System.Drawing.Font("Corbel", 18F);
+            this.datDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datDOB.Location = new System.Drawing.Point(248, 234);
+            this.datDOB.Location = new System.Drawing.Point(250, 342);
             this.datDOB.MaxDate = new System.DateTime(2013, 1, 1, 0, 0, 0, 0);
             this.datDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.datDOB.Name = "datDOB";
-            this.datDOB.Size = new System.Drawing.Size(528, 37);
+            this.datDOB.Size = new System.Drawing.Size(602, 38);
             this.datDOB.TabIndex = 3;
             this.datDOB.Tag = "";
             this.datDOB.Value = new System.DateTime(2013, 1, 1, 0, 0, 0, 0);
             // 
             // lblPassword
             // 
-            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPassword.BackColor = System.Drawing.Color.Silver;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.Gray;
-            this.lblPassword.Location = new System.Drawing.Point(13, 506);
+            this.lblPassword.Location = new System.Drawing.Point(12, 585);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(195, 42);
             this.lblPassword.TabIndex = 23;
@@ -240,9 +238,9 @@ namespace SSDCoursework.Forms.Registry
             // lblAdmin
             // 
             this.lblAdmin.BackColor = System.Drawing.Color.Silver;
-            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdmin.ForeColor = System.Drawing.Color.Gray;
-            this.lblAdmin.Location = new System.Drawing.Point(13, 295);
+            this.lblAdmin.Location = new System.Drawing.Point(15, 403);
             this.lblAdmin.Name = "lblAdmin";
             this.lblAdmin.Size = new System.Drawing.Size(220, 42);
             this.lblAdmin.TabIndex = 27;
@@ -252,13 +250,13 @@ namespace SSDCoursework.Forms.Registry
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfirm.BackColor = System.Drawing.Color.PaleGreen;
             this.btnConfirm.Font = new System.Drawing.Font("Corbel", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(926, 485);
+            this.btnConfirm.Location = new System.Drawing.Point(916, 544);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(0);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(232, 74);
+            this.btnConfirm.Size = new System.Drawing.Size(387, 129);
             this.btnConfirm.TabIndex = 10;
             this.btnConfirm.Tag = "ButtonAccent";
             this.btnConfirm.Text = "Confirm";
@@ -275,7 +273,7 @@ namespace SSDCoursework.Forms.Registry
             this.pnlExplain.Controls.Add(this.label1);
             this.pnlExplain.Controls.Add(this.lblExplain2);
             this.pnlExplain.Controls.Add(this.lblExplain1);
-            this.pnlExplain.Location = new System.Drawing.Point(782, 18);
+            this.pnlExplain.Location = new System.Drawing.Point(916, 121);
             this.pnlExplain.Name = "pnlExplain";
             this.pnlExplain.Size = new System.Drawing.Size(458, 319);
             this.pnlExplain.TabIndex = 35;
@@ -283,6 +281,7 @@ namespace SSDCoursework.Forms.Registry
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 277);
             this.label4.Name = "label4";
@@ -292,7 +291,7 @@ namespace SSDCoursework.Forms.Registry
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 162);
             this.label3.Name = "label3";
@@ -302,6 +301,7 @@ namespace SSDCoursework.Forms.Registry
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 189);
             this.label2.Name = "label2";
@@ -311,6 +311,7 @@ namespace SSDCoursework.Forms.Registry
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 135);
             this.label1.Name = "label1";
@@ -320,6 +321,7 @@ namespace SSDCoursework.Forms.Registry
             // 
             // lblExplain2
             // 
+            this.lblExplain2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExplain2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExplain2.Location = new System.Drawing.Point(3, 108);
             this.lblExplain2.Name = "lblExplain2";
@@ -329,6 +331,7 @@ namespace SSDCoursework.Forms.Registry
             // 
             // lblExplain1
             // 
+            this.lblExplain1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExplain1.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExplain1.Location = new System.Drawing.Point(3, 12);
             this.lblExplain1.Name = "lblExplain1";
@@ -338,8 +341,8 @@ namespace SSDCoursework.Forms.Registry
             // 
             // btnPasswordVis
             // 
-            this.btnPasswordVis.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPasswordVis.Location = new System.Drawing.Point(752, 508);
+            this.btnPasswordVis.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPasswordVis.Location = new System.Drawing.Point(816, 589);
             this.btnPasswordVis.Name = "btnPasswordVis";
             this.btnPasswordVis.Size = new System.Drawing.Size(33, 37);
             this.btnPasswordVis.TabIndex = 8;
@@ -352,16 +355,16 @@ namespace SSDCoursework.Forms.Registry
             // 
             this.cmbGender.BackColor = System.Drawing.Color.White;
             this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbGender.Font = new System.Drawing.Font("Corbel", 18F);
+            this.cmbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGender.ForeColor = System.Drawing.Color.Black;
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female",
             "Prefer not to say"});
-            this.cmbGender.Location = new System.Drawing.Point(248, 171);
+            this.cmbGender.Location = new System.Drawing.Point(250, 279);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(528, 37);
+            this.cmbGender.Size = new System.Drawing.Size(602, 39);
             this.cmbGender.TabIndex = 2;
             this.cmbGender.Tag = "exempt";
             // 
@@ -370,7 +373,6 @@ namespace SSDCoursework.Forms.Registry
             this.AcceptButton = this.btnConfirm;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(5)))), ((int)(((byte)(11)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
@@ -396,6 +398,7 @@ namespace SSDCoursework.Forms.Registry
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Tag = "MainColour";
             this.Text = "Sign Up";
             this.pnlExplain.ResumeLayout(false);
