@@ -73,7 +73,10 @@ namespace SSDCoursework.Classes.UserClasses
                     UserDatabase.Instance.Entries.Remove(userToDelete);
                     UserDatabase.Instance.Write();
                     CurrentUser = null;
-                    (Application.OpenForms[0] as SplashScreen).Reset(4, new RegistryHolder());
+                    Application.OpenForms[0]?.Invoke(new Action(() =>
+                    {
+                        (Application.OpenForms[0] as SplashScreen)?.Reset(4, new RegistryHolder());
+                    }));
                 }
             }
             else

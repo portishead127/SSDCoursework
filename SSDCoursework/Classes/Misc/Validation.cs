@@ -102,6 +102,11 @@ namespace SSDCoursework.Classes.Misc
                 string domain = emailToValidate.Substring(emailToValidate.IndexOf('@'));
 
                 exceptions.AddRange(ValidateDomain(domain));
+
+                if (!EmailDomainDatabase.Instance.Entries.Contains(domain))
+                {
+                    exceptions.Add(incorrectEmailDomain);
+                }
             }
             catch
             {
@@ -118,11 +123,6 @@ namespace SSDCoursework.Classes.Misc
             try
             {
                 if (domain.First() != '@')
-                {
-                    exceptions.Add(incorrectEmailDomain);
-                }
-
-                if (!EmailDomainDatabase.Instance.Entries.Contains(domain))
                 {
                     exceptions.Add(incorrectEmailDomain);
                 }

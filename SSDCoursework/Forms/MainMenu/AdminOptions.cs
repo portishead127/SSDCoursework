@@ -7,6 +7,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Linq;
 
 namespace SSDCoursework.Forms.MainMenu
 {
@@ -51,15 +52,15 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User userToChange = UserDatabase.FindUser(lstUsers.SelectedValue.ToString());
-            if (userToChange != null)
+            try
             {
-                userToChange.ChangePass(userToChange, txtPassword.Text);
+                User userToChange = UserDatabase.FindUser(lstUsers.SelectedValue.ToString());
+                if (userToChange != null)
+                {
+                    userToChange.ChangePass(userToChange, txtPassword.Text);
+                }
             }
-            else
-            {
-                MessageBox.Show("User could not be found.");
-            }
+            catch { }
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)
@@ -72,8 +73,8 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AddDomainToListbox(textBox1.Text);
-            textBox1.Text = "";
+            AddDomainToListbox(txtDomain.Text);
+            txtDomain.Text = "";
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -93,16 +94,16 @@ namespace SSDCoursework.Forms.MainMenu
         private void button3_Click(object sender, EventArgs e)
         {
             RemoveDomainFromDatabase();
-            AddDomainToListbox(textBox1.Text);
+            AddDomainToListbox(txtDomain.Text);
             RedrawListbox();
-            textBox1.Text = "";
+            txtDomain.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             RemoveDomainFromDatabase();
             RedrawListbox();
-            textBox1.Text = "";
+            txtDomain.Text = "";
         }
 
         private void RedrawListbox()
@@ -113,14 +114,14 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void AddDomainToListbox(string domain)
         {
-            if (Validation.ValidateDomain(textBox1.Text).Count == 0)
+            if (Validation.ValidateDomain(domain).Any() || EmailDomainDatabase.Instance.Entries.Contains(domain))
             {
-                EmailDomainDatabase.Instance.AddEntry(textBox1.Text);
-                RedrawListbox();
+                MessageBox.Show("Desired domain must be valid and not a duplicate.", "Invalid Domain");
             }
             else
             {
-                MessageBox.Show("Desired domain must be valid.", "Invalid Domain");
+                EmailDomainDatabase.Instance.AddEntry(domain);
+                RedrawListbox();
             }
         }
 
@@ -162,6 +163,8 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void btnAddQuestion_Click(object sender, EventArgs e)
         {
+            List<Exception> exceptions = new List<Exception>();
+
             object[] textBoxEntries =
             {
                 txtQuestionTerm.Text,
@@ -171,9 +174,21 @@ namespace SSDCoursework.Forms.MainMenu
                 txtTFQuestionTerm.Text,
                 ckbTFAnswer.Checked
             };
+            for(int i = 0; i < textBoxEntries.Length-1; i++)
+            {
+                exceptions.AddRange(Validation.Validate(textBoxEntries[i].ToString().Trim()));
+            }
 
-            dt.Rows.Add(textBoxEntries);
-            UpdateQuestionDatabase();
+            if (!exceptions.Any())
+            {
+                dt.Rows.Add(textBoxEntries);
+                UpdateQuestionDatabase();
+            }
+            else
+            {
+                MessageBox.Show("Inputs cannot be empty.", "Invalid Question");
+            }
+            
         }
 
         private void ChangeUsername_Click(object sender, EventArgs e)
