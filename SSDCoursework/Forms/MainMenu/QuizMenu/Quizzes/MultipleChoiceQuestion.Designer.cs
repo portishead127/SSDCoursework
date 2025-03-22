@@ -33,18 +33,20 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tmr = new System.Windows.Forms.Timer(this.components);
-            this.gameBannerControl1 = new SSDCoursework.UserControls.GameBannerControl();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblQuestionText = new System.Windows.Forms.Label();
             this.lblQNum = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
+            this.gameBannerControl1 = new SSDCoursework.UserControls.GameBannerControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.Location = new System.Drawing.Point(141, 517);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 109);
@@ -56,7 +58,7 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button2.Location = new System.Drawing.Point(591, 586);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(205, 109);
@@ -68,7 +70,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button3.Location = new System.Drawing.Point(1043, 517);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(205, 109);
@@ -82,20 +84,11 @@
             this.tmr.Interval = 1000;
             this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
             // 
-            // gameBannerControl1
-            // 
-            this.gameBannerControl1.AutoSize = true;
-            this.gameBannerControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gameBannerControl1.Location = new System.Drawing.Point(0, 0);
-            this.gameBannerControl1.Name = "gameBannerControl1";
-            this.gameBannerControl1.Size = new System.Drawing.Size(1386, 96);
-            this.gameBannerControl1.TabIndex = 0;
-            // 
             // btnStart
             // 
             this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStart.BackColor = System.Drawing.Color.White;
-            this.btnStart.Font = new System.Drawing.Font("Adobe Heiti Std R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Image = global::SSDCoursework.Properties.Resources.LoginSymbol;
             this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStart.Location = new System.Drawing.Point(489, 219);
@@ -111,7 +104,7 @@
             // lblQuestionText
             // 
             this.lblQuestionText.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblQuestionText.Font = new System.Drawing.Font("Adobe Heiti Std R", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQuestionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQuestionText.ForeColor = System.Drawing.Color.White;
             this.lblQuestionText.Location = new System.Drawing.Point(133, 265);
             this.lblQuestionText.Name = "lblQuestionText";
@@ -124,7 +117,7 @@
             // lblQNum
             // 
             this.lblQNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblQNum.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQNum.ForeColor = System.Drawing.Color.White;
             this.lblQNum.Location = new System.Drawing.Point(139, 201);
             this.lblQNum.Name = "lblQNum";
@@ -136,26 +129,44 @@
             // 
             // lblScore
             // 
-            this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblScore.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(1175, 99);
+            this.lblScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(1177, 99);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(183, 34);
+            this.lblScore.Size = new System.Drawing.Size(209, 34);
             this.lblScore.TabIndex = 13;
             this.lblScore.Tag = "ButtonAccent";
             this.lblScore.Text = "Score: 0";
             // 
             // lblTimer
             // 
-            this.lblTimer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblTimer.Location = new System.Drawing.Point(12, 99);
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTimer.Location = new System.Drawing.Point(3, 103);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(135, 34);
+            this.lblTimer.Size = new System.Drawing.Size(137, 31);
             this.lblTimer.TabIndex = 12;
             this.lblTimer.Tag = "ButtonAccent";
             this.lblTimer.Text = "Timer: 60";
+            // 
+            // gameBannerControl1
+            // 
+            this.gameBannerControl1.AutoSize = true;
+            this.gameBannerControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gameBannerControl1.Location = new System.Drawing.Point(0, 0);
+            this.gameBannerControl1.Name = "gameBannerControl1";
+            this.gameBannerControl1.Size = new System.Drawing.Size(1386, 100);
+            this.gameBannerControl1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(1199, 136);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 149);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // MultipleChoiceQuiz
             // 
@@ -163,6 +174,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.button3);
@@ -175,8 +187,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MultipleChoiceQuiz";
             this.Tag = "MainColour";
-            this.Text = "MultipleChoiceQuiz";
+            this.Text = "Multiple Choice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +207,6 @@
         private System.Windows.Forms.Label lblQNum;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

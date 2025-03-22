@@ -2,6 +2,7 @@
 using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
+using SSDCoursework.Properties;
 using System;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         MultipleChoiceQuestion currentQuestion;
         GameType gameType = GameType.MultipleChoice;
         Random rand = new Random();
+        bool isGameOver;
         int currentQuestionIndex = -1;
         int score = 0;
         const int maxTime = 60;
@@ -23,6 +25,8 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             InitializeComponent();
             quiz = new Quiz(gameType);
             User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
+            isGameOver = false;
+
             lblQNum.Visible = false;
             lblQNum.Enabled = false;
             lblQuestionText.Visible = false;
@@ -73,15 +77,17 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         private void EndOfQuiz()
         {
             tmr.Stop();
+            isGameOver = true;
+
             lblQuestionText.Text = "Done";
             button1.Text = "";
             button2.Text = "";
             button3.Text = "";
 
-            score += Convert.ToInt32(Math.Floor(Convert.ToDouble(remainingTime/2)));
+            score += remainingTime;
             lblScore.Text = "Score: " + score;
             remainingTime = 0;
-            lblTimer.Text = 0.ToString();
+            lblTimer.Text = "Game Over!";
 
             btnStart.Text = "DONE!";
 
@@ -103,16 +109,6 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             btnStart.Enabled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (currentQuestion.CheckAnswer(button1.Text))
-            {
-                score += 20;
-                lblScore.Text = "Score: " + score;
-            }
-            UpdateQuestion();
-        }
-
         private void tmr_Tick(object sender, EventArgs e)
         {
             if (remainingTime == 0)
@@ -125,26 +121,44 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (remainingTime == 0)
+            if (isGameOver)
             {
                 EndOfQuiz();
                 (Application.OpenForms[0] as SplashScreen).Reset(2, new MainMenuHolder());
             }
-            tmr.Start();
-            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            else
+            {
+                tmr.Start();
+                lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+                UpdateQuestion();
+                btnStart.Enabled = false;
+                btnStart.Visible = false;
+                lblQNum.Visible = true;
+                lblQNum.Enabled = true;
+                lblQuestionText.Visible = true;
+                lblQuestionText.Enabled = true;
+                button1.Enabled = true;
+                button1.Visible = true;
+                button2.Enabled = true;
+                button2.Visible = true;
+                button3.Enabled = true;
+                button3.Visible = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (currentQuestion.CheckAnswer(button1.Text))
+            {
+                score += 20;
+                lblScore.Text = "Score: " + score;
+                pictureBox1.Image = Properties.Resources.Tick;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Incorrect;
+            }
             UpdateQuestion();
-            btnStart.Enabled = false;
-            btnStart.Visible = false;
-            lblQNum.Visible = true;
-            lblQNum.Enabled = true;
-            lblQuestionText.Visible = true;
-            lblQuestionText.Enabled = true;
-            button1.Enabled = true;
-            button1.Visible = true;
-            button2.Enabled = true;
-            button2.Visible = true;
-            button3.Enabled = true;
-            button3.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -153,6 +167,11 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 score += 20;
                 lblScore.Text = "Score: " + score;
+                pictureBox1.Image = Properties.Resources.Tick;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Incorrect;
             }
             UpdateQuestion();
         }
@@ -162,7 +181,12 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             if (currentQuestion.CheckAnswer(button3.Text))
             {
                 score += 20;
-                lblScore.Text = "Score: " + score; 
+                lblScore.Text = "Score: " + score;
+                pictureBox1.Image = Properties.Resources.Tick;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Incorrect;
             }
             UpdateQuestion();
         }

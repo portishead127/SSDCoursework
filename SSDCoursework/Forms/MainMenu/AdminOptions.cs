@@ -46,7 +46,7 @@ namespace SSDCoursework.Forms.MainMenu
             }
             dgvQuestions.DataSource = dt;
 
-            listBox1.DataSource = EmailDomainDatabase.Instance.Entries;
+            lstDomains.DataSource = EmailDomainDatabase.Instance.Entries;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void button3_Click(object sender, EventArgs e)
         {
-            RemoveDomainFromListbox();
+            RemoveDomainFromDatabase();
             AddDomainToListbox(textBox1.Text);
             RedrawListbox();
             textBox1.Text = "";
@@ -100,15 +100,15 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void button4_Click(object sender, EventArgs e)
         {
-            RemoveDomainFromListbox();
+            RemoveDomainFromDatabase();
             RedrawListbox();
             textBox1.Text = "";
         }
 
         private void RedrawListbox()
         {
-            listBox1.DataSource = null;
-            listBox1.DataSource = EmailDomainDatabase.Instance.Entries;
+            lstDomains.DataSource = null;
+            lstDomains.DataSource = EmailDomainDatabase.Instance.Entries;
         }
 
         private void AddDomainToListbox(string domain)
@@ -124,9 +124,9 @@ namespace SSDCoursework.Forms.MainMenu
             }
         }
 
-        private void RemoveDomainFromListbox()
+        private void RemoveDomainFromDatabase()
         {
-            EmailDomainDatabase.Instance.RemoveEntry(EmailDomainDatabase.Instance.Entries[listBox1.SelectedIndex]);
+            EmailDomainDatabase.Instance.RemoveEntry(EmailDomainDatabase.Instance.Entries[lstDomains.SelectedIndex]);
         }
 
         private void btnRemoveQuestion_Click(object sender, EventArgs e)
@@ -134,10 +134,10 @@ namespace SSDCoursework.Forms.MainMenu
             DataGridViewRow row = dgvQuestions.Rows[dgvQuestions.CurrentRow.Index];
             dgvQuestions.Rows.Remove(row);
             
-            UpdateBaseDatabase();
+            UpdateQuestionDatabase();
         }
 
-        private void UpdateBaseDatabase()
+        private void UpdateQuestionDatabase()
         {
             QuestionDatabase.Instance.Entries.Clear();
 
@@ -173,20 +173,27 @@ namespace SSDCoursework.Forms.MainMenu
             };
 
             dt.Rows.Add(textBoxEntries);
-            UpdateBaseDatabase();
+            UpdateQuestionDatabase();
         }
 
         private void ChangeUsername_Click(object sender, EventArgs e)
         {
-            User userToChange = UserDatabase.FindUser(lstUsers.SelectedItem.ToString());
-            if (userToChange != null) {
-                userToChange.ChangeUsername(userToChange, textBox2.Text);
-            } 
-            ReconstructUsers();
+            try
+            {
+                User userToChange = UserDatabase.FindUser(lstUsers.SelectedItem.ToString());
+                if (userToChange != null)
+                {
+                    User.CurrentUser.ChangeUsername(userToChange, textBox2.Text);
+                }
+                ReconstructUsers();
+            }
+            catch { }
         }
 
         private void ReconstructUsers()
         {
+            lstUsers.DataSource = null;
+
             usernames.Clear();
             foreach (User temp in UserDatabase.Instance.Entries)
             {
@@ -198,8 +205,13 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void button5_Click(object sender, EventArgs e)
         {
-            UserDatabase.Instance.RemoveEntry(UserDatabase.FindUser(lstUsers.SelectedItem.ToString()));
-            ReconstructUsers();
+            try
+            {
+                User userToChange = UserDatabase.FindUser(lstUsers.SelectedItem.ToString());
+                User.CurrentUser.DeleteUser(userToChange);
+                ReconstructUsers();
+            }
+            catch { };
         }
     }
 }

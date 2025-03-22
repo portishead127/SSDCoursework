@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,7 +38,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lstDomains = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblExample = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -120,14 +120,14 @@
             this.pnlChangePass.TabIndex = 6;
             this.pnlChangePass.Tag = "MainColour";
             // 
-            // listBox2
+            // lstUsers
             // 
             this.lstUsers.Dock = System.Windows.Forms.DockStyle.Right;
             this.lstUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstUsers.FormattingEnabled = true;
             this.lstUsers.ItemHeight = 20;
             this.lstUsers.Location = new System.Drawing.Point(909, 0);
-            this.lstUsers.Name = "listBox2";
+            this.lstUsers.Name = "lstUsers";
             this.lstUsers.Size = new System.Drawing.Size(473, 142);
             this.lstUsers.TabIndex = 19;
             // 
@@ -178,17 +178,17 @@
             this.label9.Tag = "Username";
             this.label9.Text = "Reassigned username:";
             // 
-            // listBox1
+            // lstDomains
             // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(909, 0);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(473, 142);
-            this.listBox1.TabIndex = 9;
-            this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
+            this.lstDomains.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lstDomains.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lstDomains.FormattingEnabled = true;
+            this.lstDomains.ItemHeight = 20;
+            this.lstDomains.Location = new System.Drawing.Point(909, 0);
+            this.lstDomains.Name = "lstDomains";
+            this.lstDomains.Size = new System.Drawing.Size(473, 142);
+            this.lstDomains.TabIndex = 9;
+            this.lstDomains.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
             // 
             // panel1
             // 
@@ -198,7 +198,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.listBox1);
+            this.panel1.Controls.Add(this.lstDomains);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -413,14 +413,14 @@
             // 
             this.dgvQuestions.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQuestions.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQuestions.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvQuestions.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvQuestions.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvQuestions.GridColor = System.Drawing.Color.Black;
@@ -514,7 +514,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlChangePass;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lstDomains;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;

@@ -38,12 +38,14 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.lblQNum = new System.Windows.Forms.Label();
             this.gmcBanner = new SSDCoursework.UserControls.GameBannerControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblQuestionText
             // 
             this.lblQuestionText.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblQuestionText.Font = new System.Drawing.Font("Adobe Heiti Std R", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQuestionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQuestionText.ForeColor = System.Drawing.Color.White;
             this.lblQuestionText.Location = new System.Drawing.Point(136, 267);
             this.lblQuestionText.Name = "lblQuestionText";
@@ -57,10 +59,10 @@
             // 
             this.txtUserAnswer.AcceptsReturn = true;
             this.txtUserAnswer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtUserAnswer.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold);
+            this.txtUserAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.txtUserAnswer.Location = new System.Drawing.Point(392, 657);
             this.txtUserAnswer.Name = "txtUserAnswer";
-            this.txtUserAnswer.Size = new System.Drawing.Size(521, 61);
+            this.txtUserAnswer.Size = new System.Drawing.Size(521, 38);
             this.txtUserAnswer.TabIndex = 1;
             this.txtUserAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -77,12 +79,11 @@
             // 
             // lblTimer
             // 
-            this.lblTimer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblTimer.Location = new System.Drawing.Point(12, 111);
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTimer.Location = new System.Drawing.Point(3, 103);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(135, 34);
+            this.lblTimer.Size = new System.Drawing.Size(137, 31);
             this.lblTimer.TabIndex = 4;
             this.lblTimer.Tag = "ButtonAccent";
             this.lblTimer.Text = "Timer: 60";
@@ -96,7 +97,7 @@
             // 
             this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStart.BackColor = System.Drawing.Color.White;
-            this.btnStart.Font = new System.Drawing.Font("Adobe Heiti Std R", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Image = global::SSDCoursework.Properties.Resources.LoginSymbol;
             this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnStart.Location = new System.Drawing.Point(489, 189);
@@ -112,11 +113,11 @@
             // 
             // lblScore
             // 
-            this.lblScore.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblScore.Font = new System.Drawing.Font("Adobe Heiti Std R", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(1195, 111);
+            this.lblScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(1164, 111);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(188, 34);
+            this.lblScore.Size = new System.Drawing.Size(219, 34);
             this.lblScore.TabIndex = 6;
             this.lblScore.Tag = "ButtonAccent";
             this.lblScore.Text = "Score: 0";
@@ -124,7 +125,7 @@
             // lblQNum
             // 
             this.lblQNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblQNum.Font = new System.Drawing.Font("Adobe Heiti Std R", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQNum.ForeColor = System.Drawing.Color.White;
             this.lblQNum.Location = new System.Drawing.Point(142, 203);
             this.lblQNum.Name = "lblQNum";
@@ -139,8 +140,18 @@
             this.gmcBanner.AutoSize = true;
             this.gmcBanner.Location = new System.Drawing.Point(0, 0);
             this.gmcBanner.Name = "gmcBanner";
-            this.gmcBanner.Size = new System.Drawing.Size(1928, 96);
+            this.gmcBanner.Size = new System.Drawing.Size(1928, 100);
             this.gmcBanner.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(1196, 148);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 149);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // WrittenQuiz
             // 
@@ -148,6 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblTimer);
@@ -161,6 +173,7 @@
             this.Tag = "MainColour";
             this.Text = "Written Quiz";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +190,6 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblQNum;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

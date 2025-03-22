@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SSDCoursework.Forms.Registry
@@ -19,6 +20,7 @@ namespace SSDCoursework.Forms.Registry
         {
             InitializeComponent();
             new DarkMode().ApplyColour(this.Controls, this);
+            cmbGender.SelectedIndex = 0;
         }
 
         private void BtnConfirm_Click(object sender, EventArgs e)
@@ -34,10 +36,13 @@ namespace SSDCoursework.Forms.Registry
             rdoAdmin.Checked = !rdoAdmin.Checked;
         }
 
+
         private bool ValidateInput()
         {
             List<Exception> exceptions = new List<Exception>();
             bool valid = true;
+
+            // Validate TextBoxes
             foreach (Control c in Controls.OfType<TextBox>())
             {
                 Label correspondingLabel = Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.ToString().Contains(c.Tag.ToString()));
@@ -50,7 +55,7 @@ namespace SSDCoursework.Forms.Registry
                 {
                     exceptions = Validation.ValidatePass(c.Text.Trim());
                 }
-                else if(c.Tag.ToString().Contains("Email"))
+                else if (c.Tag.ToString().Contains("Email"))
                 {
                     exceptions = Validation.ValidateEmail(c.Text.Trim());
                 }
@@ -70,12 +75,12 @@ namespace SSDCoursework.Forms.Registry
                 if (exceptions.Any() && correspondingLabel != null)
                 {
                     valid = false;
-                    correspondingLabel.ForeColor = Color.Red; // Change label text color to red
+                    correspondingLabel.ForeColor = Color.Red;
                     MessageBox.Show($"The {correspondingLabel.Text} entry contains the following issues:\n\n{errorMessage}", "Invalid credentials");
                 }
                 else if (correspondingLabel != null)
                 {
-                    correspondingLabel.ForeColor = new DarkMode().PaletteHash["ButtonTextColour"]; // Reset label color if no errors
+                    correspondingLabel.ForeColor = new DarkMode().PaletteHash["ButtonTextColour"];
                 }
             }
             return valid;

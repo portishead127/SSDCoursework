@@ -51,11 +51,12 @@ namespace SSDCoursework.Classes.UserClasses
 
         public override void DeleteUser(User userToDelete)
         {
-            if (userToDelete == this)
+            if (this.Username == userToDelete.Username)
             {
                 if (MessageBox.Show("Are you sure you want to delete your account?", "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    UserDatabase.Instance.Entries.Remove(this);
+                { 
+                    UserDatabase.Instance.Entries.Remove(userToDelete);
+                    UserDatabase.Instance.Write();
                     CurrentUser = null;
                     (Application.OpenForms[0] as SplashScreen).Reset(4, new RegistryHolder());
                 }
@@ -63,8 +64,8 @@ namespace SSDCoursework.Classes.UserClasses
             else
             {
                 UserDatabase.Instance.Entries.Remove(userToDelete);
+                UserDatabase.Instance.Write();
             }
-            UserDatabase.Instance.Write();
         }
     }
 }

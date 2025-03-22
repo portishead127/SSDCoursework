@@ -32,12 +32,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.tmr = new System.Windows.Forms.Timer(this.components);
-            this.gameBannerControl1 = new SSDCoursework.UserControls.GameBannerControl();
             this.lblQNum = new System.Windows.Forms.Label();
-            this.btnStart = new System.Windows.Forms.Button();
             this.lblQuestionText = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblTimer = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.gameBannerControl1 = new SSDCoursework.UserControls.GameBannerControl();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -69,14 +71,6 @@
             this.tmr.Interval = 1000;
             this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
             // 
-            // gameBannerControl1
-            // 
-            this.gameBannerControl1.AutoSize = true;
-            this.gameBannerControl1.Location = new System.Drawing.Point(0, 0);
-            this.gameBannerControl1.Name = "gameBannerControl1";
-            this.gameBannerControl1.Size = new System.Drawing.Size(1928, 96);
-            this.gameBannerControl1.TabIndex = 6;
-            // 
             // lblQNum
             // 
             this.lblQNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -89,23 +83,6 @@
             this.lblQNum.Tag = "ButtonAccent";
             this.lblQNum.Text = "Question Text";
             this.lblQNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnStart
-            // 
-            this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnStart.BackColor = System.Drawing.Color.White;
-            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Image = global::SSDCoursework.Properties.Resources.LoginSymbol;
-            this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnStart.Location = new System.Drawing.Point(490, 285);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
-            this.btnStart.Size = new System.Drawing.Size(408, 462);
-            this.btnStart.TabIndex = 12;
-            this.btnStart.Text = "START";
-            this.btnStart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // lblQuestionText
             // 
@@ -123,10 +100,10 @@
             // lblScore
             // 
             this.lblScore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(1187, 99);
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(1150, 103);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(194, 34);
+            this.lblScore.Size = new System.Drawing.Size(233, 42);
             this.lblScore.TabIndex = 16;
             this.lblScore.Tag = "ButtonAccent";
             this.lblScore.Text = "Score: 0";
@@ -134,13 +111,48 @@
             // lblTimer
             // 
             this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblTimer.Location = new System.Drawing.Point(12, 99);
+            this.lblTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.Location = new System.Drawing.Point(2, 103);
             this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(137, 31);
+            this.lblTimer.Size = new System.Drawing.Size(183, 42);
             this.lblTimer.TabIndex = 15;
             this.lblTimer.Tag = "ButtonAccent";
             this.lblTimer.Text = "Timer: 60";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(1187, 148);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 149);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStart.BackColor = System.Drawing.Color.White;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Image = global::SSDCoursework.Properties.Resources.LoginSymbol;
+            this.btnStart.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnStart.Location = new System.Drawing.Point(490, 285);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
+            this.btnStart.Size = new System.Drawing.Size(408, 444);
+            this.btnStart.TabIndex = 12;
+            this.btnStart.Text = "START";
+            this.btnStart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStart.UseVisualStyleBackColor = false;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            // 
+            // gameBannerControl1
+            // 
+            this.gameBannerControl1.AutoSize = true;
+            this.gameBannerControl1.Location = new System.Drawing.Point(0, 0);
+            this.gameBannerControl1.Name = "gameBannerControl1";
+            this.gameBannerControl1.Size = new System.Drawing.Size(1928, 100);
+            this.gameBannerControl1.TabIndex = 6;
             // 
             // TrueOrFalseQuiz
             // 
@@ -148,6 +160,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblQNum);
@@ -159,8 +172,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TrueOrFalseQuiz";
             this.Tag = "MainColour";
-            this.Text = "TrueOrFalseQuiz";
+            this.Text = "True Or False";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +191,6 @@
         private System.Windows.Forms.Label lblQuestionText;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

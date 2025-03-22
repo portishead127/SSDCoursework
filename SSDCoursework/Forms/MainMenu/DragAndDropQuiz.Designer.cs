@@ -48,14 +48,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblThird = new System.Windows.Forms.Label();
             this.lblExplanation = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gameBannerControl1 = new SSDCoursework.UserControls.GameBannerControl();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -287,6 +288,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(110, 110);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblSecond
             // 
@@ -309,7 +311,7 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.lblThird);
-            this.panel3.Location = new System.Drawing.Point(1210, 407);
+            this.panel3.Location = new System.Drawing.Point(1209, 407);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(110, 110);
             this.panel3.TabIndex = 5;
@@ -333,43 +335,20 @@
             // 
             this.lblExplanation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblExplanation.BackColor = System.Drawing.Color.Silver;
-            this.lblExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExplanation.Location = new System.Drawing.Point(546, 571);
             this.lblExplanation.Margin = new System.Windows.Forms.Padding(0);
             this.lblExplanation.Name = "lblExplanation";
-            this.lblExplanation.Size = new System.Drawing.Size(852, 201);
+            this.lblExplanation.Size = new System.Drawing.Size(852, 272);
             this.lblExplanation.TabIndex = 6;
             this.lblExplanation.Tag = "ButtonAccent";
             this.lblExplanation.Text = "Explanation label";
             this.lblExplanation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::SSDCoursework.Properties.Resources.MultiplicationSign;
-            this.pictureBox2.Location = new System.Drawing.Point(1103, 416);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 89);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "Accent1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::SSDCoursework.Properties.Resources.EqualsSign;
-            this.pictureBox1.Location = new System.Drawing.Point(797, 409);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "Accent1";
-            // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Location = new System.Drawing.Point(546, 376);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(852, 180);
@@ -384,11 +363,35 @@
             this.gameBannerControl1.Size = new System.Drawing.Size(1928, 100);
             this.gameBannerControl1.TabIndex = 4;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::SSDCoursework.Properties.Resources.MultiplicationSign;
+            this.pictureBox2.Location = new System.Drawing.Point(549, 38);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(96, 95);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "Accent1";
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::SSDCoursework.Properties.Resources.EqualsSign;
+            this.pictureBox1.Location = new System.Drawing.Point(797, 409);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "Accent1";
+            // 
             // DragAndDropQuiz
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1940, 1100);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblExplanation);
             this.Controls.Add(this.panel3);
@@ -408,6 +411,7 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
