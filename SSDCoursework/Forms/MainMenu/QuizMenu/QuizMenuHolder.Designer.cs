@@ -189,11 +189,11 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(342, 126);
+            this.label4.Location = new System.Drawing.Point(502, 83);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(733, 55);
+            this.label4.Size = new System.Drawing.Size(384, 29);
             this.label4.TabIndex = 12;
             this.label4.Tag = "";
             this.label4.Text = "(recommended for new players)";

@@ -115,8 +115,11 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 EndOfQuiz();
             }
-            remainingTime--;
-            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            else
+            {
+                remainingTime--;
+                lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
