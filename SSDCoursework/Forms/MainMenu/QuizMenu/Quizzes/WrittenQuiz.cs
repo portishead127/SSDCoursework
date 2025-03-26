@@ -118,6 +118,9 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 btnStart.Text = "DONE!";
                 btnStart.Enabled = false;
                 btnStart.Visible = false;
+                btnEnter.Enabled = true;
+                btnEnter.Visible = true;
+
                 lblQNum.Visible = true;
                 lblQNum.Enabled = true;
                 lblQuestionText.Visible = true;

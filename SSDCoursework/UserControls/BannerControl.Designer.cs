@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblGameIndicator = new System.Windows.Forms.Label();
             this.pbxExit = new System.Windows.Forms.PictureBox();
+            this.lblGameIndicator = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxExit)).BeginInit();
             this.SuspendLayout();
@@ -40,13 +40,25 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
-            this.panel1.Controls.Add(this.pbxExit);
             this.panel1.Controls.Add(this.lblGameIndicator);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1927, 100);
+            this.panel1.Size = new System.Drawing.Size(1835, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // pbxExit
+            // 
+            this.pbxExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxExit.Image = global::SSDCoursework.Properties.Resources.close_1_;
+            this.pbxExit.Location = new System.Drawing.Point(1838, 12);
+            this.pbxExit.Name = "pbxExit";
+            this.pbxExit.Size = new System.Drawing.Size(87, 75);
+            this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxExit.TabIndex = 3;
+            this.pbxExit.TabStop = false;
+            this.pbxExit.Click += new System.EventHandler(this.pbxExit_Click);
             // 
             // lblGameIndicator
             // 
@@ -59,24 +71,13 @@
             this.lblGameIndicator.Text = "Current Game";
             this.lblGameIndicator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pbxExit
-            // 
-            this.pbxExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxExit.Image = global::SSDCoursework.Properties.Resources.close_1_;
-            this.pbxExit.Location = new System.Drawing.Point(1787, 10);
-            this.pbxExit.Name = "pbxExit";
-            this.pbxExit.Size = new System.Drawing.Size(87, 75);
-            this.pbxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxExit.TabIndex = 3;
-            this.pbxExit.TabStop = false;
-            this.pbxExit.Click += new System.EventHandler(this.pbxExit_Click);
-            // 
             // GameBannerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
+            this.Controls.Add(this.pbxExit);
             this.Controls.Add(this.panel1);
             this.Name = "GameBannerControl";
             this.Size = new System.Drawing.Size(1928, 100);

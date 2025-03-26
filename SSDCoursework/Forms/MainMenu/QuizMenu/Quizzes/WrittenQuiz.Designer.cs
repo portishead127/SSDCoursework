@@ -37,8 +37,8 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblQNum = new System.Windows.Forms.Label();
-            this.gmcBanner = new SSDCoursework.UserControls.GameBannerControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gmcBanner = new SSDCoursework.UserControls.GameBannerControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,10 +71,11 @@
             this.btnEnter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEnter.Location = new System.Drawing.Point(919, 657);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(61, 61);
+            this.btnEnter.Size = new System.Drawing.Size(38, 38);
             this.btnEnter.TabIndex = 3;
             this.btnEnter.Tag = "ButtonAccent";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Visible = false;
             this.btnEnter.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblTimer
@@ -135,14 +136,6 @@
             this.lblQNum.Text = "Question Text";
             this.lblQNum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gmcBanner
-            // 
-            this.gmcBanner.AutoSize = true;
-            this.gmcBanner.Location = new System.Drawing.Point(0, 0);
-            this.gmcBanner.Name = "gmcBanner";
-            this.gmcBanner.Size = new System.Drawing.Size(1928, 100);
-            this.gmcBanner.TabIndex = 2;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -152,6 +145,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
+            // 
+            // gmcBanner
+            // 
+            this.gmcBanner.AutoSize = true;
+            this.gmcBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
+            this.gmcBanner.Location = new System.Drawing.Point(0, 0);
+            this.gmcBanner.Name = "gmcBanner";
+            this.gmcBanner.Size = new System.Drawing.Size(1928, 100);
+            this.gmcBanner.TabIndex = 2;
             // 
             // WrittenQuiz
             // 
