@@ -76,9 +76,9 @@
             this.lblQNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblQNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQNum.ForeColor = System.Drawing.Color.White;
-            this.lblQNum.Location = new System.Drawing.Point(134, 162);
+            this.lblQNum.Location = new System.Drawing.Point(202, 162);
             this.lblQNum.Name = "lblQNum";
-            this.lblQNum.Size = new System.Drawing.Size(1115, 30);
+            this.lblQNum.Size = new System.Drawing.Size(956, 30);
             this.lblQNum.TabIndex = 14;
             this.lblQNum.Tag = "ButtonAccent";
             this.lblQNum.Text = "Question Text";
@@ -89,9 +89,9 @@
             this.lblQuestionText.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblQuestionText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblQuestionText.ForeColor = System.Drawing.Color.White;
-            this.lblQuestionText.Location = new System.Drawing.Point(134, 162);
+            this.lblQuestionText.Location = new System.Drawing.Point(202, 162);
             this.lblQuestionText.Name = "lblQuestionText";
-            this.lblQuestionText.Size = new System.Drawing.Size(1115, 165);
+            this.lblQuestionText.Size = new System.Drawing.Size(983, 165);
             this.lblQuestionText.TabIndex = 13;
             this.lblQuestionText.Tag = "ButtonAccent";
             this.lblQuestionText.Text = "Question Text";
@@ -122,9 +122,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Location = new System.Drawing.Point(1187, 148);
+            this.pictureBox1.Location = new System.Drawing.Point(1274, 148);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 149);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -149,9 +149,11 @@
             // gameBannerControl1
             // 
             this.gameBannerControl1.AutoSize = true;
+            this.gameBannerControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(19)))), ((int)(((byte)(33)))));
+            this.gameBannerControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.gameBannerControl1.Location = new System.Drawing.Point(0, 0);
             this.gameBannerControl1.Name = "gameBannerControl1";
-            this.gameBannerControl1.Size = new System.Drawing.Size(1928, 100);
+            this.gameBannerControl1.Size = new System.Drawing.Size(1386, 100);
             this.gameBannerControl1.TabIndex = 6;
             // 
             // TrueOrFalseQuiz

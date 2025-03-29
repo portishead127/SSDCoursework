@@ -113,7 +113,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (remainingTime == 0)
             {
-                EndOfQuiz();
+                EndOfQuiz(); 
             }
             else
             {
@@ -126,7 +126,6 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         {
             if (isGameOver)
             {
-                EndOfQuiz();
                 User.CurrentUser.Scorecard.UpdateScore(gameType, score);
                 (Application.OpenForms[0] as SplashScreen).Reset(2, new MainMenuHolder());
             }

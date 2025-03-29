@@ -100,7 +100,7 @@
             this.pnlFormHolder.Name = "pnlFormHolder";
             this.pnlFormHolder.Size = new System.Drawing.Size(1266, 668);
             this.pnlFormHolder.TabIndex = 2;
-            this.pnlFormHolder.Tag = "";
+            this.pnlFormHolder.Tag = "MainColour";
             // 
             // pbxExit
             // 

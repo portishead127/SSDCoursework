@@ -63,6 +63,11 @@ namespace SSDCoursework.Classes.DatabaseClasses
                     }
                 }
             }
+
+            if(User.CurrentUser != null)
+            {
+                User.CurrentUser = FindUser(User.CurrentUser.Username);
+            }
         }
 
 
@@ -95,6 +100,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
                     sw.WriteLine(string.Join(",", userDataPoints));
                 }
             }
+            Retrieve();
         }
 
         public static void FindUserToLogin(string desiredUsername, string desiredPass)

@@ -122,13 +122,13 @@
             // 
             // lstUsers
             // 
-            this.lstUsers.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lstUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lstUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstUsers.FormattingEnabled = true;
             this.lstUsers.ItemHeight = 20;
-            this.lstUsers.Location = new System.Drawing.Point(909, 0);
+            this.lstUsers.Location = new System.Drawing.Point(909, 8);
             this.lstUsers.Name = "lstUsers";
-            this.lstUsers.Size = new System.Drawing.Size(473, 142);
+            this.lstUsers.Size = new System.Drawing.Size(473, 124);
             this.lstUsers.TabIndex = 19;
             // 
             // button5
@@ -180,13 +180,13 @@
             // 
             // lstDomains
             // 
-            this.lstDomains.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lstDomains.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lstDomains.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.lstDomains.FormattingEnabled = true;
             this.lstDomains.ItemHeight = 20;
-            this.lstDomains.Location = new System.Drawing.Point(909, 0);
+            this.lstDomains.Location = new System.Drawing.Point(909, 4);
             this.lstDomains.Name = "lstDomains";
-            this.lstDomains.Size = new System.Drawing.Size(473, 142);
+            this.lstDomains.Size = new System.Drawing.Size(473, 144);
             this.lstDomains.TabIndex = 9;
             this.lstDomains.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
             // 
@@ -204,7 +204,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 146);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1386, 146);
+            this.panel1.Size = new System.Drawing.Size(1386, 160);
             this.panel1.TabIndex = 10;
             this.panel1.Tag = "MainColour";
             // 
@@ -269,7 +269,7 @@
             // 
             // txtDomain
             // 
-            this.txtDomain.Location = new System.Drawing.Point(117, 12);
+            this.txtDomain.Location = new System.Drawing.Point(134, 13);
             this.txtDomain.Name = "txtDomain";
             this.txtDomain.Size = new System.Drawing.Size(200, 20);
             this.txtDomain.TabIndex = 8;
@@ -306,9 +306,9 @@
             this.panel2.Controls.Add(this.txtQuestionTerm);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 232);
+            this.panel2.Location = new System.Drawing.Point(0, 407);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1386, 556);
+            this.panel2.Size = new System.Drawing.Size(1386, 381);
             this.panel2.TabIndex = 11;
             this.panel2.Tag = "MainColour";
             // 
@@ -318,7 +318,7 @@
             this.ckbTFAnswer.AutoSize = true;
             this.ckbTFAnswer.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ckbTFAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbTFAnswer.Location = new System.Drawing.Point(135, 237);
+            this.ckbTFAnswer.Location = new System.Drawing.Point(55, 197);
             this.ckbTFAnswer.Name = "ckbTFAnswer";
             this.ckbTFAnswer.Size = new System.Drawing.Size(203, 20);
             this.ckbTFAnswer.TabIndex = 23;
@@ -328,7 +328,7 @@
             // txtTFQuestionTerm
             // 
             this.txtTFQuestionTerm.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTFQuestionTerm.Location = new System.Drawing.Point(324, 211);
+            this.txtTFQuestionTerm.Location = new System.Drawing.Point(244, 171);
             this.txtTFQuestionTerm.Name = "txtTFQuestionTerm";
             this.txtTFQuestionTerm.Size = new System.Drawing.Size(281, 20);
             this.txtTFQuestionTerm.TabIndex = 21;
@@ -339,7 +339,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(138, 211);
+            this.label8.Location = new System.Drawing.Point(58, 171);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(180, 16);
             this.label8.TabIndex = 20;
@@ -349,7 +349,7 @@
             // txtFakeAnswer2
             // 
             this.txtFakeAnswer2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtFakeAnswer2.Location = new System.Drawing.Point(255, 184);
+            this.txtFakeAnswer2.Location = new System.Drawing.Point(175, 144);
             this.txtFakeAnswer2.Name = "txtFakeAnswer2";
             this.txtFakeAnswer2.Size = new System.Drawing.Size(350, 20);
             this.txtFakeAnswer2.TabIndex = 19;
@@ -360,7 +360,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(138, 188);
+            this.label7.Location = new System.Drawing.Point(58, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 16);
             this.label7.TabIndex = 18;
@@ -370,7 +370,7 @@
             // txtFakeAnswer1
             // 
             this.txtFakeAnswer1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtFakeAnswer1.Location = new System.Drawing.Point(255, 159);
+            this.txtFakeAnswer1.Location = new System.Drawing.Point(175, 119);
             this.txtFakeAnswer1.Name = "txtFakeAnswer1";
             this.txtFakeAnswer1.Size = new System.Drawing.Size(350, 20);
             this.txtFakeAnswer1.TabIndex = 17;
@@ -381,7 +381,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(138, 162);
+            this.label6.Location = new System.Drawing.Point(58, 122);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 16);
             this.label6.TabIndex = 16;
@@ -391,7 +391,7 @@
             // txtWrittenAnswer
             // 
             this.txtWrittenAnswer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtWrittenAnswer.Location = new System.Drawing.Point(255, 133);
+            this.txtWrittenAnswer.Location = new System.Drawing.Point(175, 93);
             this.txtWrittenAnswer.Name = "txtWrittenAnswer";
             this.txtWrittenAnswer.Size = new System.Drawing.Size(350, 20);
             this.txtWrittenAnswer.TabIndex = 15;
@@ -402,7 +402,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(138, 136);
+            this.label5.Location = new System.Drawing.Point(58, 96);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(112, 16);
             this.label5.TabIndex = 14;
@@ -411,6 +411,7 @@
             // 
             // dgvQuestions
             // 
+            this.dgvQuestions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvQuestions.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvQuestions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -421,14 +422,13 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvQuestions.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvQuestions.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvQuestions.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvQuestions.GridColor = System.Drawing.Color.Black;
-            this.dgvQuestions.Location = new System.Drawing.Point(636, 0);
+            this.dgvQuestions.Location = new System.Drawing.Point(798, 2);
             this.dgvQuestions.MultiSelect = false;
             this.dgvQuestions.Name = "dgvQuestions";
             this.dgvQuestions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQuestions.Size = new System.Drawing.Size(746, 552);
+            this.dgvQuestions.Size = new System.Drawing.Size(584, 372);
             this.dgvQuestions.TabIndex = 13;
             this.dgvQuestions.Tag = "ButtonAccent";
             // 
@@ -438,7 +438,7 @@
             this.btnRemoveQuestion.BackColor = System.Drawing.Color.DimGray;
             this.btnRemoveQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveQuestion.Location = new System.Drawing.Point(135, 334);
+            this.btnRemoveQuestion.Location = new System.Drawing.Point(55, 294);
             this.btnRemoveQuestion.Name = "btnRemoveQuestion";
             this.btnRemoveQuestion.Size = new System.Drawing.Size(467, 63);
             this.btnRemoveQuestion.TabIndex = 12;
@@ -453,7 +453,7 @@
             this.btnAddQuestion.BackColor = System.Drawing.Color.DimGray;
             this.btnAddQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddQuestion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddQuestion.Location = new System.Drawing.Point(135, 265);
+            this.btnAddQuestion.Location = new System.Drawing.Point(55, 225);
             this.btnAddQuestion.Name = "btnAddQuestion";
             this.btnAddQuestion.Size = new System.Drawing.Size(467, 63);
             this.btnAddQuestion.TabIndex = 10;
@@ -465,7 +465,7 @@
             // txtQuestionTerm
             // 
             this.txtQuestionTerm.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtQuestionTerm.Location = new System.Drawing.Point(255, 107);
+            this.txtQuestionTerm.Location = new System.Drawing.Point(175, 67);
             this.txtQuestionTerm.Name = "txtQuestionTerm";
             this.txtQuestionTerm.Size = new System.Drawing.Size(350, 20);
             this.txtQuestionTerm.TabIndex = 8;
@@ -476,7 +476,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(138, 110);
+            this.label3.Location = new System.Drawing.Point(58, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 16);
             this.label3.TabIndex = 7;

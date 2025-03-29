@@ -74,7 +74,6 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             btnStart.Enabled = true;
 
             User.CurrentUser.Scorecard.UpdateScore(gameType, score);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,16 +98,19 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 EndOfQuiz();
             }
-            remainingTime--;
-            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            else
+            {
+                remainingTime--;
+                lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (isGameOver)
             {
-                (Application.OpenForms[0] as SplashScreen).Reset(3, new MainMenuHolder());
                 User.CurrentUser.Scorecard.UpdateScore(gameType, score);
+                (Application.OpenForms[0] as SplashScreen).Reset(3, new MainMenuHolder());
             }
             else
             {

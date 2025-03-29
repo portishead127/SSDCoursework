@@ -38,12 +38,12 @@ namespace SSDCoursework.Classes.DatabaseClasses
             {
                 Entries.AddRange(rawDomains.Split(','));
             }
-            Write();
         }
 
         public override void Write()
         {
             File.WriteAllText(FilePath, string.Join(",", Entries));
+            Retrieve();
         }
 
         public new void RemoveEntry(string entry)

@@ -1,4 +1,5 @@
-﻿using SSDCoursework.Classes.UserClasses;
+﻿using SSDCoursework.Classes.Misc.Colours;
+using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Drawing;
@@ -55,6 +56,15 @@ namespace SSDCoursework.UserControls
 
             sidebarChange = Width / sidebarScaleExpansionFactor;
             DoubleBuffered = true;
+
+            if(User.CurrentUser == null)
+            {
+                new DarkMode().ApplyControlColour(pnlFormHolder);
+            }
+            else
+            {
+                User.CurrentUser.Settings.ColourPalette.ApplyControlColour(pnlFormHolder);
+            }
         }
 
         public void AddControl(string text, Bitmap image, EventHandler clickEventHandler)

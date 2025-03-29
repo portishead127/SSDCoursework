@@ -17,8 +17,8 @@ namespace SSDCoursework.Classes.Misc.Colours
             PaletteHash["Accent1"] = Color.FromArgb(52, 76, 132);
             PaletteHash["Accent2"] = Color.LightCyan;
             PaletteHash["Accent3"] = Color.LightBlue;
-            PaletteHash["ButtonAccent"] = Color.Black;
-            PaletteHash["ButtonTextColour"] = Color.White;
+            PaletteHash["ButtonAccent"] = Color.MintCream;
+            PaletteHash["ButtonTextColour"] = Color.Black;
             PaletteHash["TextColour"] = Color.Black;
         }
 

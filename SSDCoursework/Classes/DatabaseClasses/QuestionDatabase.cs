@@ -81,7 +81,6 @@ namespace SSDCoursework.Classes.DatabaseClasses
                     Entries.Add(new Question(items[0], items[1], new string[] { items[2], items[3] } , items[4], bool.Parse(items[5])));
                 }
             }
-            Write();
         }
 
         public override void Write()
@@ -94,6 +93,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
                     sw.WriteLine(string.Join("," , entryDetails));
                 }
             }
+            Retrieve();
         }
     }
 }

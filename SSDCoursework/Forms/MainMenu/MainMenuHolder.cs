@@ -51,7 +51,7 @@ namespace SSDCoursework.Forms.MainMenu
 
         void FormulaPlayground_Click(object sender, EventArgs e)
         {
-            (Application.OpenForms[0] as SplashScreen).Reset(10, new DragAndDropQuiz());
+            (Application.OpenForms[0] as SplashScreen).Reset(10, new FormulaePlayground());
         }
         
         void btnLeaderboard_Click(object sender, EventArgs e)

@@ -20,7 +20,7 @@ namespace SSDCoursework.Classes.Misc
         static readonly Exception noNums = new Exception("\t• No numbers were included in the entered text");
         static readonly Exception noSpecialChars = new Exception("\t• No special characters were included in the entered text");
         static readonly Exception invalidLength = new Exception("\t• The input was of invalid length");
-        static readonly Exception empty = new Exception("\t• The input was empty");
+        static readonly Exception invalidCharacter = new Exception("\t• The input was empty or contained a comma");
         static readonly Exception incorrectEmailDomain = new Exception("\t• The email domain was not registered in our database");
         static readonly Exception duplicateUsername = new Exception("\t• The username is not unique.");
 
@@ -31,9 +31,9 @@ namespace SSDCoursework.Classes.Misc
         {
             var exceptions = new List<Exception>(); // Create a new list for each validation call
 
-            if (string.IsNullOrEmpty(textToValidate))
+            if (string.IsNullOrEmpty(textToValidate) || textToValidate.Contains(','))
             {
-                exceptions.Add(empty);
+                exceptions.Add(invalidCharacter);
             }
             return exceptions;
         }

@@ -15,7 +15,6 @@ namespace SSDCoursework.Forms.Registry
 {
     public partial class SignUp : Form
     {
-        User newUser;
         public SignUp()
         {
             InitializeComponent();
@@ -90,14 +89,14 @@ namespace SSDCoursework.Forms.Registry
         {
             if (rdoAdmin.Checked)
             {
-                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, cmbGender.SelectedItem.ToString(), txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard(), new Settings());
+                UserDatabase.Instance.AddEntry(new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, cmbGender.SelectedItem.ToString(), txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard(), new Settings()));
+
             }
             else
             {
-                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, cmbGender.SelectedItem.ToString(), txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard(), new Settings());
+                UserDatabase.Instance.AddEntry(new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, cmbGender.SelectedItem.ToString(), txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard(), new Settings()));
             }
-            UserDatabase.Instance.AddEntry(newUser);
-            newUser.LoginUser();
+            UserDatabase.FindUserToLogin(txtUsername.Text, txtPassword.Text);
         }
 
         private void btnPasswordVis_Click(object sender, EventArgs e)

@@ -31,7 +31,7 @@ namespace SSDCoursework.Classes.Misc
             }
         }
 
-        void ApplyFormColour(Form form)
+        public void ApplyFormColour(Form form)
         {
             // Apply colour to the form itself
             if (form.Tag != null && PaletteHash.TryGetValue(form.Tag.ToString(), out Color formColor))
@@ -46,26 +46,30 @@ namespace SSDCoursework.Classes.Misc
             ApplyControlsColour(controls);
         }
 
-        void ApplyControlsColour(Control.ControlCollection controls)
+        public void ApplyControlsColour(Control.ControlCollection controls)
         {
             // Apply colours to controls
             foreach (Control c in controls)
             {
-                if (c.Tag == null || c.Tag.ToString().Contains("exempt"))
-                {
-                    continue;
-                }
-
-                c.ForeColor = PaletteHash["TextColour"];
-                
-                if (c.GetType() == typeof(TableLayoutPanel) || c.GetType() == typeof(Panel))
-                {
-                    ApplyControlsColour(c.Controls);
-                }
-
-                ParseTag(c);
-                
+                ApplyControlColour(c);
             }
+        }
+
+        public void ApplyControlColour(Control c)
+        {
+            if (c.Tag == null || c.Tag.ToString().Contains("exempt"))
+            {
+                return;
+            }
+
+            c.ForeColor = PaletteHash["TextColour"];
+
+            if (c.GetType() == typeof(TableLayoutPanel) || c.GetType() == typeof(Panel))
+            {
+                ApplyControlsColour(c.Controls);
+            }
+
+            ParseTag(c);
         }
 
         private void ParseTag(Control c)
