@@ -20,7 +20,7 @@ namespace SSDCoursework.Classes.DatabaseClasses
         {
             if (Instance != null)
             {
-                throw new Exception("Singleton instance of this class has already been created.");
+                throw new InvalidOperationException("Singleton instance of this class has already been created.");
             }
             Instance = this;
             Retrieve();
@@ -38,12 +38,12 @@ namespace SSDCoursework.Classes.DatabaseClasses
             {
                 Entries.AddRange(rawDomains.Split(','));
             }
-            Write();
         }
 
         public override void Write()
         {
             File.WriteAllText(FilePath, string.Join(",", Entries));
+            Retrieve();
         }
 
         public new void RemoveEntry(string entry)

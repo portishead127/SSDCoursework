@@ -19,11 +19,11 @@ namespace SSDCoursework.Classes.UserClasses
 
         public DateTime Dob { get; set; }
 
+        public string Gender { get; set; }
+
         public string FName{ get; set; }
 
         public string SName { get; set; }
-
-        public int Age { get; set; }
 
         public string Username { get; set; }
 
@@ -37,24 +37,18 @@ namespace SSDCoursework.Classes.UserClasses
 
         public Settings Settings { get; }
 
-        public User(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard, Settings settings)
+        public User(string fName, string sName, DateTime dob, string gender, string username, string email, string password, bool isAdmin, Scorecard scorecard, Settings settings)
         {
             FName = fName;
             SName = sName;
             Dob = dob;
+            Gender = gender;
             Username = username;
             Email = email;
             Password = password;
             IsAdmin = isAdmin;
             Scorecard = scorecard;
             Settings = settings;
-            Age = CalculateAge();
-        }
-
-        int CalculateAge()
-        {
-            int yearDiff = Dob.Year - DateTime.Today.Year;
-            return yearDiff;
         }
 
         public void LoginUser()

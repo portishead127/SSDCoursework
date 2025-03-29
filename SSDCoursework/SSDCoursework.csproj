@@ -104,11 +104,11 @@
     <Compile Include="Forms\MainMenu\MainMenuHolder.Designer.cs">
       <DependentUpon>MainMenuHolder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainMenu\QuizMenu\Quizzes\MultipleChoiceQuestion.cs">
+    <Compile Include="Forms\MainMenu\QuizMenu\Quizzes\MultipleChoiceQuiz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainMenu\QuizMenu\Quizzes\MultipleChoiceQuestion.Designer.cs">
-      <DependentUpon>MultipleChoiceQuestion.cs</DependentUpon>
+    <Compile Include="Forms\MainMenu\QuizMenu\Quizzes\MultipleChoiceQuiz.Designer.cs">
+      <DependentUpon>MultipleChoiceQuiz.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainMenu\QuizMenu\QuizMenuHolder.cs">
       <SubType>Form</SubType>
@@ -140,13 +140,13 @@
     <Compile Include="Forms\Misc\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\DatabaseClasses\UserDatabase.cs" />
+    <Compile Include="Classes\UserClasses\Player.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DatabaseClasses\UserDatabase.cs" />
-    <Compile Include="Classes\UserClasses\Player.cs" />
     <Compile Include="UserControls\BannerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,8 +193,8 @@
     <EmbeddedResource Include="Forms\MainMenu\MainMenuHolder.resx">
       <DependentUpon>MainMenuHolder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenu\QuizMenu\Quizzes\MultipleChoiceQuestion.resx">
-      <DependentUpon>MultipleChoiceQuestion.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainMenu\QuizMenu\Quizzes\MultipleChoiceQuiz.resx">
+      <DependentUpon>MultipleChoiceQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu\QuizMenu\QuizMenuHolder.resx">
       <DependentUpon>QuizMenuHolder.cs</DependentUpon>
@@ -266,9 +266,6 @@
     <None Include="Resources\LoginSymbol.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Backside of the tv.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\EmptyProfilePic.png" />
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +282,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FullDifficulty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\algebra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ideas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incorrect.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

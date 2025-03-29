@@ -61,11 +61,22 @@ namespace SSDCoursework.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream BacksideOfTheTV {
+        internal static System.Drawing.Bitmap Admin {
             get {
-                return ResourceManager.GetStream("BacksideOfTheTV", resourceCulture);
+                object obj = ResourceManager.GetObject("Admin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Algebra {
+            get {
+                object obj = ResourceManager.GetObject("Algebra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -102,6 +113,16 @@ namespace SSDCoursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EqualsSign {
+            get {
+                object obj = ResourceManager.GetObject("EqualsSign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FullDifficulty {
             get {
                 object obj = ResourceManager.GetObject("FullDifficulty", resourceCulture);
@@ -115,6 +136,26 @@ namespace SSDCoursework.Properties {
         internal static System.Drawing.Bitmap Hamburger {
             get {
                 object obj = ResourceManager.GetObject("Hamburger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Incorrect {
+            get {
+                object obj = ResourceManager.GetObject("Incorrect", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Leaderboard {
+            get {
+                object obj = ResourceManager.GetObject("Leaderboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -142,6 +183,26 @@ namespace SSDCoursework.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap MultiplicationSign {
+            get {
+                object obj = ResourceManager.GetObject("MultiplicationSign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Quiz {
+            get {
+                object obj = ResourceManager.GetObject("Quiz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SignUpSymbol {
             get {
                 object obj = ResourceManager.GetObject("SignUpSymbol", resourceCulture);
@@ -155,6 +216,16 @@ namespace SSDCoursework.Properties {
         internal static System.Drawing.Bitmap StemLogo {
             get {
                 object obj = ResourceManager.GetObject("StemLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tick {
+            get {
+                object obj = ResourceManager.GetObject("Tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

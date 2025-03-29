@@ -1,6 +1,11 @@
 ﻿using SSDCoursework.Classes.DatabaseClasses;
+using SSDCoursework.Classes.Misc;
 using SSDCoursework.Classes.UserClasses.UserAttributes;
+using SSDCoursework.Forms.Misc;
+using SSDCoursework.Forms.Registry;
 using System;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.UserClasses
 {
@@ -8,7 +13,7 @@ namespace SSDCoursework.Classes.UserClasses
     {
         private static int numOfAdmins;
 
-        public Admin(string fName, string sName, DateTime dob, string username, string email, string password, bool isAdmin, Scorecard scorecard, Settings settings) : base(fName, sName, dob, username, email, password, isAdmin, scorecard, settings) { }
+        public Admin(string fName, string sName, DateTime dob, string gender, string username, string email, string password, bool isAdmin, Scorecard scorecard, Settings settings) : base(fName, sName, dob, gender, username, email, password, isAdmin, scorecard, settings) { }
 
         public static int NumOfAdmins
         {
@@ -18,17 +23,52 @@ namespace SSDCoursework.Classes.UserClasses
 
         public override void ChangeUsername(User userToChange, string newUsername)
         {
-            userToChange.Username = newUsername;
+            if (Validation.ValidateUsername(newUsername).Any())
+            {
+                MessageBox.Show("The new username is invalid. Please try again.", "Invalid username", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                userToChange.Username = newUsername;
+                MessageBox.Show("Username changed successfully.", "Username changed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UserDatabase.Instance.Write();
+            }
         }
 
         public override void ChangePass(User userToChange, string newPass)
         {
-            userToChange.Password = newPass;
+            if(Validation.ValidatePass(newPass).Any())
+            {
+                MessageBox.Show("The new password is invalid. Please try again.", "Invalid password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                userToChange.Password = newPass;
+                MessageBox.Show("Password changed successfully.", "Password changed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UserDatabase.Instance.Write();
+            }
         }
 
         public override void DeleteUser(User userToDelete)
         {
-            UserDatabase.Instance.Entries.Remove(userToDelete);
+            if (this.Username == userToDelete.Username)
+            {
+                if (MessageBox.Show("Are you sure you want to delete your account?", "Delete Account", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                { 
+                    UserDatabase.Instance.Entries.Remove(userToDelete);
+                    UserDatabase.Instance.Write();
+                    CurrentUser = null;
+                    Application.OpenForms[0]?.Invoke(new Action(() =>
+                    {
+                        (Application.OpenForms[0] as SplashScreen)?.Reset(4, new RegistryHolder());
+                    }));
+                }
+            }
+            else
+            {
+                UserDatabase.Instance.Entries.Remove(userToDelete);
+                UserDatabase.Instance.Write();
+            }
         }
     }
 }

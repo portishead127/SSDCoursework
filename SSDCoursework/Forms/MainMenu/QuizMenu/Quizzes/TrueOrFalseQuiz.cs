@@ -19,6 +19,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         GameType gameType = GameType.TrueFalse;
         Quiz quiz;
         TrueOrFalseQuestion currentQuestion;
+        bool isGameOver;
         int currentQuestionIndex = -1;
         int score = 0;
         const int maxTime = 60;
@@ -29,6 +30,8 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             InitializeComponent();
             quiz = new Quiz(gameType);
             User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
+            isGameOver = false;
+
             lblQNum.Visible = false;
             lblQNum.Enabled = false;
             lblQuestionText.Visible = false;
@@ -62,7 +65,9 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             score += remainingTime;
             lblScore.Text = "Score: " + score;
             remainingTime = 0;
-            lblTimer.Text = "Remaining time: " + 0.ToString();
+            lblTimer.Text = "Game over!";
+
+            isGameOver = true;
 
             button1.Enabled = false;
             button1.Visible = false;
@@ -86,6 +91,11 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 score += 15;
                 lblScore.Text = "Score: " + score;
+                pictureBox1.Image = Properties.Resources.Tick;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Incorrect;
             }
             UpdateQuestion();
         }
@@ -96,31 +106,37 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 EndOfQuiz();
             }
-            remainingTime--;
-            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            else
+            {
+                remainingTime--;
+                lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if (remainingTime == 0)
+            if (isGameOver)
             {
-                (Application.OpenForms[0] as SplashScreen).Reset(3, new MainMenuHolder());
                 User.CurrentUser.Scorecard.UpdateScore(gameType, score);
+                (Application.OpenForms[0] as SplashScreen).Reset(3, new MainMenuHolder());
             }
-            tmr.Start();
-            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
-            UpdateQuestion();
-            btnStart.Text = "DONE!";
-            btnStart.Enabled = false;
-            btnStart.Visible = false;
-            lblQNum.Visible = true;
-            lblQNum.Enabled = true;
-            lblQuestionText.Visible = true;
-            lblQuestionText.Enabled = true;
-            button1.Enabled = true;
-            button1.Visible = true;
-            button2.Enabled = true;
-            button2.Visible = true;
+            else
+            {
+                tmr.Start();
+                lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+                UpdateQuestion();
+                btnStart.Text = "DONE!";
+                btnStart.Enabled = false;
+                btnStart.Visible = false;
+                lblQNum.Visible = true;
+                lblQNum.Enabled = true;
+                lblQuestionText.Visible = true;
+                lblQuestionText.Enabled = true;
+                button1.Enabled = true;
+                button1.Visible = true;
+                button2.Enabled = true;
+                button2.Visible = true;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -129,6 +145,11 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 score += 15;
                 lblScore.Text = "Score: " + score;
+                pictureBox1.Image = Properties.Resources.Tick;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Incorrect;
             }
             UpdateQuestion();
         }

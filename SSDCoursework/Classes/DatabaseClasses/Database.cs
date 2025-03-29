@@ -27,7 +27,6 @@ namespace SSDCoursework.Classes.DatabaseClasses
             {
                 Entries.Add(entry);
                 Write();
-                Retrieve();
             }
             else
             {
@@ -41,7 +40,6 @@ namespace SSDCoursework.Classes.DatabaseClasses
             {
                 Entries.Remove(entry);
                 Write();
-                Retrieve();
             }
             else
             {

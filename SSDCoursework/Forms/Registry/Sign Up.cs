@@ -8,17 +8,18 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SSDCoursework.Forms.Registry
 {
     public partial class SignUp : Form
     {
-        User newUser;
         public SignUp()
         {
             InitializeComponent();
             new DarkMode().ApplyColour(this.Controls, this);
+            cmbGender.SelectedIndex = 0;
         }
 
         private void BtnConfirm_Click(object sender, EventArgs e)
@@ -34,29 +35,32 @@ namespace SSDCoursework.Forms.Registry
             rdoAdmin.Checked = !rdoAdmin.Checked;
         }
 
+
         private bool ValidateInput()
         {
             List<Exception> exceptions = new List<Exception>();
             bool valid = true;
+
+            // Validate TextBoxes
             foreach (Control c in Controls.OfType<TextBox>())
             {
                 Label correspondingLabel = Controls.OfType<Label>().FirstOrDefault(label => label.Tag != null && label.Tag.ToString().Contains(c.Tag.ToString()));
 
-                if (c.Tag.Equals("Username"))
+                if (c.Tag.ToString().Contains("Username"))
                 {
-                    exceptions = Validation.ValidateUsername(c.Text);
+                    exceptions = Validation.ValidateUsername(c.Text.Trim());
                 }
-                else if (c.Tag.Equals("Pass"))
+                else if (c.Tag.ToString().Contains("Pass"))
                 {
-                    exceptions = Validation.ValidatePass(c.Text);
+                    exceptions = Validation.ValidatePass(c.Text.Trim());
                 }
-                else if(c.Tag.Equals("Email"))
+                else if (c.Tag.ToString().Contains("Email"))
                 {
-                    exceptions = Validation.ValidateEmail(c.Text);
+                    exceptions = Validation.ValidateEmail(c.Text.Trim());
                 }
                 else
                 {
-                    exceptions = Validation.Validate(c.Text);
+                    exceptions = Validation.Validate(c.Text.Trim());
                 }
 
                 //Constructing the error message
@@ -70,12 +74,12 @@ namespace SSDCoursework.Forms.Registry
                 if (exceptions.Any() && correspondingLabel != null)
                 {
                     valid = false;
-                    correspondingLabel.ForeColor = Color.Red; // Change label text color to red
+                    correspondingLabel.ForeColor = Color.Red;
                     MessageBox.Show($"The {correspondingLabel.Text} entry contains the following issues:\n\n{errorMessage}", "Invalid credentials");
                 }
                 else if (correspondingLabel != null)
                 {
-                    correspondingLabel.ForeColor = new DarkMode().PaletteHash["ButtonTextColour"]; // Reset label color if no errors
+                    correspondingLabel.ForeColor = new DarkMode().PaletteHash["ButtonTextColour"];
                 }
             }
             return valid;
@@ -85,14 +89,14 @@ namespace SSDCoursework.Forms.Registry
         {
             if (rdoAdmin.Checked)
             {
-                newUser = new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard(), new Settings());
+                UserDatabase.Instance.AddEntry(new Admin(txtFirstName.Text, txtSurname.Text, datDOB.Value, cmbGender.SelectedItem.ToString(), txtUsername.Text, txtEmail.Text, txtPassword.Text, true, new Scorecard(), new Settings()));
+
             }
             else
             {
-                newUser = new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard(), new Settings());
+                UserDatabase.Instance.AddEntry(new Player(txtFirstName.Text, txtSurname.Text, datDOB.Value, cmbGender.SelectedItem.ToString(), txtUsername.Text, txtEmail.Text, txtPassword.Text, false, new Scorecard(), new Settings()));
             }
-            UserDatabase.Instance.AddEntry(newUser);
-            newUser.LoginUser();
+            UserDatabase.FindUserToLogin(txtUsername.Text, txtPassword.Text);
         }
 
         private void btnPasswordVis_Click(object sender, EventArgs e)

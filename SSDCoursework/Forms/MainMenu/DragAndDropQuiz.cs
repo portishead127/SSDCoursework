@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SSDCoursework.Forms.MainMenu.Arcade
 {
-    public partial class DragAndDropQuiz : Form
+    public partial class FormulaePlayground : Form
     {
         string explanation;
         Dictionary<string, string> dragDropResults = new Dictionary<string, string>()
@@ -20,7 +20,7 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
             { "PIV", "P = IV is a formula used to calculate the power dissipated in an electrical circuit given the current and voltage.\n\nP - Power/Watts\nI - Current/Amperes\nV - Voltage/Volts" },
         };
 
-        public DragAndDropQuiz()
+        public FormulaePlayground()
         {
             InitializeComponent();
             User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
@@ -72,6 +72,66 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
                 explanation = "Try playing around with different symbols to find a valid formula!";
             }
             lblExplanation.Text = explanation;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormulaePlayground_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

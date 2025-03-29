@@ -48,9 +48,9 @@
             // 
             this.lblDarkMode.BackColor = System.Drawing.Color.Silver;
             this.lblDarkMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDarkMode.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblDarkMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblDarkMode.ForeColor = System.Drawing.Color.Black;
-            this.lblDarkMode.Location = new System.Drawing.Point(332, 359);
+            this.lblDarkMode.Location = new System.Drawing.Point(368, 359);
             this.lblDarkMode.Name = "lblDarkMode";
             this.lblDarkMode.Size = new System.Drawing.Size(384, 40);
             this.lblDarkMode.TabIndex = 0;
@@ -60,6 +60,7 @@
             // 
             // rdoDarkMode
             // 
+            this.rdoDarkMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdoDarkMode.AutoCheck = false;
             this.rdoDarkMode.AutoSize = true;
             this.rdoDarkMode.Location = new System.Drawing.Point(1104, 355);
@@ -74,20 +75,22 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(640, 135);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(554, 31);
             this.textBox1.TabIndex = 14;
+            this.textBox1.Tag = "ButtonAccent";
             // 
             // btnChangePassword
             // 
             this.btnChangePassword.AutoSize = true;
             this.btnChangePassword.BackColor = System.Drawing.Color.Silver;
             this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePassword.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnChangePassword.Location = new System.Drawing.Point(338, 122);
+            this.btnChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnChangePassword.Location = new System.Drawing.Point(374, 120);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(260, 55);
             this.btnChangePassword.TabIndex = 16;
@@ -100,8 +103,8 @@
             // 
             this.btnChangeUsername.BackColor = System.Drawing.Color.Silver;
             this.btnChangeUsername.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangeUsername.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold);
-            this.btnChangeUsername.Location = new System.Drawing.Point(338, 12);
+            this.btnChangeUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btnChangeUsername.Location = new System.Drawing.Point(374, 12);
             this.btnChangeUsername.Name = "btnChangeUsername";
             this.btnChangeUsername.Size = new System.Drawing.Size(260, 55);
             this.btnChangeUsername.TabIndex = 17;
@@ -112,12 +115,14 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.textBox2.Location = new System.Drawing.Point(640, 27);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(544, 31);
             this.textBox2.TabIndex = 18;
+            this.textBox2.Tag = "ButtonAccent";
             // 
             // openFileDialog1
             // 
@@ -127,7 +132,7 @@
             // btnSelectPFP
             // 
             this.btnSelectPFP.AutoSize = true;
-            this.btnSelectPFP.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btnSelectPFP.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.btnSelectPFP.Location = new System.Drawing.Point(12, 313);
             this.btnSelectPFP.Name = "btnSelectPFP";
             this.btnSelectPFP.Size = new System.Drawing.Size(297, 44);
@@ -139,7 +144,7 @@
             // 
             // btnRemovePFP
             // 
-            this.btnRemovePFP.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11F, System.Drawing.FontStyle.Bold);
+            this.btnRemovePFP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold);
             this.btnRemovePFP.Location = new System.Drawing.Point(12, 359);
             this.btnRemovePFP.Name = "btnRemovePFP";
             this.btnRemovePFP.Size = new System.Drawing.Size(297, 29);
@@ -151,12 +156,12 @@
             // 
             // btnDeleteAccount
             // 
+            this.btnDeleteAccount.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDeleteAccount.AutoSize = true;
             this.btnDeleteAccount.BackColor = System.Drawing.Color.Silver;
-            this.btnDeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteAccount.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.btnDeleteAccount.ForeColor = System.Drawing.Color.Red;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(338, 572);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(340, 451);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
             this.btnDeleteAccount.Size = new System.Drawing.Size(378, 49);
             this.btnDeleteAccount.TabIndex = 22;
@@ -167,6 +172,7 @@
             // 
             // rdoLeaderboard
             // 
+            this.rdoLeaderboard.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rdoLeaderboard.AutoCheck = false;
             this.rdoLeaderboard.AutoSize = true;
             this.rdoLeaderboard.Location = new System.Drawing.Point(1104, 274);
@@ -183,16 +189,15 @@
             // 
             this.lblScoreOnLeaderboard.BackColor = System.Drawing.Color.Silver;
             this.lblScoreOnLeaderboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblScoreOnLeaderboard.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblScoreOnLeaderboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblScoreOnLeaderboard.ForeColor = System.Drawing.Color.Black;
-            this.lblScoreOnLeaderboard.Location = new System.Drawing.Point(332, 281);
+            this.lblScoreOnLeaderboard.Location = new System.Drawing.Point(368, 288);
             this.lblScoreOnLeaderboard.Name = "lblScoreOnLeaderboard";
             this.lblScoreOnLeaderboard.Size = new System.Drawing.Size(384, 40);
             this.lblScoreOnLeaderboard.TabIndex = 23;
             this.lblScoreOnLeaderboard.Tag = "ButtonAccent";
             this.lblScoreOnLeaderboard.Text = "Show scores on leaderboard";
             this.lblScoreOnLeaderboard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblScoreOnLeaderboard.Click += new System.EventHandler(this.lblScoreOnLeaderboard_Click);
             // 
             // pictureBox1
             // 

@@ -35,6 +35,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnPasswordVis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -45,7 +46,7 @@ namespace SSDCoursework.Forms.Registry
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(719, 37);
-            this.txtUsername.TabIndex = 12;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.Tag = "ButtonAccent";
             // 
             // lblUsername
@@ -70,8 +71,8 @@ namespace SSDCoursework.Forms.Registry
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(719, 37);
-            this.txtPassword.TabIndex = 13;
+            this.txtPassword.Size = new System.Drawing.Size(680, 37);
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.Tag = "ButtonAccent";
             // 
             // lblPassword
@@ -97,11 +98,24 @@ namespace SSDCoursework.Forms.Registry
             this.btnConfirm.Location = new System.Drawing.Point(403, 425);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(565, 49);
-            this.btnConfirm.TabIndex = 14;
+            this.btnConfirm.TabIndex = 2;
             this.btnConfirm.Tag = "ButtonAccent";
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnPasswordVis
+            // 
+            this.btnPasswordVis.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnPasswordVis.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPasswordVis.Location = new System.Drawing.Point(1135, 342);
+            this.btnPasswordVis.Name = "btnPasswordVis";
+            this.btnPasswordVis.Size = new System.Drawing.Size(33, 37);
+            this.btnPasswordVis.TabIndex = 12;
+            this.btnPasswordVis.Tag = "ButtonAccent";
+            this.btnPasswordVis.Text = "*";
+            this.btnPasswordVis.UseVisualStyleBackColor = true;
+            this.btnPasswordVis.Click += new System.EventHandler(this.btnPasswordVis_Click);
             // 
             // Login
             // 
@@ -110,6 +124,7 @@ namespace SSDCoursework.Forms.Registry
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.btnPasswordVis);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnConfirm);
@@ -131,5 +146,6 @@ namespace SSDCoursework.Forms.Registry
         private TextBox txtPassword;
         private Label lblPassword;
         private Button btnConfirm;
+        private Button btnPasswordVis;
     }
 }

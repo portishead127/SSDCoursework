@@ -19,6 +19,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         const GameType gameType = GameType.WrittenQuestion;
         Quiz quiz;
         WrittenQuestion currentQuestion;
+        bool isGameOver;
         int currentQuestionIndex = -1;
         int score = 0;
         const int maxTime = 60;
@@ -27,6 +28,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         public WrittenQuiz()
         {
             InitializeComponent();
+            isGameOver = false;
             lblQNum.Visible = false;
             lblQNum.Enabled = false;
             lblQuestionText.Visible = false;
@@ -56,22 +58,22 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
         private void EndOfQuiz()
         {
             tmr.Stop();
+            isGameOver = true;
             lblQuestionText.Text = "Done";
             txtUserAnswer.Text = "";
 
             score += remainingTime;
             lblScore.Text = "Score: " + score;
             remainingTime = 0;
-            lblTimer.Text = "Remaining time: " + 0.ToString();
+            lblTimer.Text = "Game Over!";
 
-            button1.Enabled = false;
-            button1.Visible = false;
+            btnEnter.Enabled = false;
+            btnEnter.Visible = false;
 
             btnStart.Visible = true;
             btnStart.Enabled = true;
 
             User.CurrentUser.Scorecard.UpdateScore(gameType, score);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,7 +82,13 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 score += 25;
                 lblScore.Text = "Score: " + score;
+                pictureBox1.Image = Properties.Resources.Tick;
             }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Incorrect;
+            }
+
             UpdateQuestion();
         }
 
@@ -90,36 +98,38 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             {
                 EndOfQuiz();
             }
-            remainingTime--;
-            lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            else
+            {
+                remainingTime--;
+                lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+            }
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            if(remainingTime == 0)
+            if (isGameOver)
             {
+                User.CurrentUser.Scorecard.UpdateScore(gameType, score);
                 (Application.OpenForms[0] as SplashScreen).Reset(3, new MainMenuHolder());
             }
-            tmr.Start();
-            lblTimer.Text = "Remaining time: "+ remainingTime.ToString();
-            UpdateQuestion();
-            btnStart.Text = "DONE!";
-            btnStart.Enabled = false;
-            btnStart.Visible = false;
-            lblQNum.Visible = true;
-            lblQNum.Enabled = true;
-            lblQuestionText.Visible = true;
-            lblQuestionText.Enabled = true;
-            txtUserAnswer.Visible = true;
-            txtUserAnswer.Enabled = true;
-            txtUserAnswer.Focus();
-        }
-
-        private void txtUserAnswer_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if(e.KeyChar == (char)Keys.Enter)
+            else
             {
-                button1_Click(sender, e);
+                tmr.Start();
+                lblTimer.Text = "Remaining time: " + remainingTime.ToString();
+                UpdateQuestion();
+                btnStart.Text = "DONE!";
+                btnStart.Enabled = false;
+                btnStart.Visible = false;
+                btnEnter.Enabled = true;
+                btnEnter.Visible = true;
+
+                lblQNum.Visible = true;
+                lblQNum.Enabled = true;
+                lblQuestionText.Visible = true;
+                lblQuestionText.Enabled = true;
+                txtUserAnswer.Visible = true;
+                txtUserAnswer.Enabled = true;
+                txtUserAnswer.Focus();
             }
         }
     }

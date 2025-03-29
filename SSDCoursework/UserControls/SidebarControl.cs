@@ -1,4 +1,5 @@
-﻿using SSDCoursework.Classes.UserClasses;
+﻿using SSDCoursework.Classes.Misc.Colours;
+using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
 using System;
 using System.Drawing;
@@ -44,22 +45,31 @@ namespace SSDCoursework.UserControls
             InitializeComponent();
             SetSettingsIcon();
 
-            family = new FontFamily("Adobe Fan Heiti Std B");
+            family = new FontFamily("Corbel");
             font = new Font(family, 13);
 
             Size = Screen.PrimaryScreen.Bounds.Size;
             flpSidebar.MaximumSize = MaximumSize;
 
             pnlFormHolder.Width = Width - flpSidebar.Width;
-            pnlFormHolder.Height = Height - flpBannerbar.Size.Height;
+            pnlFormHolder.Height = Height - panel1.Height;
 
             sidebarChange = Width / sidebarScaleExpansionFactor;
             DoubleBuffered = true;
+
+            if(User.CurrentUser == null)
+            {
+                new DarkMode().ApplyControlColour(pnlFormHolder);
+            }
+            else
+            {
+                User.CurrentUser.Settings.ColourPalette.ApplyControlColour(pnlFormHolder);
+            }
         }
 
         public void AddControl(string text, Bitmap image, EventHandler clickEventHandler)
         {
-            pnlEmptySpace.Height -= buttonHeight + 15;
+            //pnlEmptySpace.Height -= buttonHeight + 15;
             Control control = SidebarButtonCreation(text, image, clickEventHandler);
             flpSidebar.Controls.Add(control);
             flpSidebar.Controls.SetChildIndex(control, 1);

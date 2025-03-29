@@ -18,5 +18,17 @@ namespace SSDCoursework.Forms.Registry
         {
             UserDatabase.FindUserToLogin(txtUsername.Text, txtPassword.Text);
         }
+
+        private void btnPasswordVis_Click(object sender, EventArgs e)
+        {
+            if(txtPassword.PasswordChar == '*')
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }   
+        }
     }
 }
