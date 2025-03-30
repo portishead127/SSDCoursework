@@ -188,7 +188,13 @@ namespace SSDCoursework.Forms.MainMenu
             {
                 MessageBox.Show("Inputs cannot be empty.", "Invalid Question");
             }
-            
+
+            txtQuestionTerm.Text = "";
+            txtWrittenAnswer.Text = "";
+            txtFakeAnswer1.Text = "";
+            txtFakeAnswer2.Text = "";
+            txtTFQuestionTerm.Text = "";
+            ckbTFAnswer.Checked = false;
         }
 
         private void ChangeUsername_Click(object sender, EventArgs e)

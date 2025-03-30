@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.DatabaseClasses
 {
+    /// <summary>
+    /// See Database Structure section for full description.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     internal abstract class Database<T> where T : class
     {
         public string FilePath { get; }
@@ -20,7 +24,10 @@ namespace SSDCoursework.Classes.DatabaseClasses
                 File.Create(filePath).Close();
             }
         }
-
+        /// <summary>
+        /// Adds entry if not already in the database.
+        /// </summary>
+        /// <param name="entry"></param>
         public void AddEntry(T entry)
         {
             if (!Entries.Contains(entry))
@@ -33,7 +40,10 @@ namespace SSDCoursework.Classes.DatabaseClasses
                 MessageBox.Show("Entry already exists.");
             }
         }
-
+        /// <summary>
+        /// Removes entry if in the database.
+        /// </summary>
+        /// <param name="entry"></param>
         public void RemoveEntry(T entry)
         {
             if (Entries.Contains(entry))

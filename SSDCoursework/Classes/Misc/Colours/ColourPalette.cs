@@ -11,6 +11,9 @@ using System.Windows.Forms;
 
 namespace SSDCoursework.Classes.Misc
 {
+    /// <summary>
+    /// See Colour Palettes section.
+    /// </summary>
     internal abstract class ColourPalette
     {
         public abstract Dictionary<string, Color> PaletteHash { get; }
@@ -55,6 +58,10 @@ namespace SSDCoursework.Classes.Misc
             }
         }
 
+        /// <summary>
+        /// Applies colours to control. If c is a panel, recalls this method with its controls.
+        /// </summary>
+        /// <param name="c"></param>
         public void ApplyControlColour(Control c)
         {
             if (c.Tag == null || c.Tag.ToString().Contains("exempt"))
@@ -72,6 +79,10 @@ namespace SSDCoursework.Classes.Misc
             ParseTag(c);
         }
 
+        /// <summary>
+        /// Reads control tags and assigns the corresponding colour.
+        /// </summary>
+        /// <param name="c"></param>
         private void ParseTag(Control c)
         {
             switch (c.Tag.ToString())

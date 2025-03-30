@@ -116,6 +116,11 @@ namespace SSDCoursework.Classes.Misc
             return exceptions;
         }
 
+        /// <summary>
+        /// Checks if a string matches the email domain rules.
+        /// </summary>
+        /// <param name="domain"></param>
+        /// <returns></returns>
         public static List<Exception> ValidateDomain(string domain)
         {
             var exceptions = new List<Exception>();

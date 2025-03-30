@@ -46,6 +46,10 @@ namespace SSDCoursework.Classes.DatabaseClasses
             Retrieve();
         }
 
+        /// <summary>
+        /// Attempts to remove a domain. Fails if it is a default one.
+        /// </summary>
+        /// <param name="entry"></param>
         public new void RemoveEntry(string entry)
         {
             if (!defaultDomains.Contains(entry))

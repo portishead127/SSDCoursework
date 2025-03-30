@@ -333,7 +333,7 @@
             // 
             this.lblExplanation.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblExplanation.BackColor = System.Drawing.Color.Silver;
-            this.lblExplanation.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExplanation.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExplanation.Location = new System.Drawing.Point(267, 403);
             this.lblExplanation.Margin = new System.Windows.Forms.Padding(0);
             this.lblExplanation.Name = "lblExplanation";

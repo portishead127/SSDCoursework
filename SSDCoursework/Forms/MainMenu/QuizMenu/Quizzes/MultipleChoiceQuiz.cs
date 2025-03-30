@@ -2,7 +2,6 @@
 using SSDCoursework.Classes.QuestionClasses;
 using SSDCoursework.Classes.UserClasses;
 using SSDCoursework.Forms.Misc;
-using SSDCoursework.Properties;
 using System;
 using System.Windows.Forms;
 
@@ -27,18 +26,22 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
             isGameOver = false;
 
+            //Updating visibility of assets
             lblQNum.Visible = false;
             lblQNum.Enabled = false;
             lblQuestionText.Visible = false;
             lblQuestionText.Enabled = false;
-            button1.Enabled = false;
-            button1.Visible = false;
-            button2.Enabled = false;
-            button2.Visible = false;
-            button3.Enabled = false;
-            button3.Visible = false;
+            btnAnswer1.Enabled = false;
+            btnAnswer1.Visible = false;
+            btnAnswer2.Enabled = false;
+            btnAnswer2.Visible = false;
+            btnAnswer3.Enabled = false;
+            btnAnswer3.Visible = false;
         }
 
+        /// <summary>
+        /// Decides what space will have the correct answer and selects the next question in the quiz object, unless we are out of questions.
+        /// </summary>
         private void UpdateQuestion()
         {
             int correctAnswerPos = rand.Next(0, 3);
@@ -52,19 +55,19 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 switch (correctAnswerPos)
                 {
                     case 0:
-                        button1.Text = currentQuestion.CorrectAnswer;
-                        button2.Text = currentQuestion.FakeAnswers[0];
-                        button3.Text = currentQuestion.FakeAnswers[1];
+                        btnAnswer1.Text = currentQuestion.CorrectAnswer;
+                        btnAnswer2.Text = currentQuestion.FakeAnswers[0];
+                        btnAnswer3.Text = currentQuestion.FakeAnswers[1];
                         break;
                     case 1:
-                        button1.Text = currentQuestion.FakeAnswers[0];
-                        button2.Text = currentQuestion.CorrectAnswer;
-                        button3.Text = currentQuestion.FakeAnswers[1];
+                        btnAnswer1.Text = currentQuestion.FakeAnswers[0];
+                        btnAnswer2.Text = currentQuestion.CorrectAnswer;
+                        btnAnswer3.Text = currentQuestion.FakeAnswers[1];
                         break;
                     case 2:
-                        button1.Text = currentQuestion.FakeAnswers[0];
-                        button2.Text = currentQuestion.FakeAnswers[1];
-                        button3.Text = currentQuestion.CorrectAnswer;
+                        btnAnswer1.Text = currentQuestion.FakeAnswers[0];
+                        btnAnswer2.Text = currentQuestion.FakeAnswers[1];
+                        btnAnswer3.Text = currentQuestion.CorrectAnswer;
                         break;
                 }
             }
@@ -74,16 +77,18 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             }
         }
 
+
         private void EndOfQuiz()
         {
             tmr.Stop();
             isGameOver = true;
 
             lblQuestionText.Text = "Done";
-            button1.Text = "";
-            button2.Text = "";
-            button3.Text = "";
+            btnAnswer1.Text = "";
+            btnAnswer2.Text = "";
+            btnAnswer3.Text = "";
 
+            //Adjusting score labels
             score += remainingTime;
             lblScore.Text = "Score: " + score;
             remainingTime = 0;
@@ -91,22 +96,20 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
             btnStart.Text = "DONE!";
 
+            //Updates visibilty of assets
             btnStart.Enabled = true;
             btnStart.Visible = true;
 
-            button1.Enabled = false;
-            button1.Visible = false;
-            button2.Enabled = false;
-            button2.Visible = false;
-            button3.Enabled = false;
-            button3.Visible = false;
+            btnAnswer1.Enabled = false;
+            btnAnswer1.Visible = false;
+            btnAnswer2.Enabled = false;
+            btnAnswer2.Visible = false;
+            btnAnswer3.Enabled = false;
+            btnAnswer3.Visible = false;
             lblQNum.Visible = false;
             lblQNum.Enabled = false;
             lblQuestionText.Visible = false;
             lblQuestionText.Enabled = false;
-
-            btnStart.Visible = true;
-            btnStart.Enabled = true;
         }
 
         private void tmr_Tick(object sender, EventArgs e)
@@ -122,6 +125,11 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             }
         }
 
+        /// <summary>
+        /// Updates the score if the game is over. Otherwise starts the game.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (isGameOver)
@@ -134,24 +142,27 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 tmr.Start();
                 lblTimer.Text = "Remaining time: " + remainingTime.ToString();
                 UpdateQuestion();
+
+                //Updating asset visibility
                 btnStart.Enabled = false;
                 btnStart.Visible = false;
                 lblQNum.Visible = true;
                 lblQNum.Enabled = true;
                 lblQuestionText.Visible = true;
                 lblQuestionText.Enabled = true;
-                button1.Enabled = true;
-                button1.Visible = true;
-                button2.Enabled = true;
-                button2.Visible = true;
-                button3.Enabled = true;
-                button3.Visible = true;
+                btnAnswer1.Enabled = true;
+                btnAnswer1.Visible = true;
+                btnAnswer2.Enabled = true;
+                btnAnswer2.Visible = true;
+                btnAnswer3.Enabled = true;
+                btnAnswer3.Visible = true;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //Marks answer 1
+        private void btnAnswer1_Click(object sender, EventArgs e)
         {
-            if (currentQuestion.CheckAnswer(button1.Text))
+            if (currentQuestion.CheckAnswer(btnAnswer1.Text))
             {
                 score += 20;
                 lblScore.Text = "Score: " + score;
@@ -164,9 +175,10 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             UpdateQuestion();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        //Marks answer 2
+        private void btnAnswer2_Click(object sender, EventArgs e)
         {
-            if (currentQuestion.CheckAnswer(button2.Text))
+            if (currentQuestion.CheckAnswer(btnAnswer2.Text))
             {
                 score += 20;
                 lblScore.Text = "Score: " + score;
@@ -179,9 +191,10 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             UpdateQuestion();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        //Marks answer 3
+        private void btnAnswer3_Click(object sender, EventArgs e)
         {
-            if (currentQuestion.CheckAnswer(button3.Text))
+            if (currentQuestion.CheckAnswer(btnAnswer3.Text))
             {
                 score += 20;
                 lblScore.Text = "Score: " + score;

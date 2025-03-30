@@ -14,7 +14,7 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
 {
     internal class Settings
     {
-        public static string UserImagesDirectory = Path.GetDirectoryName(Application.ExecutablePath) + @"\UserImages\";
+        public static string UserImagesDirectory = Path.GetDirectoryName(Application.ExecutablePath) + @"\UserImages\"; //Directory used to store user images.
         public ColourPalette ColourPalette { get; set; }
         public string PFPPath { get; set; }
         public Image PFP { get; set; }
