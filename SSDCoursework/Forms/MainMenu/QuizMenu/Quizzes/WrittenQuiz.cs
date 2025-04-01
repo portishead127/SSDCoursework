@@ -35,13 +35,13 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             lblQuestionText.Enabled = false;
             txtUserAnswer.Visible = false;
             txtUserAnswer.Enabled = false;
-            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);   
+            User.CurrentUser.Settings.ColourPalette.ApplyColour(this.Controls, this);
             quiz = new Quiz(gameType);
         }
 
         private void UpdateQuestion()
         {
-            if(currentQuestionIndex < Quiz.NumOfQuestions - 1)
+            if (currentQuestionIndex < Quiz.NumOfQuestions - 1)
             {
                 currentQuestionIndex++;
                 currentQuestion = (WrittenQuestion)quiz.Questions[currentQuestionIndex];
@@ -67,13 +67,14 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             remainingTime = 0;
             lblTimer.Text = "Game Over!";
 
+            txtUserAnswer.Enabled = false;
+            txtUserAnswer.Visible = false;
+
             btnEnter.Enabled = false;
             btnEnter.Visible = false;
 
             btnStart.Visible = true;
             btnStart.Enabled = true;
-
-            User.CurrentUser.Scorecard.UpdateScore(gameType, score);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -94,7 +95,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
         private void tmr_Tick(object sender, EventArgs e)
         {
-            if(remainingTime == 0)
+            if (remainingTime == 0)
             {
                 EndOfQuiz();
             }
