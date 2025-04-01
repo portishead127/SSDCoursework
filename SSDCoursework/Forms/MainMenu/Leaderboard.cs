@@ -24,7 +24,7 @@ namespace SSDCoursework.Forms.MainMenu
 
         private void Populate()
         {
-            FontFamily fontFamilty = new FontFamily("Microsoft Sans Serif");
+            FontFamily fontFamilty = new FontFamily("Corbel");
             Font font = new Font(fontFamilty, 15.25f, FontStyle.Regular);
             pictureBox1.Image = User.CurrentUser.Settings.PFP;
             label7.Text = User.CurrentUser.Username + " (You)";

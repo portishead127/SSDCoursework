@@ -22,7 +22,8 @@ namespace SSDCoursework.Forms.Misc
         {
             InitializeComponent();
 
-            if(User.CurrentUser.Settings.ColourPalette.GetType() == typeof(DarkMode))
+            //Setting controls to user settings
+            if (User.CurrentUser.Settings.ColourPalette.GetType() == typeof(DarkMode))
             {
                 rdoDarkMode.Checked = true;
             }
@@ -57,6 +58,11 @@ namespace SSDCoursework.Forms.Misc
             textBox2.Text = string.Empty;
         }
 
+        /// <summary>
+        /// Opens a file dialog to select a profile picture and sets it to the user's PFP property.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSelectPFP_Click(object sender, EventArgs e)
         {
             OpenFileDialog opFile = new OpenFileDialog();
@@ -130,7 +136,6 @@ namespace SSDCoursework.Forms.Misc
 
             UserDatabase.Instance.Write();
         }
-
 
         private void rdoLeaderboard_Click(object sender, EventArgs e)
         {
