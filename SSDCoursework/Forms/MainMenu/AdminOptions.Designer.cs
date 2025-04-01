@@ -85,7 +85,6 @@
             this.txtPassword.Size = new System.Drawing.Size(163, 20);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.Tag = "ButtonAccent";
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // button1
             // 
@@ -99,7 +98,7 @@
             this.button1.Tag = "ButtonAccent";
             this.button1.Text = "Update Password";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // pnlChangePass
             // 
@@ -143,7 +142,7 @@
             this.button5.Tag = "ButtonAccent";
             this.button5.Text = "Remove user";
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
             // button7
             // 
@@ -157,7 +156,7 @@
             this.button7.Tag = "ButtonAccent";
             this.button7.Text = "Edit username";
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.ChangeUsername_Click);
+            this.button7.Click += new System.EventHandler(this.btnChangeUsername_Click);
             // 
             // textBox2
             // 
@@ -188,7 +187,6 @@
             this.lstDomains.Name = "lstDomains";
             this.lstDomains.Size = new System.Drawing.Size(473, 144);
             this.lstDomains.TabIndex = 9;
-            this.lstDomains.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
             // 
             // panel1
             // 
@@ -226,7 +224,6 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.DimGray;
-            this.button4.Enabled = false;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(10, 113);
@@ -236,12 +233,11 @@
             this.button4.Tag = "ButtonAccent";
             this.button4.Text = "Remove selected domain";
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.btnRemoveDomain_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DimGray;
-            this.button3.Enabled = false;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(10, 84);
@@ -251,7 +247,7 @@
             this.button3.Tag = "ButtonAccent";
             this.button3.Text = "Edit domain";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.btnEditDomain_Click);
             // 
             // button2
             // 
@@ -265,7 +261,7 @@
             this.button2.Tag = "ButtonAccent";
             this.button2.Text = "Add domain";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnAddDomain_Click);
             // 
             // txtDomain
             // 
@@ -274,7 +270,6 @@
             this.txtDomain.Size = new System.Drawing.Size(200, 20);
             this.txtDomain.TabIndex = 8;
             this.txtDomain.Tag = "ButtonAccent";
-            this.txtDomain.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label4
             // 

@@ -100,7 +100,6 @@
             this.label4.Tag = "ButtonAccent";
             this.label4.Text = "F";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label5
@@ -116,7 +115,6 @@
             this.label5.Tag = "ButtonAccent";
             this.label5.Text = "m";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label6
@@ -132,7 +130,6 @@
             this.label6.Tag = "ButtonAccent";
             this.label6.Text = "a";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label7
@@ -148,7 +145,6 @@
             this.label7.Tag = "ButtonAccent";
             this.label7.Text = "W";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label8
@@ -164,7 +160,6 @@
             this.label8.Tag = "ButtonAccent";
             this.label8.Text = "P";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label9
@@ -180,7 +175,6 @@
             this.label9.Tag = "ButtonAccent";
             this.label9.Text = "v";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             this.label9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label10
@@ -196,7 +190,6 @@
             this.label10.Tag = "ButtonAccent";
             this.label10.Text = "Q";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             this.label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label11
@@ -212,7 +205,6 @@
             this.label11.Tag = "ButtonAccent";
             this.label11.Text = "c";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             this.label11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label12
@@ -228,7 +220,6 @@
             this.label12.Tag = "ButtonAccent";
             this.label12.Text = "V";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             this.label12.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             // 
             // label13
@@ -286,7 +277,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(110, 110);
             this.panel2.TabIndex = 4;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblSecond
             // 
@@ -379,7 +369,6 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "Accent1";
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // gameBannerControl1
             // 
@@ -427,9 +416,8 @@
             this.MaximizeBox = false;
             this.Name = "FormulaePlayground";
             this.Tag = "MainColour";
-            this.Text = "Formulae Playground";
+            this.Text = "Formulae";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormulaePlayground_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Label_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

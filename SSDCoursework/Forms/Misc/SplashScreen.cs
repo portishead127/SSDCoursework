@@ -120,6 +120,11 @@ namespace SSDCoursework.Forms.Misc
             }
         }
 
+        /// <summary>
+        /// Resets the SplashScreen to it's initial state and starts the fading in and out process.
+        /// </summary>
+        /// <param name="maxProgressUpdate"></param>
+        /// <param name="formToOpen"></param>
         public void Reset(int maxProgressUpdate, Form formToOpen)
         {
             this.maxProgressUpdate = maxProgressUpdate;

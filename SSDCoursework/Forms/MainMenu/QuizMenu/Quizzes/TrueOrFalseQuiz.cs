@@ -42,6 +42,9 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             button2.Visible = false;
         }
 
+        /// <summary>
+        /// Loads next question if we aren't at the end of the quiz.
+        /// </summary>
         private void UpdateQuestion()
         {
             if (currentQuestionIndex < Quiz.NumOfQuestions - 1)
@@ -69,6 +72,7 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
 
             isGameOver = true;
 
+            //Visibility of assets
             button1.Enabled = false;
             button1.Visible = false;
 
@@ -85,17 +89,32 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             btnStart.Enabled = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAnswer1_Click(object sender, EventArgs e)
         {
             if (currentQuestion.CheckAnswer(true))
             {
                 score += 15;
                 lblScore.Text = "Score: " + score;
-                pictureBox1.Image = Properties.Resources.Tick;
+                pbxResponse.Image = Properties.Resources.Tick;
             }
             else
             {
-                pictureBox1.Image = Properties.Resources.Incorrect;
+                pbxResponse.Image = Properties.Resources.Incorrect;
+            }
+            UpdateQuestion();
+        }
+
+        private void btnAnswer2_Click(object sender, EventArgs e)
+        {
+            if (currentQuestion.CheckAnswer(false))
+            {
+                score += 15;
+                lblScore.Text = "Score: " + score;
+                pbxResponse.Image = Properties.Resources.Tick;
+            }
+            else
+            {
+                pbxResponse.Image = Properties.Resources.Incorrect;
             }
             UpdateQuestion();
         }
@@ -113,6 +132,11 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
             }
         }
 
+        /// <summary>
+        /// Updates the score if the game is over. Otherwise starts the game.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStart_Click(object sender, EventArgs e)
         {
             if (isGameOver)
@@ -126,6 +150,8 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 lblTimer.Text = "Remaining time: " + remainingTime.ToString();
                 UpdateQuestion();
                 btnStart.Text = "DONE!";
+
+                //Setting visibility of assets
                 btnStart.Enabled = false;
                 btnStart.Visible = false;
                 lblQNum.Visible = true;
@@ -137,21 +163,6 @@ namespace SSDCoursework.Forms.MainMenu.QuizMenu.Quizzes
                 button2.Enabled = true;
                 button2.Visible = true;
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (currentQuestion.CheckAnswer(false))
-            {
-                score += 15;
-                lblScore.Text = "Score: " + score;
-                pictureBox1.Image = Properties.Resources.Tick;
-            }
-            else
-            {
-                pictureBox1.Image = Properties.Resources.Incorrect;
-            }
-            UpdateQuestion();
         }
     }
 }
