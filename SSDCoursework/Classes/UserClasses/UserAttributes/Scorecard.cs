@@ -14,6 +14,9 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
         public int MultipleChoiceHighScore { get; private set; }
         public int WrittenHighScore { get; private set; }
 
+        /// <summary>
+        /// Used for making new users. Creates an empty scorecard.
+        /// </summary>
         public Scorecard()
         {
             OverallScore = 0;
@@ -29,7 +32,13 @@ namespace SSDCoursework.Classes.UserClasses.UserAttributes
             MultipleChoiceHighScore = multipleChoiceHighScore;
             WrittenHighScore = writtenHighScore;
         }
-
+        
+        /// <summary>
+        /// Updates the score of the game specified if the new score is higher than the user's old score. Adds score to OverallScore property.
+        /// </summary>
+        /// <param name="gameType"></param>
+        /// <param name="score"></param>
+        /// <exception cref="Exception"></exception>
         public void UpdateScore(GameType gameType, int score)
         {
             switch (gameType)

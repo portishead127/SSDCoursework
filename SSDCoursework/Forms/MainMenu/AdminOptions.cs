@@ -13,8 +13,9 @@ namespace SSDCoursework.Forms.MainMenu
 {
     internal partial class AdminOptions : Form
     {
-        DataTable dt;
-        List<string> usernames;
+        DataTable dt; //Used to store the question in the database in a editable format.
+        List<string> usernames; //Used to store usernames of every user in database.
+
         public AdminOptions()
         {
             InitializeComponent();
@@ -23,7 +24,6 @@ namespace SSDCoursework.Forms.MainMenu
             usernames = new List<string>();
 
             ReconstructUsers();
-
 
             dt.Columns.Add("Term", typeof(string));
             dt.Columns.Add("WrittenAnswer", typeof(string));
@@ -50,7 +50,7 @@ namespace SSDCoursework.Forms.MainMenu
             lstDomains.DataSource = EmailDomainDatabase.Instance.Entries;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnChangePass_Click(object sender, EventArgs e)
         {
             try
             {
@@ -60,48 +60,56 @@ namespace SSDCoursework.Forms.MainMenu
                     userToChange.ChangePass(userToChange, txtPassword.Text);
                 }
             }
+            catch
+            {
+                MessageBox.Show("Please select a valid target.");
+            }
+        }
+
+        private void btnChangeUsername_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                User userToChange = UserDatabase.FindUser(lstUsers.SelectedItem.ToString());
+                if (userToChange != null)
+                {
+                    User.CurrentUser.ChangeUsername(userToChange, textBox2.Text);
+                }
+                ReconstructUsers();
+            }
             catch { }
         }
 
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        private void ReconstructUsers()
         {
-            if (e.KeyCode == Keys.Enter)
+            lstUsers.DataSource = null;
+
+            usernames.Clear();
+            foreach (User temp in UserDatabase.Instance.Entries)
             {
-                button1_Click(sender, e);
+                usernames.Add(temp.Username);
             }
+
+            lstUsers.DataSource = usernames;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAddDomain_Click(object sender, EventArgs e)
         {
-            AddDomainToListbox(txtDomain.Text);
+            AddDomain(txtDomain.Text);
             txtDomain.Text = "";
         }
 
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        private void btnEditDomain_Click(object sender, EventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
-            {
-                button2_Click(sender, e);
-            }
-        }
-
-        private void listBox1_SelectedValueChanged(object sender, EventArgs e)
-        {
-            button3.Enabled = true;
-            button4.Enabled = true;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            RemoveDomainFromDatabase();
-            AddDomainToListbox(txtDomain.Text);
+            RemoveDomain();
+            AddDomain(txtDomain.Text);
             RedrawListbox();
             txtDomain.Text = "";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnRemoveDomain_Click(object sender, EventArgs e)
         {
-            RemoveDomainFromDatabase();
+            RemoveDomain();
             RedrawListbox();
             txtDomain.Text = "";
         }
@@ -112,7 +120,7 @@ namespace SSDCoursework.Forms.MainMenu
             lstDomains.DataSource = EmailDomainDatabase.Instance.Entries;
         }
 
-        private void AddDomainToListbox(string domain)
+        private void AddDomain(string domain)
         {
             if (Validation.ValidateDomain(domain).Any() || EmailDomainDatabase.Instance.Entries.Contains(domain))
             {
@@ -125,9 +133,45 @@ namespace SSDCoursework.Forms.MainMenu
             }
         }
 
-        private void RemoveDomainFromDatabase()
+        private void RemoveDomain()
         {
             EmailDomainDatabase.Instance.RemoveEntry(EmailDomainDatabase.Instance.Entries[lstDomains.SelectedIndex]);
+        }
+
+        private void btnAddQuestion_Click(object sender, EventArgs e)
+        {
+            List<Exception> exceptions = new List<Exception>();
+
+            object[] textBoxEntries =
+            {
+                txtQuestionTerm.Text,
+                txtWrittenAnswer.Text,
+                txtFakeAnswer1.Text,
+                txtFakeAnswer2.Text,
+                txtTFQuestionTerm.Text,
+                ckbTFAnswer.Checked
+            };
+            for (int i = 0; i < textBoxEntries.Length - 1; i++)
+            {
+                exceptions.AddRange(Validation.Validate(textBoxEntries[i].ToString().Trim()));
+            }
+
+            if (!exceptions.Any())
+            {
+                dt.Rows.Add(textBoxEntries);
+                UpdateQuestionDatabase();
+            }
+            else
+            {
+                MessageBox.Show("Inputs cannot be empty.", "Invalid Question");
+            }
+
+            txtQuestionTerm.Text = "";
+            txtWrittenAnswer.Text = "";
+            txtFakeAnswer1.Text = "";
+            txtFakeAnswer2.Text = "";
+            txtTFQuestionTerm.Text = "";
+            ckbTFAnswer.Checked = false;
         }
 
         private void btnRemoveQuestion_Click(object sender, EventArgs e)
@@ -161,64 +205,7 @@ namespace SSDCoursework.Forms.MainMenu
             };
         }
 
-        private void btnAddQuestion_Click(object sender, EventArgs e)
-        {
-            List<Exception> exceptions = new List<Exception>();
-
-            object[] textBoxEntries =
-            {
-                txtQuestionTerm.Text,
-                txtWrittenAnswer.Text,
-                txtFakeAnswer1.Text,
-                txtFakeAnswer2.Text,
-                txtTFQuestionTerm.Text,
-                ckbTFAnswer.Checked
-            };
-            for(int i = 0; i < textBoxEntries.Length-1; i++)
-            {
-                exceptions.AddRange(Validation.Validate(textBoxEntries[i].ToString().Trim()));
-            }
-
-            if (!exceptions.Any())
-            {
-                dt.Rows.Add(textBoxEntries);
-                UpdateQuestionDatabase();
-            }
-            else
-            {
-                MessageBox.Show("Inputs cannot be empty.", "Invalid Question");
-            }
-            
-        }
-
-        private void ChangeUsername_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                User userToChange = UserDatabase.FindUser(lstUsers.SelectedItem.ToString());
-                if (userToChange != null)
-                {
-                    User.CurrentUser.ChangeUsername(userToChange, textBox2.Text);
-                }
-                ReconstructUsers();
-            }
-            catch { }
-        }
-
-        private void ReconstructUsers()
-        {
-            lstUsers.DataSource = null;
-
-            usernames.Clear();
-            foreach (User temp in UserDatabase.Instance.Entries)
-            {
-                usernames.Add(temp.Username);
-            }
-
-            lstUsers.DataSource = usernames;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
+        private void btnDeleteUser_Click(object sender, EventArgs e)
         {
             try
             {

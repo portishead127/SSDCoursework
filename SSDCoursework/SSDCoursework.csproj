@@ -86,11 +86,11 @@
     <Compile Include="Forms\MainMenu\AdminOptions.Designer.cs">
       <DependentUpon>AdminOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\MainMenu\DragAndDropQuiz.cs">
+    <Compile Include="Forms\MainMenu\Formulae.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MainMenu\DragAndDropQuiz.Designer.cs">
-      <DependentUpon>DragAndDropQuiz.cs</DependentUpon>
+    <Compile Include="Forms\MainMenu\Formulae.Designer.cs">
+      <DependentUpon>Formulae.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainMenu\Leaderboard.cs">
       <SubType>Form</SubType>
@@ -165,11 +165,11 @@
     <Compile Include="Forms\Registry\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Registry\Sign Up.cs">
+    <Compile Include="Forms\Registry\SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Registry\Sign Up.Designer.cs">
-      <DependentUpon>Sign Up.cs</DependentUpon>
+    <Compile Include="Forms\Registry\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Registry\RegistryHolder.cs">
       <SubType>Form</SubType>
@@ -184,8 +184,8 @@
     <EmbeddedResource Include="Forms\MainMenu\AdminOptions.resx">
       <DependentUpon>AdminOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenu\DragAndDropQuiz.resx">
-      <DependentUpon>DragAndDropQuiz.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainMenu\Formulae.resx">
+      <DependentUpon>Formulae.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainMenu\Leaderboard.resx">
       <DependentUpon>Leaderboard.cs</DependentUpon>
@@ -225,8 +225,8 @@
     <EmbeddedResource Include="Forms\Registry\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Registry\Sign Up.resx">
-      <DependentUpon>Sign Up.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Registry\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registry\RegistryHolder.resx">
       <DependentUpon>RegistryHolder.cs</DependentUpon>
@@ -269,9 +269,6 @@
     <None Include="Resources\EmptyProfilePic.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\close%281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\SignUpSymbol.png" />
   </ItemGroup>
   <ItemGroup>
@@ -306,6 +303,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Incorrect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close%281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

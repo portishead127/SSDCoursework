@@ -27,6 +27,11 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
             CheckResult();
         }
 
+        /// <summary>
+        /// Given to every label in the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Label_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left && sender is Label lbl && !string.IsNullOrEmpty(lbl.Text))
@@ -38,6 +43,11 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
             }
         }
 
+        /// <summary>
+        /// Given to panels that hold labels
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Label_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.StringFormat))
@@ -46,6 +56,11 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
             }
         }
 
+        /// <summary>
+        /// Given to labels that will accept the dragged text.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Label_DragDrop(object sender, DragEventArgs e)
         {
             if (sender is Label lbl)
@@ -72,66 +87,6 @@ namespace SSDCoursework.Forms.MainMenu.Arcade
                 explanation = "Try playing around with different symbols to find a valid formula!";
             }
             lblExplanation.Text = explanation;
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FormulaePlayground_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

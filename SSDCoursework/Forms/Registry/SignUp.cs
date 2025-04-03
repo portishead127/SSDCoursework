@@ -13,6 +13,9 @@ using System.Windows.Forms;
 
 namespace SSDCoursework.Forms.Registry
 {
+    /// <summary>
+    /// See Sign Up Form section.
+    /// </summary>
     public partial class SignUp : Form
     {
         public SignUp()
@@ -35,7 +38,10 @@ namespace SSDCoursework.Forms.Registry
             rdoAdmin.Checked = !rdoAdmin.Checked;
         }
 
-
+        /// <summary>
+        /// Validates all input fields on the form. If any are invalid, the user is informed of the issues and the corresponding labels turn red.
+        /// </summary>
+        /// <returns></returns>
         private bool ValidateInput()
         {
             List<Exception> exceptions = new List<Exception>();

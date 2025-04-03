@@ -17,7 +17,7 @@ namespace SSDCoursework.Classes.QuestionClasses
         public string TFQuestionTerm { get; }
         public bool TFCorrectAnswer { get; }
 
-        public object UserAnswer { get; protected set; }
+        public object UserAnswer { get; protected set; } //Possible improvements for future?
 
         /// <summary>
         /// Written question constructor.

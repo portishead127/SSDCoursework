@@ -11,6 +11,9 @@ namespace SSDCoursework.Classes.Misc.Colours
     {
         public override Dictionary<string, Color> PaletteHash { get; } = new Dictionary<string, Color>();
 
+        /// <summary>
+        /// Adds the colour keys and values to the PaletteHash.
+        /// </summary>
         public LightMode()
         {
             PaletteHash["MainColour"] = Color.WhiteSmoke;

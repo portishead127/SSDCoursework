@@ -7,6 +7,9 @@ namespace SSDCoursework.Classes.Misc.Colours
     {
         public override Dictionary<string, Color> PaletteHash { get; } = new Dictionary<string, Color>();
 
+        /// <summary>
+        /// Adds the colour keys and values to the PaletteHash.
+        /// </summary>
         public DarkMode()
         {
             PaletteHash["MainColour"] = Color.FromArgb(7, 10, 25);

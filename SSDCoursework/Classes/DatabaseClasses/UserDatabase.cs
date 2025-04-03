@@ -103,6 +103,11 @@ namespace SSDCoursework.Classes.DatabaseClasses
             Retrieve();
         }
 
+        /// <summary>
+        /// Finds and logs in the user specified.
+        /// </summary>
+        /// <param name="desiredUsername"></param>
+        /// <param name="desiredPass"></param>
         public static void FindUserToLogin(string desiredUsername, string desiredPass)
         {
             User userFound = null;
@@ -126,6 +131,11 @@ namespace SSDCoursework.Classes.DatabaseClasses
             userFound.LoginUser();
         }
 
+        /// <summary>
+        /// Finds user in the database.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns>User that holds the specified username.</returns>
         public static User FindUser(string username)
         {
             foreach (User tempUser in Instance.Entries)

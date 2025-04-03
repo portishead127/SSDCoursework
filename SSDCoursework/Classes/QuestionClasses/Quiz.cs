@@ -11,6 +11,11 @@ namespace SSDCoursework.Classes.QuestionClasses
         public List<Question> Questions { get; }
         public GameType GameType { get; }
 
+        /// <summary>
+        /// Generates a new quiz object that holds (constant) "NumOfQuestions" random questions.
+        /// </summary>
+        /// <param name="gameType"></param>
+        /// <exception cref="Exception"></exception>
         public Quiz(GameType gameType)
         {
             Random rand = new Random();
